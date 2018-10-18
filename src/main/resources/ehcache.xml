@@ -21,4 +21,9 @@
            timeToLiveSeconds="3600">
     </cache>
 
+    <cache name="kms_getInformation"
+           maxEntriesLocalHeap="100"
+           timeToLiveSeconds="3600">
+    </cache>
+
 </ehcache>

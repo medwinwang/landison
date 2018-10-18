@@ -3,6 +3,7 @@ package com.medwin.landison.web;
 import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.exception.LpsSystemException;
 import com.medwin.landison.kms.informationservice.City;
+import com.medwin.landison.kms.informationservice.CommonInfo;
 import com.medwin.landison.kms.informationservice.Country;
 import com.medwin.landison.kms.informationservice.Province;
 import com.medwin.landison.service.KmsService;
@@ -24,8 +25,16 @@ public class CommonController {
     @Autowired
     private KmsService kmsService;
 
+    @RequestMapping(value = "/information", method = RequestMethod.GET)
+    public BaseResult getInformation(String dataType, String parentCode) {
+
+        List<CommonInfo>  items = kmsService.getInformation(dataType, parentCode);
+        BaseResult baseResult = new BaseResult(BaseResult.SUCCESS_CODE, null, items);
+        return baseResult;
+    }
+
     @RequestMapping(value = "/country", method = RequestMethod.GET)
-    public BaseResult getCountry() throws LpsSystemException {
+    public BaseResult getCountry() {
 
         List<Country>  countries = kmsService.getCountry();
         BaseResult baseResult = new BaseResult(BaseResult.SUCCESS_CODE, null, countries);
@@ -33,7 +42,7 @@ public class CommonController {
     }
 
     @RequestMapping(value = "/province", method = RequestMethod.GET)
-    public BaseResult getProvince(String countryCode) throws LpsSystemException {
+    public BaseResult getProvince(String countryCode) {
 
         List<Province>  items = kmsService.getProvince(countryCode);
         BaseResult baseResult = new BaseResult(BaseResult.SUCCESS_CODE, null, items);
@@ -42,7 +51,7 @@ public class CommonController {
 
 
     @RequestMapping(value = "/city", method = RequestMethod.GET)
-    public BaseResult getCity(String countryCode) throws LpsSystemException {
+    public BaseResult getCity(String countryCode) {
 
         List<City>  items = kmsService.getCity(countryCode);
         BaseResult baseResult = new BaseResult(BaseResult.SUCCESS_CODE, null, items);

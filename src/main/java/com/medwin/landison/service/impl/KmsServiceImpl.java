@@ -96,6 +96,16 @@ public class KmsServiceImpl implements KmsService {
         return getInformationServiceSoap().getCityList(countryCode).getCity();
     }
 
+    @Override
+    @Cacheable(value="kms_getInformation", key="#dataType+#parentCode")
+    public List<CommonInfo> getInformation(String dataType, String parentCode) {
+        ArrayOfCommonInfo info = getInformationServiceSoap().getInformation(dataType,  parentCode);
+        if(info != null) {
+            return info.getCommonInfo();
+        }
+        return null;
+    }
+
 
     private InformationServiceSoap getInformationServiceSoap(){
 

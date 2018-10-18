@@ -1,9 +1,6 @@
 package com.medwin.landison.service;
 
-import com.medwin.landison.kms.informationservice.City;
-import com.medwin.landison.kms.informationservice.Country;
-import com.medwin.landison.kms.informationservice.Province;
-import com.medwin.landison.kms.informationservice.SendInfo;
+import com.medwin.landison.kms.informationservice.*;
 
 import java.util.List;
 
@@ -23,5 +20,7 @@ public interface KmsService {
     List<Province> getProvince(String countryCode);
 
     List<City> getCity(String countryCode);
+
+    List<CommonInfo> getInformation(String dataType, String parentCode);
 
 }

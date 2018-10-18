@@ -57,7 +57,7 @@ public class UserController {
     }
 
 
-    @RequestMapping(value = "/pointsHistory", method = RequestMethod.GET)
+    @RequestMapping(value = "/coupons", method = RequestMethod.GET)
     public BaseResult getCoupons(String status, int page, int pageSize, HttpSession httpSession){
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
