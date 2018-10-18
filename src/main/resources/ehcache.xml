@@ -6,4 +6,19 @@
            timeToLiveSeconds="1800">
     </cache>
 
+    <cache name="kms_getCountry"
+           maxEntriesLocalHeap="5"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="kms_getProvince"
+           maxEntriesLocalHeap="100"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="kms_getCity"
+           maxEntriesLocalHeap="100"
+           timeToLiveSeconds="3600">
+    </cache>
+
 </ehcache>

@@ -18,7 +18,7 @@ public class BaseResult {
 
     String code;
     String message;
-    JSONObject data;
+    Object data;
 
     public void setDataString(String dataStr){
         this.data = JSONObject.parseObject(dataStr);

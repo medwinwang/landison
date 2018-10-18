@@ -105,7 +105,7 @@ public class LpsUtil {
         }
     }
 
-    public BaseResult get(String apiPath, HashMap<String, String> paras) {
+    public BaseResult get(String apiPath, HashMap paras) {
 
         MultiValueMap map = new LinkedMultiValueMap();
         map.setAll(paras);

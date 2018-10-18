@@ -100,5 +100,44 @@ public class LpsServiceImpl implements LpsService{
         return  lpsUtil.put("/api/v{version}/profiles/" + profileId, par);
     }
 
+    @Override
+    public BaseResult getPointsHistory(String accountId, String beginDate, String endDate, String type,
+                                       String hotelCode, String placeCode, int page, int pageSize) {
 
+        HashMap<String, Object> par = new HashMap<>();
+        par.put("beginDate", beginDate);
+        par.put("endDate", endDate);
+        par.put("type", type);
+        par.put("hotelCode", hotelCode);
+        par.put("placeCode", placeCode);
+        par.put("page", page);
+        par.put("pageSize", pageSize);
+        return  lpsUtil.get("/api/v{version}/accounts/"+accountId+"/pointsHistory", par);
+    }
+
+
+    @Override
+    public BaseResult getStoredValueHistory(String accountId, String beginDate, String endDate, String type,
+                                            String hotelCode, String placeCode, int page, int pageSize){
+
+        HashMap<String, Object> par = new HashMap<>();
+        par.put("beginDate", beginDate);
+        par.put("endDate", endDate);
+        par.put("type", type);
+        par.put("hotelCode", hotelCode);
+        par.put("placeCode", placeCode);
+        par.put("page", page);
+        par.put("pageSize", pageSize);
+        return  lpsUtil.get("/api/v{version}/accounts/"+accountId+"/storedValueHistory", par);
+    }
+
+    @Override
+    public BaseResult getCoupons(String profileId, String status, int page, int pageSize) {
+
+        HashMap<String, Object> par = new HashMap<>();
+        par.put("status", status);
+        par.put("page", page);
+        par.put("pageSize", pageSize);
+        return  lpsUtil.get("/api/v{version}/profiles/"+profileId+"/coupons", par);
+    }
 }
