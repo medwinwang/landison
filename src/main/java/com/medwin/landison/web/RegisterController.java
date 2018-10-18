@@ -1,6 +1,7 @@
 package com.medwin.landison.web;
 
 import com.medwin.landison.common.BaseResult;
+import com.medwin.landison.common.EnvUtil;
 import com.medwin.landison.exception.LpsSystemException;
 import com.medwin.landison.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,9 @@ public class RegisterController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private EnvUtil envUtil;
+
 
     @RequestMapping(value = "/check", method = RequestMethod.GET)
     public BaseResult check(String mobile) throws LpsSystemException {
@@ -45,6 +49,10 @@ public class RegisterController {
 
         Random rand = new Random();
         int code = rand.nextInt(9000) + 1000;
+        if(!envUtil.isProd()) {
+            code = 8888;
+        }
+
         httpSession.setAttribute(REG_SMS_CODE, code);
         httpSession.setAttribute(REG_SMS_MOBILE, mobile);
         httpSession.setAttribute(REG_SMS_EXP_TIME, second+60);
@@ -53,10 +61,10 @@ public class RegisterController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public BaseResult register(String mobile, String name, HttpSession httpSession) throws LpsSystemException {
+    public BaseResult register(String mobile, String name, String code, String password, HttpSession httpSession) throws LpsSystemException {
 
-        Integer code = (Integer) httpSession.getAttribute(REG_SMS_CODE);
-        if(code == null) {
+        Integer sessionCode = (Integer) httpSession.getAttribute(REG_SMS_CODE);
+        if(sessionCode == null) {
             return new BaseResult("2", "请先选择发送验证码", null);
         }
 
@@ -66,6 +74,11 @@ public class RegisterController {
         if(!mobile.equals(httpSession.getAttribute(REG_SMS_MOBILE)) || expTime < second) {
             return new BaseResult("3", "请重新发送短信验证码", null);
         }
-        return userService.sendRegisterSms(mobile, name, String.valueOf(code));
+
+        if(!String.valueOf(sessionCode).equals(code)){
+            return new BaseResult("4", "短信验证码错误", null);
+        }
+
+        return userService.register(mobile, name, password);
     }
 }

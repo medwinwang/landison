@@ -2,6 +2,7 @@ package com.medwin.landison.web.interceptor;
 
 import com.alibaba.fastjson.JSONObject;
 import com.medwin.landison.web.LoginController;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -12,6 +13,7 @@ import java.io.PrintWriter;
 /**
  * Created by medwin on 2018/10/18.
  */
+@Component
 public class LoginInterceptor extends HandlerInterceptorAdapter {
     /**
      *预处理回调方法，实现处理器的预处理（如登录检查）。
@@ -30,8 +32,8 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
             response.setContentType("application/json; charset=utf-8");
             PrintWriter out = response.getWriter();
             JSONObject res = new JSONObject();
-            res.put("codo","0");
-            res.put("msg","请先登录");
+            res.put("code","0");
+            res.put("message","请先登录");
             out.append(res.toString());
             return false;
         }

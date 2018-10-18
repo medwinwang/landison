@@ -12,15 +12,15 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Created by medwin on 2018/10/17.
  */
-@RestController
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = Exception.class)
-    public Object defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
+    @ResponseBody
+    public Object defaultErrorHandler(HttpServletRequest req, Exception e){
         BaseResult baseResult = new BaseResult();
         baseResult.setCode("90000");
-        baseResult.setDataString(e.getMessage());
+        baseResult.setData(e.getMessage());
         return baseResult;
     }
 }
