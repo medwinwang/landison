@@ -45,30 +45,6 @@ public class KmsClientHandler implements SOAPHandler<SOAPMessageContext> {
     @Override
     public boolean handleMessage(SOAPMessageContext context) {
 
-        if(!StringUtils.isEmpty(kmsConfig.getSessionId())) {
-
-            QName qname=new QName("KwsSoapHeader");
-
-            Document doc= DOMUtils.createDocument();
-            //自定义节点
-            Element sessionId=doc.createElement("SessionId");
-            sessionId.setTextContent(kmsConfig.getSessionId());
-
-
-            Element root=doc.createElementNS("http://www.shijinet.com.cn/kunlun/kws/1.1/", "KwsSoapHeader");
-            root.appendChild(sessionId);
-
-
-            try {
-//                SOAPHeader head=new Header1_2Impl(context.getMessage().getSOAPHeader().getOwnerDocument(),root);
-
-                context.getMessage().getSOAPPart().getEnvelope().getHeader();
-
-            } catch (SOAPException e) {
-                e.printStackTrace();
-            }
-        }
-
         log.info(convertDomToString(context.getMessage().getSOAPPart()));
 
         try {
