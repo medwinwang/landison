@@ -23,4 +23,6 @@ public interface KmsService {
 
     List<CommonInfo> getInformation(String dataType, String parentCode);
 
+    HotelInfo getSingleHotelInfo(String code);
+
 }

@@ -37,7 +37,7 @@ public class KmsServiceImpl implements KmsService {
     private KmsClientHandler kmsClientHandler;
 
     @Autowired
-    private KmsAddSoapHeader kmsAddSoapHeader;
+    private InformationServiceSoap informationServiceSoap;
 
     @Override
     public boolean appLogin() {
@@ -74,53 +74,42 @@ public class KmsServiceImpl implements KmsService {
     @Override
     public boolean addSendInfo(SendInfo sendInfo) {
 
-        return getInformationServiceSoap().addSendInfo(sendInfo);
+        return informationServiceSoap.addSendInfo(sendInfo);
     }
 
     @Override
     @Cacheable("kms_getCountry")
     public List<Country> getCountry() {
 
-        return getInformationServiceSoap().getCountry().getCountry();
+        return informationServiceSoap.getCountry().getCountry();
     }
 
     @Override
     @Cacheable(value="kms_getProvince", key="#countryCode")
     public List<Province> getProvince(String countryCode) {
-        return getInformationServiceSoap().getProvince(countryCode).getProvince();
+        return informationServiceSoap.getProvince(countryCode).getProvince();
     }
 
     @Override
     @Cacheable(value="kms_getCity", key="#countryCode")
     public List<City> getCity(String countryCode) {
-        return getInformationServiceSoap().getCityList(countryCode).getCity();
+        return informationServiceSoap.getCityList(countryCode).getCity();
     }
 
     @Override
     @Cacheable(value="kms_getInformation", key="#dataType+#parentCode")
     public List<CommonInfo> getInformation(String dataType, String parentCode) {
-        ArrayOfCommonInfo info = getInformationServiceSoap().getInformation(dataType,  parentCode);
+        ArrayOfCommonInfo info = informationServiceSoap.getInformation(dataType,  parentCode);
         if(info != null) {
             return info.getCommonInfo();
         }
         return null;
     }
 
-
-    private InformationServiceSoap getInformationServiceSoap(){
-
-        JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean();
-
-        List<Interceptor<? extends Message>> list = new ArrayList();
-        // 添加soap header 信息
-        list.add(kmsAddSoapHeader);
-
-        // 添加soap消息日志打印
-        list.add(new org.apache.cxf.interceptor.LoggingOutInterceptor());
-        factory.setOutInterceptors(list);
-        factory.getInInterceptors().add(new LoggingInInterceptor());
-        factory.setAddress(kmsConfig.getUrl() + "/InformationService.asmx");
-        factory.setServiceClass(InformationServiceSoap.class);
-        return (InformationServiceSoap) factory.create();
+    @Override
+    @Cacheable(value="kms_getSingleHotelInfo", key="#code")
+    public HotelInfo getSingleHotelInfo(String code) {
+       return informationServiceSoap.getSingleHotelInfo(code);
     }
+
 }

@@ -2,10 +2,7 @@ package com.medwin.landison.web;
 
 import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.exception.LpsSystemException;
-import com.medwin.landison.kms.informationservice.City;
-import com.medwin.landison.kms.informationservice.CommonInfo;
-import com.medwin.landison.kms.informationservice.Country;
-import com.medwin.landison.kms.informationservice.Province;
+import com.medwin.landison.kms.informationservice.*;
 import com.medwin.landison.service.KmsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +27,14 @@ public class CommonController {
 
         List<CommonInfo>  items = kmsService.getInformation(dataType, parentCode);
         BaseResult baseResult = new BaseResult(BaseResult.SUCCESS_CODE, null, items);
+        return baseResult;
+    }
+
+    @RequestMapping(value = "/singleHotelInfo", method = RequestMethod.GET)
+    public BaseResult getSingleHotelInfo(String code) {
+
+        HotelInfo item = kmsService.getSingleHotelInfo(code);
+        BaseResult baseResult = new BaseResult(BaseResult.SUCCESS_CODE, null, item);
         return baseResult;
     }
 
