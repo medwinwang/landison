@@ -46,6 +46,35 @@ public class LpsUtil {
     @Autowired
     private RestTemplate restTemplate;
 
+    public BaseResult put(String apiPath, Map<String, String> paras){
+
+        HttpHeaders headers = new HttpHeaders();
+        String jsonStr = JSON.toJSONString(paras);
+        HttpEntity<String> formEntity = new HttpEntity<String>(jsonStr, headers);
+        String url = getPath(apiPath);
+
+        try {
+
+            restTemplate.put(url, formEntity);
+            log.info("put {} {}", url, jsonStr);
+
+            BaseResult baseResult = new BaseResult();
+            baseResult.setCode("1");
+            return baseResult;
+
+        }catch (HttpClientErrorException e) {
+
+            String bodyStr = e.getResponseBodyAsString();
+            String code = e.getStatusText();
+            log.info("get {} {} {} {}", url, JSON.toJSONString(paras), code, bodyStr);
+
+            BaseResult baseResult = new BaseResult();
+            baseResult.setCode("10003");
+            baseResult.setDataString(bodyStr);
+            return baseResult;
+        }
+    }
+
     public BaseResult post(String apiPath, Map<String, String> paras){
 
         HttpHeaders headers = new HttpHeaders();

@@ -21,6 +21,8 @@ import org.springframework.stereotype.Service;
 import javax.xml.ws.handler.Handler;
 import javax.xml.ws.handler.HandlerResolver;
 import javax.xml.ws.handler.PortInfo;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,20 +45,27 @@ public class KmsServiceImpl implements KmsService {
     @Override
     public boolean appLogin() {
 
-        SecurityService securityService = new SecurityService();
+        try {
+            URL url = new URL(kmsConfig.getUrl() + "/SecurityService.asmx?WSDL");
+            SecurityService securityService = new SecurityService(url);
 
-        securityService.setHandlerResolver(new HandlerResolver() {
+            securityService.setHandlerResolver(new HandlerResolver() {
 
-            @Override
-            public List<Handler> getHandlerChain(PortInfo portInfo) {
-                List<Handler> handlerList = new ArrayList<Handler>();
-                handlerList.add(kmsClientHandler);
-                return handlerList;
-            }
-        });
-        boolean ret = securityService.getSecurityServiceSoap().appLogin(kmsConfig.getUsername(), kmsConfig.getPwd(), "");
+                @Override
+                public List<Handler> getHandlerChain(PortInfo portInfo) {
+                    List<Handler> handlerList = new ArrayList<Handler>();
+                    handlerList.add(kmsClientHandler);
+                    return handlerList;
+                }
+            });
+            boolean ret = securityService.getSecurityServiceSoap().appLogin(kmsConfig.getUsername(),
+                    kmsConfig.getPwd(), "");
+            return ret;
 
-        return ret;
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        return  false;
     }
 
     @Override
@@ -70,6 +79,7 @@ public class KmsServiceImpl implements KmsService {
 
         return getInformationServiceSoap().addSendInfo(sendInfo);
     }
+
 
 
 

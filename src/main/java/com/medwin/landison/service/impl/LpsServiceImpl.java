@@ -71,4 +71,34 @@ public class LpsServiceImpl implements LpsService{
         par.put("newPassword", newPassword);
         return  lpsUtil.post("/api/v{version}/profiles/"+profileId+"/password", par);
     }
+
+    @Override
+    public BaseResult updateUser(String profileId, String firstName, String lastName, String altFirstName,
+                                 String altLastName, String genderCode, String idTypeCode, String idNumber,
+                                 String mobile, String birthday, String email, String addressCountryCode,
+                                 String addressProvinceCode, String addressCity, String addressDistrict,
+                                 String addressStreet) {
+
+        HashMap<String, String> par = new HashMap<>();
+        par.put("firstName", firstName);
+        par.put("lastName", lastName);
+        par.put("altFirstName", altFirstName);
+        par.put("altLastName", altLastName);
+        par.put("genderCode", genderCode);
+        par.put("idTypeCode", idTypeCode);
+        par.put("idNumber", idNumber);
+        par.put("mobile", mobile);
+        par.put("birthday", birthday);
+        par.put("email", email);
+
+        par.put("addressCountryCode", addressCountryCode);
+        par.put("addressProvinceCode", addressProvinceCode);
+        par.put("addressCity", addressCity);
+        par.put("addressDistrict", addressDistrict);
+        par.put("addressStreet", addressStreet);
+
+        return  lpsUtil.put("/api/v{version}/profiles/" + profileId, par);
+    }
+
+
 }
