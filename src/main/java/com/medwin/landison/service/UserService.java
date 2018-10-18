@@ -21,4 +21,12 @@ public interface UserService {
                           String addressCountryCode, String addressProvinceCode, String addressCity, String addressDistrict,
                           String addressStreet);
 
+    BaseResult getPointsHistory(String accountId, String beginDate, String endDate, String type,
+                                String hotelCode, String placeCode, int page, int pageSize);
+
+    BaseResult getStoredValueHistory(String accountId, String beginDate, String endDate, String type,
+                                     String hotelCode, String placeCode, int page, int pageSize);
+
+    BaseResult getCoupons(String profileId, String status, int page, int pageSize);
+
 }

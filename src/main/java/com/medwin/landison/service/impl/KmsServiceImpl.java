@@ -2,11 +2,10 @@ package com.medwin.landison.service.impl;
 
 import com.medwin.landison.common.KmsAddSoapHeader;
 import com.medwin.landison.common.KmsClientHandler;
-import com.medwin.landison.common.KmsConfig;
+import com.medwin.landison.config.KmsConfig;
 
 import com.medwin.landison.kms.informationservice.*;
 import com.medwin.landison.kms.securityservice.SecurityService;
-import com.medwin.landison.kms.securityservice.SecurityServiceSoap;
 import com.medwin.landison.service.KmsService;
 import org.apache.cxf.interceptor.Interceptor;
 import org.apache.cxf.interceptor.LoggingInInterceptor;

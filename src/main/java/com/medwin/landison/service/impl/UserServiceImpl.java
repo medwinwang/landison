@@ -78,4 +78,22 @@ public class UserServiceImpl implements UserService {
                 addressProvinceCode, addressCity, addressDistrict,
                 addressStreet);
     }
+
+    @Override
+    public BaseResult getPointsHistory(String accountId, String beginDate, String endDate, String type, String hotelCode, String placeCode, int page, int pageSize) {
+
+        return lpsService.getPointsHistory(accountId, beginDate, endDate, type, hotelCode, placeCode, page, pageSize);
+    }
+
+    @Override
+    public BaseResult getStoredValueHistory(String accountId, String beginDate, String endDate, String type, String hotelCode, String placeCode, int page, int pageSize) {
+
+        return lpsService.getStoredValueHistory(accountId, beginDate, endDate, type, hotelCode, placeCode, page, pageSize);
+    }
+
+    @Override
+    public BaseResult getCoupons(String profileId, String status, int page, int pageSize) {
+
+        return lpsService.getCoupons(profileId, status, page, pageSize);
+    }
 }

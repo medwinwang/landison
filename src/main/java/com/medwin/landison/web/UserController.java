@@ -36,4 +36,34 @@ public class UserController {
                 addressStreet);
     }
 
+    @RequestMapping(value = "/pointsHistory", method = RequestMethod.GET)
+    public BaseResult getPointsHistory(String beginDate, String endDate, String type,
+                                String hotelCode, String placeCode, int page, int pageSize, HttpSession httpSession){
+
+        JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
+
+        return userService.getPointsHistory(user.getString("id"), beginDate, endDate, type, hotelCode, placeCode, page, pageSize);
+
+    }
+
+    @RequestMapping(value = "/storedValueHistory", method = RequestMethod.GET)
+    public BaseResult getStoredValueHistory(String beginDate, String endDate, String type,
+                                       String hotelCode, String placeCode, int page, int pageSize, HttpSession httpSession){
+
+        JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
+
+        return userService.getStoredValueHistory(user.getString("id"), beginDate, endDate, type, hotelCode, placeCode, page, pageSize);
+
+    }
+
+
+    @RequestMapping(value = "/pointsHistory", method = RequestMethod.GET)
+    public BaseResult getCoupons(String status, int page, int pageSize, HttpSession httpSession){
+
+        JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
+
+        return userService.getCoupons(user.getString("id"), status, page, pageSize);
+
+    }
+
 }
