@@ -1,4 +1,4 @@
-package com.medwin.landison.common;
+package com.medwin.landison.config;
 
 import lombok.Getter;
 import lombok.Setter;

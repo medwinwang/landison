@@ -1,5 +1,6 @@
 package com.medwin.landison.common;
 
+import com.medwin.landison.config.KmsConfig;
 import org.apache.cxf.binding.soap.SoapHeader;
 import org.apache.cxf.binding.soap.SoapMessage;
 import org.apache.cxf.binding.soap.interceptor.AbstractSoapInterceptor;

@@ -1,14 +1,9 @@
 package com.medwin.landison.common;
 
-import com.medwin.landison.kms.informationservice.KwsSoapHeader;
-import com.sun.xml.internal.messaging.saaj.soap.impl.HeaderImpl;
-import com.sun.xml.internal.messaging.saaj.soap.ver1_1.Header1_1Impl;
-import com.sun.xml.internal.messaging.saaj.soap.ver1_2.Header1_2Impl;
+import com.medwin.landison.config.KmsConfig;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.cxf.headers.Header;
 import org.apache.cxf.helpers.DOMUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.w3c.dom.Document;
@@ -19,12 +14,9 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.namespace.QName;
-import javax.xml.soap.SOAPElement;
 import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPHeader;
 import javax.xml.soap.SOAPPart;
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -32,10 +24,7 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.ws.handler.MessageContext;
 import javax.xml.ws.handler.soap.SOAPHandler;
 import javax.xml.ws.handler.soap.SOAPMessageContext;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.io.StringWriter;
-import java.util.List;
 import java.util.Set;
 
 /**
