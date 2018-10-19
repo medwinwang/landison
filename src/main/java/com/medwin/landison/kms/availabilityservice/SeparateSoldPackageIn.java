@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>SeparateSoldPackageIn complex typeµÄ Java Àà¡£
+ * <p>SeparateSoldPackageIn complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖÐµÄÔ¤ÆÚÄÚÈÝ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½Ý¡ï¿½
  * 
  * <pre>
  * &lt;complexType name="SeparateSoldPackageIn"&gt;
@@ -40,63 +40,63 @@ public class SeparateSoldPackageIn {
 
     @XmlElement(name = "Arrival", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrival;
+    protected String arrival;
     @XmlElement(name = "Departure", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departure;
+    protected String departure;
     @XmlElement(name = "HotelCode")
     protected String hotelCode;
 
     /**
-     * »ñÈ¡arrivalÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
-     * ÉèÖÃarrivalÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setArrival(XMLGregorianCalendar value) {
+    public void setArrival(String value) {
         this.arrival = value;
     }
 
     /**
-     * »ñÈ¡departureÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
-     * ÉèÖÃdepartureÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDeparture(XMLGregorianCalendar value) {
+    public void setDeparture(String value) {
         this.departure = value;
     }
 
     /**
-     * »ñÈ¡hotelCodeÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -108,7 +108,7 @@ public class SeparateSoldPackageIn {
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is

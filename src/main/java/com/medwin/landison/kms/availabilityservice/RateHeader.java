@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>RateHeader complex type的 Java 类。
+ * <p>RateHeader complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="RateHeader"&gt;
@@ -88,15 +88,15 @@ public class RateHeader {
     protected ArrayOfPackage packages;
     @XmlElement(name = "BeginDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginDate;
+    protected String beginDate;
     @XmlElement(name = "EndDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endDate;
+    protected String endDate;
     @XmlElement(name = "SortId")
     protected String sortId;
 
     /**
-     * 获取cateCode属性的值。
+     * 锟斤拷取cateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -108,7 +108,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置cateCode属性的值。
+     * 锟斤拷锟斤拷cateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -120,7 +120,7 @@ public class RateHeader {
     }
 
     /**
-     * 获取ratePlan属性的值。
+     * 锟斤拷取ratePlan锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -132,7 +132,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置ratePlan属性的值。
+     * 锟斤拷锟斤拷ratePlan锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -144,7 +144,7 @@ public class RateHeader {
     }
 
     /**
-     * 获取minLos属性的值。
+     * 锟斤拷取minLos锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getMinLos() {
@@ -152,7 +152,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置minLos属性的值。
+     * 锟斤拷锟斤拷minLos锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setMinLos(int value) {
@@ -160,7 +160,7 @@ public class RateHeader {
     }
 
     /**
-     * 获取maxLos属性的值。
+     * 锟斤拷取maxLos锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getMaxLos() {
@@ -168,7 +168,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置maxLos属性的值。
+     * 锟斤拷锟斤拷maxLos锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setMaxLos(int value) {
@@ -176,7 +176,7 @@ public class RateHeader {
     }
 
     /**
-     * 获取advBookin属性的值。
+     * 锟斤拷取advBookin锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getAdvBookin() {
@@ -184,7 +184,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置advBookin属性的值。
+     * 锟斤拷锟斤拷advBookin锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setAdvBookin(int value) {
@@ -192,7 +192,7 @@ public class RateHeader {
     }
 
     /**
-     * 获取maxAdvBookin属性的值。
+     * 锟斤拷取maxAdvBookin锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getMaxAdvBookin() {
@@ -200,7 +200,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置maxAdvBookin属性的值。
+     * 锟斤拷锟斤拷maxAdvBookin锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setMaxAdvBookin(int value) {
@@ -208,7 +208,7 @@ public class RateHeader {
     }
 
     /**
-     * 获取des属性的值。
+     * 锟斤拷取des锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -220,7 +220,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置des属性的值。
+     * 锟斤拷锟斤拷des锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -232,7 +232,7 @@ public class RateHeader {
     }
 
     /**
-     * 获取shortInfo属性的值。
+     * 锟斤拷取shortInfo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -244,7 +244,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置shortInfo属性的值。
+     * 锟斤拷锟斤拷shortInfo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -256,7 +256,7 @@ public class RateHeader {
     }
 
     /**
-     * 获取longInfo属性的值。
+     * 锟斤拷取longInfo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -268,7 +268,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置longInfo属性的值。
+     * 锟斤拷锟斤拷longInfo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -280,7 +280,7 @@ public class RateHeader {
     }
 
     /**
-     * 获取segments属性的值。
+     * 锟斤拷取segments锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -292,7 +292,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置segments属性的值。
+     * 锟斤拷锟斤拷segments锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -304,7 +304,7 @@ public class RateHeader {
     }
 
     /**
-     * 获取sources属性的值。
+     * 锟斤拷取sources锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -316,7 +316,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置sources属性的值。
+     * 锟斤拷锟斤拷sources锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -328,7 +328,7 @@ public class RateHeader {
     }
 
     /**
-     * 获取packages属性的值。
+     * 锟斤拷取packages锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -340,7 +340,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置packages属性的值。
+     * 锟斤拷锟斤拷packages锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -352,55 +352,55 @@ public class RateHeader {
     }
 
     /**
-     * 获取beginDate属性的值。
+     * 锟斤拷取beginDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginDate() {
+    public String getBeginDate() {
         return beginDate;
     }
 
     /**
-     * 设置beginDate属性的值。
+     * 锟斤拷锟斤拷beginDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginDate(XMLGregorianCalendar value) {
+    public void setBeginDate(String value) {
         this.beginDate = value;
     }
 
     /**
-     * 获取endDate属性的值。
+     * 锟斤拷取endDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
     /**
-     * 设置endDate属性的值。
+     * 锟斤拷锟斤拷endDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndDate(XMLGregorianCalendar value) {
+    public void setEndDate(String value) {
         this.endDate = value;
     }
 
     /**
-     * 获取sortId属性的值。
+     * 锟斤拷取sortId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -412,7 +412,7 @@ public class RateHeader {
     }
 
     /**
-     * 设置sortId属性的值。
+     * 锟斤拷锟斤拷sortId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

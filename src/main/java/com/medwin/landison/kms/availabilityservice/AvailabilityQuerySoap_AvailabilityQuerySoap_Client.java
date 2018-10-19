@@ -70,8 +70,8 @@ public final class AvailabilityQuerySoap_AvailabilityQuerySoap_Client {
         java.lang.String _getRatePlan_hotelCode = "";
         java.lang.String _getRatePlan_roomType = "";
         java.lang.String _getRatePlan_rateCode = "";
-        javax.xml.datatype.XMLGregorianCalendar _getRatePlan_beginDate = null;
-        javax.xml.datatype.XMLGregorianCalendar _getRatePlan_endDate = null;
+        java.lang.String _getRatePlan_beginDate = null;
+        java.lang.String _getRatePlan_endDate = null;
         com.medwin.landison.kms.availabilityservice.ArrayOfRatePlan _getRatePlan__return = port.getRatePlan(_getRatePlan_hotelCode, _getRatePlan_roomType, _getRatePlan_rateCode, _getRatePlan_beginDate, _getRatePlan_endDate);
         System.out.println("getRatePlan.result=" + _getRatePlan__return);
 
@@ -90,8 +90,8 @@ public final class AvailabilityQuerySoap_AvailabilityQuerySoap_Client {
         System.out.println("Invoking getAvailabilityList...");
         int _getAvailabilityList_minPrice = 0;
         int _getAvailabilityList_maxPrice = 0;
-        javax.xml.datatype.XMLGregorianCalendar _getAvailabilityList_arrival = null;
-        javax.xml.datatype.XMLGregorianCalendar _getAvailabilityList_departure = null;
+        java.lang.String _getAvailabilityList_arrival = null;
+        java.lang.String _getAvailabilityList_departure = null;
         int _getAvailabilityList_extraBed = 0;
         int _getAvailabilityList_adults = 0;
         int _getAvailabilityList_roomNum = 0;
@@ -124,7 +124,7 @@ public final class AvailabilityQuerySoap_AvailabilityQuerySoap_Client {
         java.lang.String _getRateDetailSummary_hotelCode = "";
         java.lang.String _getRateDetailSummary_roomType = "";
         java.lang.String _getRateDetailSummary_rateCode = "";
-        javax.xml.datatype.XMLGregorianCalendar _getRateDetailSummary_date = null;
+        java.lang.String _getRateDetailSummary_date = null;
         com.medwin.landison.kms.availabilityservice.RateDetailSummary _getRateDetailSummary__return = port.getRateDetailSummary(_getRateDetailSummary_hotelCode, _getRateDetailSummary_roomType, _getRateDetailSummary_rateCode, _getRateDetailSummary_date);
         System.out.println("getRateDetailSummary.result=" + _getRateDetailSummary__return);
 
@@ -162,8 +162,8 @@ public final class AvailabilityQuerySoap_AvailabilityQuerySoap_Client {
         System.out.println("Invoking getAvailabilityListByCustom...");
         int _getAvailabilityListByCustom_minPrice = 0;
         int _getAvailabilityListByCustom_maxPrice = 0;
-        javax.xml.datatype.XMLGregorianCalendar _getAvailabilityListByCustom_arrival = null;
-        javax.xml.datatype.XMLGregorianCalendar _getAvailabilityListByCustom_departure = null;
+        java.lang.String _getAvailabilityListByCustom_arrival = null;
+        java.lang.String _getAvailabilityListByCustom_departure = null;
         int _getAvailabilityListByCustom_extraBed = 0;
         int _getAvailabilityListByCustom_adults = 0;
         int _getAvailabilityListByCustom_roomNum = 0;
@@ -201,8 +201,8 @@ public final class AvailabilityQuerySoap_AvailabilityQuerySoap_Client {
         }
         {
         System.out.println("Invoking newGetAvailabilityListByCustom...");
-        javax.xml.datatype.XMLGregorianCalendar _newGetAvailabilityListByCustom_arrival = null;
-        javax.xml.datatype.XMLGregorianCalendar _newGetAvailabilityListByCustom_departure = null;
+        java.lang.String _newGetAvailabilityListByCustom_arrival = null;
+        java.lang.String _newGetAvailabilityListByCustom_departure = null;
         int _newGetAvailabilityListByCustom_extraBed = 0;
         int _newGetAvailabilityListByCustom_adults = 0;
         int _newGetAvailabilityListByCustom_roomNum = 0;
@@ -237,8 +237,8 @@ public final class AvailabilityQuerySoap_AvailabilityQuerySoap_Client {
         System.out.println("Invoking getRateDetailDaily...");
         java.lang.String _getRateDetailDaily_hotelCode = "";
         java.lang.String _getRateDetailDaily_channelCode = "";
-        javax.xml.datatype.XMLGregorianCalendar _getRateDetailDaily_arrival = null;
-        javax.xml.datatype.XMLGregorianCalendar _getRateDetailDaily_departure = null;
+        java.lang.String _getRateDetailDaily_arrival = null;
+        java.lang.String _getRateDetailDaily_departure = null;
         int _getRateDetailDaily_rooms = 0;
         java.lang.String _getRateDetailDaily_rateCode = "";
         java.lang.String _getRateDetailDaily_roomType = "";
@@ -251,8 +251,8 @@ public final class AvailabilityQuerySoap_AvailabilityQuerySoap_Client {
         System.out.println("Invoking getAvailabilityHotels...");
         int _getAvailabilityHotels_minPrice = 0;
         int _getAvailabilityHotels_maxPrice = 0;
-        javax.xml.datatype.XMLGregorianCalendar _getAvailabilityHotels_arrival = null;
-        javax.xml.datatype.XMLGregorianCalendar _getAvailabilityHotels_departure = null;
+        java.lang.String _getAvailabilityHotels_arrival = null;
+        java.lang.String _getAvailabilityHotels_departure = null;
         int _getAvailabilityHotels_extraBed = 0;
         int _getAvailabilityHotels_adults = 0;
         int _getAvailabilityHotels_roomNum = 0;
@@ -284,8 +284,8 @@ public final class AvailabilityQuerySoap_AvailabilityQuerySoap_Client {
         System.out.println("Invoking getAvailabilityListPerPage...");
         int _getAvailabilityListPerPage_minPrice = 0;
         int _getAvailabilityListPerPage_maxPrice = 0;
-        javax.xml.datatype.XMLGregorianCalendar _getAvailabilityListPerPage_arrival = null;
-        javax.xml.datatype.XMLGregorianCalendar _getAvailabilityListPerPage_departure = null;
+        java.lang.String _getAvailabilityListPerPage_arrival = null;
+        java.lang.String _getAvailabilityListPerPage_departure = null;
         int _getAvailabilityListPerPage_extraBed = 0;
         int _getAvailabilityListPerPage_adults = 0;
         int _getAvailabilityListPerPage_roomNum = 0;
@@ -310,8 +310,8 @@ public final class AvailabilityQuerySoap_AvailabilityQuerySoap_Client {
         {
         System.out.println("Invoking getAvailabilityInventory...");
         java.lang.String _getAvailabilityInventory_hotelCode = "";
-        javax.xml.datatype.XMLGregorianCalendar _getAvailabilityInventory_arrival = null;
-        javax.xml.datatype.XMLGregorianCalendar _getAvailabilityInventory_departure = null;
+        java.lang.String _getAvailabilityInventory_arrival = null;
+        java.lang.String _getAvailabilityInventory_departure = null;
         java.lang.String _getAvailabilityInventory_channel = "";
         int _getAvailabilityInventory_roomNum = 0;
         com.medwin.landison.kms.availabilityservice.AvailabilityInventory _getAvailabilityInventory__return = port.getAvailabilityInventory(_getAvailabilityInventory_hotelCode, _getAvailabilityInventory_arrival, _getAvailabilityInventory_departure, _getAvailabilityInventory_channel, _getAvailabilityInventory_roomNum);
@@ -365,8 +365,8 @@ public final class AvailabilityQuerySoap_AvailabilityQuerySoap_Client {
         System.out.println("Invoking getDailyInventory...");
         java.lang.String _getDailyInventory_hotelCode = "";
         java.lang.String _getDailyInventory_channel = "";
-        javax.xml.datatype.XMLGregorianCalendar _getDailyInventory_dtBegin = null;
-        javax.xml.datatype.XMLGregorianCalendar _getDailyInventory_dtEnd = null;
+        java.lang.String _getDailyInventory_dtBegin = null;
+        java.lang.String _getDailyInventory_dtEnd = null;
         java.lang.String _getDailyInventory_roomType = "";
         com.medwin.landison.kms.availabilityservice.HotelDailyInventory _getDailyInventory__return = port.getDailyInventory(_getDailyInventory_hotelCode, _getDailyInventory_channel, _getDailyInventory_dtBegin, _getDailyInventory_dtEnd, _getDailyInventory_roomType);
         System.out.println("getDailyInventory.result=" + _getDailyInventory__return);

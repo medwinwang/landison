@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>ItemDailyInventoryInfo complex type的 Java 类。
+ * <p>ItemDailyInventoryInfo complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="ItemDailyInventoryInfo"&gt;
@@ -54,7 +54,7 @@ public class ItemDailyInventoryInfo {
     protected String hotelCode;
     @XmlElement(name = "Dt", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dt;
+    protected String dt;
     @XmlElement(name = "Quantity")
     protected int quantity;
     @XmlElement(name = "AvailableQuantity")
@@ -63,7 +63,7 @@ public class ItemDailyInventoryInfo {
     protected String limitInventory;
 
     /**
-     * 获取itemCode属性的值。
+     * 锟斤拷取itemCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -75,7 +75,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * 设置itemCode属性的值。
+     * 锟斤拷锟斤拷itemCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -87,7 +87,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * 获取itemName属性的值。
+     * 锟斤拷取itemName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -99,7 +99,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * 设置itemName属性的值。
+     * 锟斤拷锟斤拷itemName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -111,7 +111,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * 获取hotelCode属性的值。
+     * 锟斤拷取hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -123,7 +123,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * 设置hotelCode属性的值。
+     * 锟斤拷锟斤拷hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -135,31 +135,31 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * 获取dt属性的值。
+     * 锟斤拷取dt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDt() {
+    public String getDt() {
         return dt;
     }
 
     /**
-     * 设置dt属性的值。
+     * 锟斤拷锟斤拷dt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDt(XMLGregorianCalendar value) {
+    public void setDt(String value) {
         this.dt = value;
     }
 
     /**
-     * 获取quantity属性的值。
+     * 锟斤拷取quantity锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getQuantity() {
@@ -167,7 +167,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * 设置quantity属性的值。
+     * 锟斤拷锟斤拷quantity锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setQuantity(int value) {
@@ -175,7 +175,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * 获取availableQuantity属性的值。
+     * 锟斤拷取availableQuantity锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getAvailableQuantity() {
@@ -183,7 +183,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * 设置availableQuantity属性的值。
+     * 锟斤拷锟斤拷availableQuantity锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setAvailableQuantity(int value) {
@@ -191,7 +191,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * 获取limitInventory属性的值。
+     * 锟斤拷取limitInventory锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -203,7 +203,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * 设置limitInventory属性的值。
+     * 锟斤拷锟斤拷limitInventory锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

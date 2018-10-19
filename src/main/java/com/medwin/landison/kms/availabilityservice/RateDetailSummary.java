@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>RateDetailSummary complex type的 Java 类。
+ * <p>RateDetailSummary complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="RateDetailSummary"&gt;
@@ -96,10 +96,10 @@ public class RateDetailSummary {
     protected BigDecimal price;
     @XmlElement(name = "FromDt", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar fromDt;
+    protected String fromDt;
     @XmlElement(name = "ToDt", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar toDt;
+    protected String toDt;
     @XmlElement(name = "RoomNumbers")
     protected String roomNumbers;
     @XmlElement(name = "Prs1", required = true)
@@ -144,7 +144,7 @@ public class RateDetailSummary {
     protected ArrayOfPackage packages;
 
     /**
-     * 获取id属性的值。
+     * 锟斤拷取id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getId() {
@@ -152,7 +152,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置id属性的值。
+     * 锟斤拷锟斤拷id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setId(int value) {
@@ -160,7 +160,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取rate属性的值。
+     * 锟斤拷取rate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -172,7 +172,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置rate属性的值。
+     * 锟斤拷锟斤拷rate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -184,7 +184,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取roomType属性的值。
+     * 锟斤拷取roomType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -196,7 +196,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置roomType属性的值。
+     * 锟斤拷锟斤拷roomType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -208,7 +208,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取price属性的值。
+     * 锟斤拷取price锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -220,7 +220,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置price属性的值。
+     * 锟斤拷锟斤拷price锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -232,55 +232,55 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取fromDt属性的值。
+     * 锟斤拷取fromDt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getFromDt() {
+    public String getFromDt() {
         return fromDt;
     }
 
     /**
-     * 设置fromDt属性的值。
+     * 锟斤拷锟斤拷fromDt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setFromDt(XMLGregorianCalendar value) {
+    public void setFromDt(String value) {
         this.fromDt = value;
     }
 
     /**
-     * 获取toDt属性的值。
+     * 锟斤拷取toDt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getToDt() {
+    public String getToDt() {
         return toDt;
     }
 
     /**
-     * 设置toDt属性的值。
+     * 锟斤拷锟斤拷toDt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setToDt(XMLGregorianCalendar value) {
+    public void setToDt(String value) {
         this.toDt = value;
     }
 
     /**
-     * 获取roomNumbers属性的值。
+     * 锟斤拷取roomNumbers锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -292,7 +292,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置roomNumbers属性的值。
+     * 锟斤拷锟斤拷roomNumbers锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -304,7 +304,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取prs1属性的值。
+     * 锟斤拷取prs1锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -316,7 +316,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置prs1属性的值。
+     * 锟斤拷锟斤拷prs1锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -328,7 +328,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取prs2属性的值。
+     * 锟斤拷取prs2锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -340,7 +340,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置prs2属性的值。
+     * 锟斤拷锟斤拷prs2锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -352,7 +352,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取prs3属性的值。
+     * 锟斤拷取prs3锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -364,7 +364,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置prs3属性的值。
+     * 锟斤拷锟斤拷prs3锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -376,7 +376,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取prs4属性的值。
+     * 锟斤拷取prs4锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -388,7 +388,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置prs4属性的值。
+     * 锟斤拷锟斤拷prs4锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -400,7 +400,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取prs5属性的值。
+     * 锟斤拷取prs5锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -412,7 +412,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置prs5属性的值。
+     * 锟斤拷锟斤拷prs5锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -424,7 +424,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取wprs1属性的值。
+     * 锟斤拷取wprs1锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -436,7 +436,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置wprs1属性的值。
+     * 锟斤拷锟斤拷wprs1锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -448,7 +448,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取wprs2属性的值。
+     * 锟斤拷取wprs2锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -460,7 +460,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置wprs2属性的值。
+     * 锟斤拷锟斤拷wprs2锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -472,7 +472,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取wprs3属性的值。
+     * 锟斤拷取wprs3锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -484,7 +484,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置wprs3属性的值。
+     * 锟斤拷锟斤拷wprs3锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -496,7 +496,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取wprs4属性的值。
+     * 锟斤拷取wprs4锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -508,7 +508,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置wprs4属性的值。
+     * 锟斤拷锟斤拷wprs4锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -520,7 +520,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取wprs5属性的值。
+     * 锟斤拷取wprs5锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -532,7 +532,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置wprs5属性的值。
+     * 锟斤拷锟斤拷wprs5锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -544,7 +544,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取extraBed属性的值。
+     * 锟斤拷取extraBed锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -556,7 +556,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置extraBed属性的值。
+     * 锟斤拷锟斤拷extraBed锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -568,7 +568,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取wextraBed属性的值。
+     * 锟斤拷取wextraBed锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -580,7 +580,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置wextraBed属性的值。
+     * 锟斤拷锟斤拷wextraBed锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -592,7 +592,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取child属性的值。
+     * 锟斤拷取child锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -604,7 +604,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置child属性的值。
+     * 锟斤拷锟斤拷child锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -616,7 +616,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取wchild属性的值。
+     * 锟斤拷取wchild锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -628,7 +628,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置wchild属性的值。
+     * 锟斤拷锟斤拷wchild锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -640,7 +640,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取name属性的值。
+     * 锟斤拷取name锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -652,7 +652,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置name属性的值。
+     * 锟斤拷锟斤拷name锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -664,7 +664,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取memo属性的值。
+     * 锟斤拷取memo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -676,7 +676,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置memo属性的值。
+     * 锟斤拷锟斤拷memo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -688,7 +688,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取hotel属性的值。
+     * 锟斤拷取hotel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -700,7 +700,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置hotel属性的值。
+     * 锟斤拷锟斤拷hotel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -712,7 +712,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取weekControl属性的值。
+     * 锟斤拷取weekControl锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -724,7 +724,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置weekControl属性的值。
+     * 锟斤拷锟斤拷weekControl锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -736,7 +736,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取sumPrice属性的值。
+     * 锟斤拷取sumPrice锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getSumPrice() {
@@ -744,7 +744,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置sumPrice属性的值。
+     * 锟斤拷锟斤拷sumPrice锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setSumPrice(int value) {
@@ -752,7 +752,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 获取packages属性的值。
+     * 锟斤拷取packages锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -764,7 +764,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * 设置packages属性的值。
+     * 锟斤拷锟斤拷packages锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

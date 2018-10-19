@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>CheckItemIsEnoughOut complex type的 Java 类。
+ * <p>CheckItemIsEnoughOut complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="CheckItemIsEnoughOut"&gt;
@@ -44,14 +44,14 @@ public class CheckItemIsEnoughOut {
     protected String itemCode;
     @XmlElement(name = "Dt", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dt;
+    protected String dt;
     @XmlElement(name = "OverstepQuantity")
     protected String overstepQuantity;
     @XmlElement(name = "LimitInventory")
     protected String limitInventory;
 
     /**
-     * 获取itemCode属性的值。
+     * 锟斤拷取itemCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -63,7 +63,7 @@ public class CheckItemIsEnoughOut {
     }
 
     /**
-     * 设置itemCode属性的值。
+     * 锟斤拷锟斤拷itemCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -75,31 +75,31 @@ public class CheckItemIsEnoughOut {
     }
 
     /**
-     * 获取dt属性的值。
+     * 锟斤拷取dt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDt() {
+    public String getDt() {
         return dt;
     }
 
     /**
-     * 设置dt属性的值。
+     * 锟斤拷锟斤拷dt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDt(XMLGregorianCalendar value) {
+    public void setDt(String value) {
         this.dt = value;
     }
 
     /**
-     * 获取overstepQuantity属性的值。
+     * 锟斤拷取overstepQuantity锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -111,7 +111,7 @@ public class CheckItemIsEnoughOut {
     }
 
     /**
-     * 设置overstepQuantity属性的值。
+     * 锟斤拷锟斤拷overstepQuantity锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -123,7 +123,7 @@ public class CheckItemIsEnoughOut {
     }
 
     /**
-     * 获取limitInventory属性的值。
+     * 锟斤拷取limitInventory锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -135,7 +135,7 @@ public class CheckItemIsEnoughOut {
     }
 
     /**
-     * 设置limitInventory属性的值。
+     * 锟斤拷锟斤拷limitInventory锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

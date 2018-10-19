@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>GetAvailabilityPackageIn complex typeµÄ Java Àà¡£
+ * <p>GetAvailabilityPackageIn complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½İ¡ï¿½
  * 
  * <pre>
  * &lt;complexType name="GetAvailabilityPackageIn"&gt;
@@ -50,10 +50,10 @@ public class GetAvailabilityPackageIn {
 
     @XmlElement(name = "Arrival", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrival;
+    protected String arrival;
     @XmlElement(name = "Departure", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departure;
+    protected String departure;
     @XmlElement(name = "RateCode")
     protected String rateCode;
     @XmlElement(name = "RoomTypeCode")
@@ -68,55 +68,55 @@ public class GetAvailabilityPackageIn {
     protected int rooms;
 
     /**
-     * »ñÈ¡arrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
-     * ÉèÖÃarrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setArrival(XMLGregorianCalendar value) {
+    public void setArrival(String value) {
         this.arrival = value;
     }
 
     /**
-     * »ñÈ¡departureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
-     * ÉèÖÃdepartureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDeparture(XMLGregorianCalendar value) {
+    public void setDeparture(String value) {
         this.departure = value;
     }
 
     /**
-     * »ñÈ¡rateCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡rateCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -128,7 +128,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ÉèÖÃrateCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½rateCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -140,7 +140,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * »ñÈ¡roomTypeCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡roomTypeCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -152,7 +152,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ÉèÖÃroomTypeCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½roomTypeCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -164,7 +164,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * »ñÈ¡hotelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -176,7 +176,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -188,7 +188,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * »ñÈ¡adultÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡adultï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getAdult() {
@@ -196,7 +196,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ÉèÖÃadultÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½adultï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setAdult(int value) {
@@ -204,7 +204,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * »ñÈ¡childrenÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡childrenï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getChildren() {
@@ -212,7 +212,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ÉèÖÃchildrenÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½childrenï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setChildren(int value) {
@@ -220,7 +220,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * »ñÈ¡roomsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡roomsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getRooms() {
@@ -228,7 +228,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ÉèÖÃroomsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½roomsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setRooms(int value) {

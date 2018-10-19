@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>GetRateRestrictionsOut complex type的 Java 类。
+ * <p>GetRateRestrictionsOut complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="GetRateRestrictionsOut"&gt;
@@ -64,10 +64,10 @@ public class GetRateRestrictionsOut {
     protected String channel;
     @XmlElement(name = "BeginDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginDate;
+    protected String beginDate;
     @XmlElement(name = "EndDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endDate;
+    protected String endDate;
     @XmlElement(name = "RestrictionType")
     protected String restrictionType;
     @XmlElement(name = "RestrictionValue")
@@ -88,7 +88,7 @@ public class GetRateRestrictionsOut {
     protected String los;
 
     /**
-     * 获取hotelCode属性的值。
+     * 锟斤拷取hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -100,7 +100,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 设置hotelCode属性的值。
+     * 锟斤拷锟斤拷hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -112,7 +112,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 获取channel属性的值。
+     * 锟斤拷取channel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -124,7 +124,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 设置channel属性的值。
+     * 锟斤拷锟斤拷channel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -136,55 +136,55 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 获取beginDate属性的值。
+     * 锟斤拷取beginDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginDate() {
+    public String getBeginDate() {
         return beginDate;
     }
 
     /**
-     * 设置beginDate属性的值。
+     * 锟斤拷锟斤拷beginDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginDate(XMLGregorianCalendar value) {
+    public void setBeginDate(String value) {
         this.beginDate = value;
     }
 
     /**
-     * 获取endDate属性的值。
+     * 锟斤拷取endDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
     /**
-     * 设置endDate属性的值。
+     * 锟斤拷锟斤拷endDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndDate(XMLGregorianCalendar value) {
+    public void setEndDate(String value) {
         this.endDate = value;
     }
 
     /**
-     * 获取restrictionType属性的值。
+     * 锟斤拷取restrictionType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -196,7 +196,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 设置restrictionType属性的值。
+     * 锟斤拷锟斤拷restrictionType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -208,7 +208,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 获取restrictionValue属性的值。
+     * 锟斤拷取restrictionValue锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getRestrictionValue() {
@@ -216,7 +216,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 设置restrictionValue属性的值。
+     * 锟斤拷锟斤拷restrictionValue锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setRestrictionValue(int value) {
@@ -224,7 +224,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 获取dow属性的值。
+     * 锟斤拷取dow锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -236,7 +236,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 设置dow属性的值。
+     * 锟斤拷锟斤拷dow锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -248,7 +248,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 获取houseLevel属性的值。
+     * 锟斤拷取houseLevel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -260,7 +260,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 设置houseLevel属性的值。
+     * 锟斤拷锟斤拷houseLevel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -272,7 +272,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 获取roomTypeCode属性的值。
+     * 锟斤拷取roomTypeCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -284,7 +284,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 设置roomTypeCode属性的值。
+     * 锟斤拷锟斤拷roomTypeCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -296,7 +296,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 获取rateCode属性的值。
+     * 锟斤拷取rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -308,7 +308,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 设置rateCode属性的值。
+     * 锟斤拷锟斤拷rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -320,7 +320,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 获取rateCate属性的值。
+     * 锟斤拷取rateCate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -332,7 +332,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 设置rateCate属性的值。
+     * 锟斤拷锟斤拷rateCate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -344,7 +344,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 获取roomClass属性的值。
+     * 锟斤拷取roomClass锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -356,7 +356,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 设置roomClass属性的值。
+     * 锟斤拷锟斤拷roomClass锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -368,7 +368,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 获取los属性的值。
+     * 锟斤拷取los锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -380,7 +380,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * 设置los属性的值。
+     * 锟斤拷锟斤拷los锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

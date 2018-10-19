@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½İ¡ï¿½
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -54,10 +54,10 @@ public class GetRateDetailDaily {
     protected String channelCode;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrival;
+    protected String arrival;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departure;
+    protected String departure;
     protected int rooms;
     @XmlElement(name = "rate_code")
     protected String rateCode;
@@ -65,7 +65,7 @@ public class GetRateDetailDaily {
     protected String roomType;
 
     /**
-     * »ñÈ¡hotelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -77,7 +77,7 @@ public class GetRateDetailDaily {
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -89,7 +89,7 @@ public class GetRateDetailDaily {
     }
 
     /**
-     * »ñÈ¡channelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡channelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -101,7 +101,7 @@ public class GetRateDetailDaily {
     }
 
     /**
-     * ÉèÖÃchannelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½channelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -113,55 +113,55 @@ public class GetRateDetailDaily {
     }
 
     /**
-     * »ñÈ¡arrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
-     * ÉèÖÃarrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setArrival(XMLGregorianCalendar value) {
+    public void setArrival(String value) {
         this.arrival = value;
     }
 
     /**
-     * »ñÈ¡departureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
-     * ÉèÖÃdepartureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDeparture(XMLGregorianCalendar value) {
+    public void setDeparture(String value) {
         this.departure = value;
     }
 
     /**
-     * »ñÈ¡roomsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡roomsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getRooms() {
@@ -169,7 +169,7 @@ public class GetRateDetailDaily {
     }
 
     /**
-     * ÉèÖÃroomsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½roomsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setRooms(int value) {
@@ -177,7 +177,7 @@ public class GetRateDetailDaily {
     }
 
     /**
-     * »ñÈ¡rateCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡rateCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -189,7 +189,7 @@ public class GetRateDetailDaily {
     }
 
     /**
-     * ÉèÖÃrateCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½rateCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -201,7 +201,7 @@ public class GetRateDetailDaily {
     }
 
     /**
-     * »ñÈ¡roomTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡roomTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -213,7 +213,7 @@ public class GetRateDetailDaily {
     }
 
     /**
-     * ÉèÖÃroomTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½roomTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is

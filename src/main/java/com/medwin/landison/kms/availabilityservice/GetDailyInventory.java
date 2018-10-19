@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>anonymous complex type的 Java 类。
+ * <p>anonymous complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -49,15 +49,15 @@ public class GetDailyInventory {
     protected String channel;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dtBegin;
+    protected String dtBegin;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dtEnd;
+    protected String dtEnd;
     @XmlElement(name = "room_type")
     protected String roomType;
 
     /**
-     * 获取hotelCode属性的值。
+     * 锟斤拷取hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -69,7 +69,7 @@ public class GetDailyInventory {
     }
 
     /**
-     * 设置hotelCode属性的值。
+     * 锟斤拷锟斤拷hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -81,7 +81,7 @@ public class GetDailyInventory {
     }
 
     /**
-     * 获取channel属性的值。
+     * 锟斤拷取channel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -93,7 +93,7 @@ public class GetDailyInventory {
     }
 
     /**
-     * 设置channel属性的值。
+     * 锟斤拷锟斤拷channel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -105,55 +105,55 @@ public class GetDailyInventory {
     }
 
     /**
-     * 获取dtBegin属性的值。
+     * 锟斤拷取dtBegin锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDtBegin() {
+    public String getDtBegin() {
         return dtBegin;
     }
 
     /**
-     * 设置dtBegin属性的值。
+     * 锟斤拷锟斤拷dtBegin锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDtBegin(XMLGregorianCalendar value) {
+    public void setDtBegin(String value) {
         this.dtBegin = value;
     }
 
     /**
-     * 获取dtEnd属性的值。
+     * 锟斤拷取dtEnd锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDtEnd() {
+    public String getDtEnd() {
         return dtEnd;
     }
 
     /**
-     * 设置dtEnd属性的值。
+     * 锟斤拷锟斤拷dtEnd锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDtEnd(XMLGregorianCalendar value) {
+    public void setDtEnd(String value) {
         this.dtEnd = value;
     }
 
     /**
-     * 获取roomType属性的值。
+     * 锟斤拷取roomType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -165,7 +165,7 @@ public class GetDailyInventory {
     }
 
     /**
-     * 设置roomType属性的值。
+     * 锟斤拷锟斤拷roomType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

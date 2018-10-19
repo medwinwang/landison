@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½İ¡ï¿½
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -48,16 +48,16 @@ public class GetAvailabilityInventory {
     protected String hotelCode;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrival;
+    protected String arrival;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departure;
+    protected String departure;
     protected String channel;
     @XmlElement(name = "room_num")
     protected int roomNum;
 
     /**
-     * »ñÈ¡hotelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -69,7 +69,7 @@ public class GetAvailabilityInventory {
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -81,55 +81,55 @@ public class GetAvailabilityInventory {
     }
 
     /**
-     * »ñÈ¡arrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
-     * ÉèÖÃarrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setArrival(XMLGregorianCalendar value) {
+    public void setArrival(String value) {
         this.arrival = value;
     }
 
     /**
-     * »ñÈ¡departureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
-     * ÉèÖÃdepartureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDeparture(XMLGregorianCalendar value) {
+    public void setDeparture(String value) {
         this.departure = value;
     }
 
     /**
-     * »ñÈ¡channelÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡channelï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -141,7 +141,7 @@ public class GetAvailabilityInventory {
     }
 
     /**
-     * ÉèÖÃchannelÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½channelï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -153,7 +153,7 @@ public class GetAvailabilityInventory {
     }
 
     /**
-     * »ñÈ¡roomNumÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡roomNumï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getRoomNum() {
@@ -161,7 +161,7 @@ public class GetAvailabilityInventory {
     }
 
     /**
-     * ÉèÖÃroomNumÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½roomNumï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setRoomNum(int value) {

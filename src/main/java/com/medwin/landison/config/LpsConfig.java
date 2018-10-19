@@ -31,6 +31,8 @@ public class LpsConfig {
 
     private Register register;
 
+    private String channel;
+
     @Data
     public static class Register{
 

@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>RateDetailDaily complex type的 Java 类。
+ * <p>RateDetailDaily complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="RateDetailDaily"&gt;
@@ -85,7 +85,7 @@ public class RateDetailDaily {
     protected int status;
     @XmlElement(name = "InHouseDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar inHouseDate;
+    protected String inHouseDate;
     @XmlElement(required = true)
     protected BigDecimal price;
     @XmlElement(name = "prs_1", required = true)
@@ -119,7 +119,7 @@ public class RateDetailDaily {
     protected ArrayOfPackage packages;
 
     /**
-     * 获取rateCode属性的值。
+     * 锟斤拷取rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -131,7 +131,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置rateCode属性的值。
+     * 锟斤拷锟斤拷rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -143,7 +143,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取resvCouponCode属性的值。
+     * 锟斤拷取resvCouponCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -155,7 +155,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置resvCouponCode属性的值。
+     * 锟斤拷锟斤拷resvCouponCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -167,7 +167,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取resvPoints属性的值。
+     * 锟斤拷取resvPoints锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -179,7 +179,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置resvPoints属性的值。
+     * 锟斤拷锟斤拷resvPoints锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -191,7 +191,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取status属性的值。
+     * 锟斤拷取status锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getStatus() {
@@ -199,7 +199,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置status属性的值。
+     * 锟斤拷锟斤拷status锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setStatus(int value) {
@@ -207,31 +207,31 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取inHouseDate属性的值。
+     * 锟斤拷取inHouseDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getInHouseDate() {
+    public String getInHouseDate() {
         return inHouseDate;
     }
 
     /**
-     * 设置inHouseDate属性的值。
+     * 锟斤拷锟斤拷inHouseDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setInHouseDate(XMLGregorianCalendar value) {
+    public void setInHouseDate(String value) {
         this.inHouseDate = value;
     }
 
     /**
-     * 获取price属性的值。
+     * 锟斤拷取price锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -243,7 +243,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置price属性的值。
+     * 锟斤拷锟斤拷price锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -255,7 +255,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取prs1属性的值。
+     * 锟斤拷取prs1锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -267,7 +267,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置prs1属性的值。
+     * 锟斤拷锟斤拷prs1锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -279,7 +279,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取prs2属性的值。
+     * 锟斤拷取prs2锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -291,7 +291,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置prs2属性的值。
+     * 锟斤拷锟斤拷prs2锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -303,7 +303,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取prs3属性的值。
+     * 锟斤拷取prs3锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -315,7 +315,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置prs3属性的值。
+     * 锟斤拷锟斤拷prs3锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -327,7 +327,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取prs4属性的值。
+     * 锟斤拷取prs4锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -339,7 +339,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置prs4属性的值。
+     * 锟斤拷锟斤拷prs4锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -351,7 +351,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取prs5属性的值。
+     * 锟斤拷取prs5锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -363,7 +363,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置prs5属性的值。
+     * 锟斤拷锟斤拷prs5锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -375,7 +375,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取isWeekend属性的值。
+     * 锟斤拷取isWeekend锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getIsWeekend() {
@@ -383,7 +383,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置isWeekend属性的值。
+     * 锟斤拷锟斤拷isWeekend锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setIsWeekend(int value) {
@@ -391,7 +391,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取extraBed属性的值。
+     * 锟斤拷取extraBed锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -403,7 +403,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置extraBed属性的值。
+     * 锟斤拷锟斤拷extraBed锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -415,7 +415,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取child属性的值。
+     * 锟斤拷取child锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -427,7 +427,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置child属性的值。
+     * 锟斤拷锟斤拷child锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -439,7 +439,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取tax属性的值。
+     * 锟斤拷取tax锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -451,7 +451,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置tax属性的值。
+     * 锟斤拷锟斤拷tax锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -463,7 +463,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取taxFlag属性的值。
+     * 锟斤拷取taxFlag锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -475,7 +475,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置taxFlag属性的值。
+     * 锟斤拷锟斤拷taxFlag锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -487,7 +487,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取serviceCharge属性的值。
+     * 锟斤拷取serviceCharge锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -499,7 +499,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置serviceCharge属性的值。
+     * 锟斤拷锟斤拷serviceCharge锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -511,7 +511,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取serviceChargeFlag属性的值。
+     * 锟斤拷取serviceChargeFlag锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -523,7 +523,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置serviceChargeFlag属性的值。
+     * 锟斤拷锟斤拷serviceChargeFlag锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -535,7 +535,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取des属性的值。
+     * 锟斤拷取des锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -547,7 +547,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置des属性的值。
+     * 锟斤拷锟斤拷des锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -559,7 +559,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取availableRooms属性的值。
+     * 锟斤拷取availableRooms锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getAvailableRooms() {
@@ -567,7 +567,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置availableRooms属性的值。
+     * 锟斤拷锟斤拷availableRooms锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setAvailableRooms(int value) {
@@ -575,7 +575,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 获取packages属性的值。
+     * 锟斤拷取packages锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -587,7 +587,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * 设置packages属性的值。
+     * 锟斤拷锟斤拷packages锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

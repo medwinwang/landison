@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>anonymous complex type的 Java 类。
+ * <p>anonymous complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -76,10 +76,10 @@ public class GetAvailabilityHotels {
     protected int maxPrice;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrival;
+    protected String arrival;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departure;
+    protected String departure;
     @XmlElement(name = "extra_bed")
     protected int extraBed;
     protected int adults;
@@ -101,7 +101,7 @@ public class GetAvailabilityHotels {
     protected String starCode;
 
     /**
-     * 获取minPrice属性的值。
+     * 锟斤拷取minPrice锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getMinPrice() {
@@ -109,7 +109,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置minPrice属性的值。
+     * 锟斤拷锟斤拷minPrice锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setMinPrice(int value) {
@@ -117,7 +117,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取maxPrice属性的值。
+     * 锟斤拷取maxPrice锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getMaxPrice() {
@@ -125,7 +125,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置maxPrice属性的值。
+     * 锟斤拷锟斤拷maxPrice锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setMaxPrice(int value) {
@@ -133,55 +133,55 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取arrival属性的值。
+     * 锟斤拷取arrival锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
-     * 设置arrival属性的值。
+     * 锟斤拷锟斤拷arrival锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setArrival(XMLGregorianCalendar value) {
+    public void setArrival(String value) {
         this.arrival = value;
     }
 
     /**
-     * 获取departure属性的值。
+     * 锟斤拷取departure锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
-     * 设置departure属性的值。
+     * 锟斤拷锟斤拷departure锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDeparture(XMLGregorianCalendar value) {
+    public void setDeparture(String value) {
         this.departure = value;
     }
 
     /**
-     * 获取extraBed属性的值。
+     * 锟斤拷取extraBed锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getExtraBed() {
@@ -189,7 +189,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置extraBed属性的值。
+     * 锟斤拷锟斤拷extraBed锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setExtraBed(int value) {
@@ -197,7 +197,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取adults属性的值。
+     * 锟斤拷取adults锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getAdults() {
@@ -205,7 +205,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置adults属性的值。
+     * 锟斤拷锟斤拷adults锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setAdults(int value) {
@@ -213,7 +213,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取roomNum属性的值。
+     * 锟斤拷取roomNum锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getRoomNum() {
@@ -221,7 +221,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置roomNum属性的值。
+     * 锟斤拷锟斤拷roomNum锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setRoomNum(int value) {
@@ -229,7 +229,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取guesttypeCode属性的值。
+     * 锟斤拷取guesttypeCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -241,7 +241,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置guesttypeCode属性的值。
+     * 锟斤拷锟斤拷guesttypeCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -253,7 +253,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取custAccount属性的值。
+     * 锟斤拷取custAccount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -265,7 +265,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置custAccount属性的值。
+     * 锟斤拷锟斤拷custAccount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -277,7 +277,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取cardNo属性的值。
+     * 锟斤拷取cardNo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -289,7 +289,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置cardNo属性的值。
+     * 锟斤拷锟斤拷cardNo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -301,7 +301,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取children属性的值。
+     * 锟斤拷取children锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getChildren() {
@@ -309,7 +309,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置children属性的值。
+     * 锟斤拷锟斤拷children锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setChildren(int value) {
@@ -317,7 +317,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取channel属性的值。
+     * 锟斤拷取channel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -329,7 +329,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置channel属性的值。
+     * 锟斤拷锟斤拷channel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -341,7 +341,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取groupCode属性的值。
+     * 锟斤拷取groupCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -353,7 +353,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置groupCode属性的值。
+     * 锟斤拷锟斤拷groupCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -365,7 +365,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取countryCode属性的值。
+     * 锟斤拷取countryCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -377,7 +377,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置countryCode属性的值。
+     * 锟斤拷锟斤拷countryCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -389,7 +389,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取cityCode属性的值。
+     * 锟斤拷取cityCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -401,7 +401,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置cityCode属性的值。
+     * 锟斤拷锟斤拷cityCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -413,7 +413,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取tag属性的值。
+     * 锟斤拷取tag锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -425,7 +425,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置tag属性的值。
+     * 锟斤拷锟斤拷tag锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -437,7 +437,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取hotelName属性的值。
+     * 锟斤拷取hotelName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -449,7 +449,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置hotelName属性的值。
+     * 锟斤拷锟斤拷hotelName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -461,7 +461,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 获取starCode属性的值。
+     * 锟斤拷取starCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -473,7 +473,7 @@ public class GetAvailabilityHotels {
     }
 
     /**
-     * 设置starCode属性的值。
+     * 锟斤拷锟斤拷starCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

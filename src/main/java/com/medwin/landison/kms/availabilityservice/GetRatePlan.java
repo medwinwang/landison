@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>anonymous complex type的 Java 类。
+ * <p>anonymous complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -52,13 +52,13 @@ public class GetRatePlan {
     protected String rateCode;
     @XmlElement(name = "begin_date", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginDate;
+    protected String beginDate;
     @XmlElement(name = "end_date", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endDate;
+    protected String endDate;
 
     /**
-     * 获取hotelCode属性的值。
+     * 锟斤拷取hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -70,7 +70,7 @@ public class GetRatePlan {
     }
 
     /**
-     * 设置hotelCode属性的值。
+     * 锟斤拷锟斤拷hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -82,7 +82,7 @@ public class GetRatePlan {
     }
 
     /**
-     * 获取roomType属性的值。
+     * 锟斤拷取roomType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -94,7 +94,7 @@ public class GetRatePlan {
     }
 
     /**
-     * 设置roomType属性的值。
+     * 锟斤拷锟斤拷roomType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -106,7 +106,7 @@ public class GetRatePlan {
     }
 
     /**
-     * 获取rateCode属性的值。
+     * 锟斤拷取rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -118,7 +118,7 @@ public class GetRatePlan {
     }
 
     /**
-     * 设置rateCode属性的值。
+     * 锟斤拷锟斤拷rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -130,50 +130,50 @@ public class GetRatePlan {
     }
 
     /**
-     * 获取beginDate属性的值。
+     * 锟斤拷取beginDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginDate() {
+    public String getBeginDate() {
         return beginDate;
     }
 
     /**
-     * 设置beginDate属性的值。
+     * 锟斤拷锟斤拷beginDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginDate(XMLGregorianCalendar value) {
+    public void setBeginDate(String value) {
         this.beginDate = value;
     }
 
     /**
-     * 获取endDate属性的值。
+     * 锟斤拷取endDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
     /**
-     * 设置endDate属性的值。
+     * 锟斤拷锟斤拷endDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndDate(XMLGregorianCalendar value) {
+    public void setEndDate(String value) {
         this.endDate = value;
     }
 

@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>CalculationSeparateSoldPackageIn complex typeµÄ Java Àà¡£
+ * <p>CalculationSeparateSoldPackageIn complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½İ¡ï¿½
  * 
  * <pre>
  * &lt;complexType name="CalculationSeparateSoldPackageIn"&gt;
@@ -58,10 +58,10 @@ public class CalculationSeparateSoldPackageIn {
     protected int quantity;
     @XmlElement(name = "Arrival", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrival;
+    protected String arrival;
     @XmlElement(name = "Departure", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departure;
+    protected String departure;
     @XmlElement(name = "Adults")
     protected int adults;
     @XmlElement(name = "Children")
@@ -72,13 +72,13 @@ public class CalculationSeparateSoldPackageIn {
     protected String hotelCode;
     @XmlElement(name = "BeginDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginDate;
+    protected String beginDate;
     @XmlElement(name = "EndDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endDate;
+    protected String endDate;
 
     /**
-     * »ñÈ¡packageCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡packageCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -90,7 +90,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ÉèÖÃpackageCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½packageCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -102,7 +102,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * »ñÈ¡quantityÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡quantityï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getQuantity() {
@@ -110,7 +110,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ÉèÖÃquantityÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½quantityï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setQuantity(int value) {
@@ -118,55 +118,55 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * »ñÈ¡arrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
-     * ÉèÖÃarrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setArrival(XMLGregorianCalendar value) {
+    public void setArrival(String value) {
         this.arrival = value;
     }
 
     /**
-     * »ñÈ¡departureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
-     * ÉèÖÃdepartureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDeparture(XMLGregorianCalendar value) {
+    public void setDeparture(String value) {
         this.departure = value;
     }
 
     /**
-     * »ñÈ¡adultsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡adultsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getAdults() {
@@ -174,7 +174,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ÉèÖÃadultsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½adultsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setAdults(int value) {
@@ -182,7 +182,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * »ñÈ¡childrenÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡childrenï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getChildren() {
@@ -190,7 +190,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ÉèÖÃchildrenÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½childrenï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setChildren(int value) {
@@ -198,7 +198,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * »ñÈ¡roomsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡roomsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getRooms() {
@@ -206,7 +206,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ÉèÖÃroomsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½roomsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setRooms(int value) {
@@ -214,7 +214,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * »ñÈ¡hotelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -226,7 +226,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -238,50 +238,50 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * »ñÈ¡beginDateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡beginDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginDate() {
+    public String getBeginDate() {
         return beginDate;
     }
 
     /**
-     * ÉèÖÃbeginDateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½beginDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginDate(XMLGregorianCalendar value) {
+    public void setBeginDate(String value) {
         this.beginDate = value;
     }
 
     /**
-     * »ñÈ¡endDateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡endDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
     /**
-     * ÉèÖÃendDateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½endDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndDate(XMLGregorianCalendar value) {
+    public void setEndDate(String value) {
         this.endDate = value;
     }
 

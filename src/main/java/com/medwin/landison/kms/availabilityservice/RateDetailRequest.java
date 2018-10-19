@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>RateDetailRequest complex type的 Java 类。
+ * <p>RateDetailRequest complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="RateDetailRequest"&gt;
@@ -68,10 +68,10 @@ public class RateDetailRequest {
     protected String channel;
     @XmlElement(name = "Arrival", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrival;
+    protected String arrival;
     @XmlElement(name = "Departure", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departure;
+    protected String departure;
     @XmlElement(name = "Rate_code")
     protected String rateCode;
     @XmlElement(name = "Roomtype_code")
@@ -97,7 +97,7 @@ public class RateDetailRequest {
     protected String isAllPrices;
 
     /**
-     * 获取hotelCode属性的值。
+     * 锟斤拷取hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -109,7 +109,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置hotelCode属性的值。
+     * 锟斤拷锟斤拷hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -121,7 +121,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 获取channel属性的值。
+     * 锟斤拷取channel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -133,7 +133,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置channel属性的值。
+     * 锟斤拷锟斤拷channel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -145,55 +145,55 @@ public class RateDetailRequest {
     }
 
     /**
-     * 获取arrival属性的值。
+     * 锟斤拷取arrival锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
-     * 设置arrival属性的值。
+     * 锟斤拷锟斤拷arrival锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setArrival(XMLGregorianCalendar value) {
+    public void setArrival(String value) {
         this.arrival = value;
     }
 
     /**
-     * 获取departure属性的值。
+     * 锟斤拷取departure锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
-     * 设置departure属性的值。
+     * 锟斤拷锟斤拷departure锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDeparture(XMLGregorianCalendar value) {
+    public void setDeparture(String value) {
         this.departure = value;
     }
 
     /**
-     * 获取rateCode属性的值。
+     * 锟斤拷取rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -205,7 +205,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置rateCode属性的值。
+     * 锟斤拷锟斤拷rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -217,7 +217,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 获取roomtypeCode属性的值。
+     * 锟斤拷取roomtypeCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -229,7 +229,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置roomtypeCode属性的值。
+     * 锟斤拷锟斤拷roomtypeCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -241,7 +241,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 获取cardNo属性的值。
+     * 锟斤拷取cardNo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -253,7 +253,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置cardNo属性的值。
+     * 锟斤拷锟斤拷cardNo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -265,7 +265,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 获取cardType属性的值。
+     * 锟斤拷取cardType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -277,7 +277,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置cardType属性的值。
+     * 锟斤拷锟斤拷cardType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -289,7 +289,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 获取cardLevel属性的值。
+     * 锟斤拷取cardLevel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -301,7 +301,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置cardLevel属性的值。
+     * 锟斤拷锟斤拷cardLevel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -313,7 +313,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 获取account属性的值。
+     * 锟斤拷取account锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -325,7 +325,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置account属性的值。
+     * 锟斤拷锟斤拷account锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -337,7 +337,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 获取barType属性的值。
+     * 锟斤拷取barType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -349,7 +349,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置barType属性的值。
+     * 锟斤拷锟斤拷barType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -361,7 +361,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 获取roomNum属性的值。
+     * 锟斤拷取roomNum锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getRoomNum() {
@@ -369,7 +369,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置roomNum属性的值。
+     * 锟斤拷锟斤拷roomNum锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setRoomNum(int value) {
@@ -377,7 +377,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 获取groupType属性的值。
+     * 锟斤拷取groupType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -389,7 +389,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置groupType属性的值。
+     * 锟斤拷锟斤拷groupType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -401,7 +401,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 获取adults属性的值。
+     * 锟斤拷取adults锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getAdults() {
@@ -409,7 +409,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置adults属性的值。
+     * 锟斤拷锟斤拷adults锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setAdults(int value) {
@@ -417,7 +417,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 获取isAllPrices属性的值。
+     * 锟斤拷取isAllPrices锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -429,7 +429,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * 设置isAllPrices属性的值。
+     * 锟斤拷锟斤拷isAllPrices锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

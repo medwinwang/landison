@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½İ¡ï¿½
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -58,10 +58,10 @@ public class NewGetAvailabilityListByCustom {
 
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrival;
+    protected String arrival;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departure;
+    protected String departure;
     @XmlElement(name = "extra_bed")
     protected int extraBed;
     protected int adults;
@@ -78,55 +78,55 @@ public class NewGetAvailabilityListByCustom {
     protected ArrayOfString hotelArr;
 
     /**
-     * »ñÈ¡arrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
-     * ÉèÖÃarrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setArrival(XMLGregorianCalendar value) {
+    public void setArrival(String value) {
         this.arrival = value;
     }
 
     /**
-     * »ñÈ¡departureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
-     * ÉèÖÃdepartureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDeparture(XMLGregorianCalendar value) {
+    public void setDeparture(String value) {
         this.departure = value;
     }
 
     /**
-     * »ñÈ¡extraBedÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡extraBedï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getExtraBed() {
@@ -134,7 +134,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ÉèÖÃextraBedÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½extraBedï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setExtraBed(int value) {
@@ -142,7 +142,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * »ñÈ¡adultsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡adultsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getAdults() {
@@ -150,7 +150,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ÉèÖÃadultsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½adultsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setAdults(int value) {
@@ -158,7 +158,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * »ñÈ¡roomNumÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡roomNumï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getRoomNum() {
@@ -166,7 +166,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ÉèÖÃroomNumÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½roomNumï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setRoomNum(int value) {
@@ -174,7 +174,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * »ñÈ¡guesttypeCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡guesttypeCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -186,7 +186,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ÉèÖÃguesttypeCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½guesttypeCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -198,7 +198,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * »ñÈ¡custAccountÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡custAccountï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -210,7 +210,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ÉèÖÃcustAccountÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½custAccountï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -222,7 +222,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * »ñÈ¡cardNoÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡cardNoï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -234,7 +234,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ÉèÖÃcardNoÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½cardNoï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -246,7 +246,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * »ñÈ¡childrenÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡childrenï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getChildren() {
@@ -254,7 +254,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ÉèÖÃchildrenÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½childrenï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setChildren(int value) {
@@ -262,7 +262,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * »ñÈ¡channelÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡channelï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -274,7 +274,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ÉèÖÃchannelÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½channelï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -286,7 +286,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * »ñÈ¡hotelArrÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡hotelArrï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -298,7 +298,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ÉèÖÃhotelArrÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½hotelArrï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is

@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>RateDetail complex type的 Java 类。
+ * <p>RateDetail complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="RateDetail"&gt;
@@ -71,10 +71,10 @@ public class RateDetail {
     protected CommonInfo roomType;
     @XmlElement(name = "BeginDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginDate;
+    protected String beginDate;
     @XmlElement(name = "EndDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endDate;
+    protected String endDate;
     @XmlElement(name = "WeekControls")
     protected String weekControls;
     @XmlElement(name = "Price1", required = true)
@@ -105,7 +105,7 @@ public class RateDetail {
     protected ArrayOfPackage packages;
 
     /**
-     * 获取roomType属性的值。
+     * 锟斤拷取roomType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -117,7 +117,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置roomType属性的值。
+     * 锟斤拷锟斤拷roomType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -129,55 +129,55 @@ public class RateDetail {
     }
 
     /**
-     * 获取beginDate属性的值。
+     * 锟斤拷取beginDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginDate() {
+    public String getBeginDate() {
         return beginDate;
     }
 
     /**
-     * 设置beginDate属性的值。
+     * 锟斤拷锟斤拷beginDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginDate(XMLGregorianCalendar value) {
+    public void setBeginDate(String value) {
         this.beginDate = value;
     }
 
     /**
-     * 获取endDate属性的值。
+     * 锟斤拷取endDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
     /**
-     * 设置endDate属性的值。
+     * 锟斤拷锟斤拷endDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndDate(XMLGregorianCalendar value) {
+    public void setEndDate(String value) {
         this.endDate = value;
     }
 
     /**
-     * 获取weekControls属性的值。
+     * 锟斤拷取weekControls锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -189,7 +189,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置weekControls属性的值。
+     * 锟斤拷锟斤拷weekControls锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -201,7 +201,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取price1属性的值。
+     * 锟斤拷取price1锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -213,7 +213,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置price1属性的值。
+     * 锟斤拷锟斤拷price1锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -225,7 +225,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取price2属性的值。
+     * 锟斤拷取price2锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -237,7 +237,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置price2属性的值。
+     * 锟斤拷锟斤拷price2锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -249,7 +249,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取price3属性的值。
+     * 锟斤拷取price3锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -261,7 +261,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置price3属性的值。
+     * 锟斤拷锟斤拷price3锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -273,7 +273,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取price4属性的值。
+     * 锟斤拷取price4锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -285,7 +285,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置price4属性的值。
+     * 锟斤拷锟斤拷price4锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -297,7 +297,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取price5属性的值。
+     * 锟斤拷取price5锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -309,7 +309,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置price5属性的值。
+     * 锟斤拷锟斤拷price5锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -321,7 +321,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取priceBed属性的值。
+     * 锟斤拷取priceBed锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -333,7 +333,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置priceBed属性的值。
+     * 锟斤拷锟斤拷priceBed锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -345,7 +345,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取priceChild属性的值。
+     * 锟斤拷取priceChild锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -357,7 +357,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置priceChild属性的值。
+     * 锟斤拷锟斤拷priceChild锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -369,7 +369,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取taxFlag属性的值。
+     * 锟斤拷取taxFlag锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -381,7 +381,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置taxFlag属性的值。
+     * 锟斤拷锟斤拷taxFlag锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -393,7 +393,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取tax属性的值。
+     * 锟斤拷取tax锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -405,7 +405,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置tax属性的值。
+     * 锟斤拷锟斤拷tax锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -417,7 +417,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取serviceChargeFlag属性的值。
+     * 锟斤拷取serviceChargeFlag锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -429,7 +429,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置serviceChargeFlag属性的值。
+     * 锟斤拷锟斤拷serviceChargeFlag锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -441,7 +441,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取serviceCharge属性的值。
+     * 锟斤拷取serviceCharge锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -453,7 +453,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置serviceCharge属性的值。
+     * 锟斤拷锟斤拷serviceCharge锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -465,7 +465,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取des属性的值。
+     * 锟斤拷取des锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -477,7 +477,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置des属性的值。
+     * 锟斤拷锟斤拷des锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -489,7 +489,7 @@ public class RateDetail {
     }
 
     /**
-     * 获取packages属性的值。
+     * 锟斤拷取packages锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -501,7 +501,7 @@ public class RateDetail {
     }
 
     /**
-     * 设置packages属性的值。
+     * 锟斤拷锟斤拷packages锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

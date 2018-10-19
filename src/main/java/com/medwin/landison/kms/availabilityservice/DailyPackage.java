@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>DailyPackage complex type的 Java 类。
+ * <p>DailyPackage complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="DailyPackage"&gt;
@@ -51,7 +51,7 @@ public class DailyPackage {
     protected String packageCode;
     @XmlElement(name = "Dt", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dt;
+    protected String dt;
     @XmlElement(name = "Quantity")
     protected int quantity;
     @XmlElement(name = "Price", required = true)
@@ -64,7 +64,7 @@ public class DailyPackage {
     protected String calculationRule;
 
     /**
-     * 获取packageCode属性的值。
+     * 锟斤拷取packageCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class DailyPackage {
     }
 
     /**
-     * 设置packageCode属性的值。
+     * 锟斤拷锟斤拷packageCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -88,31 +88,31 @@ public class DailyPackage {
     }
 
     /**
-     * 获取dt属性的值。
+     * 锟斤拷取dt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDt() {
+    public String getDt() {
         return dt;
     }
 
     /**
-     * 设置dt属性的值。
+     * 锟斤拷锟斤拷dt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDt(XMLGregorianCalendar value) {
+    public void setDt(String value) {
         this.dt = value;
     }
 
     /**
-     * 获取quantity属性的值。
+     * 锟斤拷取quantity锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getQuantity() {
@@ -120,7 +120,7 @@ public class DailyPackage {
     }
 
     /**
-     * 设置quantity属性的值。
+     * 锟斤拷锟斤拷quantity锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setQuantity(int value) {
@@ -128,7 +128,7 @@ public class DailyPackage {
     }
 
     /**
-     * 获取price属性的值。
+     * 锟斤拷取price锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -140,7 +140,7 @@ public class DailyPackage {
     }
 
     /**
-     * 设置price属性的值。
+     * 锟斤拷锟斤拷price锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -152,7 +152,7 @@ public class DailyPackage {
     }
 
     /**
-     * 获取packageName属性的值。
+     * 锟斤拷取packageName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -164,7 +164,7 @@ public class DailyPackage {
     }
 
     /**
-     * 设置packageName属性的值。
+     * 锟斤拷锟斤拷packageName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -176,7 +176,7 @@ public class DailyPackage {
     }
 
     /**
-     * 获取rateCode属性的值。
+     * 锟斤拷取rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -188,7 +188,7 @@ public class DailyPackage {
     }
 
     /**
-     * 设置rateCode属性的值。
+     * 锟斤拷锟斤拷rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -200,7 +200,7 @@ public class DailyPackage {
     }
 
     /**
-     * 获取calculationRule属性的值。
+     * 锟斤拷取calculationRule锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -212,7 +212,7 @@ public class DailyPackage {
     }
 
     /**
-     * 设置calculationRule属性的值。
+     * 锟斤拷锟斤拷calculationRule锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

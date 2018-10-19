@@ -27,7 +27,6 @@ public interface KmsService {
     HotelInfo getSingleHotelInfo(String code);
 
     Availability getAvailability(String hotelCode, String arrival, String departure, int extraBed, int adults,
-                                 int roomNum, String guesttypeCode, String custAccount, String cardNo,
-                                 String card_no, int children, String channel);
+                                 int roomNum, String guesttypeCode, String custAccount, String cardNo, int children, String channel);
 
 }

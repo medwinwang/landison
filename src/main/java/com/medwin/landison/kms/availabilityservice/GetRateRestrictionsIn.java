@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>GetRateRestrictionsIn complex type的 Java 类。
+ * <p>GetRateRestrictionsIn complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="GetRateRestrictionsIn"&gt;
@@ -50,17 +50,17 @@ public class GetRateRestrictionsIn {
     protected String channel;
     @XmlElement(name = "Start", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar start;
+    protected String start;
     @XmlElement(name = "End", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar end;
+    protected String end;
     @XmlElement(name = "RateCode")
     protected String rateCode;
     @XmlElement(name = "RoomTypeCode")
     protected String roomTypeCode;
 
     /**
-     * 获取hotelCode属性的值。
+     * 锟斤拷取hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -72,7 +72,7 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * 设置hotelCode属性的值。
+     * 锟斤拷锟斤拷hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -84,7 +84,7 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * 获取channel属性的值。
+     * 锟斤拷取channel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -96,7 +96,7 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * 设置channel属性的值。
+     * 锟斤拷锟斤拷channel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -108,55 +108,55 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * 获取start属性的值。
+     * 锟斤拷取start锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getStart() {
+    public String getStart() {
         return start;
     }
 
     /**
-     * 设置start属性的值。
+     * 锟斤拷锟斤拷start锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setStart(XMLGregorianCalendar value) {
+    public void setStart(String value) {
         this.start = value;
     }
 
     /**
-     * 获取end属性的值。
+     * 锟斤拷取end锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEnd() {
+    public String getEnd() {
         return end;
     }
 
     /**
-     * 设置end属性的值。
+     * 锟斤拷锟斤拷end锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEnd(XMLGregorianCalendar value) {
+    public void setEnd(String value) {
         this.end = value;
     }
 
     /**
-     * 获取rateCode属性的值。
+     * 锟斤拷取rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -168,7 +168,7 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * 设置rateCode属性的值。
+     * 锟斤拷锟斤拷rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -180,7 +180,7 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * 获取roomTypeCode属性的值。
+     * 锟斤拷取roomTypeCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -192,7 +192,7 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * 设置roomTypeCode属性的值。
+     * 锟斤拷锟斤拷roomTypeCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.common.UserUtil;
+import com.medwin.landison.config.LpsConfig;
 import com.medwin.landison.exception.LpsSystemException;
 import com.medwin.landison.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private LpsConfig lpsConfig;
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public BaseResult update(String firstName, String lastName, String altFirstName, String altLastName,
@@ -46,8 +50,9 @@ public class UserController {
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
 
-        return userService.getPointsHistory(UserUtil.getPointId(user), beginDate, endDate, type,
-                hotelCode, placeCode, page, pageSize);
+        return userService.getPointsHistory(
+                UserUtil.getPointId(user, lpsConfig.getRegister().getMembershipCardTypeCode()),
+                 beginDate, endDate, type, hotelCode, placeCode, page, pageSize);
 
     }
 
@@ -58,8 +63,9 @@ public class UserController {
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
 
-        return userService.getStoredValueHistory(UserUtil.getStoredValueId(user), beginDate, endDate, type,
-                hotelCode, placeCode, page, pageSize);
+        return userService.getStoredValueHistory(
+                UserUtil.getStoredValueId(user, lpsConfig.getRegister().getMembershipCardTypeCode()),
+                beginDate, endDate, type, hotelCode, placeCode, page, pageSize);
 
     }
 
@@ -70,7 +76,7 @@ public class UserController {
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
 
-        return userService.getCoupons(user.getString("id"), status, page, pageSize);
+        return userService.getCoupons(UserUtil.getId(user), status, page, pageSize);
 
     }
 

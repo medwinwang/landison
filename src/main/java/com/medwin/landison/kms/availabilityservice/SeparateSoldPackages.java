@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>SeparateSoldPackages complex typeµÄ Java Àà¡£
+ * <p>SeparateSoldPackages complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½İ¡ï¿½
  * 
  * <pre>
  * &lt;complexType name="SeparateSoldPackages"&gt;
@@ -46,13 +46,13 @@ public class SeparateSoldPackages {
     protected int quantity;
     @XmlElement(name = "BeginDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginDate;
+    protected String beginDate;
     @XmlElement(name = "EndDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endDate;
+    protected String endDate;
 
     /**
-     * »ñÈ¡packageCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡packageCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -64,7 +64,7 @@ public class SeparateSoldPackages {
     }
 
     /**
-     * ÉèÖÃpackageCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½packageCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -76,7 +76,7 @@ public class SeparateSoldPackages {
     }
 
     /**
-     * »ñÈ¡quantityÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡quantityï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getQuantity() {
@@ -84,7 +84,7 @@ public class SeparateSoldPackages {
     }
 
     /**
-     * ÉèÖÃquantityÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½quantityï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setQuantity(int value) {
@@ -92,50 +92,50 @@ public class SeparateSoldPackages {
     }
 
     /**
-     * »ñÈ¡beginDateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡beginDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginDate() {
+    public String getBeginDate() {
         return beginDate;
     }
 
     /**
-     * ÉèÖÃbeginDateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½beginDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginDate(XMLGregorianCalendar value) {
+    public void setBeginDate(String value) {
         this.beginDate = value;
     }
 
     /**
-     * »ñÈ¡endDateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡endDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
     /**
-     * ÉèÖÃendDateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½endDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndDate(XMLGregorianCalendar value) {
+    public void setEndDate(String value) {
         this.endDate = value;
     }
 

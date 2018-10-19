@@ -1,26 +1,18 @@
 package com.medwin;
 
+import com.medwin.landison.common.EnvUtil;
 import com.medwin.landison.common.KmsAddSoapHeader;
-import com.medwin.landison.common.KmsConfig;
-import com.medwin.landison.kms.informationservice.InformationService;
-import com.medwin.landison.kms.informationservice.InformationServiceSoap;
-import com.medwin.landison.kms.informationservice.SendInfo;
+import com.medwin.landison.config.KmsConfig;
+import com.medwin.landison.config.LpsConfig;
 import com.medwin.landison.service.UserService;
 import com.medwin.landison.service.impl.KmsServiceImpl;
 import com.medwin.landison.service.impl.LpsServiceImpl;
 
-import org.apache.cxf.interceptor.Interceptor;
-import org.apache.cxf.interceptor.LoggingInInterceptor;
-import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
-import org.apache.cxf.message.Message;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -36,14 +28,21 @@ public class LandsionApplicationTests {
 	private KmsConfig kmsConfig;
 
 	@Autowired
+	private LpsConfig lpsConfig;
+
+	@Autowired
 	private UserService userService;
 
 	@Autowired
 	private KmsAddSoapHeader  kmsAddSoapHeader;
 
+	@Autowired
+	private EnvUtil envUtil;
+
 	@Test
 	public void contextLoads() {
 
+		lpsConfig.getRegister();
 //		JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean();
 //
 //		List<Interceptor<? extends Message>> list = new ArrayList();

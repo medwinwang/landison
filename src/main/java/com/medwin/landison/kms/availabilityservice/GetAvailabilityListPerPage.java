@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½İ¡ï¿½
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -80,10 +80,10 @@ public class GetAvailabilityListPerPage {
     protected int maxPrice;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrival;
+    protected String arrival;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departure;
+    protected String departure;
     @XmlElement(name = "extra_bed")
     protected int extraBed;
     protected int adults;
@@ -107,7 +107,7 @@ public class GetAvailabilityListPerPage {
     protected int currentPage;
 
     /**
-     * »ñÈ¡minPriceÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡minPriceï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getMinPrice() {
@@ -115,7 +115,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃminPriceÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½minPriceï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setMinPrice(int value) {
@@ -123,7 +123,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡maxPriceÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡maxPriceï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getMaxPrice() {
@@ -131,7 +131,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃmaxPriceÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½maxPriceï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setMaxPrice(int value) {
@@ -139,55 +139,55 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡arrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
-     * ÉèÖÃarrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setArrival(XMLGregorianCalendar value) {
+    public void setArrival(String value) {
         this.arrival = value;
     }
 
     /**
-     * »ñÈ¡departureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
-     * ÉèÖÃdepartureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDeparture(XMLGregorianCalendar value) {
+    public void setDeparture(String value) {
         this.departure = value;
     }
 
     /**
-     * »ñÈ¡extraBedÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡extraBedï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getExtraBed() {
@@ -195,7 +195,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃextraBedÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½extraBedï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setExtraBed(int value) {
@@ -203,7 +203,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡adultsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡adultsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getAdults() {
@@ -211,7 +211,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃadultsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½adultsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setAdults(int value) {
@@ -219,7 +219,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡roomNumÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡roomNumï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getRoomNum() {
@@ -227,7 +227,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃroomNumÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½roomNumï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setRoomNum(int value) {
@@ -235,7 +235,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡guesttypeCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡guesttypeCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -247,7 +247,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃguesttypeCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½guesttypeCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -259,7 +259,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡custAccountÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡custAccountï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -271,7 +271,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃcustAccountÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½custAccountï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -283,7 +283,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡cardNoÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡cardNoï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -295,7 +295,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃcardNoÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½cardNoï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -307,7 +307,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡childrenÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡childrenï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getChildren() {
@@ -315,7 +315,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃchildrenÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½childrenï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setChildren(int value) {
@@ -323,7 +323,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡channelÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡channelï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -335,7 +335,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃchannelÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½channelï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -347,7 +347,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡groupCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡groupCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -359,7 +359,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃgroupCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½groupCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -371,7 +371,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡countryCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡countryCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -383,7 +383,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃcountryCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½countryCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -395,7 +395,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡cityCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡cityCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -407,7 +407,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃcityCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½cityCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -419,7 +419,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡tagÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡tagï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -431,7 +431,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃtagÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½tagï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -443,7 +443,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡hotelNameÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡hotelNameï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -455,7 +455,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃhotelNameÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½hotelNameï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -467,7 +467,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡starCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡starCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -479,7 +479,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃstarCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½starCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -491,7 +491,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡pageSizeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡pageSizeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getPageSize() {
@@ -499,7 +499,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃpageSizeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½pageSizeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setPageSize(int value) {
@@ -507,7 +507,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * »ñÈ¡currentPageÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡currentPageï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getCurrentPage() {
@@ -515,7 +515,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ÉèÖÃcurrentPageÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½currentPageï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setCurrentPage(int value) {

@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>GetAvailabilitybyRateCodeIn complex typeµÄ Java Àà¡£
+ * <p>GetAvailabilitybyRateCodeIn complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½İ¡ï¿½
  * 
  * <pre>
  * &lt;complexType name="GetAvailabilitybyRateCodeIn"&gt;
@@ -66,10 +66,10 @@ public class GetAvailabilitybyRateCodeIn {
     protected String hotelCode;
     @XmlElement(name = "Arrival", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrival;
+    protected String arrival;
     @XmlElement(name = "Departure", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departure;
+    protected String departure;
     @XmlElement(name = "Adults")
     protected int adults;
     @XmlElement(name = "RoomNum")
@@ -97,7 +97,7 @@ public class GetAvailabilitybyRateCodeIn {
     protected String groupType;
 
     /**
-     * »ñÈ¡hotelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -109,7 +109,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -121,55 +121,55 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * »ñÈ¡arrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
-     * ÉèÖÃarrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setArrival(XMLGregorianCalendar value) {
+    public void setArrival(String value) {
         this.arrival = value;
     }
 
     /**
-     * »ñÈ¡departureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
-     * ÉèÖÃdepartureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDeparture(XMLGregorianCalendar value) {
+    public void setDeparture(String value) {
         this.departure = value;
     }
 
     /**
-     * »ñÈ¡adultsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡adultsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getAdults() {
@@ -177,7 +177,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃadultsÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½adultsï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setAdults(int value) {
@@ -185,7 +185,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * »ñÈ¡roomNumÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡roomNumï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getRoomNum() {
@@ -193,7 +193,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃroomNumÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½roomNumï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setRoomNum(int value) {
@@ -201,7 +201,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * »ñÈ¡guesttypeCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡guesttypeCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -213,7 +213,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃguesttypeCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½guesttypeCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -225,7 +225,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * »ñÈ¡custAccountÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡custAccountï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -237,7 +237,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃcustAccountÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½custAccountï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -249,7 +249,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * »ñÈ¡cardNoÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡cardNoï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -261,7 +261,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃcardNoÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½cardNoï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -273,7 +273,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * »ñÈ¡cardTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡cardTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -285,7 +285,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃcardTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½cardTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -297,7 +297,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * »ñÈ¡cardLevelÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡cardLevelï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -309,7 +309,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃcardLevelÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½cardLevelï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -321,7 +321,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * »ñÈ¡childrenÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡childrenï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getChildren() {
@@ -329,7 +329,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃchildrenÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½childrenï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setChildren(int value) {
@@ -337,7 +337,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * »ñÈ¡channelÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡channelï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -349,7 +349,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃchannelÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½channelï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -361,7 +361,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * »ñÈ¡barTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡barTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -373,7 +373,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃbarTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½barTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -385,7 +385,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * »ñÈ¡rateCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡rateCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -397,7 +397,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃrateCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½rateCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -409,7 +409,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * »ñÈ¡groupTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡groupTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -421,7 +421,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ÉèÖÃgroupTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½groupTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is

@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>DailyInventory complex type的 Java 类。
+ * <p>DailyInventory complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="DailyInventory"&gt;
@@ -40,38 +40,38 @@ public class DailyInventory {
 
     @XmlElement(name = "Datum", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar datum;
+    protected String datum;
     @XmlElement(name = "HouseOverBook")
     protected int houseOverBook;
     @XmlElement(name = "RoomTypeInventories")
     protected ArrayOfDailyInventoryRoomTypeInventory roomTypeInventories;
 
     /**
-     * 获取datum属性的值。
+     * 锟斤拷取datum锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDatum() {
+    public String getDatum() {
         return datum;
     }
 
     /**
-     * 设置datum属性的值。
+     * 锟斤拷锟斤拷datum锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDatum(XMLGregorianCalendar value) {
+    public void setDatum(String value) {
         this.datum = value;
     }
 
     /**
-     * 获取houseOverBook属性的值。
+     * 锟斤拷取houseOverBook锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getHouseOverBook() {
@@ -79,7 +79,7 @@ public class DailyInventory {
     }
 
     /**
-     * 设置houseOverBook属性的值。
+     * 锟斤拷锟斤拷houseOverBook锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setHouseOverBook(int value) {
@@ -87,7 +87,7 @@ public class DailyInventory {
     }
 
     /**
-     * 获取roomTypeInventories属性的值。
+     * 锟斤拷取roomTypeInventories锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -99,7 +99,7 @@ public class DailyInventory {
     }
 
     /**
-     * 设置roomTypeInventories属性的值。
+     * 锟斤拷锟斤拷roomTypeInventories锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

@@ -120,7 +120,7 @@ public class KmsServiceImpl implements KmsService {
     @Override
     public Availability getAvailability(String hotelCode, String arrival, String departure, int extraBed, int adults,
                                 int roomNum, String guesttypeCode, String custAccount, String cardNo,
-                                String card_no, int children, String channel) {
+                                        int children, String channel) {
 
         Availability availability = availabilityQuerySoap.getAvailability(hotelCode, arrival, departure, extraBed, adults, roomNum,
                 guesttypeCode, custAccount, cardNo, children, channel);

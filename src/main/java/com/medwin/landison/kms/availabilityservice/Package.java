@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>Package complex type的 Java 类。
+ * <p>Package complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="Package"&gt;
@@ -88,17 +88,17 @@ public class Package
     protected String roomTypeCode;
     @XmlElement(name = "BeginDate", required = true, nillable = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginDate;
+    protected String beginDate;
     @XmlElement(name = "EndDate", required = true, nillable = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endDate;
+    protected String endDate;
     @XmlElement(name = "ItemInfoList")
     protected ArrayOfItemInfo itemInfoList;
     @XmlElement(name = "FromFlag")
     protected String fromFlag;
 
     /**
-     * 获取groupCode属性的值。
+     * 锟斤拷取groupCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -110,7 +110,7 @@ public class Package
     }
 
     /**
-     * 设置groupCode属性的值。
+     * 锟斤拷锟斤拷groupCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -122,7 +122,7 @@ public class Package
     }
 
     /**
-     * 获取groupName属性的值。
+     * 锟斤拷取groupName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -134,7 +134,7 @@ public class Package
     }
 
     /**
-     * 设置groupName属性的值。
+     * 锟斤拷锟斤拷groupName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -146,7 +146,7 @@ public class Package
     }
 
     /**
-     * 获取price属性的值。
+     * 锟斤拷取price锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -158,7 +158,7 @@ public class Package
     }
 
     /**
-     * 设置price属性的值。
+     * 锟斤拷锟斤拷price锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -170,7 +170,7 @@ public class Package
     }
 
     /**
-     * 获取packageType属性的值。
+     * 锟斤拷取packageType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -182,7 +182,7 @@ public class Package
     }
 
     /**
-     * 设置packageType属性的值。
+     * 锟斤拷锟斤拷packageType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -194,7 +194,7 @@ public class Package
     }
 
     /**
-     * 获取postingRhythm属性的值。
+     * 锟斤拷取postingRhythm锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -206,7 +206,7 @@ public class Package
     }
 
     /**
-     * 设置postingRhythm属性的值。
+     * 锟斤拷锟斤拷postingRhythm锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -218,7 +218,7 @@ public class Package
     }
 
     /**
-     * 获取calculationRule属性的值。
+     * 锟斤拷取calculationRule锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -230,7 +230,7 @@ public class Package
     }
 
     /**
-     * 设置calculationRule属性的值。
+     * 锟斤拷锟斤拷calculationRule锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -242,7 +242,7 @@ public class Package
     }
 
     /**
-     * 获取kwsDesc属性的值。
+     * 锟斤拷取kwsDesc锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -254,7 +254,7 @@ public class Package
     }
 
     /**
-     * 设置kwsDesc属性的值。
+     * 锟斤拷锟斤拷kwsDesc锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -266,7 +266,7 @@ public class Package
     }
 
     /**
-     * 获取inputQuantityYn属性的值。
+     * 锟斤拷取inputQuantityYn锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public boolean isInputQuantityYn() {
@@ -274,7 +274,7 @@ public class Package
     }
 
     /**
-     * 设置inputQuantityYn属性的值。
+     * 锟斤拷锟斤拷inputQuantityYn锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setInputQuantityYn(boolean value) {
@@ -282,7 +282,7 @@ public class Package
     }
 
     /**
-     * 获取quantity属性的值。
+     * 锟斤拷取quantity锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getQuantity() {
@@ -290,7 +290,7 @@ public class Package
     }
 
     /**
-     * 设置quantity属性的值。
+     * 锟斤拷锟斤拷quantity锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setQuantity(int value) {
@@ -298,7 +298,7 @@ public class Package
     }
 
     /**
-     * 获取rateCode属性的值。
+     * 锟斤拷取rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -310,7 +310,7 @@ public class Package
     }
 
     /**
-     * 设置rateCode属性的值。
+     * 锟斤拷锟斤拷rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -322,7 +322,7 @@ public class Package
     }
 
     /**
-     * 获取roomTypeCode属性的值。
+     * 锟斤拷取roomTypeCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -334,7 +334,7 @@ public class Package
     }
 
     /**
-     * 设置roomTypeCode属性的值。
+     * 锟斤拷锟斤拷roomTypeCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -346,55 +346,55 @@ public class Package
     }
 
     /**
-     * 获取beginDate属性的值。
+     * 锟斤拷取beginDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginDate() {
+    public String getBeginDate() {
         return beginDate;
     }
 
     /**
-     * 设置beginDate属性的值。
+     * 锟斤拷锟斤拷beginDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginDate(XMLGregorianCalendar value) {
+    public void setBeginDate(String value) {
         this.beginDate = value;
     }
 
     /**
-     * 获取endDate属性的值。
+     * 锟斤拷取endDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
     /**
-     * 设置endDate属性的值。
+     * 锟斤拷锟斤拷endDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndDate(XMLGregorianCalendar value) {
+    public void setEndDate(String value) {
         this.endDate = value;
     }
 
     /**
-     * 获取itemInfoList属性的值。
+     * 锟斤拷取itemInfoList锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -406,7 +406,7 @@ public class Package
     }
 
     /**
-     * 设置itemInfoList属性的值。
+     * 锟斤拷锟斤拷itemInfoList锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -418,7 +418,7 @@ public class Package
     }
 
     /**
-     * 获取fromFlag属性的值。
+     * 锟斤拷取fromFlag锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -430,7 +430,7 @@ public class Package
     }
 
     /**
-     * 设置fromFlag属性的值。
+     * 锟斤拷锟斤拷fromFlag锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

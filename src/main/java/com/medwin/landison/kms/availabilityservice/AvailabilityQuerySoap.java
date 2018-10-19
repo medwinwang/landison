@@ -57,9 +57,9 @@ public interface AvailabilityQuerySoap {
         @WebParam(name = "rate_code", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         java.lang.String rateCode,
         @WebParam(name = "begin_date", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar beginDate,
+        java.lang.String beginDate,
         @WebParam(name = "end_date", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar endDate
+        java.lang.String endDate
     );
 
     /**
@@ -89,9 +89,9 @@ public interface AvailabilityQuerySoap {
         @WebParam(name = "max_price", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int maxPrice,
         @WebParam(name = "arrival", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar arrival,
+        java.lang.String arrival,
         @WebParam(name = "departure", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar departure,
+        java.lang.String departure,
         @WebParam(name = "extra_bed", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int extraBed,
         @WebParam(name = "adults", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
@@ -149,7 +149,7 @@ public interface AvailabilityQuerySoap {
         @WebParam(name = "rate_code", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         java.lang.String rateCode,
         @WebParam(name = "date", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar date
+        java.lang.String date
     );
 
     /**
@@ -209,9 +209,9 @@ public interface AvailabilityQuerySoap {
         @WebParam(name = "max_price", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int maxPrice,
         @WebParam(name = "arrival", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar arrival,
+        java.lang.String arrival,
         @WebParam(name = "departure", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar departure,
+        java.lang.String departure,
         @WebParam(name = "extra_bed", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int extraBed,
         @WebParam(name = "adults", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
@@ -275,9 +275,9 @@ public interface AvailabilityQuerySoap {
     @WebResult(name = "NewGetAvailabilityListByCustomResult", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
     public com.medwin.landison.kms.availabilityservice.ArrayOfAvailability newGetAvailabilityListByCustom(
         @WebParam(name = "arrival", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar arrival,
+        java.lang.String arrival,
         @WebParam(name = "departure", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar departure,
+        java.lang.String departure,
         @WebParam(name = "extra_bed", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int extraBed,
         @WebParam(name = "adults", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
@@ -335,9 +335,9 @@ public interface AvailabilityQuerySoap {
         @WebParam(name = "channel_code", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         java.lang.String channelCode,
         @WebParam(name = "arrival", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar arrival,
+        java.lang.String arrival,
         @WebParam(name = "departure", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar departure,
+        java.lang.String departure,
         @WebParam(name = "rooms", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int rooms,
         @WebParam(name = "rate_code", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
@@ -359,9 +359,9 @@ public interface AvailabilityQuerySoap {
         @WebParam(name = "max_price", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int maxPrice,
         @WebParam(name = "arrival", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar arrival,
+        java.lang.String arrival,
         @WebParam(name = "departure", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar departure,
+        java.lang.String departure,
         @WebParam(name = "extra_bed", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int extraBed,
         @WebParam(name = "adults", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
@@ -417,9 +417,9 @@ public interface AvailabilityQuerySoap {
         @WebParam(name = "max_price", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int maxPrice,
         @WebParam(name = "arrival", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar arrival,
+        java.lang.String arrival,
         @WebParam(name = "departure", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar departure,
+        java.lang.String departure,
         @WebParam(name = "extra_bed", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int extraBed,
         @WebParam(name = "adults", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
@@ -465,9 +465,9 @@ public interface AvailabilityQuerySoap {
         @WebParam(name = "hotel_code", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         java.lang.String hotelCode,
         @WebParam(name = "arrival", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar arrival,
+        java.lang.String arrival,
         @WebParam(name = "departure", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar departure,
+        java.lang.String departure,
         @WebParam(name = "channel", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         java.lang.String channel,
         @WebParam(name = "room_num", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
@@ -555,9 +555,9 @@ public interface AvailabilityQuerySoap {
         @WebParam(name = "channel", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         java.lang.String channel,
         @WebParam(name = "dtBegin", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar dtBegin,
+        java.lang.String dtBegin,
         @WebParam(name = "dtEnd", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar dtEnd,
+        java.lang.String dtEnd,
         @WebParam(name = "room_type", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         java.lang.String roomType
     );
