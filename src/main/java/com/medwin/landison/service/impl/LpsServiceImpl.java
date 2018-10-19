@@ -21,10 +21,11 @@ public class LpsServiceImpl implements LpsService{
 
 
     @Override
-    public BaseResult getUserProfile(String mobile)  {
+    public BaseResult getUserProfile(String mobileCountryNumber, String mobile)  {
 
         HashMap<String, String> par = new HashMap<>();
         par.put("mobile", mobile);
+        par.put("mobileCountryNumber", mobileCountryNumber);
         return  lpsUtil.get("/api/v{version}/profiles/profile", par);
     }
 

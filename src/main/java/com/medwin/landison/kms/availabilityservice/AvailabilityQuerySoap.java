@@ -485,9 +485,9 @@ public interface AvailabilityQuerySoap {
         @WebParam(name = "hotel_code", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         java.lang.String hotelCode,
         @WebParam(name = "arrival", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar arrival,
+        java.lang.String  arrival,
         @WebParam(name = "departure", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar departure,
+        java.lang.String departure,
         @WebParam(name = "extra_bed", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int extraBed,
         @WebParam(name = "adults", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")

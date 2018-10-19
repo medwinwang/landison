@@ -4,6 +4,8 @@ import com.medwin.landison.common.KmsAddSoapHeader;
 import com.medwin.landison.common.KmsClientHandler;
 import com.medwin.landison.config.KmsConfig;
 
+import com.medwin.landison.kms.availabilityservice.Availability;
+import com.medwin.landison.kms.availabilityservice.AvailabilityQuerySoap;
 import com.medwin.landison.kms.informationservice.*;
 import com.medwin.landison.kms.securityservice.SecurityService;
 import com.medwin.landison.service.KmsService;
@@ -38,6 +40,9 @@ public class KmsServiceImpl implements KmsService {
 
     @Autowired
     private InformationServiceSoap informationServiceSoap;
+
+    @Autowired
+    private AvailabilityQuerySoap availabilityQuerySoap;
 
     @Override
     public boolean appLogin() {
@@ -110,6 +115,17 @@ public class KmsServiceImpl implements KmsService {
     @Cacheable(value="kms_getSingleHotelInfo", key="#code")
     public HotelInfo getSingleHotelInfo(String code) {
        return informationServiceSoap.getSingleHotelInfo(code);
+    }
+
+    @Override
+    public Availability getAvailability(String hotelCode, String arrival, String departure, int extraBed, int adults,
+                                int roomNum, String guesttypeCode, String custAccount, String cardNo,
+                                String card_no, int children, String channel) {
+
+        Availability availability = availabilityQuerySoap.getAvailability(hotelCode, arrival, departure, extraBed, adults, roomNum,
+                guesttypeCode, custAccount, cardNo, children, channel);
+
+        return availability;
     }
 
 }

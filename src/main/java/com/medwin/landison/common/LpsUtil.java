@@ -2,6 +2,7 @@ package com.medwin.landison.common;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.medwin.landison.config.LpsConfig;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -26,22 +27,11 @@ import java.util.Map;
  * Created by medwin on 2018/10/16.
  */
 @Component
-@ConfigurationProperties(prefix="lps")
-@Getter
-@Setter
-@ToString
 @Slf4j
 public class LpsUtil {
 
-    private String version;
-
-    private String host;
-
-    private String client_id;
-
-    private String client_secret;
-
-    private String token_url;
+    @Autowired
+    private LpsConfig lpsConfig;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -136,7 +126,7 @@ public class LpsUtil {
     }
 
     public String getPath(String apiPath){
-        String url = host + apiPath.replace("{version}", version);
+        String url = lpsConfig.getHost() + apiPath.replace("{version}", lpsConfig.getVersion());
         return url;
     }
 
@@ -149,16 +139,16 @@ public class LpsUtil {
         headers.setContentType(type);
 
         MultiValueMap<String, String> params =  new LinkedMultiValueMap<>();
-        params.add("client_id", client_id);
-        params.add("client_secret", client_secret);
+        params.add("client_id", lpsConfig.getClient_id());
+        params.add("client_secret", lpsConfig.getClient_secret());
         params.add("grant_type", "client_credentials");
         params.add("scope", "LPS_Web_API");
 
         HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<>(params, headers);
         RestTemplate restTemplate = new RestTemplate();
-        String jsonStr = restTemplate.postForObject(token_url, requestEntity, String.class);
+        String jsonStr = restTemplate.postForObject(lpsConfig.getToken_url(), requestEntity, String.class);
 
-        log.info("getToken {} {} {}", token_url, JSON.toJSONString(params), jsonStr);
+        log.info("getToken {} {} {}", lpsConfig.getToken_url(), JSON.toJSONString(params), jsonStr);
 
         JSONObject json = JSON.parseObject(jsonStr);
         if(StringUtils.isEmpty(json.getString("access_token"))) {

@@ -1,5 +1,6 @@
 package com.medwin.landison.service;
 
+import com.medwin.landison.kms.availabilityservice.Availability;
 import com.medwin.landison.kms.informationservice.*;
 
 import java.util.List;
@@ -24,5 +25,9 @@ public interface KmsService {
     List<CommonInfo> getInformation(String dataType, String parentCode);
 
     HotelInfo getSingleHotelInfo(String code);
+
+    Availability getAvailability(String hotelCode, String arrival, String departure, int extraBed, int adults,
+                                 int roomNum, String guesttypeCode, String custAccount, String cardNo,
+                                 String card_no, int children, String channel);
 
 }

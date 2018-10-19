@@ -23,9 +23,9 @@ public class UserServiceImpl implements UserService {
     private KmsServiceImpl kmsService;
 
     @Override
-    public BaseResult getUser(String mobile){
+    public BaseResult getUser(String mobileCountryNumber, String mobile){
 
-        return lpsService.getUserProfile(mobile);
+        return lpsService.getUserProfile(mobileCountryNumber, mobile);
     }
 
     @Override

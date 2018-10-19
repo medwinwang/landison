@@ -26,7 +26,6 @@ public class BaseResult {
 
     public void setBooleanCode(boolean code){
         this.code = code ? SUCCESS_CODE: "2";
-        this.message = "调用失败";
     }
 
 }

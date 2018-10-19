@@ -33,12 +33,12 @@ public class RegisterController {
 
 
     @RequestMapping(value = "/check", method = RequestMethod.GET)
-    public BaseResult check(String mobile) throws LpsSystemException {
-        return userService.getUser(mobile);
+    public BaseResult check(String  mobileCountryNumber, String mobile) {
+        return userService.getUser(mobileCountryNumber, mobile);
     }
 
     @RequestMapping(value = "/sendRegisterSms", method = RequestMethod.POST)
-    public BaseResult sendRegisterSms(String mobile, String name, HttpSession httpSession) throws LpsSystemException {
+    public BaseResult sendRegisterSms(String mobile, String name, HttpSession httpSession) {
 
         Long expTime = (Long) httpSession.getAttribute(REG_SMS_EXP_TIME);
         Long second = LocalDateTime.now().toEpochSecond(ZoneOffset.of("+8"));
@@ -55,13 +55,13 @@ public class RegisterController {
 
         httpSession.setAttribute(REG_SMS_CODE, code);
         httpSession.setAttribute(REG_SMS_MOBILE, mobile);
-        httpSession.setAttribute(REG_SMS_EXP_TIME, second+60);
+        httpSession.setAttribute(REG_SMS_EXP_TIME, second+120);
 
         return userService.sendRegisterSms(mobile, name, String.valueOf(code));
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public BaseResult register(String mobile, String name, String code, String password, HttpSession httpSession) throws LpsSystemException {
+    public BaseResult register(String mobile, String name, String code, String password, String mobileCountryNumber, HttpSession httpSession) {
 
         Integer sessionCode = (Integer) httpSession.getAttribute(REG_SMS_CODE);
         if(sessionCode == null) {

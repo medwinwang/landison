@@ -9,7 +9,7 @@ import com.medwin.landison.exception.LpsSystemException;
 public interface LpsService {
 
     //根据手机号查询
-    BaseResult getUserProfile(String mobile);
+    BaseResult getUserProfile(String mobileCountryNumber, String mobile);
 
     BaseResult getUserProfiles(String mobile);
 

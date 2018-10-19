@@ -322,8 +322,8 @@ public final class AvailabilityQuerySoap_AvailabilityQuerySoap_Client {
         {
         System.out.println("Invoking getAvailability...");
         java.lang.String _getAvailability_hotelCode = "";
-        javax.xml.datatype.XMLGregorianCalendar _getAvailability_arrival = null;
-        javax.xml.datatype.XMLGregorianCalendar _getAvailability_departure = null;
+        String _getAvailability_arrival = null;
+        String _getAvailability_departure = null;
         int _getAvailability_extraBed = 0;
         int _getAvailability_adults = 0;
         int _getAvailability_roomNum = 0;

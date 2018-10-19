@@ -8,7 +8,7 @@ import com.medwin.landison.exception.LpsSystemException;
  */
 public interface UserService {
 
-    BaseResult getUser(String mobile);
+    BaseResult getUser(String mobileCountryNumber, String mobile);
 
     BaseResult sendRegisterSms(String mobile, String name, String code);
 
