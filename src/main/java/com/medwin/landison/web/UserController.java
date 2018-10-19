@@ -1,7 +1,9 @@
 package com.medwin.landison.web;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.medwin.landison.common.BaseResult;
+import com.medwin.landison.common.UserUtil;
 import com.medwin.landison.exception.LpsSystemException;
 import com.medwin.landison.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +45,9 @@ public class UserController {
                                        @RequestParam(value="pageSize", defaultValue="10")int pageSize, HttpSession httpSession){
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
-        return userService.getPointsHistory(user.getString("id"), beginDate, endDate, type, hotelCode, placeCode, page, pageSize);
+
+        return userService.getPointsHistory(UserUtil.getPointId(user), beginDate, endDate, type,
+                hotelCode, placeCode, page, pageSize);
 
     }
 
@@ -54,7 +58,8 @@ public class UserController {
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
 
-        return userService.getStoredValueHistory(user.getString("id"), beginDate, endDate, type, hotelCode, placeCode, page, pageSize);
+        return userService.getStoredValueHistory(UserUtil.getStoredValueId(user), beginDate, endDate, type,
+                hotelCode, placeCode, page, pageSize);
 
     }
 
