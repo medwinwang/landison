@@ -10,6 +10,7 @@ import com.medwin.landison.kms.informationservice.*;
 import com.medwin.landison.kms.reservationservice.OrderInfo;
 import com.medwin.landison.kms.reservationservice.ReservationSoap;
 import com.medwin.landison.kms.securityservice.SecurityService;
+import com.medwin.landison.kms.securityservice.SecurityServiceSoap;
 import com.medwin.landison.service.KmsService;
 import org.apache.cxf.interceptor.Interceptor;
 import org.apache.cxf.interceptor.LoggingInInterceptor;
@@ -38,9 +39,6 @@ public class KmsServiceImpl implements KmsService {
     private KmsConfig kmsConfig;
 
     @Autowired
-    private KmsClientHandler kmsClientHandler;
-
-    @Autowired
     private InformationServiceSoap informationServiceSoap;
 
     @Autowired
@@ -49,30 +47,15 @@ public class KmsServiceImpl implements KmsService {
     @Autowired
     private ReservationSoap reservationSoap;
 
+    @Autowired
+    private SecurityServiceSoap securityServiceSoap;
+
     @Override
     public boolean appLogin() {
 
-        try {
-            URL url = new URL(kmsConfig.getUrl() + "/SecurityService.asmx?WSDL");
-            SecurityService securityService = new SecurityService(url);
-
-            securityService.setHandlerResolver(new HandlerResolver() {
-
-                @Override
-                public List<Handler> getHandlerChain(PortInfo portInfo) {
-                    List<Handler> handlerList = new ArrayList<Handler>();
-                    handlerList.add(kmsClientHandler);
-                    return handlerList;
-                }
-            });
-            boolean ret = securityService.getSecurityServiceSoap().appLogin(kmsConfig.getUsername(),
+            boolean ret = securityServiceSoap.appLogin(kmsConfig.getUsername(),
                     kmsConfig.getPwd(), "");
             return ret;
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        return  false;
     }
 
     @Override

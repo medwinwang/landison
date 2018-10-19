@@ -6,6 +6,8 @@ import com.medwin.landison.config.KmsConfig;
 import com.medwin.landison.kms.availabilityservice.AvailabilityQuerySoap;
 import com.medwin.landison.kms.informationservice.InformationServiceSoap;
 import com.medwin.landison.kms.reservationservice.ReservationSoap;
+import com.medwin.landison.kms.securityservice.SecurityService;
+import com.medwin.landison.kms.securityservice.SecurityServiceSoap;
 import org.apache.cxf.interceptor.Interceptor;
 import org.apache.cxf.interceptor.LoggingInInterceptor;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
@@ -15,6 +17,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import javax.xml.ws.handler.Handler;
+import javax.xml.ws.handler.HandlerResolver;
+import javax.xml.ws.handler.PortInfo;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,16 +30,37 @@ import java.util.List;
 @Configuration
 public class ServiceFactory {
 
-
     @Autowired
     private KmsConfig kmsConfig;
 
     @Autowired
     private KmsAddSoapHeader kmsAddSoapHeader;
 
-
     @Autowired
     private KmsClientHandler kmsClientHandler;
+
+    @Bean
+    public SecurityServiceSoap getSecurityServiceSoap(){
+
+        URL url = null;
+        try {
+            url = new URL(kmsConfig.getUrl() + "/SecurityService.asmx?WSDL");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        SecurityService securityService = new SecurityService(url);
+
+        securityService.setHandlerResolver(new HandlerResolver() {
+
+            @Override
+            public List<Handler> getHandlerChain(PortInfo portInfo) {
+                List<Handler> handlerList = new ArrayList<Handler>();
+                handlerList.add(kmsClientHandler);
+                return handlerList;
+            }
+        });
+        return securityService.getSecurityServiceSoap();
+    }
 
     @Bean
     public InformationServiceSoap getInformationServiceSoap(){
