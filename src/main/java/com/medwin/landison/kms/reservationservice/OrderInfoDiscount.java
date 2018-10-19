@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>OrderInfoDiscount complex type的 Java 类。
+ * <p>OrderInfoDiscount complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="OrderInfoDiscount"&gt;
@@ -61,7 +61,7 @@ public class OrderInfoDiscount
     protected int orderID;
     @XmlElement(name = "DiscountDt", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar discountDt;
+    protected String discountDt;
     @XmlElement(name = "DiscountMethod")
     protected String discountMethod;
     @XmlElement(name = "DiscountAmount", required = true)
@@ -78,7 +78,7 @@ public class OrderInfoDiscount
     protected String discountPercentage;
 
     /**
-     * 获取id属性的值。
+     * 锟斤拷取id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getID() {
@@ -86,7 +86,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 设置id属性的值。
+     * 锟斤拷锟斤拷id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setID(int value) {
@@ -94,7 +94,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 获取orderID属性的值。
+     * 锟斤拷取orderID锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getOrderID() {
@@ -102,7 +102,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 设置orderID属性的值。
+     * 锟斤拷锟斤拷orderID锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setOrderID(int value) {
@@ -110,31 +110,31 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 获取discountDt属性的值。
+     * 锟斤拷取discountDt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDiscountDt() {
+    public String getDiscountDt() {
         return discountDt;
     }
 
     /**
-     * 设置discountDt属性的值。
+     * 锟斤拷锟斤拷discountDt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDiscountDt(XMLGregorianCalendar value) {
+    public void setDiscountDt(String value) {
         this.discountDt = value;
     }
 
     /**
-     * 获取discountMethod属性的值。
+     * 锟斤拷取discountMethod锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -146,7 +146,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 设置discountMethod属性的值。
+     * 锟斤拷锟斤拷discountMethod锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -158,7 +158,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 获取discountAmount属性的值。
+     * 锟斤拷取discountAmount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -170,7 +170,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 设置discountAmount属性的值。
+     * 锟斤拷锟斤拷discountAmount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -182,7 +182,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 获取serialNumber属性的值。
+     * 锟斤拷取serialNumber锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -194,7 +194,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 设置serialNumber属性的值。
+     * 锟斤拷锟斤拷serialNumber锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -206,7 +206,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 获取recordNumber属性的值。
+     * 锟斤拷取recordNumber锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -218,7 +218,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 设置recordNumber属性的值。
+     * 锟斤拷锟斤拷recordNumber锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -230,7 +230,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 获取discountReasonCode属性的值。
+     * 锟斤拷取discountReasonCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -242,7 +242,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 设置discountReasonCode属性的值。
+     * 锟斤拷锟斤拷discountReasonCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -254,7 +254,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 获取discountReasonName属性的值。
+     * 锟斤拷取discountReasonName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -266,7 +266,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 设置discountReasonName属性的值。
+     * 锟斤拷锟斤拷discountReasonName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -278,7 +278,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 获取discountPercentage属性的值。
+     * 锟斤拷取discountPercentage锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -290,7 +290,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * 设置discountPercentage属性的值。
+     * 锟斤拷锟斤拷discountPercentage锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

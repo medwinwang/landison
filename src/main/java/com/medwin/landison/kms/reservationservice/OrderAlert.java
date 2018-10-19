@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>OrderAlert complex type的 Java 类。
+ * <p>OrderAlert complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="OrderAlert"&gt;
@@ -64,20 +64,20 @@ public class OrderAlert {
     protected String phone;
     @XmlElement(name = "Arrival", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrival;
+    protected String arrival;
     @XmlElement(name = "Departure", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departure;
+    protected String departure;
     @XmlElement(name = "Status")
     protected String status;
     @XmlElement(name = "ConfirmDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar confirmDate;
+    protected String confirmDate;
     @XmlElement(name = "IsConfim")
     protected String isConfim;
 
     /**
-     * 获取id属性的值。
+     * 锟斤拷取id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getId() {
@@ -85,7 +85,7 @@ public class OrderAlert {
     }
 
     /**
-     * 设置id属性的值。
+     * 锟斤拷锟斤拷id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setId(int value) {
@@ -93,7 +93,7 @@ public class OrderAlert {
     }
 
     /**
-     * 获取hotelCode属性的值。
+     * 锟斤拷取hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -105,7 +105,7 @@ public class OrderAlert {
     }
 
     /**
-     * 设置hotelCode属性的值。
+     * 锟斤拷锟斤拷hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -117,7 +117,7 @@ public class OrderAlert {
     }
 
     /**
-     * 获取hotelName属性的值。
+     * 锟斤拷取hotelName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -129,7 +129,7 @@ public class OrderAlert {
     }
 
     /**
-     * 设置hotelName属性的值。
+     * 锟斤拷锟斤拷hotelName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -141,7 +141,7 @@ public class OrderAlert {
     }
 
     /**
-     * 获取orderId属性的值。
+     * 锟斤拷取orderId锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getOrderId() {
@@ -149,7 +149,7 @@ public class OrderAlert {
     }
 
     /**
-     * 设置orderId属性的值。
+     * 锟斤拷锟斤拷orderId锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setOrderId(int value) {
@@ -157,7 +157,7 @@ public class OrderAlert {
     }
 
     /**
-     * 获取phone属性的值。
+     * 锟斤拷取phone锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -169,7 +169,7 @@ public class OrderAlert {
     }
 
     /**
-     * 设置phone属性的值。
+     * 锟斤拷锟斤拷phone锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -181,55 +181,55 @@ public class OrderAlert {
     }
 
     /**
-     * 获取arrival属性的值。
+     * 锟斤拷取arrival锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
-     * 设置arrival属性的值。
+     * 锟斤拷锟斤拷arrival锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setArrival(XMLGregorianCalendar value) {
+    public void setArrival(String value) {
         this.arrival = value;
     }
 
     /**
-     * 获取departure属性的值。
+     * 锟斤拷取departure锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
-     * 设置departure属性的值。
+     * 锟斤拷锟斤拷departure锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDeparture(XMLGregorianCalendar value) {
+    public void setDeparture(String value) {
         this.departure = value;
     }
 
     /**
-     * 获取status属性的值。
+     * 锟斤拷取status锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -241,7 +241,7 @@ public class OrderAlert {
     }
 
     /**
-     * 设置status属性的值。
+     * 锟斤拷锟斤拷status锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -253,31 +253,31 @@ public class OrderAlert {
     }
 
     /**
-     * 获取confirmDate属性的值。
+     * 锟斤拷取confirmDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getConfirmDate() {
+    public String getConfirmDate() {
         return confirmDate;
     }
 
     /**
-     * 设置confirmDate属性的值。
+     * 锟斤拷锟斤拷confirmDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setConfirmDate(XMLGregorianCalendar value) {
+    public void setConfirmDate(String value) {
         this.confirmDate = value;
     }
 
     /**
-     * 获取isConfim属性的值。
+     * 锟斤拷取isConfim锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -289,7 +289,7 @@ public class OrderAlert {
     }
 
     /**
-     * 设置isConfim属性的值。
+     * 锟斤拷锟斤拷isConfim锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

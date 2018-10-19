@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>OrderAlertIn complex typeµÄ Java Àà¡£
+ * <p>OrderAlertIn complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖÐµÄÔ¤ÆÚÄÚÈÝ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½Ý¡ï¿½
  * 
  * <pre>
  * &lt;complexType name="OrderAlertIn"&gt;
@@ -54,16 +54,16 @@ public class OrderAlertIn {
     protected PageInfo pageInfo;
     @XmlElement(name = "BeginInsertDate", required = true, nillable = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginInsertDate;
+    protected String beginInsertDate;
     @XmlElement(name = "EndInsertDate", required = true, nillable = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endInsertDate;
+    protected String endInsertDate;
     @XmlElement(name = "BeginArrivalDate", required = true, nillable = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginArrivalDate;
+    protected String beginArrivalDate;
     @XmlElement(name = "EndArrivalDate", required = true, nillable = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endArrivalDate;
+    protected String endArrivalDate;
     @XmlElement(name = "OrderId", required = true, type = Integer.class, nillable = true)
     protected Integer orderId;
     @XmlElement(name = "Phone")
@@ -74,7 +74,7 @@ public class OrderAlertIn {
     protected String isShowConfirm;
 
     /**
-     * »ñÈ¡pageInfoÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡pageInfoï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -86,7 +86,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ÉèÖÃpageInfoÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½pageInfoï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -98,103 +98,103 @@ public class OrderAlertIn {
     }
 
     /**
-     * »ñÈ¡beginInsertDateÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡beginInsertDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginInsertDate() {
+    public String getBeginInsertDate() {
         return beginInsertDate;
     }
 
     /**
-     * ÉèÖÃbeginInsertDateÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½beginInsertDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginInsertDate(XMLGregorianCalendar value) {
+    public void setBeginInsertDate(String value) {
         this.beginInsertDate = value;
     }
 
     /**
-     * »ñÈ¡endInsertDateÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡endInsertDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndInsertDate() {
+    public String getEndInsertDate() {
         return endInsertDate;
     }
 
     /**
-     * ÉèÖÃendInsertDateÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½endInsertDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndInsertDate(XMLGregorianCalendar value) {
+    public void setEndInsertDate(String value) {
         this.endInsertDate = value;
     }
 
     /**
-     * »ñÈ¡beginArrivalDateÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡beginArrivalDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginArrivalDate() {
+    public String getBeginArrivalDate() {
         return beginArrivalDate;
     }
 
     /**
-     * ÉèÖÃbeginArrivalDateÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½beginArrivalDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginArrivalDate(XMLGregorianCalendar value) {
+    public void setBeginArrivalDate(String value) {
         this.beginArrivalDate = value;
     }
 
     /**
-     * »ñÈ¡endArrivalDateÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡endArrivalDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndArrivalDate() {
+    public String getEndArrivalDate() {
         return endArrivalDate;
     }
 
     /**
-     * ÉèÖÃendArrivalDateÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½endArrivalDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndArrivalDate(XMLGregorianCalendar value) {
+    public void setEndArrivalDate(String value) {
         this.endArrivalDate = value;
     }
 
     /**
-     * »ñÈ¡orderIdÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡orderIdï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -206,7 +206,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ÉèÖÃorderIdÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½orderIdï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -218,7 +218,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * »ñÈ¡phoneÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡phoneï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -230,7 +230,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ÉèÖÃphoneÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½phoneï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -242,7 +242,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * »ñÈ¡hotelCodeÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -254,7 +254,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -266,7 +266,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * »ñÈ¡isShowConfirmÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡isShowConfirmï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -278,7 +278,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ÉèÖÃisShowConfirmÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½isShowConfirmï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is

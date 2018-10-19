@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½İ¡ï¿½
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -46,13 +46,13 @@ public class GetOrderInfoByGuestType {
     protected String account;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginMakedate;
+    protected String beginMakedate;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endMakedate;
+    protected String endMakedate;
 
     /**
-     * »ñÈ¡guestTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡guestTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -64,7 +64,7 @@ public class GetOrderInfoByGuestType {
     }
 
     /**
-     * ÉèÖÃguestTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½guestTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -76,7 +76,7 @@ public class GetOrderInfoByGuestType {
     }
 
     /**
-     * »ñÈ¡accountÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡accountï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -88,7 +88,7 @@ public class GetOrderInfoByGuestType {
     }
 
     /**
-     * ÉèÖÃaccountÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½accountï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -100,50 +100,50 @@ public class GetOrderInfoByGuestType {
     }
 
     /**
-     * »ñÈ¡beginMakedateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡beginMakedateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginMakedate() {
+    public String getBeginMakedate() {
         return beginMakedate;
     }
 
     /**
-     * ÉèÖÃbeginMakedateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½beginMakedateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginMakedate(XMLGregorianCalendar value) {
+    public void setBeginMakedate(String value) {
         this.beginMakedate = value;
     }
 
     /**
-     * »ñÈ¡endMakedateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡endMakedateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndMakedate() {
+    public String getEndMakedate() {
         return endMakedate;
     }
 
     /**
-     * ÉèÖÃendMakedateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½endMakedateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndMakedate(XMLGregorianCalendar value) {
+    public void setEndMakedate(String value) {
         this.endMakedate = value;
     }
 

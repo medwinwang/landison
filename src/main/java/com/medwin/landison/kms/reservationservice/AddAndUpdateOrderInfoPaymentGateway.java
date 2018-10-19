@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>anonymous complex type的 Java 类。
+ * <p>anonymous complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -56,11 +56,11 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     protected String cardHolder;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar expire;
+    protected String expire;
     protected boolean isCancelPayment;
 
     /**
-     * 获取paymentGateway属性的值。
+     * 锟斤拷取paymentGateway锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -72,7 +72,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * 设置paymentGateway属性的值。
+     * 锟斤拷锟斤拷paymentGateway锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -84,7 +84,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * 获取id属性的值。
+     * 锟斤拷取id锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -96,7 +96,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * 设置id属性的值。
+     * 锟斤拷锟斤拷id锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -108,7 +108,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * 获取isRequiredCredit属性的值。
+     * 锟斤拷取isRequiredCredit锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public boolean isIsRequiredCredit() {
@@ -116,7 +116,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * 设置isRequiredCredit属性的值。
+     * 锟斤拷锟斤拷isRequiredCredit锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setIsRequiredCredit(boolean value) {
@@ -124,7 +124,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * 获取creditId属性的值。
+     * 锟斤拷取creditId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -136,7 +136,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * 设置creditId属性的值。
+     * 锟斤拷锟斤拷creditId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -148,7 +148,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * 获取cardHolder属性的值。
+     * 锟斤拷取cardHolder锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -160,7 +160,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * 设置cardHolder属性的值。
+     * 锟斤拷锟斤拷cardHolder锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -172,31 +172,31 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * 获取expire属性的值。
+     * 锟斤拷取expire锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getExpire() {
+    public String getExpire() {
         return expire;
     }
 
     /**
-     * 设置expire属性的值。
+     * 锟斤拷锟斤拷expire锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setExpire(XMLGregorianCalendar value) {
+    public void setExpire(String value) {
         this.expire = value;
     }
 
     /**
-     * 获取isCancelPayment属性的值。
+     * 锟斤拷取isCancelPayment锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public boolean isIsCancelPayment() {
@@ -204,7 +204,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * 设置isCancelPayment属性的值。
+     * 锟斤拷锟斤拷isCancelPayment锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setIsCancelPayment(boolean value) {

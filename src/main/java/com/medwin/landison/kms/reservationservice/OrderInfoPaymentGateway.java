@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>OrderInfoPaymentGateway complex type的 Java 类。
+ * <p>OrderInfoPaymentGateway complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="OrderInfoPaymentGateway"&gt;
@@ -79,7 +79,7 @@ public class OrderInfoPaymentGateway
     protected String orderId;
     @XmlElement(name = "PaymentDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar paymentDate;
+    protected String paymentDate;
     @XmlElement(name = "Amount_type", required = true)
     @XmlSchemaType(name = "string")
     protected AmountType amountType;
@@ -93,7 +93,7 @@ public class OrderInfoPaymentGateway
     protected String gatewayIdentification;
     @XmlElement(name = "ExpirePayment", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar expirePayment;
+    protected String expirePayment;
     @XmlElement(name = "CardHolderPayment")
     protected String cardHolderPayment;
     @XmlElement(name = "Category")
@@ -119,7 +119,7 @@ public class OrderInfoPaymentGateway
     protected boolean isCancelRule;
 
     /**
-     * 获取id属性的值。
+     * 锟斤拷取id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getId() {
@@ -127,7 +127,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置id属性的值。
+     * 锟斤拷锟斤拷id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setId(int value) {
@@ -135,7 +135,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取orderId属性的值。
+     * 锟斤拷取orderId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -147,7 +147,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置orderId属性的值。
+     * 锟斤拷锟斤拷orderId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -159,31 +159,31 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取paymentDate属性的值。
+     * 锟斤拷取paymentDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getPaymentDate() {
+    public String getPaymentDate() {
         return paymentDate;
     }
 
     /**
-     * 设置paymentDate属性的值。
+     * 锟斤拷锟斤拷paymentDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setPaymentDate(XMLGregorianCalendar value) {
+    public void setPaymentDate(String value) {
         this.paymentDate = value;
     }
 
     /**
-     * 获取amountType属性的值。
+     * 锟斤拷取amountType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -195,7 +195,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置amountType属性的值。
+     * 锟斤拷锟斤拷amountType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -207,7 +207,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取currency属性的值。
+     * 锟斤拷取currency锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -219,7 +219,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置currency属性的值。
+     * 锟斤拷锟斤拷currency锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -231,7 +231,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取amount属性的值。
+     * 锟斤拷取amount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -243,7 +243,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置amount属性的值。
+     * 锟斤拷锟斤拷amount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -255,7 +255,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取gatewayReferenceNo属性的值。
+     * 锟斤拷取gatewayReferenceNo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -267,7 +267,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置gatewayReferenceNo属性的值。
+     * 锟斤拷锟斤拷gatewayReferenceNo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -279,7 +279,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取gatewayIdentification属性的值。
+     * 锟斤拷取gatewayIdentification锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -291,7 +291,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置gatewayIdentification属性的值。
+     * 锟斤拷锟斤拷gatewayIdentification锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -303,31 +303,31 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取expirePayment属性的值。
+     * 锟斤拷取expirePayment锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getExpirePayment() {
+    public String getExpirePayment() {
         return expirePayment;
     }
 
     /**
-     * 设置expirePayment属性的值。
+     * 锟斤拷锟斤拷expirePayment锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setExpirePayment(XMLGregorianCalendar value) {
+    public void setExpirePayment(String value) {
         this.expirePayment = value;
     }
 
     /**
-     * 获取cardHolderPayment属性的值。
+     * 锟斤拷取cardHolderPayment锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -339,7 +339,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置cardHolderPayment属性的值。
+     * 锟斤拷锟斤拷cardHolderPayment锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -351,7 +351,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取category属性的值。
+     * 锟斤拷取category锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -363,7 +363,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置category属性的值。
+     * 锟斤拷锟斤拷category锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -375,7 +375,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取status属性的值。
+     * 锟斤拷取status锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -387,7 +387,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置status属性的值。
+     * 锟斤拷锟斤拷status锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -399,7 +399,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取remark属性的值。
+     * 锟斤拷取remark锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -411,7 +411,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置remark属性的值。
+     * 锟斤拷锟斤拷remark锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -423,7 +423,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取points属性的值。
+     * 锟斤拷取points锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -435,7 +435,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置points属性的值。
+     * 锟斤拷锟斤拷points锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -447,7 +447,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取paymentCode属性的值。
+     * 锟斤拷取paymentCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -459,7 +459,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置paymentCode属性的值。
+     * 锟斤拷锟斤拷paymentCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -471,7 +471,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取orderType属性的值。
+     * 锟斤拷取orderType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -483,7 +483,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置orderType属性的值。
+     * 锟斤拷锟斤拷orderType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -495,7 +495,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取updateStatus属性的值。
+     * 锟斤拷取updateStatus锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -507,7 +507,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置updateStatus属性的值。
+     * 锟斤拷锟斤拷updateStatus锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -519,7 +519,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取useCouponIn属性的值。
+     * 锟斤拷取useCouponIn锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -531,7 +531,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置useCouponIn属性的值。
+     * 锟斤拷锟斤拷useCouponIn锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -543,7 +543,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 获取isCancelRule属性的值。
+     * 锟斤拷取isCancelRule锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public boolean isIsCancelRule() {
@@ -551,7 +551,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * 设置isCancelRule属性的值。
+     * 锟斤拷锟斤拷isCancelRule锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setIsCancelRule(boolean value) {

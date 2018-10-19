@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>OrderInfoDepositSchedule complex type的 Java 类。
+ * <p>OrderInfoDepositSchedule complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="OrderInfoDepositSchedule"&gt;
@@ -55,12 +55,12 @@ public class OrderInfoDepositSchedule {
     protected BigDecimal amount;
     @XmlElement(name = "DueDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dueDate;
+    protected String dueDate;
     @XmlElement(name = "ExternalUser")
     protected String externalUser;
 
     /**
-     * 获取orderId属性的值。
+     * 锟斤拷取orderId锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getOrderId() {
@@ -68,7 +68,7 @@ public class OrderInfoDepositSchedule {
     }
 
     /**
-     * 设置orderId属性的值。
+     * 锟斤拷锟斤拷orderId锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setOrderId(int value) {
@@ -76,7 +76,7 @@ public class OrderInfoDepositSchedule {
     }
 
     /**
-     * 获取depositRuleCode属性的值。
+     * 锟斤拷取depositRuleCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -88,7 +88,7 @@ public class OrderInfoDepositSchedule {
     }
 
     /**
-     * 设置depositRuleCode属性的值。
+     * 锟斤拷锟斤拷depositRuleCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -100,7 +100,7 @@ public class OrderInfoDepositSchedule {
     }
 
     /**
-     * 获取description属性的值。
+     * 锟斤拷取description锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -112,7 +112,7 @@ public class OrderInfoDepositSchedule {
     }
 
     /**
-     * 设置description属性的值。
+     * 锟斤拷锟斤拷description锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -124,7 +124,7 @@ public class OrderInfoDepositSchedule {
     }
 
     /**
-     * 获取amount属性的值。
+     * 锟斤拷取amount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -136,7 +136,7 @@ public class OrderInfoDepositSchedule {
     }
 
     /**
-     * 设置amount属性的值。
+     * 锟斤拷锟斤拷amount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -148,31 +148,31 @@ public class OrderInfoDepositSchedule {
     }
 
     /**
-     * 获取dueDate属性的值。
+     * 锟斤拷取dueDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDueDate() {
+    public String getDueDate() {
         return dueDate;
     }
 
     /**
-     * 设置dueDate属性的值。
+     * 锟斤拷锟斤拷dueDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDueDate(XMLGregorianCalendar value) {
+    public void setDueDate(String value) {
         this.dueDate = value;
     }
 
     /**
-     * 获取externalUser属性的值。
+     * 锟斤拷取externalUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -184,7 +184,7 @@ public class OrderInfoDepositSchedule {
     }
 
     /**
-     * 设置externalUser属性的值。
+     * 锟斤拷锟斤拷externalUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

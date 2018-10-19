@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>OrderInfoAccompanying complex type的 Java 类。
+ * <p>OrderInfoAccompanying complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="OrderInfoAccompanying"&gt;
@@ -72,7 +72,7 @@ public class OrderInfoAccompanying {
     protected String address;
     @XmlElement(name = "Birthday", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar birthday;
+    protected String birthday;
     @XmlElement(name = "Title")
     protected String title;
     @XmlElement(name = "Email")
@@ -83,7 +83,7 @@ public class OrderInfoAccompanying {
     protected String bookerName;
 
     /**
-     * 获取orderID属性的值。
+     * 锟斤拷取orderID锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getOrderID() {
@@ -91,7 +91,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 设置orderID属性的值。
+     * 锟斤拷锟斤拷orderID锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setOrderID(int value) {
@@ -99,7 +99,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 获取firstName属性的值。
+     * 锟斤拷取firstName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -111,7 +111,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 设置firstName属性的值。
+     * 锟斤拷锟斤拷firstName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -123,7 +123,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 获取lastName属性的值。
+     * 锟斤拷取lastName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -135,7 +135,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 设置lastName属性的值。
+     * 锟斤拷锟斤拷lastName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -147,7 +147,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 获取mobile属性的值。
+     * 锟斤拷取mobile锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -159,7 +159,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 设置mobile属性的值。
+     * 锟斤拷锟斤拷mobile锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -171,7 +171,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 获取countryCode属性的值。
+     * 锟斤拷取countryCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -183,7 +183,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 设置countryCode属性的值。
+     * 锟斤拷锟斤拷countryCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -195,7 +195,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 获取provinceCode属性的值。
+     * 锟斤拷取provinceCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -207,7 +207,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 设置provinceCode属性的值。
+     * 锟斤拷锟斤拷provinceCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -219,7 +219,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 获取address属性的值。
+     * 锟斤拷取address锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -231,7 +231,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 设置address属性的值。
+     * 锟斤拷锟斤拷address锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -243,31 +243,31 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 获取birthday属性的值。
+     * 锟斤拷取birthday锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
     /**
-     * 设置birthday属性的值。
+     * 锟斤拷锟斤拷birthday锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBirthday(XMLGregorianCalendar value) {
+    public void setBirthday(String value) {
         this.birthday = value;
     }
 
     /**
-     * 获取title属性的值。
+     * 锟斤拷取title锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -279,7 +279,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 设置title属性的值。
+     * 锟斤拷锟斤拷title锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -291,7 +291,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 获取email属性的值。
+     * 锟斤拷取email锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -303,7 +303,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 设置email属性的值。
+     * 锟斤拷锟斤拷email锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -315,7 +315,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 获取chineseName属性的值。
+     * 锟斤拷取chineseName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -327,7 +327,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 设置chineseName属性的值。
+     * 锟斤拷锟斤拷chineseName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -339,7 +339,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 获取bookerName属性的值。
+     * 锟斤拷取bookerName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -351,7 +351,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * 设置bookerName属性的值。
+     * 锟斤拷锟斤拷bookerName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

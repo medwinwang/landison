@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>OrderRoomStayInfo complex type的 Java 类。
+ * <p>OrderRoomStayInfo complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="OrderRoomStayInfo"&gt;
@@ -103,7 +103,7 @@ public class OrderRoomStayInfo
     protected int orderID;
     @XmlElement(name = "DT", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dt;
+    protected String dt;
     @XmlElement(name = "RoomTypeCode")
     protected String roomTypeCode;
     @XmlElement(name = "RateAmount", required = true)
@@ -162,7 +162,7 @@ public class OrderRoomStayInfo
     protected boolean isInverse;
 
     /**
-     * 获取id属性的值。
+     * 锟斤拷取id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getID() {
@@ -170,7 +170,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置id属性的值。
+     * 锟斤拷锟斤拷id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setID(int value) {
@@ -178,7 +178,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取orderID属性的值。
+     * 锟斤拷取orderID锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getOrderID() {
@@ -186,7 +186,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置orderID属性的值。
+     * 锟斤拷锟斤拷orderID锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setOrderID(int value) {
@@ -194,31 +194,31 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取dt属性的值。
+     * 锟斤拷取dt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDT() {
+    public String getDT() {
         return dt;
     }
 
     /**
-     * 设置dt属性的值。
+     * 锟斤拷锟斤拷dt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDT(XMLGregorianCalendar value) {
+    public void setDT(String value) {
         this.dt = value;
     }
 
     /**
-     * 获取roomTypeCode属性的值。
+     * 锟斤拷取roomTypeCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -230,7 +230,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置roomTypeCode属性的值。
+     * 锟斤拷锟斤拷roomTypeCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -242,7 +242,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取rateAmount属性的值。
+     * 锟斤拷取rateAmount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -254,7 +254,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置rateAmount属性的值。
+     * 锟斤拷锟斤拷rateAmount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -266,7 +266,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取tax属性的值。
+     * 锟斤拷取tax锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -278,7 +278,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置tax属性的值。
+     * 锟斤拷锟斤拷tax锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -290,7 +290,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取discountPercentage属性的值。
+     * 锟斤拷取discountPercentage锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -302,7 +302,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置discountPercentage属性的值。
+     * 锟斤拷锟斤拷discountPercentage锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -314,7 +314,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取serviceCharge属性的值。
+     * 锟斤拷取serviceCharge锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -326,7 +326,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置serviceCharge属性的值。
+     * 锟斤拷锟斤拷serviceCharge锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -338,7 +338,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取currencyType属性的值。
+     * 锟斤拷取currencyType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -350,7 +350,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置currencyType属性的值。
+     * 锟斤拷锟斤拷currencyType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -362,7 +362,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取discountAmount属性的值。
+     * 锟斤拷取discountAmount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -374,7 +374,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置discountAmount属性的值。
+     * 锟斤拷锟斤拷discountAmount锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -386,7 +386,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取discountPercent属性的值。
+     * 锟斤拷取discountPercent锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -398,7 +398,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置discountPercent属性的值。
+     * 锟斤拷锟斤拷discountPercent锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -410,7 +410,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取discountReason属性的值。
+     * 锟斤拷取discountReason锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -422,7 +422,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置discountReason属性的值。
+     * 锟斤拷锟斤拷discountReason锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -434,7 +434,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取statusCode属性的值。
+     * 锟斤拷取statusCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -446,7 +446,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置statusCode属性的值。
+     * 锟斤拷锟斤拷statusCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -458,7 +458,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取roomNum属性的值。
+     * 锟斤拷取roomNum锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getRoomNum() {
@@ -466,7 +466,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置roomNum属性的值。
+     * 锟斤拷锟斤拷roomNum锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setRoomNum(int value) {
@@ -474,7 +474,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取adults属性的值。
+     * 锟斤拷取adults锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getAdults() {
@@ -482,7 +482,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置adults属性的值。
+     * 锟斤拷锟斤拷adults锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setAdults(int value) {
@@ -490,7 +490,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取comments属性的值。
+     * 锟斤拷取comments锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -502,7 +502,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置comments属性的值。
+     * 锟斤拷锟斤拷comments锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -514,7 +514,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取lastOperator属性的值。
+     * 锟斤拷取lastOperator锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -526,7 +526,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置lastOperator属性的值。
+     * 锟斤拷锟斤拷lastOperator锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -538,7 +538,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取extraBed属性的值。
+     * 锟斤拷取extraBed锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getExtraBed() {
@@ -546,7 +546,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置extraBed属性的值。
+     * 锟斤拷锟斤拷extraBed锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setExtraBed(int value) {
@@ -554,7 +554,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取roomNo属性的值。
+     * 锟斤拷取roomNo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -566,7 +566,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置roomNo属性的值。
+     * 锟斤拷锟斤拷roomNo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -578,7 +578,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取children属性的值。
+     * 锟斤拷取children锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getChildren() {
@@ -586,7 +586,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置children属性的值。
+     * 锟斤拷锟斤拷children锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setChildren(int value) {
@@ -594,7 +594,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取rateCode属性的值。
+     * 锟斤拷取rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -606,7 +606,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置rateCode属性的值。
+     * 锟斤拷锟斤拷rateCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -618,7 +618,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取fixedRate属性的值。
+     * 锟斤拷取fixedRate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -630,7 +630,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置fixedRate属性的值。
+     * 锟斤拷锟斤拷fixedRate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -642,7 +642,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取source属性的值。
+     * 锟斤拷取source锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -654,7 +654,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置source属性的值。
+     * 锟斤拷锟斤拷source锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -666,7 +666,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取market属性的值。
+     * 锟斤拷取market锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -678,7 +678,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置market属性的值。
+     * 锟斤拷锟斤拷market锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -690,7 +690,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取rtc属性的值。
+     * 锟斤拷取rtc锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -702,7 +702,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置rtc属性的值。
+     * 锟斤拷锟斤拷rtc锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -714,7 +714,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取couponcode属性的值。
+     * 锟斤拷取couponcode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -726,7 +726,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置couponcode属性的值。
+     * 锟斤拷锟斤拷couponcode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -738,7 +738,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取points属性的值。
+     * 锟斤拷取points锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getPoints() {
@@ -746,7 +746,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置points属性的值。
+     * 锟斤拷锟斤拷points锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setPoints(int value) {
@@ -754,7 +754,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取couponNum属性的值。
+     * 锟斤拷取couponNum锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getCouponNum() {
@@ -762,7 +762,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置couponNum属性的值。
+     * 锟斤拷锟斤拷couponNum锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setCouponNum(int value) {
@@ -770,7 +770,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取aavailableRooms属性的值。
+     * 锟斤拷取aavailableRooms锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getAavailableRooms() {
@@ -778,7 +778,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置aavailableRooms属性的值。
+     * 锟斤拷锟斤拷aavailableRooms锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setAavailableRooms(int value) {
@@ -786,7 +786,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取serialNumber属性的值。
+     * 锟斤拷取serialNumber锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -798,7 +798,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置serialNumber属性的值。
+     * 锟斤拷锟斤拷serialNumber锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -810,7 +810,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 获取isInverse属性的值。
+     * 锟斤拷取isInverse锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public boolean isIsInverse() {
@@ -818,7 +818,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * 设置isInverse属性的值。
+     * 锟斤拷锟斤拷isInverse锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setIsInverse(boolean value) {

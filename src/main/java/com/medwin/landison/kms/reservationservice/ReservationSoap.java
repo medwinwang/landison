@@ -67,9 +67,9 @@ public interface ReservationSoap {
         @WebParam(name = "account", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         java.lang.String account,
         @WebParam(name = "beginMakedate", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar beginMakedate,
+        java.lang.String beginMakedate,
         @WebParam(name = "endMakedate", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar endMakedate
+        java.lang.String endMakedate
     );
 
     /**
@@ -91,7 +91,7 @@ public interface ReservationSoap {
         @WebParam(name = "cardHolder", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         java.lang.String cardHolder,
         @WebParam(name = "expire", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar expire,
+        java.lang.String expire,
         @WebParam(name = "isCancelPayment", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         boolean isCancelPayment
     );
@@ -119,13 +119,13 @@ public interface ReservationSoap {
         @WebParam(name = "id", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int id,
         @WebParam(name = "beginMakedate", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar beginMakedate,
+        java.lang.String beginMakedate,
         @WebParam(name = "endMakedate", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar endMakedate,
+        java.lang.String endMakedate,
         @WebParam(name = "arrival", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar arrival,
+        java.lang.String arrival,
         @WebParam(name = "departure", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar departure,
+        java.lang.String departure,
         @WebParam(name = "status_code", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         java.lang.String statusCode,
         @WebParam(name = "reservation_type", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
@@ -287,13 +287,13 @@ public interface ReservationSoap {
         @WebParam(name = "id", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         int id,
         @WebParam(name = "beginMakedate", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar beginMakedate,
+        java.lang.String beginMakedate,
         @WebParam(name = "endMakedate", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar endMakedate,
+        java.lang.String endMakedate,
         @WebParam(name = "arrival", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar arrival,
+        java.lang.String arrival,
         @WebParam(name = "departure", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
-        javax.xml.datatype.XMLGregorianCalendar departure,
+        java.lang.String departure,
         @WebParam(name = "status_code", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")
         java.lang.String statusCode,
         @WebParam(name = "reservation_type", targetNamespace = "http://www.shijinet.com.cn/kunlun/kws/1.1/")

@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½İ¡ï¿½
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -67,16 +67,16 @@ public class OrderQueryPerPage {
     protected int id;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginMakedate;
+    protected String beginMakedate;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endMakedate;
+    protected String endMakedate;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar arrival;
+    protected String arrival;
     @XmlElement(required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar departure;
+    protected String departure;
     @XmlElement(name = "status_code")
     protected String statusCode;
     @XmlElement(name = "reservation_type")
@@ -93,7 +93,7 @@ public class OrderQueryPerPage {
     protected int currentPage;
 
     /**
-     * »ñÈ¡idÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡idï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getId() {
@@ -101,7 +101,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * ÉèÖÃidÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½idï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setId(int value) {
@@ -109,103 +109,103 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * »ñÈ¡beginMakedateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡beginMakedateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginMakedate() {
+    public String getBeginMakedate() {
         return beginMakedate;
     }
 
     /**
-     * ÉèÖÃbeginMakedateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½beginMakedateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginMakedate(XMLGregorianCalendar value) {
+    public void setBeginMakedate(String value) {
         this.beginMakedate = value;
     }
 
     /**
-     * »ñÈ¡endMakedateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡endMakedateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndMakedate() {
+    public String getEndMakedate() {
         return endMakedate;
     }
 
     /**
-     * ÉèÖÃendMakedateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½endMakedateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndMakedate(XMLGregorianCalendar value) {
+    public void setEndMakedate(String value) {
         this.endMakedate = value;
     }
 
     /**
-     * »ñÈ¡arrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getArrival() {
+    public String getArrival() {
         return arrival;
     }
 
     /**
-     * ÉèÖÃarrivalÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½arrivalï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setArrival(XMLGregorianCalendar value) {
+    public void setArrival(String value) {
         this.arrival = value;
     }
 
     /**
-     * »ñÈ¡departureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDeparture() {
+    public String getDeparture() {
         return departure;
     }
 
     /**
-     * ÉèÖÃdepartureÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½departureï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDeparture(XMLGregorianCalendar value) {
+    public void setDeparture(String value) {
         this.departure = value;
     }
 
     /**
-     * »ñÈ¡statusCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡statusCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -217,7 +217,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * ÉèÖÃstatusCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½statusCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -229,7 +229,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * »ñÈ¡reservationTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡reservationTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -241,7 +241,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * ÉèÖÃreservationTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½reservationTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -253,7 +253,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * »ñÈ¡hotelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -265,7 +265,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½hotelCodeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -277,7 +277,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * »ñÈ¡firstnameÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡firstnameï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -289,7 +289,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * ÉèÖÃfirstnameÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½firstnameï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -301,7 +301,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * »ñÈ¡lastnameÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡lastnameï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -313,7 +313,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * ÉèÖÃlastnameÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½lastnameï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -325,7 +325,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * »ñÈ¡guestIdÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡guestIdï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -337,7 +337,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * ÉèÖÃguestIdÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½guestIdï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -349,7 +349,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * »ñÈ¡accountÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡accountï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -361,7 +361,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * ÉèÖÃaccountÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½accountï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -373,7 +373,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * »ñÈ¡guestTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡guestTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -385,7 +385,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * ÉèÖÃguestTypeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½guestTypeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -397,7 +397,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * »ñÈ¡pageSizeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡pageSizeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getPageSize() {
@@ -405,7 +405,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * ÉèÖÃpageSizeÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½pageSizeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setPageSize(int value) {
@@ -413,7 +413,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * »ñÈ¡currentPageÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡currentPageï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public int getCurrentPage() {
@@ -421,7 +421,7 @@ public class OrderQueryPerPage {
     }
 
     /**
-     * ÉèÖÃcurrentPageÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½currentPageï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setCurrentPage(int value) {

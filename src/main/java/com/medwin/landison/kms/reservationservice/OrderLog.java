@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>OrderLog complex type的 Java 类。
+ * <p>OrderLog complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="OrderLog"&gt;
@@ -46,12 +46,12 @@ public class OrderLog {
     protected CommonInfo insertUser;
     @XmlElement(name = "InserDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar inserDate;
+    protected String inserDate;
     @XmlElement(name = "ExternalUser")
     protected String externalUser;
 
     /**
-     * 获取content属性的值。
+     * 锟斤拷取content锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -63,7 +63,7 @@ public class OrderLog {
     }
 
     /**
-     * 设置content属性的值。
+     * 锟斤拷锟斤拷content锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -75,7 +75,7 @@ public class OrderLog {
     }
 
     /**
-     * 获取insertUser属性的值。
+     * 锟斤拷取insertUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -87,7 +87,7 @@ public class OrderLog {
     }
 
     /**
-     * 设置insertUser属性的值。
+     * 锟斤拷锟斤拷insertUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -99,31 +99,31 @@ public class OrderLog {
     }
 
     /**
-     * 获取inserDate属性的值。
+     * 锟斤拷取inserDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getInserDate() {
+    public String getInserDate() {
         return inserDate;
     }
 
     /**
-     * 设置inserDate属性的值。
+     * 锟斤拷锟斤拷inserDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setInserDate(XMLGregorianCalendar value) {
+    public void setInserDate(String value) {
         this.inserDate = value;
     }
 
     /**
-     * 获取externalUser属性的值。
+     * 锟斤拷取externalUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -135,7 +135,7 @@ public class OrderLog {
     }
 
     /**
-     * 设置externalUser属性的值。
+     * 锟斤拷锟斤拷externalUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

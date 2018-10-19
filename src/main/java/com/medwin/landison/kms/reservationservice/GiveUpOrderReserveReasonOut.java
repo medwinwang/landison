@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>GiveUpOrderReserveReasonOut complex type的 Java 类。
+ * <p>GiveUpOrderReserveReasonOut complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="GiveUpOrderReserveReasonOut"&gt;
@@ -66,7 +66,7 @@ public class GiveUpOrderReserveReasonOut {
     protected String externalUserCode;
     @XmlElement(name = "Dt", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar dt;
+    protected String dt;
     @XmlElement(name = "GuestType")
     protected String guestType;
     @XmlElement(name = "GuestID")
@@ -77,15 +77,15 @@ public class GiveUpOrderReserveReasonOut {
     protected String insertUser;
     @XmlElement(name = "InsertDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar insertDate;
+    protected String insertDate;
     @XmlElement(name = "UpdateUser")
     protected String updateUser;
     @XmlElement(name = "UpdateDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar updateDate;
+    protected String updateDate;
 
     /**
-     * 获取reasonCode属性的值。
+     * 锟斤拷取reasonCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -97,7 +97,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 设置reasonCode属性的值。
+     * 锟斤拷锟斤拷reasonCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -109,7 +109,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 获取hotelCode属性的值。
+     * 锟斤拷取hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -121,7 +121,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 设置hotelCode属性的值。
+     * 锟斤拷锟斤拷hotelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -133,7 +133,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 获取channelCode属性的值。
+     * 锟斤拷取channelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -145,7 +145,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 设置channelCode属性的值。
+     * 锟斤拷锟斤拷channelCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -157,7 +157,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 获取externalUserCode属性的值。
+     * 锟斤拷取externalUserCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -169,7 +169,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 设置externalUserCode属性的值。
+     * 锟斤拷锟斤拷externalUserCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -181,31 +181,31 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 获取dt属性的值。
+     * 锟斤拷取dt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDt() {
+    public String getDt() {
         return dt;
     }
 
     /**
-     * 设置dt属性的值。
+     * 锟斤拷锟斤拷dt锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDt(XMLGregorianCalendar value) {
+    public void setDt(String value) {
         this.dt = value;
     }
 
     /**
-     * 获取guestType属性的值。
+     * 锟斤拷取guestType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -217,7 +217,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 设置guestType属性的值。
+     * 锟斤拷锟斤拷guestType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -229,7 +229,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 获取guestID属性的值。
+     * 锟斤拷取guestID锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -241,7 +241,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 设置guestID属性的值。
+     * 锟斤拷锟斤拷guestID锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -253,7 +253,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 获取comment属性的值。
+     * 锟斤拷取comment锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -265,7 +265,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 设置comment属性的值。
+     * 锟斤拷锟斤拷comment锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -277,7 +277,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 获取insertUser属性的值。
+     * 锟斤拷取insertUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -289,7 +289,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 设置insertUser属性的值。
+     * 锟斤拷锟斤拷insertUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -301,31 +301,31 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 获取insertDate属性的值。
+     * 锟斤拷取insertDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getInsertDate() {
+    public String getInsertDate() {
         return insertDate;
     }
 
     /**
-     * 设置insertDate属性的值。
+     * 锟斤拷锟斤拷insertDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setInsertDate(XMLGregorianCalendar value) {
+    public void setInsertDate(String value) {
         this.insertDate = value;
     }
 
     /**
-     * 获取updateUser属性的值。
+     * 锟斤拷取updateUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -337,7 +337,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 设置updateUser属性的值。
+     * 锟斤拷锟斤拷updateUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -349,26 +349,26 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * 获取updateDate属性的值。
+     * 锟斤拷取updateDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getUpdateDate() {
+    public String getUpdateDate() {
         return updateDate;
     }
 
     /**
-     * 设置updateDate属性的值。
+     * 锟斤拷锟斤拷updateDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setUpdateDate(XMLGregorianCalendar value) {
+    public void setUpdateDate(String value) {
         this.updateDate = value;
     }
 

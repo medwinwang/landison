@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>SelfCheckInAllowedInfo complex typeµÄ Java Àà¡£
+ * <p>SelfCheckInAllowedInfo complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖÐµÄÔ¤ÆÚÄÚÈÝ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ðµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½Ý¡ï¿½
  * 
  * <pre>
  * &lt;complexType name="SelfCheckInAllowedInfo"&gt;
@@ -40,10 +40,10 @@ public class SelfCheckInAllowedInfo {
     protected boolean allowed;
     @XmlElement(name = "AllowedTime", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar allowedTime;
+    protected String allowedTime;
 
     /**
-     * »ñÈ¡allowedÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡allowedï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public boolean isAllowed() {
@@ -51,7 +51,7 @@ public class SelfCheckInAllowedInfo {
     }
 
     /**
-     * ÉèÖÃallowedÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½allowedï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      */
     public void setAllowed(boolean value) {
@@ -59,26 +59,26 @@ public class SelfCheckInAllowedInfo {
     }
 
     /**
-     * »ñÈ¡allowedTimeÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½È¡allowedTimeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getAllowedTime() {
+    public String getAllowedTime() {
         return allowedTime;
     }
 
     /**
-     * ÉèÖÃallowedTimeÊôÐÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½allowedTimeï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setAllowedTime(XMLGregorianCalendar value) {
+    public void setAllowedTime(String value) {
         this.allowedTime = value;
     }
 

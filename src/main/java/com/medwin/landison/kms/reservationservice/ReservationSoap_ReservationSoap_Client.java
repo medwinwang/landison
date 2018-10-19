@@ -77,8 +77,8 @@ public final class ReservationSoap_ReservationSoap_Client {
         System.out.println("Invoking getOrderInfoByGuestType...");
         java.lang.String _getOrderInfoByGuestType_guestType = "";
         java.lang.String _getOrderInfoByGuestType_account = "";
-        javax.xml.datatype.XMLGregorianCalendar _getOrderInfoByGuestType_beginMakedate = null;
-        javax.xml.datatype.XMLGregorianCalendar _getOrderInfoByGuestType_endMakedate = null;
+        java.lang.String _getOrderInfoByGuestType_beginMakedate = null;
+        java.lang.String _getOrderInfoByGuestType_endMakedate = null;
         com.medwin.landison.kms.reservationservice.ArrayOfOrderInfo _getOrderInfoByGuestType__return = port.getOrderInfoByGuestType(_getOrderInfoByGuestType_guestType, _getOrderInfoByGuestType_account, _getOrderInfoByGuestType_beginMakedate, _getOrderInfoByGuestType_endMakedate);
         System.out.println("getOrderInfoByGuestType.result=" + _getOrderInfoByGuestType__return);
 
@@ -91,7 +91,7 @@ public final class ReservationSoap_ReservationSoap_Client {
         boolean _addAndUpdateOrderInfoPaymentGateway_isRequiredCredit = false;
         java.lang.String _addAndUpdateOrderInfoPaymentGateway_creditId = "";
         java.lang.String _addAndUpdateOrderInfoPaymentGateway_cardHolder = "";
-        javax.xml.datatype.XMLGregorianCalendar _addAndUpdateOrderInfoPaymentGateway_expire = null;
+        java.lang.String _addAndUpdateOrderInfoPaymentGateway_expire = null;
         boolean _addAndUpdateOrderInfoPaymentGateway_isCancelPayment = false;
         com.medwin.landison.kms.reservationservice.OrderInfoPaymentGateway _addAndUpdateOrderInfoPaymentGateway__return = port.addAndUpdateOrderInfoPaymentGateway(_addAndUpdateOrderInfoPaymentGateway_paymentGateway, _addAndUpdateOrderInfoPaymentGateway_id, _addAndUpdateOrderInfoPaymentGateway_isRequiredCredit, _addAndUpdateOrderInfoPaymentGateway_creditId, _addAndUpdateOrderInfoPaymentGateway_cardHolder, _addAndUpdateOrderInfoPaymentGateway_expire, _addAndUpdateOrderInfoPaymentGateway_isCancelPayment);
         System.out.println("addAndUpdateOrderInfoPaymentGateway.result=" + _addAndUpdateOrderInfoPaymentGateway__return);
@@ -109,10 +109,10 @@ public final class ReservationSoap_ReservationSoap_Client {
         {
         System.out.println("Invoking orderQuery...");
         int _orderQuery_id = 0;
-        javax.xml.datatype.XMLGregorianCalendar _orderQuery_beginMakedate = null;
-        javax.xml.datatype.XMLGregorianCalendar _orderQuery_endMakedate = null;
-        javax.xml.datatype.XMLGregorianCalendar _orderQuery_arrival = null;
-        javax.xml.datatype.XMLGregorianCalendar _orderQuery_departure = null;
+        java.lang.String _orderQuery_beginMakedate = null;
+        java.lang.String _orderQuery_endMakedate = null;
+        java.lang.String _orderQuery_arrival = null;
+        java.lang.String _orderQuery_departure = null;
         java.lang.String _orderQuery_statusCode = "";
         java.lang.String _orderQuery_reservationType = "";
         java.lang.String _orderQuery_hotelCode = "";
@@ -215,10 +215,10 @@ public final class ReservationSoap_ReservationSoap_Client {
         {
         System.out.println("Invoking orderQueryPerPage...");
         int _orderQueryPerPage_id = 0;
-        javax.xml.datatype.XMLGregorianCalendar _orderQueryPerPage_beginMakedate = null;
-        javax.xml.datatype.XMLGregorianCalendar _orderQueryPerPage_endMakedate = null;
-        javax.xml.datatype.XMLGregorianCalendar _orderQueryPerPage_arrival = null;
-        javax.xml.datatype.XMLGregorianCalendar _orderQueryPerPage_departure = null;
+        java.lang.String _orderQueryPerPage_beginMakedate = null;
+        java.lang.String _orderQueryPerPage_endMakedate = null;
+        java.lang.String _orderQueryPerPage_arrival = null;
+        java.lang.String _orderQueryPerPage_departure = null;
         java.lang.String _orderQueryPerPage_statusCode = "";
         java.lang.String _orderQueryPerPage_reservationType = "";
         java.lang.String _orderQueryPerPage_hotelCode = "";

@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>OrderInfoTraceTexts complex type的 Java 类。
+ * <p>OrderInfoTraceTexts complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="OrderInfoTraceTexts"&gt;
@@ -58,7 +58,7 @@ public class OrderInfoTraceTexts {
     protected String itemCode;
     @XmlElement(name = "TraceDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar traceDate;
+    protected String traceDate;
     @XmlElement(name = "PmsDepartmentCode")
     protected String pmsDepartmentCode;
     @XmlElement(name = "PmsDepartmentName")
@@ -67,12 +67,12 @@ public class OrderInfoTraceTexts {
     protected String traceTexts;
     @XmlElement(name = "ResolveDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar resolveDate;
+    protected String resolveDate;
     @XmlElement(name = "ResolveUser")
     protected String resolveUser;
 
     /**
-     * 获取id属性的值。
+     * 锟斤拷取id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getId() {
@@ -80,7 +80,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 设置id属性的值。
+     * 锟斤拷锟斤拷id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setId(int value) {
@@ -88,7 +88,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 获取orderId属性的值。
+     * 锟斤拷取orderId锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getOrderId() {
@@ -96,7 +96,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 设置orderId属性的值。
+     * 锟斤拷锟斤拷orderId锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setOrderId(int value) {
@@ -104,7 +104,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 获取itemCode属性的值。
+     * 锟斤拷取itemCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -116,7 +116,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 设置itemCode属性的值。
+     * 锟斤拷锟斤拷itemCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -128,31 +128,31 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 获取traceDate属性的值。
+     * 锟斤拷取traceDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getTraceDate() {
+    public String getTraceDate() {
         return traceDate;
     }
 
     /**
-     * 设置traceDate属性的值。
+     * 锟斤拷锟斤拷traceDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setTraceDate(XMLGregorianCalendar value) {
+    public void setTraceDate(String value) {
         this.traceDate = value;
     }
 
     /**
-     * 获取pmsDepartmentCode属性的值。
+     * 锟斤拷取pmsDepartmentCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -164,7 +164,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 设置pmsDepartmentCode属性的值。
+     * 锟斤拷锟斤拷pmsDepartmentCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -176,7 +176,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 获取pmsDepartmentName属性的值。
+     * 锟斤拷取pmsDepartmentName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -188,7 +188,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 设置pmsDepartmentName属性的值。
+     * 锟斤拷锟斤拷pmsDepartmentName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -200,7 +200,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 获取traceTexts属性的值。
+     * 锟斤拷取traceTexts锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -212,7 +212,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 设置traceTexts属性的值。
+     * 锟斤拷锟斤拷traceTexts锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -224,31 +224,31 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 获取resolveDate属性的值。
+     * 锟斤拷取resolveDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getResolveDate() {
+    public String getResolveDate() {
         return resolveDate;
     }
 
     /**
-     * 设置resolveDate属性的值。
+     * 锟斤拷锟斤拷resolveDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setResolveDate(XMLGregorianCalendar value) {
+    public void setResolveDate(String value) {
         this.resolveDate = value;
     }
 
     /**
-     * 获取resolveUser属性的值。
+     * 锟斤拷取resolveUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -260,7 +260,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * 设置resolveUser属性的值。
+     * 锟斤拷锟斤拷resolveUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is

@@ -7,13 +7,13 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>BaseInfo complex typeµÄ Java Àà¡£
+ * <p>BaseInfo complex typeï¿½ï¿½ Java ï¿½à¡£
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ï¿½ï¿½ï¿½ï¿½Ä£Ê½Æ¬ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ğµï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½İ¡ï¿½
  * 
  * <pre>
  * &lt;complexType name="BaseInfo"&gt;
@@ -56,15 +56,15 @@ public abstract class BaseInfo {
     protected String insertUser;
     @XmlElement(name = "InsertDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar insertDate;
+    protected String insertDate;
     @XmlElement(name = "UpdateUser")
     protected String updateUser;
     @XmlElement(name = "UpdateDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar updateDate;
+    protected String updateDate;
 
     /**
-     * »ñÈ¡insertUserÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡insertUserï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public abstract class BaseInfo {
     }
 
     /**
-     * ÉèÖÃinsertUserÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½insertUserï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -88,31 +88,31 @@ public abstract class BaseInfo {
     }
 
     /**
-     * »ñÈ¡insertDateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡insertDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getInsertDate() {
+    public String getInsertDate() {
         return insertDate;
     }
 
     /**
-     * ÉèÖÃinsertDateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½insertDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setInsertDate(XMLGregorianCalendar value) {
+    public void setInsertDate(String value) {
         this.insertDate = value;
     }
 
     /**
-     * »ñÈ¡updateUserÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡updateUserï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
@@ -124,7 +124,7 @@ public abstract class BaseInfo {
     }
 
     /**
-     * ÉèÖÃupdateUserÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½updateUserï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
@@ -136,26 +136,26 @@ public abstract class BaseInfo {
     }
 
     /**
-     * »ñÈ¡updateDateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½È¡updateDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getUpdateDate() {
+    public String getUpdateDate() {
         return updateDate;
     }
 
     /**
-     * ÉèÖÃupdateDateÊôĞÔµÄÖµ¡£
+     * ï¿½ï¿½ï¿½ï¿½updateDateï¿½ï¿½ï¿½Ôµï¿½Öµï¿½ï¿½
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setUpdateDate(XMLGregorianCalendar value) {
+    public void setUpdateDate(String value) {
         this.updateDate = value;
     }
 

@@ -6,13 +6,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.lang.String;
 
 
 /**
- * <p>QueryOrderPageIn complex type的 Java 类。
+ * <p>QueryOrderPageIn complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="QueryOrderPageIn"&gt;
@@ -99,22 +99,22 @@ public class QueryOrderPageIn {
     protected int id;
     @XmlElement(name = "BeginArrivalDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginArrivalDate;
+    protected String beginArrivalDate;
     @XmlElement(name = "EndArrivalDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endArrivalDate;
+    protected String endArrivalDate;
     @XmlElement(name = "BeginDepartureDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginDepartureDate;
+    protected String beginDepartureDate;
     @XmlElement(name = "EndDepartureDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endDepartureDate;
+    protected String endDepartureDate;
     @XmlElement(name = "BeginInsertDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar beginInsertDate;
+    protected String beginInsertDate;
     @XmlElement(name = "EndInsertDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar endInsertDate;
+    protected String endInsertDate;
     @XmlElement(name = "Hotels")
     protected String hotels;
     @XmlElement(name = "FirstName")
@@ -167,7 +167,7 @@ public class QueryOrderPageIn {
     protected String isRtOrigOrder;
 
     /**
-     * 获取id属性的值。
+     * 锟斤拷取id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getId() {
@@ -175,7 +175,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置id属性的值。
+     * 锟斤拷锟斤拷id锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setId(int value) {
@@ -183,151 +183,151 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取beginArrivalDate属性的值。
+     * 锟斤拷取beginArrivalDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginArrivalDate() {
+    public String getBeginArrivalDate() {
         return beginArrivalDate;
     }
 
     /**
-     * 设置beginArrivalDate属性的值。
+     * 锟斤拷锟斤拷beginArrivalDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginArrivalDate(XMLGregorianCalendar value) {
+    public void setBeginArrivalDate(String value) {
         this.beginArrivalDate = value;
     }
 
     /**
-     * 获取endArrivalDate属性的值。
+     * 锟斤拷取endArrivalDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndArrivalDate() {
+    public String getEndArrivalDate() {
         return endArrivalDate;
     }
 
     /**
-     * 设置endArrivalDate属性的值。
+     * 锟斤拷锟斤拷endArrivalDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndArrivalDate(XMLGregorianCalendar value) {
+    public void setEndArrivalDate(String value) {
         this.endArrivalDate = value;
     }
 
     /**
-     * 获取beginDepartureDate属性的值。
+     * 锟斤拷取beginDepartureDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginDepartureDate() {
+    public String getBeginDepartureDate() {
         return beginDepartureDate;
     }
 
     /**
-     * 设置beginDepartureDate属性的值。
+     * 锟斤拷锟斤拷beginDepartureDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginDepartureDate(XMLGregorianCalendar value) {
+    public void setBeginDepartureDate(String value) {
         this.beginDepartureDate = value;
     }
 
     /**
-     * 获取endDepartureDate属性的值。
+     * 锟斤拷取endDepartureDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndDepartureDate() {
+    public String getEndDepartureDate() {
         return endDepartureDate;
     }
 
     /**
-     * 设置endDepartureDate属性的值。
+     * 锟斤拷锟斤拷endDepartureDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndDepartureDate(XMLGregorianCalendar value) {
+    public void setEndDepartureDate(String value) {
         this.endDepartureDate = value;
     }
 
     /**
-     * 获取beginInsertDate属性的值。
+     * 锟斤拷取beginInsertDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBeginInsertDate() {
+    public String getBeginInsertDate() {
         return beginInsertDate;
     }
 
     /**
-     * 设置beginInsertDate属性的值。
+     * 锟斤拷锟斤拷beginInsertDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBeginInsertDate(XMLGregorianCalendar value) {
+    public void setBeginInsertDate(String value) {
         this.beginInsertDate = value;
     }
 
     /**
-     * 获取endInsertDate属性的值。
+     * 锟斤拷取endInsertDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getEndInsertDate() {
+    public String getEndInsertDate() {
         return endInsertDate;
     }
 
     /**
-     * 设置endInsertDate属性的值。
+     * 锟斤拷锟斤拷endInsertDate锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setEndInsertDate(XMLGregorianCalendar value) {
+    public void setEndInsertDate(String value) {
         this.endInsertDate = value;
     }
 
     /**
-     * 获取hotels属性的值。
+     * 锟斤拷取hotels锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -339,7 +339,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置hotels属性的值。
+     * 锟斤拷锟斤拷hotels锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -351,7 +351,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取firstName属性的值。
+     * 锟斤拷取firstName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -363,7 +363,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置firstName属性的值。
+     * 锟斤拷锟斤拷firstName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -375,7 +375,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取lastName属性的值。
+     * 锟斤拷取lastName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -387,7 +387,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置lastName属性的值。
+     * 锟斤拷锟斤拷lastName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -399,7 +399,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取profileId属性的值。
+     * 锟斤拷取profileId锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getProfileId() {
@@ -407,7 +407,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置profileId属性的值。
+     * 锟斤拷锟斤拷profileId锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setProfileId(int value) {
@@ -415,7 +415,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取account属性的值。
+     * 锟斤拷取account锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -427,7 +427,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置account属性的值。
+     * 锟斤拷锟斤拷account锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -439,7 +439,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取cardNumber属性的值。
+     * 锟斤拷取cardNumber锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -451,7 +451,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置cardNumber属性的值。
+     * 锟斤拷锟斤拷cardNumber锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -463,7 +463,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取phoneNumber属性的值。
+     * 锟斤拷取phoneNumber锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -475,7 +475,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置phoneNumber属性的值。
+     * 锟斤拷锟斤拷phoneNumber锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -487,7 +487,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取party属性的值。
+     * 锟斤拷取party锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -499,7 +499,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置party属性的值。
+     * 锟斤拷锟斤拷party锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -511,7 +511,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取pageInfo属性的值。
+     * 锟斤拷取pageInfo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -523,7 +523,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置pageInfo属性的值。
+     * 锟斤拷锟斤拷pageInfo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -535,7 +535,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取blockCode属性的值。
+     * 锟斤拷取blockCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -547,7 +547,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置blockCode属性的值。
+     * 锟斤拷锟斤拷blockCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -559,7 +559,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取channelConfirmID属性的值。
+     * 锟斤拷取channelConfirmID锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -571,7 +571,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置channelConfirmID属性的值。
+     * 锟斤拷锟斤拷channelConfirmID锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -583,7 +583,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取pmsId属性的值。
+     * 锟斤拷取pmsId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -595,7 +595,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置pmsId属性的值。
+     * 锟斤拷锟斤拷pmsId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -607,7 +607,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取shareCode属性的值。
+     * 锟斤拷取shareCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -619,7 +619,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置shareCode属性的值。
+     * 锟斤拷锟斤拷shareCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -631,7 +631,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取channel属性的值。
+     * 锟斤拷取channel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -643,7 +643,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置channel属性的值。
+     * 锟斤拷锟斤拷channel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -655,7 +655,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取insertUser属性的值。
+     * 锟斤拷取insertUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -667,7 +667,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置insertUser属性的值。
+     * 锟斤拷锟斤拷insertUser锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -679,7 +679,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取cancelId属性的值。
+     * 锟斤拷取cancelId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -691,7 +691,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置cancelId属性的值。
+     * 锟斤拷锟斤拷cancelId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -703,7 +703,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取channelCancelId属性的值。
+     * 锟斤拷取channelCancelId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -715,7 +715,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置channelCancelId属性的值。
+     * 锟斤拷锟斤拷channelCancelId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -727,7 +727,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取pmsCancelId属性的值。
+     * 锟斤拷取pmsCancelId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -739,7 +739,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置pmsCancelId属性的值。
+     * 锟斤拷锟斤拷pmsCancelId锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -751,7 +751,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取chineseName属性的值。
+     * 锟斤拷取chineseName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -763,7 +763,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置chineseName属性的值。
+     * 锟斤拷锟斤拷chineseName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -775,7 +775,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取bookerName属性的值。
+     * 锟斤拷取bookerName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -787,7 +787,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置bookerName属性的值。
+     * 锟斤拷锟斤拷bookerName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -799,7 +799,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取bookerMobile属性的值。
+     * 锟斤拷取bookerMobile锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -811,7 +811,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置bookerMobile属性的值。
+     * 锟斤拷锟斤拷bookerMobile锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -823,7 +823,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取statusCode属性的值。
+     * 锟斤拷取statusCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -835,7 +835,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置statusCode属性的值。
+     * 锟斤拷锟斤拷statusCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -847,7 +847,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取companyType属性的值。
+     * 锟斤拷取companyType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -859,7 +859,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置companyType属性的值。
+     * 锟斤拷锟斤拷companyType锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -871,7 +871,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取roomNo属性的值。
+     * 锟斤拷取roomNo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -883,7 +883,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置roomNo属性的值。
+     * 锟斤拷锟斤拷roomNo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -895,7 +895,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 获取isRtOrigOrder属性的值。
+     * 锟斤拷取isRtOrigOrder锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -907,7 +907,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * 设置isRtOrigOrder属性的值。
+     * 锟斤拷锟斤拷isRtOrigOrder锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
