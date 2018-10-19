@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.xml.ws.handler.Handler;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +31,10 @@ public class ServiceFactory {
     @Autowired
     private KmsAddSoapHeader kmsAddSoapHeader;
 
+
+    @Autowired
+    private KmsClientHandler kmsClientHandler;
+
     @Bean
     public InformationServiceSoap getInformationServiceSoap(){
 
@@ -43,6 +48,11 @@ public class ServiceFactory {
         list.add(new org.apache.cxf.interceptor.LoggingOutInterceptor());
         factory.setOutInterceptors(list);
         factory.getInInterceptors().add(new LoggingInInterceptor());
+
+        List<Handler> handlerList = new ArrayList<Handler>();
+        handlerList.add(kmsClientHandler);
+        factory.setHandlers(handlerList);
+
         factory.setAddress(kmsConfig.getUrl() + "/InformationService.asmx");
         factory.setServiceClass(InformationServiceSoap.class);
         return (InformationServiceSoap) factory.create();
@@ -61,6 +71,11 @@ public class ServiceFactory {
         list.add(new org.apache.cxf.interceptor.LoggingOutInterceptor());
         factory.setOutInterceptors(list);
         factory.getInInterceptors().add(new LoggingInInterceptor());
+
+        List<Handler> handlerList = new ArrayList<Handler>();
+        handlerList.add(kmsClientHandler);
+        factory.setHandlers(handlerList);
+
         factory.setAddress(kmsConfig.getUrl() + "/AvailabilityService.asmx");
         factory.setServiceClass(AvailabilityQuerySoap.class);
         return (AvailabilityQuerySoap) factory.create();
@@ -79,6 +94,11 @@ public class ServiceFactory {
         list.add(new org.apache.cxf.interceptor.LoggingOutInterceptor());
         factory.setOutInterceptors(list);
         factory.getInInterceptors().add(new LoggingInInterceptor());
+
+        List<Handler> handlerList = new ArrayList<Handler>();
+        handlerList.add(kmsClientHandler);
+        factory.setHandlers(handlerList);
+
         factory.setAddress(kmsConfig.getUrl() + "/ReservationService.asmx");
         factory.setServiceClass(ReservationSoap.class);
         return (ReservationSoap) factory.create();
