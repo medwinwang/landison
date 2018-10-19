@@ -12,7 +12,7 @@ public interface UserService {
 
     BaseResult sendRegisterSms(String mobile, String name, String code);
 
-    BaseResult register(String mobile, String name, String password);
+    BaseResult register(String mobile, String firstName, String lastName, String password, String mobileCountryNumber);
 
     BaseResult login(String mobile, String password, String mobileCountryNumber);
 

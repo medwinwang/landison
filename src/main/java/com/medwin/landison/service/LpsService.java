@@ -14,7 +14,9 @@ public interface LpsService {
     BaseResult getUserProfiles(String mobile);
 
     //注册
-    BaseResult register(String mobile, String firstName, String password);
+    BaseResult register(String mobile, String firstName, String lastName, String password, String mobileCountryNumber,
+                        String membershipCardTypeCode, String membershipCardLevelCode,
+                        String enrollmentChannelCode);
 
     //用户验证
     BaseResult checkUser(String mobile, String password, String mobileCountryNumber);

@@ -1,6 +1,7 @@
 package com.medwin.landison.service.impl;
 
 import com.medwin.landison.common.BaseResult;
+import com.medwin.landison.config.LpsConfig;
 import com.medwin.landison.kms.informationservice.SendInfo;
 import com.medwin.landison.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,9 @@ import java.time.temporal.ChronoUnit;
  */
 @Service
 public class UserServiceImpl implements UserService {
+
+    @Autowired
+    private LpsConfig lpsConfig;
 
     @Autowired
     private LpsServiceImpl lpsService;
@@ -54,9 +58,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public BaseResult register(String mobile, String name, String password) {
+    public BaseResult register(String mobile, String firstName, String lastName, String password, String mobileCountryNumber) {
 
-        return lpsService.register(mobile, name, password);
+        LpsConfig.Register register = lpsConfig.getRegister();
+        return lpsService.register(mobile, firstName, lastName, password, mobileCountryNumber,
+                register.getMembershipCardTypeCode(), register.getMembershipCardLevelCode(),
+                register.getEnrollmentChannelCode());
     }
 
     @Override

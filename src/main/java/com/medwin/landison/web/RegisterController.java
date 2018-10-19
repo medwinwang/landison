@@ -61,7 +61,8 @@ public class RegisterController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public BaseResult register(String mobile, String name, String code, String password, String mobileCountryNumber, HttpSession httpSession) {
+    public BaseResult register(String mobile, String firstName, String lastName, String code, String password,
+                               String mobileCountryNumber, HttpSession httpSession) {
 
         Integer sessionCode = (Integer) httpSession.getAttribute(REG_SMS_CODE);
         if(sessionCode == null) {
@@ -79,6 +80,6 @@ public class RegisterController {
             return new BaseResult("4", "短信验证码错误", null);
         }
 
-        return userService.register(mobile, name, password);
+        return userService.register(mobile, firstName, lastName, password, mobileCountryNumber);
     }
 }

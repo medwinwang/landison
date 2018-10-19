@@ -21,8 +21,8 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public BaseResult login(String mobile, String password, String mobileCountryNumber, HttpSession httpSession) throws LpsSystemException {
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public BaseResult login(String mobile, String password, String mobileCountryNumber, HttpSession httpSession) {
 
         BaseResult baseResult = userService.login(mobile, password, mobileCountryNumber);
         if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())) {

@@ -7,6 +7,7 @@ import com.medwin.landison.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
@@ -37,18 +38,19 @@ public class UserController {
     }
 
     @RequestMapping(value = "/pointsHistory", method = RequestMethod.GET)
-    public BaseResult getPointsHistory(String beginDate, String endDate, String type,
-                                String hotelCode, String placeCode, int page, int pageSize, HttpSession httpSession){
+    public BaseResult getPointsHistory(String beginDate, String endDate, String type, String hotelCode, String placeCode,
+                                       @RequestParam(value="page", defaultValue="1") int page,
+                                       @RequestParam(value="pageSize", defaultValue="10")int pageSize, HttpSession httpSession){
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
-
         return userService.getPointsHistory(user.getString("id"), beginDate, endDate, type, hotelCode, placeCode, page, pageSize);
 
     }
 
     @RequestMapping(value = "/storedValueHistory", method = RequestMethod.GET)
     public BaseResult getStoredValueHistory(String beginDate, String endDate, String type,
-                                       String hotelCode, String placeCode, int page, int pageSize, HttpSession httpSession){
+                                       String hotelCode, String placeCode, @RequestParam(value="page", defaultValue="1") int page,
+                                            @RequestParam(value="pageSize", defaultValue="10")int pageSize, HttpSession httpSession){
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
 
@@ -58,7 +60,8 @@ public class UserController {
 
 
     @RequestMapping(value = "/coupons", method = RequestMethod.GET)
-    public BaseResult getCoupons(String status, int page, int pageSize, HttpSession httpSession){
+    public BaseResult getCoupons(String status, @RequestParam(value="page", defaultValue="1") int page,
+                                 @RequestParam(value="pageSize", defaultValue="10")int pageSize, HttpSession httpSession){
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
 

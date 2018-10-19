@@ -38,12 +38,19 @@ public class LpsServiceImpl implements LpsService{
     }
 
     @Override
-    public BaseResult register(String mobile, String firstName, String password)  {
+    public BaseResult register(String mobile, String firstName, String lastName, String password, String mobileCountryNumber,
+                               String membershipCardTypeCode, String membershipCardLevelCode,
+                               String enrollmentChannelCode)  {
 
         HashMap<String, String> par = new HashMap<>();
         par.put("mobile", mobile);
         par.put("firstName", firstName);
+        par.put("lastName", lastName);
         par.put("password", password);
+        par.put("mobileCountryNumber", mobileCountryNumber);
+        par.put("membershipCardTypeCode", membershipCardTypeCode);
+        par.put("membershipCardLevelCode", membershipCardLevelCode);
+        par.put("enrollmentChannelCode", enrollmentChannelCode);
         return  lpsUtil.post("/api/v{version}/profiles", par);
     }
 
