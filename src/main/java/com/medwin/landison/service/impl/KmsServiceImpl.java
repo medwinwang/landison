@@ -7,6 +7,8 @@ import com.medwin.landison.config.KmsConfig;
 import com.medwin.landison.kms.availabilityservice.Availability;
 import com.medwin.landison.kms.availabilityservice.AvailabilityQuerySoap;
 import com.medwin.landison.kms.informationservice.*;
+import com.medwin.landison.kms.reservationservice.OrderInfo;
+import com.medwin.landison.kms.reservationservice.ReservationSoap;
 import com.medwin.landison.kms.securityservice.SecurityService;
 import com.medwin.landison.service.KmsService;
 import org.apache.cxf.interceptor.Interceptor;
@@ -43,6 +45,9 @@ public class KmsServiceImpl implements KmsService {
 
     @Autowired
     private AvailabilityQuerySoap availabilityQuerySoap;
+
+    @Autowired
+    private ReservationSoap reservationSoap;
 
     @Override
     public boolean appLogin() {
@@ -126,6 +131,12 @@ public class KmsServiceImpl implements KmsService {
                 guesttypeCode, custAccount, cardNo, children, channel);
 
         return availability;
+    }
+
+    @Override
+    public OrderInfo greateReservation(OrderInfo orderInfo) {
+
+        return reservationSoap.createReservation(orderInfo);
     }
 
 }

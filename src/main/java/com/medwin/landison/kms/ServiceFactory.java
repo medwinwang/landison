@@ -5,6 +5,7 @@ import com.medwin.landison.common.KmsClientHandler;
 import com.medwin.landison.config.KmsConfig;
 import com.medwin.landison.kms.availabilityservice.AvailabilityQuerySoap;
 import com.medwin.landison.kms.informationservice.InformationServiceSoap;
+import com.medwin.landison.kms.reservationservice.ReservationSoap;
 import org.apache.cxf.interceptor.Interceptor;
 import org.apache.cxf.interceptor.LoggingInInterceptor;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
@@ -63,5 +64,23 @@ public class ServiceFactory {
         factory.setAddress(kmsConfig.getUrl() + "/AvailabilityService.asmx");
         factory.setServiceClass(AvailabilityQuerySoap.class);
         return (AvailabilityQuerySoap) factory.create();
+    }
+
+    @Bean
+    public ReservationSoap getReservationSoap(){
+
+        JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean();
+
+        List<Interceptor<? extends Message>> list = new ArrayList();
+        // 添加soap header 信息
+        list.add(kmsAddSoapHeader);
+
+        // 添加soap消息日志打印
+        list.add(new org.apache.cxf.interceptor.LoggingOutInterceptor());
+        factory.setOutInterceptors(list);
+        factory.getInInterceptors().add(new LoggingInInterceptor());
+        factory.setAddress(kmsConfig.getUrl() + "/ReservationService.asmx");
+        factory.setServiceClass(ReservationSoap.class);
+        return (ReservationSoap) factory.create();
     }
 }
