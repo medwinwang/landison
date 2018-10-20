@@ -11,6 +11,8 @@ public interface LpsService {
     //根据手机号查询
     BaseResult getUserProfile(String mobileCountryNumber, String mobile);
 
+    BaseResult getUserProfileById(String id);
+
     BaseResult getUserProfiles(String mobile);
 
     //注册

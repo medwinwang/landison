@@ -33,6 +33,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public BaseResult getUserByPid(String id) {
+        return lpsService.getUserProfileById(id);
+    }
+
+    @Override
     public BaseResult sendRegisterSms(String mobile, String name, String code) {
 
         BaseResult baseResult = new BaseResult();

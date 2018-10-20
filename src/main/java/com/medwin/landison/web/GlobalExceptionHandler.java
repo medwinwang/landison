@@ -25,6 +25,7 @@ public class GlobalExceptionHandler {
 
         BaseResult baseResult = new BaseResult();
         baseResult.setCode("90001");
+        baseResult.setMessage(e.getMessage());
         Map<String, String> emap = new HashMap<>();
         emap.put(KmsClientHandler.RET_CODE, e.getRetCode());
         emap.put(KmsClientHandler.ERR_REASON, e.getErrReason());

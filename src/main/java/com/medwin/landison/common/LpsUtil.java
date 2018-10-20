@@ -49,7 +49,7 @@ public class LpsUtil {
             log.info("put {} {}", url, jsonStr);
 
             BaseResult baseResult = new BaseResult();
-            baseResult.setCode("1");
+            baseResult.setCode(BaseResult.SUCCESS_CODE);
             return baseResult;
 
         }catch (HttpClientErrorException e) {
@@ -78,7 +78,7 @@ public class LpsUtil {
             log.info("post {} {} {} {}", url, jsonStr, result.getStatusCodeValue(), result.getBody());
 
             BaseResult baseResult = new BaseResult();
-            baseResult.setCode("1");
+            baseResult.setCode(BaseResult.SUCCESS_CODE);
             baseResult.setDataString(result.getBody());
             return baseResult;
 
@@ -107,7 +107,7 @@ public class LpsUtil {
             ResponseEntity<String> result = restTemplate.getForEntity(targetUrl, String.class);
             log.info("get {} {} {} {}", targetUrl, JSON.toJSONString(paras), result.getStatusCodeValue(), result.getBody());
             BaseResult baseResult = new BaseResult();
-            baseResult.setCode("1");
+            baseResult.setCode(BaseResult.SUCCESS_CODE);
             baseResult.setDataString(result.getBody());
             return baseResult;
 

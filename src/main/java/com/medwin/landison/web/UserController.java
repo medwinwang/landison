@@ -1,6 +1,5 @@
 package com.medwin.landison.web;
 
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.common.UserUtil;
@@ -28,6 +27,25 @@ public class UserController {
     @Autowired
     private LpsConfig lpsConfig;
 
+    @RequestMapping(value = "/info", method = RequestMethod.GET)
+    public BaseResult getUser(@RequestParam(value="from", defaultValue="0") int from,
+                                       HttpSession httpSession){
+
+        JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
+
+        if(from > 0) {
+            BaseResult baseResult = userService.getUserByPid(UserUtil.getId(user));
+            if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())) {
+                httpSession.setAttribute(LoginController.SESSION_USER, baseResult.getData());
+            }
+            return baseResult;
+        } else {
+            return new BaseResult(BaseResult.SUCCESS_CODE, null, user);
+        }
+
+    }
+
+
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public BaseResult update(String firstName, String lastName, String altFirstName, String altLastName,
                              String genderCode, String idTypeCode, String idNumber, String mobile, String birthday, String email,
@@ -36,11 +54,16 @@ public class UserController {
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
 
-        return userService.updateUser(user.getString("id"), firstName, lastName, altFirstName,
+        BaseResult baseResult = userService.updateUser(UserUtil.getId(user), firstName, lastName, altFirstName,
                 altLastName, genderCode, idTypeCode, idNumber,
                 mobile, birthday, email, addressCountryCode,
                 addressProvinceCode, addressCity, addressDistrict,
                 addressStreet);
+        if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())) {
+            httpSession.setAttribute(LoginController.SESSION_USER, baseResult.getData());
+        }
+
+        return baseResult;
     }
 
     @RequestMapping(value = "/pointsHistory", method = RequestMethod.GET)

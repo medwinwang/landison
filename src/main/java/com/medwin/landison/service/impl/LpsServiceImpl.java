@@ -30,6 +30,13 @@ public class LpsServiceImpl implements LpsService{
     }
 
     @Override
+    public BaseResult getUserProfileById(String id) {
+
+        HashMap<String, String> par = new HashMap<>();
+        return  lpsUtil.get("/api/v{version}/profiles/"+id, par);
+    }
+
+    @Override
     public BaseResult getUserProfiles(String mobile)  {
 
         HashMap<String, String> par = new HashMap<>();

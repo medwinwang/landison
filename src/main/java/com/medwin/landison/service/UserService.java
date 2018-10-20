@@ -10,6 +10,8 @@ public interface UserService {
 
     BaseResult getUser(String mobileCountryNumber, String mobile);
 
+    BaseResult getUserByPid(String id);
+
     BaseResult sendRegisterSms(String mobile, String name, String code);
 
     BaseResult register(String mobile, String firstName, String lastName, String password, String mobileCountryNumber);
