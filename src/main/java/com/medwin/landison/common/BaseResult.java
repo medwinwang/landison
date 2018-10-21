@@ -1,5 +1,6 @@
 package com.medwin.landison.common;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +22,9 @@ public class BaseResult {
     Object data;
 
     public void setDataString(String dataStr){
-        this.data = JSONObject.parseObject(dataStr);
+        JSONObject jsonObject = JSON.parseObject(dataStr);
+        this.data = jsonObject;
+        this.message = jsonObject.getString("message");
     }
 
     public void setBooleanCode(boolean code){

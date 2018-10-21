@@ -38,7 +38,7 @@ public class RegisterController {
     }
 
     @RequestMapping(value = "/sendRegisterSms", method = RequestMethod.POST)
-    public BaseResult sendRegisterSms(String mobile, String name, HttpSession httpSession) {
+    public BaseResult sendRegisterSms(String  mobileCountryNumber, String mobile, String name, HttpSession httpSession) {
 
         Long expTime = (Long) httpSession.getAttribute(REG_SMS_EXP_TIME);
         Long second = LocalDateTime.now().toEpochSecond(ZoneOffset.of("+8"));
@@ -57,7 +57,7 @@ public class RegisterController {
         httpSession.setAttribute(REG_SMS_MOBILE, mobile);
         httpSession.setAttribute(REG_SMS_EXP_TIME, second+120);
 
-        return userService.sendRegisterSms(mobile, name, String.valueOf(code));
+        return userService.sendRegisterSms(mobileCountryNumber, mobile, name, String.valueOf(code));
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)

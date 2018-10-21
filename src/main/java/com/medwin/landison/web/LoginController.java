@@ -21,7 +21,7 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/", method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST)
     public BaseResult login(String mobile, String password, String mobileCountryNumber, HttpSession httpSession) {
 
         BaseResult baseResult = userService.login(mobile, password, mobileCountryNumber);

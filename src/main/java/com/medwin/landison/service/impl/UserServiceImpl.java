@@ -38,9 +38,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public BaseResult sendRegisterSms(String mobile, String name, String code) {
+    public BaseResult sendRegisterSms(String mobileCountryNumber, String mobile, String name, String code) {
 
         BaseResult baseResult = new BaseResult();
+
+        BaseResult userBaseResult = getUser(mobileCountryNumber, mobile);
+        if(BaseResult.SUCCESS_CODE.equals(userBaseResult.getCode())) {
+            baseResult.setCode("2");
+            baseResult.setMessage("手机号已注册");
+            return baseResult;
+        }
 
         SendInfo sendInfo = new SendInfo();
         sendInfo.setSendType("3");
