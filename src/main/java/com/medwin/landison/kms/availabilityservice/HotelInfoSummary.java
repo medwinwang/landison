@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>HotelInfoSummary complex type的 Java 类。
+ * <p>HotelInfoSummary complex type锟斤拷 Java 锟洁。
  * 
- * <p>以下模式片段指定包含在此类中的预期内容。
+ * <p>锟斤拷锟斤拷模式片锟斤拷指锟斤拷锟斤拷锟斤拷锟节达拷锟斤拷锟叫碉拷预锟斤拷锟斤拷锟捷★拷
  * 
  * <pre>
  * &lt;complexType name="HotelInfoSummary"&gt;
@@ -93,6 +93,7 @@ import javax.xml.bind.annotation.XmlType;
     "cityName",
     "cityCode",
     "showVIPPlanLogo",
+    "realInventory",
     "withGroupHotels"
 })
 public class HotelInfoSummary {
@@ -161,11 +162,13 @@ public class HotelInfoSummary {
     protected String cityCode;
     @XmlElement(name = "ShowVIPPlanLogo")
     protected String showVIPPlanLogo;
+    @XmlElement(name = "RealInventory")
+    protected String realInventory;
     @XmlElement(name = "WithGroupHotels")
     protected CommonInfo withGroupHotels;
 
     /**
-     * 获取picPath属性的值。
+     * 锟斤拷取picPath锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -177,7 +180,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置picPath属性的值。
+     * 锟斤拷锟斤拷picPath锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -189,7 +192,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取recommendedLevel属性的值。
+     * 锟斤拷取recommendedLevel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -201,7 +204,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置recommendedLevel属性的值。
+     * 锟斤拷锟斤拷recommendedLevel锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -213,7 +216,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取fullName属性的值。
+     * 锟斤拷取fullName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -225,7 +228,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置fullName属性的值。
+     * 锟斤拷锟斤拷fullName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -237,7 +240,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取desc属性的值。
+     * 锟斤拷取desc锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -249,7 +252,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置desc属性的值。
+     * 锟斤拷锟斤拷desc锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -261,7 +264,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取remark属性的值。
+     * 锟斤拷取remark锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -273,7 +276,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置remark属性的值。
+     * 锟斤拷锟斤拷remark锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -285,7 +288,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取keyword属性的值。
+     * 锟斤拷取keyword锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -297,7 +300,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置keyword属性的值。
+     * 锟斤拷锟斤拷keyword锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -309,7 +312,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取email属性的值。
+     * 锟斤拷取email锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -321,7 +324,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置email属性的值。
+     * 锟斤拷锟斤拷email锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -333,7 +336,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取map属性的值。
+     * 锟斤拷取map锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -345,7 +348,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置map属性的值。
+     * 锟斤拷锟斤拷map锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -357,7 +360,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取level属性的值。
+     * 锟斤拷取level锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public int getLevel() {
@@ -365,7 +368,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置level属性的值。
+     * 锟斤拷锟斤拷level锟斤拷锟皆碉拷值锟斤拷
      * 
      */
     public void setLevel(int value) {
@@ -373,7 +376,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取minPrice属性的值。
+     * 锟斤拷取minPrice锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -385,7 +388,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置minPrice属性的值。
+     * 锟斤拷锟斤拷minPrice锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -397,7 +400,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取maxPrice属性的值。
+     * 锟斤拷取maxPrice锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -409,7 +412,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置maxPrice属性的值。
+     * 锟斤拷锟斤拷maxPrice锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -421,7 +424,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取commentResult属性的值。
+     * 锟斤拷取commentResult锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -433,7 +436,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置commentResult属性的值。
+     * 锟斤拷锟斤拷commentResult锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -445,7 +448,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取udf1属性的值。
+     * 锟斤拷取udf1锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -457,7 +460,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置udf1属性的值。
+     * 锟斤拷锟斤拷udf1锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -469,7 +472,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取udf2属性的值。
+     * 锟斤拷取udf2锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -481,7 +484,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置udf2属性的值。
+     * 锟斤拷锟斤拷udf2锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -493,7 +496,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取udf3属性的值。
+     * 锟斤拷取udf3锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -505,7 +508,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置udf3属性的值。
+     * 锟斤拷锟斤拷udf3锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -517,7 +520,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取udf4属性的值。
+     * 锟斤拷取udf4锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -529,7 +532,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置udf4属性的值。
+     * 锟斤拷锟斤拷udf4锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -541,7 +544,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取udf5属性的值。
+     * 锟斤拷取udf5锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -553,7 +556,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置udf5属性的值。
+     * 锟斤拷锟斤拷udf5锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -565,7 +568,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取code属性的值。
+     * 锟斤拷取code锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -577,7 +580,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置code属性的值。
+     * 锟斤拷锟斤拷code锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -589,7 +592,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取name属性的值。
+     * 锟斤拷取name锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -601,7 +604,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置name属性的值。
+     * 锟斤拷锟斤拷name锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -613,7 +616,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取engName属性的值。
+     * 锟斤拷取engName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -625,7 +628,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置engName属性的值。
+     * 锟斤拷锟斤拷engName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -637,7 +640,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取stars属性的值。
+     * 锟斤拷取stars锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -649,7 +652,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置stars属性的值。
+     * 锟斤拷锟斤拷stars锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -661,7 +664,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取starName属性的值。
+     * 锟斤拷取starName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -673,7 +676,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置starName属性的值。
+     * 锟斤拷锟斤拷starName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -685,7 +688,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取address属性的值。
+     * 锟斤拷取address锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -697,7 +700,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置address属性的值。
+     * 锟斤拷锟斤拷address锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -709,7 +712,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取engAddress属性的值。
+     * 锟斤拷取engAddress锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -721,7 +724,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置engAddress属性的值。
+     * 锟斤拷锟斤拷engAddress锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -733,7 +736,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取country属性的值。
+     * 锟斤拷取country锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -745,7 +748,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置country属性的值。
+     * 锟斤拷锟斤拷country锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -757,7 +760,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取province属性的值。
+     * 锟斤拷取province锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -769,7 +772,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置province属性的值。
+     * 锟斤拷锟斤拷province锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -781,7 +784,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取phone属性的值。
+     * 锟斤拷取phone锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -793,7 +796,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置phone属性的值。
+     * 锟斤拷锟斤拷phone锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -805,7 +808,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取fax属性的值。
+     * 锟斤拷取fax锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -817,7 +820,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置fax属性的值。
+     * 锟斤拷锟斤拷fax锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -829,7 +832,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取postCode属性的值。
+     * 锟斤拷取postCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -841,7 +844,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置postCode属性的值。
+     * 锟斤拷锟斤拷postCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -853,7 +856,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取cityName属性的值。
+     * 锟斤拷取cityName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -865,7 +868,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置cityName属性的值。
+     * 锟斤拷锟斤拷cityName锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -877,7 +880,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取cityCode属性的值。
+     * 锟斤拷取cityCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -889,7 +892,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置cityCode属性的值。
+     * 锟斤拷锟斤拷cityCode锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -901,7 +904,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取showVIPPlanLogo属性的值。
+     * 锟斤拷取showVIPPlanLogo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -913,7 +916,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置showVIPPlanLogo属性的值。
+     * 锟斤拷锟斤拷showVIPPlanLogo锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -925,7 +928,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 获取withGroupHotels属性的值。
+     * 锟斤拷取withGroupHotels锟斤拷锟皆碉拷值锟斤拷
      * 
      * @return
      *     possible object is
@@ -937,7 +940,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * 设置withGroupHotels属性的值。
+     * 锟斤拷锟斤拷withGroupHotels锟斤拷锟皆碉拷值锟斤拷
      * 
      * @param value
      *     allowed object is
@@ -948,4 +951,11 @@ public class HotelInfoSummary {
         this.withGroupHotels = value;
     }
 
+    public String getRealInventory() {
+        return realInventory;
+    }
+
+    public void setRealInventory(String realInventory) {
+        this.realInventory = realInventory;
+    }
 }

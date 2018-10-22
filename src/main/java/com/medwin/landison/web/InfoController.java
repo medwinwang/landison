@@ -60,7 +60,7 @@ public class InfoController {
 
         Availability item = kmsService.getAvailability(hotelCode, arrival, departure, extraBed, adults, roomNum,
                 guesttypeCode, custAccount, cardNo, children, lpsConfig.getChannel());
-        BaseResult baseResult = new BaseResult(BaseResult.SUCCESS_CODE, null, item);
+        BaseResult baseResult = new BaseResult(BaseResult.SUCCESS_CODE, null, item.getRateInfos());
         return baseResult;
     }
 
