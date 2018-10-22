@@ -67,7 +67,11 @@ public class UserController {
                 addressProvinceCode, addressCity, addressDistrict,
                 addressStreet);
         if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())) {
-            httpSession.setAttribute(LoginController.SESSION_USER, baseResult.getData());
+
+            baseResult = userService.getUserByPid(UserUtil.getId(user));
+            if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())) {
+                httpSession.setAttribute(LoginController.SESSION_USER, baseResult.getData());
+            }
         }
 
         return baseResult;
