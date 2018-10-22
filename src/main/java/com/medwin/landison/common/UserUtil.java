@@ -36,7 +36,7 @@ public class UserUtil {
         return getAccountId(user, cardType,"storedValue");
     }
 
-    private static JSONObject getCard(JSONObject user, String cardType){
+    public static JSONObject getCard(JSONObject user, String cardType){
 
         JSONArray jsonArray = user.getJSONArray("membershipCards");
         if(jsonArray != null && jsonArray.size() > 0) {

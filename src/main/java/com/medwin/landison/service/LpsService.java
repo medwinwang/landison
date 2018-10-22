@@ -31,7 +31,8 @@ public interface LpsService {
 
     //修改用户信息
     BaseResult updateUser(String profileId, String firstName, String lastName, String altFirstName, String altLastName,
-                          String genderCode, String idTypeCode, String idNumber, String mobile, String birthday, String email,
+                          String genderCode, String idTypeCode, String idNumber, String mobile, String mobileCountryNumber,
+                          String birthday, String email,
                           String addressCountryCode, String addressProvinceCode, String addressCity, String addressDistrict,
                           String addressStreet);
 

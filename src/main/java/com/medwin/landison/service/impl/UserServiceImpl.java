@@ -87,13 +87,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public BaseResult updateUser(String profileId, String firstName, String lastName, String altFirstName,
                                  String altLastName, String genderCode, String idTypeCode, String idNumber,
-                                 String mobile, String birthday, String email, String addressCountryCode,
+                                 String mobile, String mobileCountryNumber, String birthday, String email,
+                                 String addressCountryCode,
                                  String addressProvinceCode, String addressCity, String addressDistrict,
                                  String addressStreet) {
 
         return lpsService.updateUser(profileId, firstName, lastName, altFirstName,
                 altLastName, genderCode, idTypeCode, idNumber,
-                mobile, birthday, email, addressCountryCode,
+                mobile, mobileCountryNumber, birthday, email, addressCountryCode,
                 addressProvinceCode, addressCity, addressDistrict,
                 addressStreet);
     }

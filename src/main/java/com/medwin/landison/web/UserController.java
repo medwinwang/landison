@@ -45,18 +45,27 @@ public class UserController {
 
     }
 
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public BaseResult logout(HttpSession httpSession){
+
+        httpSession.removeAttribute(LoginController.SESSION_USER);
+        return new BaseResult(BaseResult.SUCCESS_CODE, null, null);
+    }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public BaseResult update(String firstName, String lastName, String altFirstName, String altLastName,
-                             String genderCode, String idTypeCode, String idNumber, String mobile, String birthday, String email,
+                             String genderCode, String idTypeCode, String idNumber, String birthday, String email,
                              String addressCountryCode, String addressProvinceCode, String addressCity, String addressDistrict,
                              String addressStreet, HttpSession httpSession) throws LpsSystemException {
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
 
+        JSONObject card = UserUtil.getCard(user, lpsConfig.getRegister().getMembershipCardTypeCode());
+
         BaseResult baseResult = userService.updateUser(UserUtil.getId(user), firstName, lastName, altFirstName,
                 altLastName, genderCode, idTypeCode, idNumber,
-                mobile, birthday, email, addressCountryCode,
+                card.getString("mobile"), card.getString("mobileCountryNumber"),
+                birthday, email, addressCountryCode,
                 addressProvinceCode, addressCity, addressDistrict,
                 addressStreet);
         if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())) {
