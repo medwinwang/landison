@@ -44,7 +44,7 @@ public class RegisterController {
         Long second = LocalDateTime.now().toEpochSecond(ZoneOffset.of("+8"));
 
         if(expTime != null && expTime>second){
-            return new BaseResult("2", "请1分钟后再试", null);
+            return new BaseResult("2", "请2分钟后再试", null);
         }
 
         Random rand = new Random();

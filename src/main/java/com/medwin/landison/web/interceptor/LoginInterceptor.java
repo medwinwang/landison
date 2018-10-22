@@ -26,7 +26,7 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
                              Object handler) throws Exception {
         // 验证用户是否登陆
         Object obj = request.getSession().getAttribute(LoginController.SESSION_USER);
-        if (obj == null || !(obj instanceof JSONObject)) {
+        if (obj == null) {
 
             response.setCharacterEncoding("UTF-8");
             response.setContentType("application/json; charset=utf-8");

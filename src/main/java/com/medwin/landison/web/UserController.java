@@ -60,11 +60,9 @@ public class UserController {
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
 
-        JSONObject card = UserUtil.getCard(user, lpsConfig.getRegister().getMembershipCardTypeCode());
-
         BaseResult baseResult = userService.updateUser(UserUtil.getId(user), firstName, lastName, altFirstName,
                 altLastName, genderCode, idTypeCode, idNumber,
-                card.getString("mobile"), card.getString("mobileCountryNumber"),
+                user.getString("mobile"), user.getString("mobileCountryNumber"),
                 birthday, email, addressCountryCode,
                 addressProvinceCode, addressCity, addressDistrict,
                 addressStreet);
