@@ -3,10 +3,13 @@ package com.medwin.landison.service.impl;
 import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.config.LpsConfig;
 import com.medwin.landison.kms.informationservice.SendInfo;
+import com.medwin.landison.kms.reservationservice.CommonInfo;
+import com.medwin.landison.kms.reservationservice.OrderInfo;
 import com.medwin.landison.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
@@ -115,5 +118,62 @@ public class UserServiceImpl implements UserService {
     public BaseResult getCoupons(String profileId, String status, int page, int pageSize) {
 
         return lpsService.getCoupons(profileId, status, page, pageSize);
+    }
+
+    @Override
+    public BaseResult addOrder(String arrival, String departure, int roomNum, int extraBed, int adults, int children,
+                               double rate, String lastName, double totalRevenue, String hotelCode, String guesttypeCode,
+                               String roomtypeCode, String reteCode, String memberId, String reservationTypeCode) {
+
+
+        OrderInfo orderInfo = new OrderInfo();
+        orderInfo.setArrival(arrival);
+        orderInfo.setDeparture(departure);
+        orderInfo.setRoomNum(roomNum);
+        orderInfo.setExtraBed(extraBed);
+        orderInfo.setAdults(adults);
+        orderInfo.setChildren(children);
+        orderInfo.setRate(new BigDecimal(rate));
+        orderInfo.setLastname(lastName);
+        orderInfo.setTotalRevenue(new BigDecimal(totalRevenue));
+
+        CommonInfo hotel = new CommonInfo();
+        hotel.setCode(hotelCode);
+        orderInfo.setHotelCode(hotel);
+
+        CommonInfo gusttpe = new CommonInfo();
+        gusttpe.setCode(guesttypeCode);
+        orderInfo.setGuesttypeCode(gusttpe);
+
+        CommonInfo roomtype = new CommonInfo();
+        roomtype.setCode(roomtypeCode);
+        orderInfo.setRoomtypeCode(roomtype);
+
+        CommonInfo rete = new CommonInfo();
+        rete.setCode(reteCode);
+        orderInfo.setRateCode(rete);
+
+        CommonInfo market = new CommonInfo();
+        market.setCode("");
+        orderInfo.setMarket(market);
+
+        CommonInfo source = new CommonInfo();
+        source.setCode("");
+        orderInfo.setSource(source);
+
+        CommonInfo channel = new CommonInfo();
+        channel.setCode(lpsConfig.getChannel());
+        orderInfo.setChannel(channel);
+
+        CommonInfo memberIdInfo = new CommonInfo();
+        memberIdInfo.setCode(memberId);
+        orderInfo.setMemberId(memberIdInfo);
+
+        CommonInfo reservationType = new CommonInfo();
+        memberIdInfo.setCode(reservationTypeCode);
+        orderInfo.setReservationType(reservationType);
+
+        OrderInfo info = kmsService.greateReservation(orderInfo);
+        return new BaseResult(BaseResult.SUCCESS_CODE, "提交成功", info);
     }
 }

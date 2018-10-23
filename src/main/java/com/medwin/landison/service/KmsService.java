@@ -33,4 +33,8 @@ public interface KmsService {
 
     OrderInfo greateReservation(OrderInfo orderInfo);
 
+    List<OrderInfo> getOrderInfoByGuestType(String guestType, String account, String beginMakedate,
+                                            String endMakedate);
+
+
 }

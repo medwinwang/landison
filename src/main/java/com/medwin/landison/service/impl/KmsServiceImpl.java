@@ -7,6 +7,7 @@ import com.medwin.landison.config.KmsConfig;
 import com.medwin.landison.kms.availabilityservice.Availability;
 import com.medwin.landison.kms.availabilityservice.AvailabilityQuerySoap;
 import com.medwin.landison.kms.informationservice.*;
+import com.medwin.landison.kms.reservationservice.ArrayOfOrderInfo;
 import com.medwin.landison.kms.reservationservice.OrderInfo;
 import com.medwin.landison.kms.reservationservice.ReservationSoap;
 import com.medwin.landison.kms.securityservice.SecurityService;
@@ -120,6 +121,18 @@ public class KmsServiceImpl implements KmsService {
     public OrderInfo greateReservation(OrderInfo orderInfo) {
 
         return reservationSoap.createReservation(orderInfo);
+    }
+
+    @Override
+    public List<OrderInfo> getOrderInfoByGuestType(String guestType, String account, String beginMakedate,
+                                                    String endMakedate) {
+
+        ArrayOfOrderInfo arrayOfOrderInfo =  reservationSoap.getOrderInfoByGuestType(guestType,
+                account, beginMakedate, endMakedate);
+        if(arrayOfOrderInfo != null) {
+            return arrayOfOrderInfo.getOrderInfo();
+        }
+        return null;
     }
 
 }

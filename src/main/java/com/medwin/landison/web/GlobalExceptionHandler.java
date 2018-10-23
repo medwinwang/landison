@@ -44,6 +44,7 @@ public class GlobalExceptionHandler {
 
         BaseResult baseResult = new BaseResult();
         baseResult.setCode("90000");
+        baseResult.setMessage(e.getMessage());
         baseResult.setData(e.getMessage());
         return baseResult;
     }
