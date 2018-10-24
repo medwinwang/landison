@@ -29,6 +29,10 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private KmsServiceImpl kmsService;
 
+    @Autowired
+    private LdsServiceImpl ldsService;
+
+
     @Override
     public BaseResult getUser(String mobileCountryNumber, String mobile){
 
@@ -67,8 +71,10 @@ public class UserServiceImpl implements UserService {
 
         sendInfo.setHotelCode("000001");
         boolean ret = kmsService.addSendInfo(sendInfo);
-
         baseResult.setBooleanCode(ret);
+
+        ldsService.addSmsLog(null, sendInfo.getContent(), 1);
+
         return baseResult;
     }
 
@@ -76,15 +82,26 @@ public class UserServiceImpl implements UserService {
     public BaseResult register(String mobile, String firstName, String lastName, String password, String mobileCountryNumber) {
 
         LpsConfig.Register register = lpsConfig.getRegister();
-        return lpsService.register(mobile, firstName, lastName, password, mobileCountryNumber,
+        BaseResult baseResult = lpsService.register(mobile, firstName, lastName, password, mobileCountryNumber,
                 register.getMembershipCardTypeCode(), register.getMembershipCardLevelCode(),
                 register.getEnrollmentChannelCode());
+
+        if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())){
+            ldsService.addUser(mobile, password, baseResult.getData().toString());
+        }
+
+        return baseResult;
     }
 
     @Override
     public BaseResult login(String mobile, String password, String mobileCountryNumber) {
 
-        return lpsService.checkUser(mobile, password, mobileCountryNumber);
+        BaseResult baseResult = lpsService.checkUser(mobile, password, mobileCountryNumber);
+        if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())){
+            ldsService.loginUser(mobile, password, baseResult.getData().toString());
+        }
+
+        return baseResult;
     }
 
     @Override
