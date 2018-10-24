@@ -3,13 +3,33 @@ package com.medwin.landison.common;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.medwin.landison.web.LoginController;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by medwin on 2018/10/19.
  */
 
 public class UserUtil {
+
+    public static List<String> getCardAndType(JSONObject user, String type){
+        List<String> ret = new ArrayList<>(2);
+        String guesttypeCode = "0000";
+        String cardNo = null;
+        if(user != null) {
+            cardNo = getCardNo(user, type);
+            if(!StringUtils.isEmpty(cardNo)) {
+                guesttypeCode = "0002";
+            }
+        }
+        ret.add(guesttypeCode);
+        ret.add(cardNo);
+        return ret;
+    }
 
     public static String getId(JSONObject user){
 

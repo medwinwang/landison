@@ -43,23 +43,14 @@ public class InfoController {
     public BaseResult getAvailability(String hotelCode, String arrival, String departure,
                                       @RequestParam(value="extraBed", defaultValue="0")int extraBed,
                                       @RequestParam(value="adults", defaultValue="1")int adults,
-                                      @RequestParam(value="adults", defaultValue="1")int roomNum, String custAccount,
+                                      @RequestParam(value="roomNum", defaultValue="1")int roomNum, String custAccount,
                                       @RequestParam(value="children", defaultValue="0")int children, HttpSession httpSession) {
 
-        String guesttypeCode = "0000";
-        String cardNo = null;
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
-        if(user != null) {
-
-            cardNo = UserUtil.getCardNo(user, lpsConfig.getRegister().getMembershipCardTypeCode());
-            if(!StringUtils.isEmpty(cardNo)) {
-
-                guesttypeCode = "0002";
-            }
-        }
+        List<String> info = UserUtil.getCardAndType(user,  lpsConfig.getRegister().getMembershipCardTypeCode());
 
         Availability item = kmsService.getAvailability(hotelCode, arrival, departure, extraBed, adults, roomNum,
-                guesttypeCode, custAccount, cardNo, children, lpsConfig.getChannel());
+                info.get(0), custAccount, info.get(1), children, lpsConfig.getChannel());
         BaseResult baseResult = new BaseResult(BaseResult.SUCCESS_CODE, null, item.getRateInfos());
         return baseResult;
     }
