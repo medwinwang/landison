@@ -1,5 +1,6 @@
 package com.medwin.landison.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.config.LpsConfig;
 import com.medwin.landison.kms.informationservice.SendInfo;
@@ -152,9 +153,9 @@ public class UserServiceImpl implements UserService {
         orderInfo.setExtraBed(extraBed);
         orderInfo.setAdults(adults);
         orderInfo.setChildren(children);
-        orderInfo.setRate(new BigDecimal(rate));
+        orderInfo.setRate(new BigDecimal(rate).setScale(2,BigDecimal.ROUND_HALF_UP));
         orderInfo.setLastname(lastName);
-        orderInfo.setTotalRevenue(new BigDecimal(totalRevenue));
+        orderInfo.setTotalRevenue(new BigDecimal(totalRevenue).setScale(2,BigDecimal.ROUND_HALF_UP));
         orderInfo.setComments(comments);
         orderInfo.setAddress(address);
         if(!StringUtils.isEmpty(email)) {
@@ -196,10 +197,13 @@ public class UserServiceImpl implements UserService {
         orderInfo.setMemberId(memberIdInfo);
 
         CommonInfo reservationType = new CommonInfo();
-        memberIdInfo.setCode(reservationTypeCode);
+        reservationType.setCode(reservationTypeCode);
         orderInfo.setReservationType(reservationType);
 
         OrderInfo info = kmsService.greateReservation(orderInfo);
+
+        ldsService.addOrder(mobile, JSONObject.toJSONString(info));
+
         return new BaseResult(BaseResult.SUCCESS_CODE, "提交成功", info);
     }
 }

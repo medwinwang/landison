@@ -4,11 +4,13 @@ import com.medwin.landison.common.MD5Util;
 import com.medwin.landison.dao.OrderRepository;
 import com.medwin.landison.dao.SmsRepository;
 import com.medwin.landison.dao.UserRepository;
+import com.medwin.landison.entity.LdsOrderEntity;
 import com.medwin.landison.entity.LdsSmsLogEntity;
 import com.medwin.landison.entity.LdsUserEntity;
 import com.medwin.landison.service.LdsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.Date;
 
@@ -57,5 +59,19 @@ public class LdsServiceImpl implements LdsService {
            addUser(username,password,info);
         }
         userRepository.loginUser(username, info, new Date());
+    }
+
+    @Override
+    public void addOrder(String username, String info) {
+
+        LdsOrderEntity entity = new LdsOrderEntity();
+        if(!StringUtils.isEmpty(username)) {
+            LdsUserEntity user = userRepository.findByUsername(username);
+            if(user != null) {
+                entity.setUserId(user.getId());
+            }
+        }
+        entity.setInfo(info);
+        orderRepository.save(entity);
     }
 }
