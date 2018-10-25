@@ -8,6 +8,7 @@ import com.medwin.landison.kms.reservationservice.OrderInfo;
 import com.medwin.landison.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -140,7 +141,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public BaseResult addOrder(String arrival, String departure, int roomNum, int extraBed, int adults, int children,
                                double rate, String lastName, double totalRevenue, String hotelCode, String guesttypeCode,
-                               String roomtypeCode, String reteCode, String memberId, String reservationTypeCode) {
+                               String roomtypeCode, String reteCode, String memberId, String reservationTypeCode, String comments,
+                               String address, String email, String mobile) {
 
 
         OrderInfo orderInfo = new OrderInfo();
@@ -153,6 +155,13 @@ public class UserServiceImpl implements UserService {
         orderInfo.setRate(new BigDecimal(rate));
         orderInfo.setLastname(lastName);
         orderInfo.setTotalRevenue(new BigDecimal(totalRevenue));
+        orderInfo.setComments(comments);
+        orderInfo.setAddress(address);
+        if(!StringUtils.isEmpty(email)) {
+            orderInfo.setEmail(email);
+            orderInfo.setEmailConfirm("1");
+        }
+        orderInfo.setMobile(mobile);
 
         CommonInfo hotel = new CommonInfo();
         hotel.setCode(hotelCode);

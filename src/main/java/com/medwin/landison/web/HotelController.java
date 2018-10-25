@@ -31,21 +31,22 @@ public class HotelController {
         return null;
     }
 
-    @RequestMapping(value = "/order", method = RequestMethod.POST)
+    @RequestMapping(value = "/addOrder", method = RequestMethod.POST)
     public BaseResult addOrder(String arrival, String departure,
                                @RequestParam(value="roomNum", defaultValue="1")int roomNum,
                                @RequestParam(value="extraBed", defaultValue="0")int extraBed,
                                @RequestParam(value="adults", defaultValue="1")int adults,
                                @RequestParam(value="children", defaultValue="0")int children, double rate,
-                               String lastName, double totalRevenue, String hotelCode, String roomtypeCode,
-                               String reteCode, String reservationTypeCode, HttpSession httpSession) throws LpsSystemException {
+                               String lastName, double totalRevenue, String hotelCode, String roomtypeCode, String comments,
+                               String reteCode, String reservationTypeCode,String address, String email,String mobile,
+                               HttpSession httpSession) throws LpsSystemException {
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
         List<String> info = UserUtil.getCardAndType(user,  lpsConfig.getRegister().getMembershipCardTypeCode());
 
         BaseResult baseResult = userService.addOrder(arrival,departure, roomNum, extraBed, adults, children, rate,
                 lastName, totalRevenue, hotelCode, info.get(0),
-                roomtypeCode, reteCode, info.get(1), reservationTypeCode);
+                roomtypeCode, reteCode, info.get(1), reservationTypeCode, comments, address, email, mobile);
 
         return baseResult;
     }
