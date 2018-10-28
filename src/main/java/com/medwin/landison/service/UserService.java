@@ -38,4 +38,7 @@ public interface UserService {
                         String email, String mobile);
 
 
+    BaseResult checkOrder(String orderId, Double amount, String gatewayIdentification,
+                          String gatewayReferenceNo, String status, String remark, String paymentCode,
+                          String orderType, String updateStatus);
 }

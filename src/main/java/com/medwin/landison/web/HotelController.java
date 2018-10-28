@@ -39,7 +39,7 @@ public class HotelController {
                                @RequestParam(value="children", defaultValue="0")int children, double rate,
                                String lastName, double totalRevenue, String hotelCode, String roomtypeCode, String comments,
                                String reteCode, String reservationTypeCode,String address, String email,String mobile,
-                               HttpSession httpSession) throws LpsSystemException {
+                               HttpSession httpSession) {
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
         List<String> info = UserUtil.getCardAndType(user,  lpsConfig.getRegister().getMembershipCardTypeCode());
@@ -47,6 +47,18 @@ public class HotelController {
         BaseResult baseResult = userService.addOrder(arrival,departure, roomNum, extraBed, adults, children, rate,
                 lastName, totalRevenue, hotelCode, info.get(0),
                 roomtypeCode, reteCode, info.get(1), reservationTypeCode, comments, address, email, mobile);
+
+        return baseResult;
+    }
+
+
+    @RequestMapping(value = "/checkOrder", method = RequestMethod.POST)
+    public BaseResult checkOrder(String orderId, Double amount, String gatewayIdentification,
+                               String gatewayReferenceNo, String status, String remark, String paymentCode,
+                               String orderType, String updateStatus)  {
+
+        BaseResult baseResult = userService.checkOrder(orderId, amount, gatewayIdentification, gatewayReferenceNo,
+                status, remark, paymentCode, orderType, updateStatus);
 
         return baseResult;
     }

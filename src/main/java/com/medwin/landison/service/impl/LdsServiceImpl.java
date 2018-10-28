@@ -1,5 +1,6 @@
 package com.medwin.landison.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.medwin.landison.common.MD5Util;
 import com.medwin.landison.dao.OrderRepository;
 import com.medwin.landison.dao.SmsRepository;
@@ -62,7 +63,7 @@ public class LdsServiceImpl implements LdsService {
     }
 
     @Override
-    public void addOrder(String username, String info) {
+    public void addOrder(String username, String info, String orderId, String reservationType, String status) {
 
         LdsOrderEntity entity = new LdsOrderEntity();
         if(!StringUtils.isEmpty(username)) {
@@ -72,6 +73,20 @@ public class LdsServiceImpl implements LdsService {
             }
         }
         entity.setInfo(info);
+        entity.setReservationType(reservationType);
+        entity.setStatus(status);
+        entity.setOrderId(orderId);
         orderRepository.save(entity);
+    }
+
+    @Override
+    public void checkOrder(String orderId, String payInfo, String status) {
+
+        LdsOrderEntity entity = orderRepository.findByOrOrderId(orderId);
+        if(entity != null) {
+            entity.setPayInfo(payInfo);
+            entity.setPayStatus(status);
+            orderRepository.save(entity);
+        }
     }
 }

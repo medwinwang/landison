@@ -9,6 +9,7 @@ import com.medwin.landison.kms.availabilityservice.AvailabilityQuerySoap;
 import com.medwin.landison.kms.informationservice.*;
 import com.medwin.landison.kms.reservationservice.ArrayOfOrderInfo;
 import com.medwin.landison.kms.reservationservice.OrderInfo;
+import com.medwin.landison.kms.reservationservice.OrderInfoPaymentGateway;
 import com.medwin.landison.kms.reservationservice.ReservationSoap;
 import com.medwin.landison.kms.securityservice.SecurityService;
 import com.medwin.landison.kms.securityservice.SecurityServiceSoap;
@@ -133,6 +134,11 @@ public class KmsServiceImpl implements KmsService {
             return arrayOfOrderInfo.getOrderInfo();
         }
         return null;
+    }
+
+    @Override
+    public OrderInfoPaymentGateway addorderInfoPaymentGateway(OrderInfoPaymentGateway orderInfoPaymentGateway){
+        return reservationSoap.addorderInfoPaymentGateway(orderInfoPaymentGateway);
     }
 
 }

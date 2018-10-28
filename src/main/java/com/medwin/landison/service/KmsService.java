@@ -3,6 +3,7 @@ package com.medwin.landison.service;
 import com.medwin.landison.kms.availabilityservice.Availability;
 import com.medwin.landison.kms.informationservice.*;
 import com.medwin.landison.kms.reservationservice.OrderInfo;
+import com.medwin.landison.kms.reservationservice.OrderInfoPaymentGateway;
 
 import java.util.List;
 
@@ -36,5 +37,6 @@ public interface KmsService {
     List<OrderInfo> getOrderInfoByGuestType(String guestType, String account, String beginMakedate,
                                             String endMakedate);
 
+    OrderInfoPaymentGateway addorderInfoPaymentGateway(OrderInfoPaymentGateway orderInfoPaymentGateway);
 
 }

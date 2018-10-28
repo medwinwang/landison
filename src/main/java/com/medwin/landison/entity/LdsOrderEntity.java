@@ -1,6 +1,7 @@
 package com.medwin.landison.entity;
 
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -17,6 +18,73 @@ public class LdsOrderEntity {
     private Integer userId;
     private Date createTime;
     private String info;
+    private Date updateTime;
+    private String status;
+    private String orderId;
+    private String reservationType;
+    private String payInfo;
+    private String payStatus;
+
+    @Basic
+    @Column(name = "pay_status")
+    public String getPayStatus() {
+        return payStatus;
+    }
+
+    public void setPayStatus(String payStatus) {
+        this.payStatus = payStatus;
+    }
+
+    @Basic
+    @Column(name = "pay_info")
+    public String getPayInfo() {
+        return payInfo;
+    }
+
+    public void setPayInfo(String payInfo) {
+        this.payInfo = payInfo;
+    }
+
+    @Basic
+    @Column(name = "update_time")
+    @LastModifiedDate
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    @Basic
+    @Column(name = "status")
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Basic
+    @Column(name = "order_id")
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    @Basic
+    @Column(name = "reservation_type")
+    public String getReservationType() {
+        return reservationType;
+    }
+
+    public void setReservationType(String reservationType) {
+        this.reservationType = reservationType;
+    }
 
     @Id
     @Column(name = "id")
@@ -64,14 +132,16 @@ public class LdsOrderEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        LdsOrderEntity that = (LdsOrderEntity) o;
+        LdsOrderEntity entity = (LdsOrderEntity) o;
 
-        if (id != that.id) return false;
-        if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
-        if (createTime != null ? !createTime.equals(that.createTime) : that.createTime != null) return false;
-        if (info != null ? !info.equals(that.info) : that.info != null) return false;
-
-        return true;
+        if (id != entity.id) return false;
+        if (userId != null ? !userId.equals(entity.userId) : entity.userId != null) return false;
+        if (createTime != null ? !createTime.equals(entity.createTime) : entity.createTime != null) return false;
+        if (info != null ? !info.equals(entity.info) : entity.info != null) return false;
+        if (updateTime != null ? !updateTime.equals(entity.updateTime) : entity.updateTime != null) return false;
+        if (status != null ? !status.equals(entity.status) : entity.status != null) return false;
+        if (orderId != null ? !orderId.equals(entity.orderId) : entity.orderId != null) return false;
+        return reservationType != null ? reservationType.equals(entity.reservationType) : entity.reservationType == null;
     }
 
     @Override
@@ -80,6 +150,10 @@ public class LdsOrderEntity {
         result = 31 * result + (userId != null ? userId.hashCode() : 0);
         result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
         result = 31 * result + (info != null ? info.hashCode() : 0);
+        result = 31 * result + (updateTime != null ? updateTime.hashCode() : 0);
+        result = 31 * result + (status != null ? status.hashCode() : 0);
+        result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
+        result = 31 * result + (reservationType != null ? reservationType.hashCode() : 0);
         return result;
     }
 }

@@ -12,4 +12,9 @@ public interface LdsService {
     void addUser(String username, String password, String info);
 
     void loginUser(String username, String password, String info);
+
+    void addOrder(String username, String info, String orderId,  String reservationTypeCode, String status);
+
+    void checkOrder(String orderId, String payInfo, String status);
+
 }
