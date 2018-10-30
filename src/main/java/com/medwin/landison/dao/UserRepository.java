@@ -18,7 +18,7 @@ public interface UserRepository extends JpaRepository<LdsUserEntity,Long> {
     LdsUserEntity findByUsername(String username);
 
     @Modifying
-    @Transactional(readOnly = false)
+    @Transactional
     @Query("update  LdsUserEntity u set u.info = :info, u.loginNum=u.loginNum+1,u.lastLoginTime=:time,u.updateTime=:time where u.username = :username")
     int loginUser(@Param("username")String username, @Param("info")String info, @Param("time")Date time);
 }

@@ -13,7 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * Created by medwin on 2018/10/19.
@@ -63,7 +65,8 @@ public class LdsServiceImpl implements LdsService {
     }
 
     @Override
-    public void addOrder(String username, String info, String orderId, String reservationType, String status) {
+    public void addOrder(String username, String info, String orderId, String reservationType, String status,
+                         BigDecimal totalAmount) {
 
         LdsOrderEntity entity = new LdsOrderEntity();
         if(!StringUtils.isEmpty(username)) {
@@ -74,19 +77,28 @@ public class LdsServiceImpl implements LdsService {
         }
         entity.setInfo(info);
         entity.setReservationType(reservationType);
+        entity.setTotalAmount(totalAmount);
         entity.setStatus(status);
         entity.setOrderId(orderId);
         orderRepository.save(entity);
     }
 
     @Override
-    public void checkOrder(String orderId, String payInfo, String status) {
+    public void checkOrder(String orderId, String payInfo, String status, String payCode, String tradeNo, String buyerId) {
 
         LdsOrderEntity entity = orderRepository.findByOrOrderId(orderId);
         if(entity != null) {
             entity.setPayInfo(payInfo);
             entity.setPayStatus(status);
+            entity.setTradeNo(tradeNo);
+            entity.setPayCode(payCode);
+            entity.setBuyerId(buyerId);
             orderRepository.save(entity);
         }
+    }
+
+    @Override
+    public LdsOrderEntity getOrderByOrderId(String orderId) {
+        return orderRepository.findByOrOrderId(orderId);
     }
 }

@@ -2,6 +2,8 @@ package com.medwin.landison.service;
 
 import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.exception.LpsSystemException;
+import com.medwin.landison.kms.reservationservice.DataType;
+import com.medwin.landison.kms.reservationservice.PayMentStatus;
 
 /**
  * Created by medwin on 2018/10/16.
@@ -39,6 +41,6 @@ public interface UserService {
 
 
     BaseResult checkOrder(String orderId, Double amount, String gatewayIdentification,
-                          String gatewayReferenceNo, String status, String remark, String paymentCode,
-                          String orderType, String updateStatus);
+                          String gatewayReferenceNo, PayMentStatus status, String remark, String paymentCode,
+                          DataType orderType, PayMentStatus updateStatus);
 }

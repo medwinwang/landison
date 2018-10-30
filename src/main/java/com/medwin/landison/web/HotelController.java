@@ -50,16 +50,4 @@ public class HotelController {
 
         return baseResult;
     }
-
-
-    @RequestMapping(value = "/checkOrder", method = RequestMethod.POST)
-    public BaseResult checkOrder(String orderId, Double amount, String gatewayIdentification,
-                               String gatewayReferenceNo, String status, String remark, String paymentCode,
-                               String orderType, String updateStatus)  {
-
-        BaseResult baseResult = userService.checkOrder(orderId, amount, gatewayIdentification, gatewayReferenceNo,
-                status, remark, paymentCode, orderType, updateStatus);
-
-        return baseResult;
-    }
 }

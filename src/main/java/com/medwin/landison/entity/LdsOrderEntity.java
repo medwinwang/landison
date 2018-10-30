@@ -5,6 +5,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -24,6 +25,55 @@ public class LdsOrderEntity {
     private String reservationType;
     private String payInfo;
     private String payStatus;
+
+    private String tradeNo;//三方支付流水
+    private String payCode;
+    private BigDecimal totalAmount;
+    private String buyerId;
+
+    public static final String TYPE_PRE = "10"; //预付订单
+    public static final String TYPE_NO_PRE = "1"; //前台支付
+
+    @Basic
+    @Column(name = "buyer_id")
+    public String getBuyerId() {
+        return buyerId;
+    }
+
+    public void setBuyerId(String buyerId) {
+        this.buyerId = buyerId;
+    }
+
+    @Basic
+    @Column(name = "pay_code")
+    public String getPayCode() {
+        return payCode;
+    }
+
+    public void setPayCode(String payCode) {
+        this.payCode = payCode;
+    }
+
+    @Basic
+    @Column(name = "total_amount")
+    public BigDecimal getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(BigDecimal totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+
+    @Basic
+    @Column(name = "trade_no")
+    public String getTradeNo() {
+        return tradeNo;
+    }
+
+    public void setTradeNo(String tradeNo) {
+        this.tradeNo = tradeNo;
+    }
 
     @Basic
     @Column(name = "pay_status")

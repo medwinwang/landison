@@ -8,6 +8,7 @@ import com.medwin.landison.kms.reservationservice.*;
 import com.medwin.landison.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
@@ -202,15 +203,16 @@ public class UserServiceImpl implements UserService {
         OrderInfo info = kmsService.greateReservation(orderInfo);
 
         ldsService.addOrder(mobile, JSONObject.toJSONString(info), String.valueOf(info.getID()),
-                reservationTypeCode, orderInfo.getStatusCode().getCode());
+                reservationTypeCode, orderInfo.getStatusCode().getCode(), orderInfo.getTotalRevenue());
 
         return new BaseResult(BaseResult.SUCCESS_CODE, "提交成功", info);
     }
 
     @Override
+    @Transactional
     public BaseResult checkOrder(String orderId, Double amount, String gatewayIdentification,
-                                 String gatewayReferenceNo, String status, String remark, String paymentCode,
-                                 String orderType, String updateStatus) {
+                                 String gatewayReferenceNo, PayMentStatus status, String remark, String paymentCode,
+                                 DataType orderType, PayMentStatus updateStatus) {
 
         OrderInfoPaymentGateway orderInfoPaymentGateway = new OrderInfoPaymentGateway();
         orderInfoPaymentGateway.setOrderId(orderId);
@@ -218,14 +220,15 @@ public class UserServiceImpl implements UserService {
         orderInfoPaymentGateway.setAmount(new BigDecimal(amount).setScale(2,BigDecimal.ROUND_HALF_UP));
         orderInfoPaymentGateway.setGatewayIdentification(gatewayIdentification);
         orderInfoPaymentGateway.setGatewayReferenceNo(gatewayReferenceNo);
-        orderInfoPaymentGateway.setStatus(PayMentStatus.fromValue(status));
+        orderInfoPaymentGateway.setStatus(status);
         orderInfoPaymentGateway.setRemark(remark);
         orderInfoPaymentGateway.setPaymentCode(paymentCode);
-        orderInfoPaymentGateway.setOrderType(DataType.RESVROOM);
-        orderInfoPaymentGateway.setUpdateStatus(PayMentStatus.PAID);
+        orderInfoPaymentGateway.setOrderType(orderType);
+        orderInfoPaymentGateway.setUpdateStatus(updateStatus);
         OrderInfoPaymentGateway gateway = kmsService.addorderInfoPaymentGateway(orderInfoPaymentGateway);
 
-        ldsService.checkOrder(orderId, JSONObject.toJSONString(gateway), gateway.getUpdateStatus().value());
+        ldsService.checkOrder(orderId, JSONObject.toJSONString(gateway), gateway.getUpdateStatus().value(),
+                paymentCode, gatewayReferenceNo, gatewayIdentification);
 
         return new BaseResult(BaseResult.SUCCESS_CODE, "提交成功", gateway);
 
