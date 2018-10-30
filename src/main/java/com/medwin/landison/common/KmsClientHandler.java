@@ -50,8 +50,7 @@ public class KmsClientHandler implements SOAPHandler<SOAPMessageContext> {
     @Override
     public boolean handleMessage(SOAPMessageContext context) {
 
-        log.info(convertDomToString(context.getMessage().getSOAPPart()));
-
+//        log.info(convertDomToString(context.getMessage().getSOAPPart()));
         try {
             String point = (String) context.get("org.apache.cxf.message.Message.ENDPOINT_ADDRESS");
             SOAPHeader soapHeader = context.getMessage().getSOAPHeader();

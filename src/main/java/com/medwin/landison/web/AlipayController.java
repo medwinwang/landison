@@ -122,6 +122,7 @@ public class AlipayController {
     }
 
     @GetMapping("/return")
+    @ResponseBody
     private String alipayReturn(Map<String, String> params, HttpServletRequest request, String out_trade_no,
                                 String trade_no, String total_amount)
             throws AlipayApiException {

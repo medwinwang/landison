@@ -227,7 +227,7 @@ public class UserServiceImpl implements UserService {
         orderInfoPaymentGateway.setUpdateStatus(updateStatus);
         OrderInfoPaymentGateway gateway = kmsService.addorderInfoPaymentGateway(orderInfoPaymentGateway);
 
-        ldsService.checkOrder(orderId, JSONObject.toJSONString(gateway), gateway.getUpdateStatus().value(),
+        ldsService.checkOrder(orderId, JSONObject.toJSONString(gateway), gateway.getStatus().value(),
                 paymentCode, gatewayReferenceNo, gatewayIdentification);
 
         return new BaseResult(BaseResult.SUCCESS_CODE, "提交成功", gateway);
