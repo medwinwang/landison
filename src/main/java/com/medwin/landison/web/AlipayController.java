@@ -1,5 +1,6 @@
 package com.medwin.landison.web;
 
+import com.alibaba.fastjson.JSONObject;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
@@ -20,8 +21,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -44,7 +47,8 @@ public class AlipayController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("pay")
+    @GetMapping("/pay")
+    @ResponseBody
     private String pay(String orderId, String subject, String body) throws AlipayApiException, SystemException {
 
         LdsOrderEntity ldsOrderEntity = ldsService.getOrderByOrderId(orderId);
@@ -75,12 +79,12 @@ public class AlipayController {
         log.info("alipay pay: {}", alipayRequest.getBizContent());
 
         String result = alipayClient.pageExecute(alipayRequest).getBody();
-        log.info("alipay pay result: {}", alipayRequest.getBizContent());
+        log.info("alipay pay result: {}", result);
 
         return result;
     }
 
-    @PostMapping("notify")
+    @PostMapping("/notify")
     private String notify(HttpServletRequest request, String out_trade_no, String trade_no, String trade_status,
                           Double receipt_amount, String buyer_id){
 
@@ -117,7 +121,7 @@ public class AlipayController {
         }
     }
 
-    @GetMapping("return")
+    @GetMapping("/return")
     private String alipayReturn(Map<String, String> params, HttpServletRequest request, String out_trade_no,
                                 String trade_no, String total_amount)
             throws AlipayApiException {

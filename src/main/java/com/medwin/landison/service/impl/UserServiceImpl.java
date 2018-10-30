@@ -203,7 +203,7 @@ public class UserServiceImpl implements UserService {
         OrderInfo info = kmsService.greateReservation(orderInfo);
 
         ldsService.addOrder(mobile, JSONObject.toJSONString(info), String.valueOf(info.getID()),
-                reservationTypeCode, orderInfo.getStatusCode().getCode(), orderInfo.getTotalRevenue());
+                reservationTypeCode, info.getStatusCode().getCode(), orderInfo.getTotalRevenue());
 
         return new BaseResult(BaseResult.SUCCESS_CODE, "提交成功", info);
     }
