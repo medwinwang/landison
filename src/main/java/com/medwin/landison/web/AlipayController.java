@@ -1,13 +1,11 @@
 package com.medwin.landison.web;
 
-import com.alibaba.fastjson.JSONObject;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;
 import com.alipay.api.internal.util.AlipaySignature;
 import com.alipay.api.internal.util.StringUtils;
 import com.alipay.api.request.AlipayTradePagePayRequest;
-import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.config.AlipayConfig;
 import com.medwin.landison.entity.LdsOrderEntity;
 import com.medwin.landison.exception.SystemException;
@@ -17,24 +15,18 @@ import com.medwin.landison.service.LdsService;
 import com.medwin.landison.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.UUID;
 
 /**
  * Created by medwin on 2018/10/30.
  */
 @Slf4j
-@Controller
+@RestController
 @RequestMapping("/alipay")
 public class AlipayController {
 
@@ -48,7 +40,6 @@ public class AlipayController {
     private UserService userService;
 
     @GetMapping("/pay")
-    @ResponseBody
     private String pay(String orderId, String subject, String body) throws AlipayApiException, SystemException {
 
         LdsOrderEntity ldsOrderEntity = ldsService.getOrderByOrderId(orderId);
@@ -122,7 +113,6 @@ public class AlipayController {
     }
 
     @GetMapping("/return")
-    @ResponseBody
     private String alipayReturn(Map<String, String> params, HttpServletRequest request, String out_trade_no,
                                 String trade_no, String total_amount)
             throws AlipayApiException {
