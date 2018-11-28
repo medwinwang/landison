@@ -103,9 +103,10 @@ public class LpsUtil {
         URI targetUrl= UriComponentsBuilder.fromHttpUrl(url)
                 .queryParams(map).build().toUri();
         try {
-
+            String parasStr = JSON.toJSONString(paras);
+            log.info("get {} {}", targetUrl, parasStr);
             ResponseEntity<String> result = restTemplate.getForEntity(targetUrl, String.class);
-            log.info("get {} {} {} {}", targetUrl, JSON.toJSONString(paras), result.getStatusCodeValue(), result.getBody());
+            log.info("get return {} {}", result.getStatusCodeValue(), result.getBody());
             BaseResult baseResult = new BaseResult();
             baseResult.setCode(BaseResult.SUCCESS_CODE);
             baseResult.setDataString(result.getBody());

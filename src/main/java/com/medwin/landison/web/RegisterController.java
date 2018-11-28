@@ -53,11 +53,13 @@ public class RegisterController {
             code = 8888;
         }
 
-        httpSession.setAttribute(REG_SMS_CODE, code);
-        httpSession.setAttribute(REG_SMS_MOBILE, mobile);
-        httpSession.setAttribute(REG_SMS_EXP_TIME, second+120);
-
-        return userService.sendRegisterSms(mobileCountryNumber, mobile, name, String.valueOf(code));
+        BaseResult baseResult = userService.sendRegisterSms(mobileCountryNumber, mobile, name, String.valueOf(code));
+        if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())){
+            httpSession.setAttribute(REG_SMS_CODE, code);
+            httpSession.setAttribute(REG_SMS_MOBILE, mobile);
+            httpSession.setAttribute(REG_SMS_EXP_TIME, second+120);
+        }
+        return baseResult;
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
