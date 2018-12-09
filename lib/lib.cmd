@@ -9,4 +9,5 @@ java -jar  -XX:+UseConcMarkSweepGC -Xms256m -Xmx512m -XX:+PrintGCDetails -XX:Met
  jmap -heap <pid>
  jstack <pid>
  jstat -gc <pid>
+ jinfo <pid>
  gcViewer
