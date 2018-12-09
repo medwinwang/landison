@@ -12,6 +12,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.util.StringUtils;
@@ -40,13 +41,15 @@ public class LpsUtil {
 
         HttpHeaders headers = new HttpHeaders();
         String jsonStr = JSON.toJSONString(paras);
+        String logJsonStr = hidePwd(paras);
+
         HttpEntity<String> formEntity = new HttpEntity<String>(jsonStr, headers);
         String url = getPath(apiPath);
 
         try {
 
             restTemplate.put(url, formEntity);
-            log.info("put {} {}", url, jsonStr);
+            log.info("put {} {}", url, logJsonStr);
 
             BaseResult baseResult = new BaseResult();
             baseResult.setCode(BaseResult.SUCCESS_CODE);
@@ -56,7 +59,7 @@ public class LpsUtil {
 
             String bodyStr = e.getResponseBodyAsString();
             String code = e.getStatusText();
-            log.info("get {} {} {} {}", url, JSON.toJSONString(paras), code, bodyStr);
+            log.info("put {} {} {} {}", url, logJsonStr, code, bodyStr);
 
             BaseResult baseResult = new BaseResult();
             baseResult.setCode("10003");
@@ -69,13 +72,15 @@ public class LpsUtil {
 
         HttpHeaders headers = new HttpHeaders();
         String jsonStr = JSON.toJSONString(paras);
+        String logJsonStr = hidePwd(paras);
+
         HttpEntity<String> formEntity = new HttpEntity<String>(jsonStr, headers);
         String url = getPath(apiPath);
 
         try {
 
             ResponseEntity<String> result = restTemplate.postForEntity(url, formEntity, String.class);
-            log.info("post {} {} {} {}", url, jsonStr, result.getStatusCodeValue(), result.getBody());
+            log.info("post {} {} {} {}", url, logJsonStr, result.getStatusCodeValue(), result.getBody());
 
             BaseResult baseResult = new BaseResult();
             baseResult.setCode(BaseResult.SUCCESS_CODE);
@@ -86,7 +91,7 @@ public class LpsUtil {
 
             String bodyStr = e.getResponseBodyAsString();
             String code = e.getStatusText();
-            log.info("get {} {} {} {}", url, JSON.toJSONString(paras), code, bodyStr);
+            log.info("get {} {} {} {}", url, logJsonStr, code, bodyStr);
 
             BaseResult baseResult = new BaseResult();
             baseResult.setCode("10001");
@@ -95,16 +100,17 @@ public class LpsUtil {
         }
     }
 
-    public BaseResult get(String apiPath, HashMap paras) {
+    public BaseResult get(String apiPath, Map<String, String> paras) {
 
         MultiValueMap map = new LinkedMultiValueMap();
         map.setAll(paras);
+        String logJsonStr = hidePwd(paras);
         String url = getPath(apiPath);
         URI targetUrl= UriComponentsBuilder.fromHttpUrl(url)
                 .queryParams(map).build().toUri();
+
         try {
-            String parasStr = JSON.toJSONString(paras);
-            log.info("get {} {}", targetUrl, parasStr);
+            log.info("get {} {}", targetUrl, logJsonStr);
             ResponseEntity<String> result = restTemplate.getForEntity(targetUrl, String.class);
             log.info("get return {} {}", result.getStatusCodeValue(), result.getBody());
             BaseResult baseResult = new BaseResult();
@@ -116,7 +122,7 @@ public class LpsUtil {
 
             String bodyStr = e.getResponseBodyAsString();
             String code = e.getStatusText();
-            log.info("get {} {} {} {}", targetUrl, JSON.toJSONString(paras), code, bodyStr);
+            log.info("get {} {} {} {}", targetUrl, logJsonStr, code, bodyStr);
 
             BaseResult baseResult = new BaseResult();
             baseResult.setCode("10000");
@@ -131,6 +137,16 @@ public class LpsUtil {
         return url;
     }
 
+    private String hidePwd(Map<String, String> paras){
+
+        if(CollectionUtils.isEmpty(paras)) {
+            return null;
+        }
+        if(!StringUtils.isEmpty(paras.get("password"))) {
+            paras.put("password", "***");
+        }
+        return JSON.toJSONString(paras);
+    }
 
     @Cacheable("lps_token")
     public String getToken() {
