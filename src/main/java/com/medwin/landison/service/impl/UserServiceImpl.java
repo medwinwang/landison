@@ -103,6 +103,7 @@ public class UserServiceImpl implements UserService {
             ldsService.loginUser(mobile, password, baseResult.getData().toString());
         } else {
             baseResult.setMessage("手机号或密码错误");
+            baseResult.setData(null);
         }
 
         return baseResult;
