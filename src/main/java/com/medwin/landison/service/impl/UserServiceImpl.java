@@ -101,6 +101,8 @@ public class UserServiceImpl implements UserService {
         BaseResult baseResult = lpsService.checkUser(mobile, password, mobileCountryNumber);
         if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())){
             ldsService.loginUser(mobile, password, baseResult.getData().toString());
+        } else {
+            baseResult.setMessage("手机号或密码错误");
         }
 
         return baseResult;

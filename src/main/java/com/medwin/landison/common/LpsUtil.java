@@ -91,7 +91,7 @@ public class LpsUtil {
 
             String bodyStr = e.getResponseBodyAsString();
             String code = e.getStatusText();
-            log.info("get {} {} {} {}", url, logJsonStr, code, bodyStr);
+            log.info("post {} {} {} {}", url, logJsonStr, code, bodyStr);
 
             BaseResult baseResult = new BaseResult();
             baseResult.setCode("10001");
@@ -100,7 +100,7 @@ public class LpsUtil {
         }
     }
 
-    public BaseResult get(String apiPath, Map<String, String> paras) {
+    public BaseResult get(String apiPath, Map paras) {
 
         MultiValueMap map = new LinkedMultiValueMap();
         map.setAll(paras);
@@ -137,7 +137,7 @@ public class LpsUtil {
         return url;
     }
 
-    private String hidePwd(Map<String, String> paras){
+    private String hidePwd(Map paras){
 
         if(CollectionUtils.isEmpty(paras)) {
             return null;
