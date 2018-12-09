@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    [#include '../include/head_meta.html'/]
+    <title>${channel.title!channel.name}-${site.name}</title>
+    <meta name="description" content="${channel.description!}" />
+    <meta name="keywords" content="${channel.keywords!}">
+    <link rel="dns-prefetch" href="">
+    <link rel="stylesheet" href="${static}/css/base.css">
+    <link rel="stylesheet" href="${static}/css/yearning-club.css">
+</head>
+<body>
+
+[#include '../include/header_nav.html'/]
+
+<!-- container -->
+<div class="container">
+
+    [#include '../include/inc_yearning_club.html'/]
+
+    <div class="wrap join">
+        <img src="${static}/img/yearning-club/logo.png" class="yearning-club" alt="忆旅慧 YEAENING CLUB">
+
+        <h2 class="title none" id="userAllName"></h2>
+
+        <div class="form">
+            <ul>
+                <li class="single-row">
+                    <label class="label">您在怿旅惠的积分为：<em id="points"></em>分</label>
+                    <div class="block">
+                        <div class="inline">
+                            <div class="sel">
+                                <select>
+                                    <option value="">积分获取记录　　　</option>
+                                    <option value="">……</option>
+                                    <option value="">……</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="inline">
+                            <div class="sel">
+                                <select>
+                                    <option value="">积分消费记录　　　</option>
+                                    <option value="">……</option>
+                                    <option value="">……</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="single-row">
+                    <label class="label">您在怿旅惠余额：<em id="storedValue"></em>元</label>
+                    <div class="block">
+                        <div class="inline">
+                            <div class="sel">
+                                <select>
+                                    <option value="">充值记录　　　</option>
+                                    <option value="">……</option>
+                                    <option value="">……</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="inline">
+                            <div class="sel">
+                                <select>
+                                    <option value="">消费记录　　　</option>
+                                    <option value="">……</option>
+                                    <option value="">……</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="single-row">
+                    <label class="label">您在怿旅惠的优惠券</label>
+                    <div class="block">
+                        <div class="inline">
+                            <div class="sel">
+                                <select>
+                                    <option value="">未使用　　　</option>
+                                    <option value="">……</option>
+                                    <option value="">……</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="inline">
+                            <div class="sel">
+                                <select>
+                                    <option value="">已使用　　　</option>
+                                    <option value="">……</option>
+                                    <option value="">……</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="inline">
+                            <div class="sel">
+                                <select>
+                                    <option value="">已过期　　　</option>
+                                    <option value="">……</option>
+                                    <option value="">……</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="form">
+            <h2 class="title">联系信息更改</h2>
+            <ul>
+                <li>
+                    <label class="label must">姓名</label>
+                    <div class="block">
+                        <div class="inline"><input type="text" size="10" placeholder="中文姓" name="lastName" id="lastName"></div>
+                        <div class="inline"><input type="text" size="10" placeholder="中文名" name="firstName" id="firstName"></div>
+                    </div>
+                </li>
+                <li>
+                    <label class="label must">拼音姓名</label>
+                    <div class="block">
+                        <div class="inline"><input type="text" size="10" placeholder="拼音姓" name="altLastName" id="altLastName"></div>
+                        <div class="inline"><input type="text" size="10" placeholder="拼音名" name="altFirstName" id="altFirstName"></div>
+                    </div>
+                </li>
+                <li>
+                    <label class="label must">性别</label>
+                    <div class="block" id="genderCode">
+                        <label><input type="radio" name="genderCode" value="M" id="genderCode_M"> 先生</label>
+                        <label><input type="radio" name="genderCode" value="F" id="genderCode_F"> 女士</label>
+                    </div>
+                </li>
+                <li>
+                    <label class="label must">证件类型</label>
+                    <div class="block">
+                        <div class="inline">
+                            <div class="sel">
+                                <select id="idTypeCode" name="idTypeCode">
+                                    <option value="">-请选择-</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <label class="label must">证件号码</label>
+                    <div class="block">
+                        <input type="text" size="40" placeholder="请输入..." name="idNumber" id="idNumber">
+                    </div>
+                </li>
+                <li>
+                    <label class="label">出生日期</label>
+                    <div class="block">
+                        <input type="date" size="20" placeholder="请输入..." name="birthday" id="birthday">
+                    </div>
+                </li>
+                <li>
+                    <label class="label">电子邮箱</label>
+                    <div class="block">
+                        <input type="email" size="40" placeholder="请输入..." name="email" id="email">
+                    </div>
+                </li>
+                <li>
+                    <label class="label">联系地址</label>
+                    <div class="block">
+                        <div class="inline">
+                            <div class="sel">
+                                <select id="addressProvinceCode" name="addressProvinceCode">
+                                    <option value="">-请选择省-</option>
+                                </select>
+                            </div>
+                            <input type="text" size="15" placeholder="请输入市..." id="addressCity" name="addressCity">
+                            <input type="text" size="15" placeholder="请输入区..." id="addressDistrict" name="addressDistrict">
+                            <input type="text" size="40" placeholder="请输入街道..." id="addressStreet" name="addressStreet">
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <label class="label must">为必填项</label>
+                </li>
+                <li>
+                    <div class="block">
+                        <button class="btn" id="updateUser">更改递交</button>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+
+[#include '../include/foot.html'/]
+<script type="application/javascript">
+
+    function isLogin(user) {
+
+        $("#userAllName").html("尊敬的 "+ user.lastName + " " + (user.firstName? user.firstName: "") + " "
+            + (user.gender&& user.gender.code == "F"? "女士": "先生") +"：");
+
+        var card = getMembershipCard(user);
+        $("#storedValue").html(getAccountValue(card, "storedValue").value);
+        $("#points").html(getAccountValue(card, "points").value);
+
+        initUserFrom(user);
+
+        $("#updateUser").click(function () {
+
+            var lastName = $.trim($("#lastName").val());
+            var firstName = $.trim($("#firstName").val());
+            var altLastName = $.trim($("#altLastName").val());
+            var altFirstName = $.trim($("#altFirstName").val());
+            var genderCode = $('#genderCode input[name="genderCode"]:checked ').val();
+            var idTypeCode = $("#idTypeCode").val();
+            var idNumber = $.trim($("#idNumber").val());
+            var birthday = $("#birthday").val();
+            var email = $.trim($("#email").val());
+            var addressProvinceCode = $("#addressProvinceCode").val();
+            var addressCity = $.trim($("#addressCity").val());
+            var addressDistrict = $.trim($("#addressDistrict").val());
+            var addressStreet = $.trim($("#addressStreet").val());
+            if(lastName == null || lastName == ""){
+                alert("请输入中文姓");
+                return false;
+            }
+            if(firstName == null || firstName == ""){
+                alert("请输入中文名");
+                return false;
+            }
+            if(altLastName == null || altLastName == ""){
+                alert("请输入拼音姓");
+                return false;
+            }
+            if(altFirstName == null || altFirstName == ""){
+                alert("请输入拼音名");
+                return false;
+            }
+            if(genderCode == null || genderCode == ""){
+                alert("请选择性别");
+                return false;
+            }
+            if(idTypeCode == null || idTypeCode == ""){
+                alert("请选择证件类型");
+                return false;
+            }
+            if(idNumber == null || idNumber == ""){
+                alert("请输入证件号码");
+                return false;
+            }
+            if(email!= null && !checkEmail(email)){
+                alert("请输入正确的邮箱格式");
+                return false;
+            }
+
+            $.ajax({
+                url: path + "/user/update" + "?" + new Date().getTime(),
+                data: {lastName: lastName, firstName: firstName, altLastName: altLastName, altFirstName:altFirstName,
+                    genderCode:genderCode, idTypeCode: idTypeCode, idNumber: idNumber, birthday: birthday, email: email,
+                    addressProvinceCode:addressProvinceCode, addressCity: addressCity, addressDistrict: addressDistrict,
+                    addressStreet: addressStreet, addressCountryCode: 'CN'},
+                type: 'post',
+                dataType: 'json',
+                success: function(result){
+                    if(result && result.code == 1) {
+
+                        alert("更改成功");
+                        window.location.reload();
+                    } else {
+                        alert(result.message);
+                    }
+                }
+            });
+        });
+    }
+
+    function initUserFrom(user) {
+
+        $("#lastName").val(user.lastName);
+        $("#firstName").val(user.firstName);
+        $("#altLastName").val(user.altLastName);
+        $("#altFirstName").val(user.altFirstName);
+        if(user.gender && user.gender.code){
+            $("#genderCode_" + user.gender.code).attr('checked', 'checked');
+        }
+        if(user.idType){
+            $("#idTypeCode").val(user.idType.code);
+        }
+        $("#idNumber").val(user.idNumber);
+        if(user.birthday)
+            $("#birthday").val(user.birthday.split("T")[0]);
+
+        $("#email").val(user.email);
+        if(user.addressProvince){
+            $("#addressProvinceCode").val(user.addressProvince.code);
+        }
+        $("#addressCity").val(user.addressCityName);
+        $("#addressDistrict").val(user.addressDistrict);
+        $("#addressStreet").val(user.addressStreet);
+
+    }
+    
+    var idTypes = [{"code":"01","name":"身份证"},{"code":"02","name":"护照证"},{"code":"03","name":"军官证"},{"code":"13","name":"户口簿"},{"code":"21","name":"台湾居民来往大陆通行证"},{"code":"22","name":"外国人临时居留证"},{"code":"23","name":"港澳居民往来内地通行证"},{"code":"24","name":"中华人民共和国旅行证"},{"code":"25","name":"外国人旅行证"},{"code":"26","name":"外国人出入境证"},{"code":"27","name":"外国人居留证"},{"code":"28","name":"港澳同胞回乡证"},{"code":"29","name":"中华人民共和国入出境通行证"},{"code":"30","name":"海员证"},{"code":"91","name":"警官证"},{"code":"92","name":"士兵证"},{"code":"93","name":"普通护照"},{"code":"94","name":"外交护照"},{"code":"95","name":"官员护照"},{"code":"96","name":"公务护照"},{"code":"97","name":"特别护照"},{"code":"32","name":"中国护照"},{"code":"33","name":"驾驶证"},{"code":"98","name":"联合国护照"},{"code":"PASSPORT","name":"Passport"},{"code":"31","name":"学生证"},{"code":"99","name":"其它证件"}];
+    var idTypeSelect = $("#idTypeCode");
+    idTypes.forEach(function (item, index) {
+        idTypeSelect.append("<option value='"+item.code+"'>"+item.name+"</option>");
+    });
+
+    var addressProvinces = [{"code":"ZJS","name":"浙江省|zhejiang"},{"code":"AHS","name":"安微省|anhui"},{"code":"CKG","name":"重庆市|chongqing"},{"code":"FJS","name":"福建省|fujian"},{"code":"GDS","name":"广东省|guangdong"},{"code":"GSS","name":"甘肃省|gansu"},{"code":"GZS","name":"贵州省|guizhou"},{"code":"GXZ","name":"广西壮族自治区|guangxi"},{"code":"HBS","name":"河北省|hebei"},{"code":"HEN","name":"河南省|henan"},{"code":"HLJ","name":"黑龙江省|heilongjiang"},{"code":"HNS","name":"海南省|hainan"},{"code":"HUN","name":"湖南省|hunan"},{"code":"HUS","name":"湖北省|hubei"},{"code":"JLS","name":"吉林省|jilin"},{"code":"JSS","name":"江苏省|jiangsu"},{"code":"JXS","name":"江西省|jiangxi"},{"code":"LNS","name":"辽宁省|liaoning"},{"code":"NMZ","name":"内蒙古自治区|neimenggu"},{"code":"NXZ","name":"宁夏回族自治区|ningxia"},{"code":"PEK","name":"北京市|beijing"},{"code":"QHS","name":"青海省|qinghai"},{"code":"SCS","name":"四川省|sichuan"},{"code":"SDS","name":"山东省|shandong"},{"code":"SHA","name":"上海市|shanghai"},{"code":"SIS","name":"山西省|shanxi"},{"code":"SXS","name":"陕西省|shanxi"},{"code":"TSN","name":"天津市|tianjin"},{"code":"XJW","name":"新疆维吾尔自治区|xinjiang"},{"code":"XZZ","name":"西藏自治区|xizang"},{"code":"YNS","name":"云南省|yunnan"},{"code":"OTH","name":"其他|Other"}];
+
+    var provinceSelect = $("#addressProvinceCode");
+    addressProvinces.forEach(function (item, index) {
+        provinceSelect.append("<option value='"+item.code+"'>"+item.name.split("|")[0]+"</option>");
+    });
+//    provinceSelect.change(function () {
+//        if(provinceSelect.val() != ''){
+//            initAddressCitySelect(provinceSelect.val());
+//        }
+//    });
+
+    function initAddressCitySelect(province) {
+        $.ajax({
+            url: path + "//info/information?dataType=CITYS&parentCode="+province,
+            data: {},
+            type: 'get',
+            dataType: 'json',
+            success: function(result){
+                if(result && result.code == 1) {
+
+                    var data = result.data;
+                    var select = $("#addressCity");
+                    select.html('<option value="">-请选择市-</option>');
+                    data.forEach(function (item, index) {
+                        select.append("<option value='"+item.code+"'>"+item.name+"</option>");
+                    });
+
+                }else {
+                    alert(result.message);
+                }
+            }
+        });
+    }
+
+    function getMembershipCard(user) {
+
+        var cards = user.membershipCards;
+        var ret;
+        cards.forEach(function (item) {
+            if(item.enrollmentChannel.code == "grp01"){
+                ret = item;
+            }
+        })
+        return ret;
+    }
+    
+    function getAccountValue(card, type) {
+        var items = card.accounts;
+        var ret;
+        items.forEach(function (item) {
+            if(item.accountType == type){
+                ret = item;
+            }
+        })
+        return ret;
+    }
+</script>
+</body>
+</html>

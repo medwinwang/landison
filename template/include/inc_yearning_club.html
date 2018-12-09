@@ -1,0 +1,13 @@
+<!-- head -->
+<div class="banner"><img src="${static}/img/yearning-club/yearning-club.jpg" alt=""></div>
+<div class="club-nav">
+	<div class="wrap"><img src="${static}/img/yearning-club/jion-qr.jpg" alt=""></div>
+	<ul class="wrap clearfix">
+		[@cms_channel_list parentId=channel.parentId channelOption='1']
+		[#list tag_list as sub]
+		<li [#if sub.id==118 ] style="display:none;" class="j_user" [/#if]>
+		<a href="${sub.url}" [#if channel??&&(channel.id==sub.id) ] class="active" [/#if]>${sub.name}</a></li>
+		[/#list]
+		[/@cms_channel_list]
+	</ul>		
+</div>

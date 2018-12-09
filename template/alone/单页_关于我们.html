@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    [#include '../include/head_meta.html'/]
+    <title>${channel.title!channel.name}-${site.name}</title>
+    <meta name="description" content="${channel.description!}" />
+    <meta name="keywords" content="${channel.keywords!}">
+    <link rel="dns-prefetch" href="">
+    <link rel="stylesheet" href="${static}/css/base.css">
+    <link rel="stylesheet" href="${static}/css/about.css">
+</head>
+<body>
+
+[#include '../include/header_nav.html'/]
+
+<!-- container -->
+<div class="container">
+    <div class="banner"><img src="${channel.contentImg!}" alt=""></div>
+
+    [#include '../include/inc_about.html'/]
+
+    ${channel.txt!}
+
+</div>
+
+[#include '../include/foot.html'/]
+
+</body>
+</html>

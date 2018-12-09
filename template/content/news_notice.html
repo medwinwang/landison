@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <title>${content.title!}-${site.name}</title>
+    <meta content="${content.tagStr!}" http-equiv="keywords" />
+    <meta content="${content.description!}" http-equiv="description" />
+    [#include '../include/head_meta.html'/]
+    [#assign isNotice = true /]
+    <link href="/${res}/css/comment.css" rel="stylesheet" />
+    <link href="/${res}/css/manage.css" rel="stylesheet" />
+</head>
+<body>
+
+[#include '../include/header_nav.html']
+
+<div class="floor comment content boarddetail">
+    <div class="contain">
+        <p class="bread-crumb">
+            <a href="/${base}">首页</a> >
+            [#list channel.nodeList as n]
+             <a href="${n.url}">${n.name}</a> >
+            [/#list]
+            <span>${content.title}</span>
+        </p>
+        <div class="detail clearfix">
+            <div class="text-wrap">
+                <h3 class="text-title">
+                    ${content.title}
+                </h3>
+                <p class="sub-info clearfix">
+                    <span class="fl">作者：${content.author!''}</span>
+                    <span class="fl">来源：${content.origin!'一点金网'}</span>
+                    <span class="fr">${content.releaseDate!''}</span>
+                </p>
+                <p class="detail-text">
+                    ${txt!}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+[#include '../include/foot.html'/]
+
+</body>
+</html>

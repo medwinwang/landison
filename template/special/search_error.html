@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <title>搜索结果-${site.name}</title>
+    [#include '../include/head_meta.html'/]
+    [#assign isHelp = true /]
+    <link type="text/css" href="/${res}/css/help.css" rel="stylesheet" />
+    <link type="text/css" href="/${res}/css/helpCat.css" rel="stylesheet" />
+    <link type="text/css" href="/${res}/css/manage.css" rel="stylesheet" />
+
+</head>
+<body>
+[#include '../include/header_nav.html'/]
+
+<div class="floor help search banner">
+    <div class="contain">
+        <form action="${base}/search.htm" name="searchForm">
+            <div class="searchBar clearfix">
+                <input class="searchbox " name="q" value="${q!'请输入关键词'}"
+                       type="text" id="txtKey"
+                       onfocus="if(this.value=='请输入关键词')this.value=''"
+                       onblur="if(this.value=='')this.value='请输入关键词'" maxlength="24"
+                       autocomplete="off" placeholder="请输入关键词"/>
+                <a class="button j_search_button">搜索</a>
+            </div>
+        </form>
+
+        <div class="hintBar">
+            <span>搜索结果：</span>
+            <span>抱歉，您输入的内容"${q!}"不在查询范围内。</span>
+        </div>
+    </div>
+
+</div>
+
+[#include '../include/foot.html'/]
+<script type="application/javascript">
+    $(function(){
+
+        $('.help-item .htitle').on('click',function(){
+            $(this).parent().toggleClass('on');
+        });
+
+        $('.j_search_button').on('click',function(){
+            var val = $('.searchbox').val();
+            if(val && val.length>0&&val!='请输入关键词'){
+//                $(".j_search_button").addClass("loading");
+                $('form[name=searchForm]').submit();
+            }
+        });
+
+        function getUrlParam(param) {
+            var paramIndex = location.href.indexOf('?');
+            if (paramIndex > 0) {
+                var params = location.href.slice(paramIndex + 1).split('&'),
+                        paramsObj = {};
+                for (var i = 0, len = params.length; i < len; i++) {
+                    var dict = params[i].split('=');
+                    paramsObj[dict[0]] = dict[1];
+                }
+                return param ? paramsObj[param] : paramsObj;
+            }
+        }
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    [#include '../include/head_meta.html'/]
+    <title>${channel.title!channel.name}-${site.name}</title>
+    <meta name="description" content="${channel.description!}" />
+    <meta name="keywords" content="${channel.keywords!}">
+    <link rel="dns-prefetch" href="">
+    <link rel="stylesheet" href="${static}/css/base.css">
+    <link rel="stylesheet" href="${static}/css/original/map.css">
+</head>
+<body>
+
+[#include '../include/header_nav.html'/]
+
+<!-- container -->
+<div class="container">
+
+    <div class="banner" style="background: url(${channel.titleImg!}) no-repeat;">
+    </div>
+    <div class="introduction">
+        <div class="introduction-nav">
+            <ul>
+                <li ><a href="/member/reserve.html">客房预订</a></li>
+                [@cms_channel_list parentId=channel.parent.id channelOption='1']
+                [#list tag_list as sub]
+                    <li [#if sub.id == channel.id] class="active" [/#if]><a href="${sub.url}">${sub.name}</a></li>
+                [/#list]
+                [/@cms_channel_list]
+            </ul>
+        </div>
+
+        <div class="entertainment"><div><img src="${static}/img/original/map/1.png">酒店位置</div></div>
+
+        <div class="baidu">
+            <img src="${channel.contentImg!}" alt="">
+        </div>
+    </div>
+
+</div>
+
+[#include '../include/foot.html'/]
+
+</body>
+</html>

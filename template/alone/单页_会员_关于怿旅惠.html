@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    [#include '../include/head_meta.html'/]
+    <title>${channel.title!channel.name}-${site.name}</title>
+    <meta name="description" content="${channel.description!}" />
+    <meta name="keywords" content="${channel.keywords!}">
+    <link rel="dns-prefetch" href="">
+    <link rel="stylesheet" href="${static}/css/base.css">
+    <link rel="stylesheet" href="${static}/css/yearning-club.css">
+</head>
+<body>
+
+[#include '../include/header_nav.html'/]
+
+<!-- container -->
+<div class="container">
+
+    [#include '../include/inc_yearning_club.html'/]
+
+    <div class="wrap about">
+        <img src="${static}/img/yearning-club/logo.png" class="yearning-club" alt="忆旅慧 YEAENING CLUB">
+
+        <h2 class="title">加入怿旅惠，享受专属服务，赢取丰厚奖励！</h2>
+        <p>旅惠是雷迪森旅业集团宾客忠诚奖励计划。加入怿旅惠，您可以在雷迪森品牌旗下参与怿旅惠计划的酒店获享会员专属礼遇与各类积分奖励，并在怿旅惠微信平台订房与怿商城消费或换购产品时积分抵现。</p>
+        <!--<h2 class="title">快速升级⸺更高级别更多积分更优礼遇</h2>-->
+        <!--<h3 class="sub-title">升级规则</h3>-->
+        <!--<ul>-->
+            <!--<li>注册免费加入，成为怿旅惠普卡会员；</li>-->
+            <!--<li>怿旅惠普卡会员在激活会员卡开始一年内累计完成40晚入住或者累计10万积分即可升级怿旅惠金卡会员会籍，并额外赠送1000积分；</li>-->
+            <!--<li>怿旅惠普卡在激活会员卡开始一年内累计完成60晚入住或累计15万积分即可升级为怿旅惠白金卡会员会籍，并额外赠送1500积分；</li>-->
+        <!--</ul>-->
+        <!--<h3 class="sub-title">降级规则</h3>-->
+        <!--<p>自注册之日起一个日历年后，系统重新计算会员在过去一个日历年的累计房晚量，自动按照会员的升降级规则进行降级。调整会员级别后，系统中会将过去一个日历年中的历史房晚数据归零。</p>-->
+        <!--<ul>-->
+            <!--<li>上一个日历年内（即上一次调整降级后的365天）累计的合格房晚小于40个房晚并且累计积分不足10万，在新一年度中会员级别调整为  普通卡。</li>-->
+            <!--<li>上一个日历年内（即上一次调整降级后的365天）累计的合格房晚大于等于40个房晚小于60个房晚或累计积分大于等于10万小于15万，在新一年度中会员级别调整为金卡。</li>-->
+        <!--</ul>-->
+        <h2 class="title">积分赚取与消费⸺积分奖励赢取丰厚回报</h2>
+        <p>当您成为怿旅惠尊贵会员之后，无论您是商务出差亦或是休闲度假，入住雷迪森品牌旗下参与怿旅惠计划酒店或在相应餐厅消费，即可赚取怿旅惠积分。<br>
+            怿旅惠积分在怿旅惠微信平台订房与怿商城消费或换购产品时积分抵现。</p>
+        <ul>
+            <li>通过第三方渠道预订所产生的消费不可积分 </li>
+            <li>产生怿旅惠积分每两年清零一次</li>
+            <li>最终解释权归属雷迪森旅业集团</li>
+        </ul>
+        <table>
+            <thead>
+            <tr>
+                <th class="tal">条款</th>
+                <th>普卡</th>
+                <th>金卡</th>
+                <th>白金卡</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="tal">一个日历年内（自注册之后365天内）</td>
+                <td>免费注册</td>
+                <td>累计入住40晚或<br>积分累计到达10万分</td>
+                <td>累计入住60晚或<br>积分累计到达15万分</td>
+            </tr>
+            <tr>
+                <td class="tal">享受会员价</td>
+                <td>√</td>
+                <td>√</td>
+                <td>√</td>
+            </tr>
+            <tr>
+                <td class="tal">符合条件的每1元人民币住房消费均可获得的积分</td>
+                <td>5</td>
+                <td>7</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td class="tal">符合条件的每1元人民币餐饮消费均可获得的积分</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td class="tal">餐饮折扣：只限零点、包厢；  3桌及3桌以上<br>宴会、婚宴、酒水、香烟、海鲜除外</td>
+                <td>95折</td>
+                <td>9折</td>
+                <td>88折</td>
+            </tr>
+            <tr>
+                <td class="tal">房间免费升级（视酒店入住率情况）</td>
+                <td>√</td>
+                <td>√</td>
+                <td>√</td>
+            </tr>
+            <tr>
+                <td class="tal">会员专属通道（快速登记入住和退房）</td>
+                <td>√</td>
+                <td>√</td>
+                <td>√</td>
+            </tr>
+            <tr>
+                <td class="tal">延迟退房（视酒店入住率情况）</td>
+                <td>√</td>
+                <td>至下午两点</td>
+                <td>至下午四点</td>
+            </tr>
+            <tr>
+                <td class="tal">入住欢迎水果</td>
+                <td>√</td>
+                <td>√</td>
+                <td>√</td>
+            </tr>
+            <tr>
+                <td class="tal">每日送递主要国内报纸</td>
+                <td>√</td>
+                <td>√</td>
+                <td>√</td>
+            </tr>
+            <tr>
+                <td class="tal">夜床会员礼品</td>
+                <td>√</td>
+                <td>√</td>
+                <td>√</td>
+            </tr>
+            <tr>
+                <td class="tal">房内咖啡茶可添加</td>
+                <td>√</td>
+                <td>√</td>
+                <td>√</td>
+            </tr>
+            <tr>
+                <td class="tal">餐厅消费时可获赠水果一份</td>
+                <td>√</td>
+                <td>√</td>
+                <td>√</td>
+            </tr>
+            <tr>
+                <td class="tal">入住期间洗衣服务折扣</td>
+                <td>9折</td>
+                <td>85折</td>
+                <td>8折</td>
+            </tr>
+            <tr>
+                <td class="tal">生日当月入住赠送当月电子蛋糕券1张1磅</td>
+                <td>√</td>
+                <td>√</td>
+                <td>√</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+[#include '../include/foot.html'/]
+</body>
+</html>

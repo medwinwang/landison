@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<title>${content.title!}-${site.name}</title>
+	<meta content="${content.tagStr!}" http-equiv="keywords" />
+	<meta content="${content.description!}" http-equiv="description" />
+	[#include '../include/head_meta.html'/]
+	[#assign isSchool = true /]
+	<link href="/${res}/css/comment.css" rel="stylesheet" />
+	<link href="/${res}/css/manage.css" rel="stylesheet" />
+</head>
+<body>
+[#include '../include/header_nav.html']
+
+<div class="floor comment banner">
+</div>
+<div class="floor comment content">
+	<div class="contain">
+		<p class="bread-crumb">
+			<a href="/${base}">首页</a> >
+			[#list channel.nodeList as n]
+			[#if n_has_next] <a href="${n.url}">${n.name}</a> > [/#if]
+			[#if !n_has_next] <span>${n.name}</span>[/#if]
+			[/#list]
+		</p>
+		<div class="detail clearfix">
+			<div class="text-wrap">
+				<h3 class="text-title">
+					${content.title}
+				</h3>
+				<p class="sub-info clearfix">
+					<span class="fl">作者：${content.author!''}</span>
+					<span class="fl">来源：${content.origin!'一点金网'}</span>
+					<span class="fr">${content.releaseDate!''}</span>
+				</p>
+				<p class="detail-text">${txt!}</p>
+			</div>
+
+			<div class="text-list">
+				<p class="list-title">全部评论</p>
+
+				<ul class="text-list-inner">
+				</ul>
+				<div class="pagingBar">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+[#include '../include/foot.html'/]
+<script type="application/javascript">
+	var pageSize = ${channel.pageSize};
+	var pageNo = parseInt(getUrlParam("pageNo"));
+	if(isNaN(pageNo)) {
+		pageNo = 1;
+	}
+	var channelId = ${channel.id};
+	var contentId = ${content.id};
+
+	getContentPage(pageNo);
+
+	function getContentPage(pno) {
+		$.ajax({
+			url: "${base}/searchContentsByChannelId.htm",
+			data: {channelId: channelId, pageNo: pno, pageSize: pageSize},
+			dataType: 'json',
+			success: function(result){
+				if(result && result.success){
+					$(".text-list-inner").html('');
+					if(result.data && result.data.length > 0) {
+						for(var i=0; i < result.data.length; i++) {
+							var content = result.data[i];
+							var newDate = new Date();
+							newDate.setTime(content.date);
+							var html = '<li class="text-item '+ (content.id==contentId?'on':'') +'"><p class="text-item-title">' +
+									'<a href="'+content.url+'?pageNo='+pageNo+'" title="'+content.title+'" target="_blank">'+content.title+'</a></p>' +
+									'<p class="text-item-time"><span>'+StringFormatter.format("{Date: {format: 'YYYY-MM-DD HH:mm:ss'}}", newDate)+'</span></p>' +
+									'</li>';
+							$(".text-list-inner").append(html);
+						}
+					}
+
+					var html = '<div class="pb-inner">';
+					if(pageNo != 1) {
+						html += '<a href="javascript:void (0)" onclick="goBefore()" class="pb-item pb-prev"></a>';
+					} else {
+						html += '<a class="pb-item pb-prev off"></a>';
+					}
+					if(pageNo > 4) {
+						html += '<a class="pb-item pb-etc">...</a>';
+					}
+					if(pageNo > 3) {
+						var p = pageNo-3;
+						html += '<a class="pb-item" href="javascript:void (0)" onclick="goPage('+p+')">'+p+'</a>';
+					}
+					if(pageNo > 2) {
+						var p = pageNo-2;
+						html += '<a class="pb-item" href="javascript:void (0)" onclick="goPage('+p+')">'+p+'</a>';
+					}
+					if(pageNo > 1) {
+						var p = pageNo-1;
+						html += '<a class="pb-item" href="javascript:void (0)" onclick="goPage('+p+')">'+p+'</a>';
+					}
+					html += '<a class="pb-item on" href="javascript:void (0)" >'+pageNo+'</a>';
+
+					var totalPage = result.totalPage;
+
+					if(totalPage - pageNo > 0) {
+						var p = pageNo+1;
+						html += '<a class="pb-item" href="javascript:void (0)" onclick="goPage('+p+')">'+p+'</a>';
+					}
+					if(totalPage - pageNo > 1) {
+						var p = pageNo+2;
+						html += '<a class="pb-item" href="javascript:void (0)" onclick="goPage('+p+')">'+p+'</a>';
+					}
+					if(totalPage - pageNo > 2) {
+						var p = pageNo+3;
+						html += '<a class="pb-item" href="javascript:void (0)" onclick="goPage('+p+')">'+p+'</a>';
+					}
+					if(totalPage - pageNo > 3) {
+						html += '<a class="pb-item pb-etc">...</a>';
+					}
+					if(totalPage == pageNo) {
+						html += '<a class="pb-item pb-next off"></a>';
+					}else {
+						html += '<a href="javascript:void (0)" onclick="goNext()" class="pb-item pb-next"></a>';
+					}
+					html += '</div>';
+					$(".pagingBar").html(html);
+ 				} else  {
+					console.log("加载失败");
+				}
+			}
+		});
+	}
+
+	function goBefore() {
+		pageNo--;
+		getContentPage(pageNo);
+	}
+	function goNext() {
+		pageNo++;
+		getContentPage(pageNo);
+	}
+	function goPage(p) {
+		pageNo = p;
+		getContentPage(pageNo);
+	}
+</script>
+</body>
+</html>

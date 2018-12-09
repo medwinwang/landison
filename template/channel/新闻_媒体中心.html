@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    [#include '../include/head_meta.html'/]
+    <title>${channel.title!channel.name}-${site.name}</title>
+    <meta name="description" content="${channel.description!}" />
+    <meta name="keywords" content="${channel.keywords!}">
+    <link rel="dns-prefetch" href="">
+    <link rel="stylesheet" href="${static}/css/base.css">
+    <link rel="stylesheet" href="${static}/css/about.css">
+</head>
+<body>
+
+[#include '../include/header_nav.html'/]
+
+<!-- container -->
+<div class="container">
+    <div class="banner"><img src="${channel.contentImg!}" alt="${channel.title!channel.name}"></div>
+
+    [#include '../include/inc_about.html'/]
+
+    [@cms_content_page channelId=channel.id count='4' sysPage='1' titLen='30' append='...' orderBy='2' dateFormat='MM-dd' channelOption='1']
+    <div class="wrap media-list">
+        <ul>
+            [#list tag_pagination.list as a]
+            <li>
+                <img src="${a.contentImg!}" alt="${a.title}">
+                <h2>${a.title}</h2>
+                <a href="${a.url}">查看详情</a>
+            </li>
+            [/#list]
+        </ul>
+    </div>
+    [/@cms_content_page]
+</div>
+
+[#include '../include/foot.html'/]
+
+</body>
+</html>

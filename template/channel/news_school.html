@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <title>${channel.title!channel.name}-${site.name}</title>
+    <meta name="description" content="${channel.description!}" />
+    <meta name="keywords" content="${channel.keywords!}">
+    [#include '../include/head_meta.html'/]
+    <link href="/${res}/css/moving.css" rel="stylesheet" />
+    <link href="/${res}/css/school.css" rel="stylesheet" />
+</head>
+<body>
+[#include '../include/header_nav.html'/]
+
+<div class="floor banner school">
+</div>
+
+<div class="floor school data">
+    <div class="contain">
+        <p class="title">数据展示</p>
+        <div class="divider"></div>
+        <ul class="chartlist">
+            <li class="chartitem">
+                <p class="chart-title">年龄分布</p>
+                <div class="chart-area" id="chart1"></div>
+            </li>
+            <li class="chartitem">
+                <p class="chart-title">品种分布</p>
+                <div class="chart-area" id="chart2"></div>
+            </li>
+            <li class="chartitem">
+                <p class="chart-title">盈利分布</p>
+                <div class="chart-area" id="chart3"></div>
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+<div class="floor school comment progresswrap">
+    <div class="contain">
+        <h3 class="title">点金评论</h3>
+        <div class="divider"></div>
+        <div class="time-line">
+            <ul class="time-line-wrap">
+                <li class="year-item">
+                    <div class="year-list">
+                        [@cms_content_list channelId=147  orderBy='2' channelOption='1'  count='3' ]
+                        [#list tag_list as a]
+                        <div class="sub-item">
+                            <p class="date"></p>
+                            <div class="dot"></div>
+                            <div class="time-line-content">
+                                <div class="arrow"></div>
+                                <div class="ct">
+                                    <h4 class="item-title"><a target="_blank" href="${a.url}?pageNo=1">${a.title}</a></h4>
+                                    <p class="item-content">[@text_cut s=a.description len=100 append='...'/]</p>
+                                </div>
+                            </div>
+                        </div>
+                        [/#list]
+                        [/@cms_content_list]
+                    </div>
+                </li>
+            </ul>
+        </div>
+        [@cms_content_list channelId=147  orderBy='2' channelOption='1'  count='1' ]
+        [#list tag_list as a]
+        <a class="knowMore" target="_blank" href="${a.url}?pageNo=1">了解更多</a>
+        [/#list]
+        [/@cms_content_list]
+    </div>
+</div>
+<div class="floor school download" name="download" id="download">
+    <div class="contain">
+        <h3 class="title">应用下载</h3>
+        <div class="divider"></div>
+        <ul class="itemlist">
+            [@cms_channel_list parentId='104' channelOption='1']
+            [#list tag_list as c]
+                <li class="listitem [#if c_index== 0] on [/#if]"><a href="javascript:void (0)">${c.name}</a></li>
+            [/#list]
+            [/@cms_channel_list]
+        </ul>
+        [@cms_channel_list parentId='104' channelOption='1']
+        [#list tag_list as c]
+            [@cms_content_list channelId=c.id  orderBy='9' channelOption='1']
+            <ul class="applist J_downLoad_${c_index}" [#if c_index != 0] style="display: none" [/#if]>
+                [#list tag_list as a]
+                <li class="app-item item${a_index+1}">
+                    <div class="icon"></div>
+                    [#if a.url != "#"]
+                    <a class="button" href="${a.url}">${a.title}</a>
+                    [/#if]
+                </li>
+                [/#list]
+            </ul>
+            [/@cms_content_list]
+        [/#list]
+        [/@cms_channel_list]
+    </div>
+</div>
+<div class="floor books school">
+    <div class="contain">
+        <h3 class="title">经典书籍</h3>
+        <div class="divider"></div>
+        <div class="book-list clearfix">
+        </div>
+        <a class="more" href="javascript:void (0)"></a>
+    </div>
+</div>
+
+<div class="floor reco school">
+    <div class="contain">
+        <h3 class="title">热站推荐</h3>
+        <div class="divider"></div>
+        <div class="reco-list-wrap">
+            <ul class="reco-list">
+                [@cms_friendlink_list ctgId='2']
+                <li class="reco-set-item">
+                    [#list tag_list as link]
+                    [#if link_index < 8]
+                    <a class="reco-item" href="${link.domain}" style="background-image: url(${link.logo!site.defImg});" target="_blank"></a>
+                    [/#if]
+                    [/#list]
+                </li>
+                [/@cms_friendlink_list]
+                [@cms_friendlink_list ctgId='2']
+                <li class="reco-set-item">
+                    [#list tag_list as link]
+                    [#if link_index >7 ]
+                    <a class="reco-item" href="${link.domain}" style="background-image: url(${link.logo!site.defImg});" target="_blank"></a>
+                    [/#if]
+                    [/#list]
+                </li>
+                [/@cms_friendlink_list]
+            </ul>
+        </div>
+        <div class="reco-nav">
+            <a class="reco-prev off"></a>
+            <a class="reco-next"></a>
+        </div>
+    </div>
+</div>
+
+
+[#include '../include/foot.html'/]
+<script type="application/javascript">
+
+    $(".itemlist .listitem").click(function (data) {
+        $(this).siblings().removeClass("on");
+        $(this).addClass("on");
+        var index = $(this).index();
+        $(".contain .applist").hide();
+        $(".J_downLoad_" + index).show();
+    });
+
+    var type = getUrlParam("type");
+    if(type) {
+        $('html, body').animate({
+            scrollTop: $("#download").offset().top
+        }, 2000);
+        $(".itemlist .listitem:eq(" + type + ")").click();
+
+    }
+
+    function loginFail() {
+        location.href = "${frontbaseUrl}#/login";
+    }
+
+
+    var bookPageSize = 6;
+    var bookPageNo = 1;
+    var bookChannelId = 166;
+
+    $(".books .more").click(function () {
+        bookPageNo++;
+        getBookPage(bookPageNo);
+    });
+
+    function getBookPage(pno) {
+        $.ajax({
+            url: "${base}/searchContentsByChannelId.htm",
+            data: {channelId: bookChannelId, pageNo: pno, pageSize: bookPageSize},
+            dataType: 'json',
+            success: function(result){
+                if(result && result.success){
+                    if(result.totalPage <= 1) {
+                        $(".books .more").hide();
+                    }
+                    if(result.data && result.data.length > 0) {
+                        for(var i=0; i < result.data.length; i++) {
+                            var content = result.data[i];
+                            var html = '<div class="book-item"><p class="book-title">【'+content.title+'】</p>' +
+                                    '<div class="book-img" style="background-image: url('
+                            + ((content.pictures && content.pictures.length > 0) ?content.pictures[0].imgPath : '')
+                            +');"></div>' +
+                                    '<div class="mask"><div class="inner"><p class="book-title">【'+content.title+'】</p>' +
+                                    '<p class="book-content">'+ content.description+'</p>' +
+                                    '<a class="download-button" href="'+ content.url
+                                    +'">点击下载</a></div></div></div>';
+                            $(".book-list").append(html);
+                        }
+                    } else {
+                        $(".books .more").hide();
+                    }
+                } else  {
+                    console.log("加载失败");
+                }
+            }
+        });
+    }
+
+    getBookPage(bookPageNo);
+
+
+    ;(function(){
+
+        var chart1 = echarts.init(document.getElementById('chart1'));
+        var chart2 = echarts.init(document.getElementById('chart2'));
+        var chart3 = echarts.init(document.getElementById('chart3'));
+
+        var setChart1 = function(data){
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{b}: {c}%"
+                },
+                legend: {
+                    orient: 'horizontal',
+                    x: 'center',
+                    data:['41-50岁','31-40岁','30岁以下']
+                },
+                color:['#ff6155','#ffb258','#fffb8a'],
+                series: [
+                    {
+                        name:'年龄分布',
+                        type:'pie',
+                        radius: ['50%', '70%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: false,
+                                textStyle: {
+                                    fontSize: '30',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data:[
+                            {value:data[0], name:'41-50岁'},
+                            {value:data[1], name:'31-40岁'},
+                            {value:data[2], name:'30岁以下'}
+
+                        ]
+                    }
+                ]
+            }
+            chart1.setOption(option);
+
+        };
+
+        var setChart2 = function(data){
+
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{b}: {c}%"
+                },
+                color:['#65a3ff','#c9acff','#8be4f7'],
+                legend: {
+                    orient: 'horizontal',
+                    x: 'center',
+                    data:['外汇','股票借款','股指期货借款']
+                },
+                series: [
+                    {
+                        name:'品种分布',
+                        type:'pie',
+                        radius: ['50%', '70%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: false,
+                                textStyle: {
+                                    fontSize: '30',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data:[
+                            {value:data[0], name:'外汇'},
+                            {value:data[1], name:'股票借款'},
+                            {value:data[2], name:'股指期货借款'}
+
+                        ]
+                    }
+                ]
+            }
+            chart2.setOption(option);
+
+        };
+        var setChart3 = function(data){
+
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{b}: {c}%"
+                },
+                color:['#9fe786','#c3c3c3'],
+                legend: {
+                    orient: 'horizontal',
+                    x: 'center',
+                    data:['盈利','未盈利']
+                },
+                series: [
+                    {
+                        name:'负债总额',
+                        type:'pie',
+                        radius: ['50%', '70%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: false,
+                                textStyle: {
+                                    fontSize: '30',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data:[
+                            {value:data[0], name:'盈利'},
+                            {value:data[1], name:'未盈利'}
+
+                        ]
+                    }
+                ]
+            }
+            chart3.setOption(option);
+
+        };
+
+        [@cms_channel id='170']
+            var values = "${tag_bean.description}";
+            var list = values.split(";");
+            setChart1(list[0].split(","));
+            setChart2(list[1].split(","));
+            setChart3(list[2].split(","));
+        [/@cms_channel]
+
+        //底部切换
+        var navLength = 0;
+        var navNow = 0;
+        var itemWidth = 0;
+        var navInit = function(){
+            itemWidth = parseInt($('.reco-list-wrap .reco-set-item').width());
+            navLength = $('.reco-list-wrap .reco-set-item').length;
+            $('.reco-nav .reco-next').on('click',function(){
+                if(navNow == (navLength -1)){
+                    return;
+                }
+                flip(++navNow);
+            });
+            $('.reco-nav .reco-prev').on('click',function(){
+                if(navNow == 0){
+                    return;
+                }
+                flip(--navNow);
+            });
+
+        };
+        var flip = function(index){
+            $('.reco-nav .reco-next').removeClass('off');
+            $('.reco-nav .reco-prev').removeClass('off');
+
+            if(index ==(navLength -1)){
+                $('.reco-nav .reco-next').addClass('off');
+            }
+            if(index ==0){
+                $('.reco-nav .reco-prev').addClass('off');
+            }
+            $('.reco-list-wrap .reco-list').animate({
+                "margin-left": "-"+index*itemWidth+"px"
+            },300);
+        };
+        navInit();
+    })();
+</script>
+
+</body>
+</html>

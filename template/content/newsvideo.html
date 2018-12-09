@@ -1,0 +1,29 @@
+<#assign title='${title}'/>
+<#include  '../include/layout.html'/>
+<#macro css>
+<link rel="stylesheet" type="text/css"
+	href="../../${res}/style/noticeDetail.css" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="${content.tagStr!}" http-equiv="keywords" />
+<meta content="${content.description!}" http-equiv="description" />
+</#macro>
+<#macro main>
+<div class="header-line clearfix"></div>
+<div class="contents">
+	<div class="con-detailNews">
+		<!--正文-->
+		<div class="container notice_wrap">
+			<div class="notice_header">
+				<h5 class="notice_title">${content.title}</h5>
+				<p class="notice_time">
+					作者:${content.author!''} &nbsp;&nbsp;发布时间:${content.releaseDate!''}&nbsp;&nbsp; 来源:<a
+						href="${content.originUrl!}" target="_blank">${content.origin!'本站原创'}</a>
+				</p>
+			</div>
+			<div class="notice_content_video">
+				<p>${txt!}</p>
+			</div>
+		</div>
+	</div>
+</div>
+</#macro>

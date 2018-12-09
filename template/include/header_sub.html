@@ -1,0 +1,11 @@
+<div class="sub_nav container">
+	<ul class="sub_nav_list">
+	  [@cms_channel_list parentId=100]
+	  	[#list tag_list as sub]
+         <li [#if channel??&&(channel.id==sub.id) ] class="sn_item_wrap on" [#else]  class="sn_item_wrap" [/#if]>
+			<a class="sn_item_content" href="${sub.url}">${sub.name}</a>
+		</li>
+		[/#list]
+	 [/@cms_channel_list]
+	</ul>
+</div>

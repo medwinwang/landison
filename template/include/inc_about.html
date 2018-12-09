@@ -1,0 +1,10 @@
+<div class="about-nav">
+  <ul class="wrap clearfix">
+    [@cms_channel_list parentId=channel.parentId channelOption='1']
+    [#list tag_list as sub]
+    <li><a href="${sub.url}"
+           [#if channel??&&(channel.id==sub.id) ] class="active" [/#if]>${sub.name}</a></li>
+    [/#list]
+    [/@cms_channel_list]
+  </ul>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <title>${channel.title!channel.name}-${site.name}</title>
+    <meta name="description" content="${channel.description!}" />
+    <meta name="keywords" content="${channel.keywords!}">
+    [#include '../include/head_meta.html'/]
+    [#assign isHelp = true /]
+    <link type="text/css" href="/${res}/css/helpCat.css" rel="stylesheet" />
+    <link type="text/css" href="/${res}/css/manage.css" rel="stylesheet" />
+</head>
+<body>
+[#include '../include/header_nav.html'/]
+<div class="floor hcat">
+    <div class="contain">
+        <p class="title">${channel.name}<span class="subtitle">${channel.path}</span></p>
+        <div class="help-list">
+            [@cms_content_list channelId='${channel.id}' orderBy='1' descLen='40' channelOption='1']
+            [#list tag_list as c]
+            <div class="help-item [#if c_index + 1 > 5] hide [/#if] J_page${c_index + 1}">
+                <div class="htitle">${c.title}</div>
+                <div class="hcontent">
+                    ${c.txt}
+                </div>
+            </div>
+            [#assign maxNum = c_index + 1 /]
+            [/#list]
+            [/@cms_content_list]
+        </div>
+        [#if maxNum > 5] <a class="button more-help" href="javascript:void(0)">更多帮助</a> [/#if]
+    </div>
+
+</div>
+
+[#include '../include/foot.html'/]
+<script type="application/javascript">
+
+    var pageIndex = 1;
+    var total = ${maxNum};
+
+    $('.help-item .htitle').on('click',function(){
+        $(this).parent().toggleClass('on');
+    });
+
+    $(".more-help").click(function () {
+        for(var i= pageIndex * 5 + 1;i <= (pageIndex + 1) * 5;i++ ) {
+            $('.J_page' + i).show();
+            $(".more-help").css("margin-bottom","60px");
+            if(i >= total) {
+                $(".more-help").hide();
+            }
+        }
+        pageIndex++;
+    })
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+[#assign p=tag_pagination/]
+<div class="pagingBar">
+    <div class="pb-inner">
+        [#if p.firstPage]<a class="pb-item pb-prev off"></a>
+        [#else]<a href="${hrefFormer}[#if p.prePage gt 1]_${p.prePage}[/#if]${hrefLatter}" class="pb-item pb-prev"></a>[#t/]
+        [/#if]
+        [#if p.pageNo>3] <a class="pb-item pb-etc">...</a>[/#if]
+        [#if p.pageNo>2] <a class="pb-item">${p.pageNo-2}</a>[/#if]
+        [#if p.pageNo>1] <a class="pb-item">${p.pageNo-1}</a>[/#if]
+        <a class="pb-item on">${p.pageNo}</a>
+        [#if p.totalPage-p.pageNo>0] <a class="pb-item">${p.pageNo+1}</a>[/#if]
+        [#if p.totalPage-p.pageNo>1] <a class="pb-item">${p.pageNo+2}</a>[/#if]
+        [#if p.totalPage-p.pageNo>2] <a class="pb-item pb-etc">...</a>[/#if]
+        [#if p.lastPage]<a class="pb-item pb-next off"></a>
+        [#else]<a href="${hrefFormer}_${p.nextPage}${hrefLatter}" class="pb-item pb-next"></a>
+        [/#if]
+    </div>
+</div>

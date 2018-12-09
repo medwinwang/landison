@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="utf-8">
+	<title>${channel.title!channel.name}-${site.name}</title>
+	<meta name="description" content="${channel.description!}" />
+	<meta name="keywords" content="${channel.keywords!}">
+	[#include '../include/head_meta.html'/]
+	<link href="/${res}/css/ourproduct.css" rel="stylesheet" />
+</head>
+<body>
+[#include '../include/header_nav.html'/]
+	<div class="floor product banner">
+	</div>
+
+	<div class="floor choice">
+		<div class="divid">
+			<div class="contain">
+				<p class="title">选择您喜欢的交易产品</p>
+				<div class="divider"></div>
+				<ul class="product-list clearfix">
+					<li class="product-item item1 disable">
+						<p class="ptitle">股指期货</p>
+						<p class="psubtitle">Share Price Index Futures</p>
+						<div class="hover-block">
+							<p>新加坡A50股指期货</p>
+                                                               &nbsp;
+                                                             <p>T+0交易</p>
+							<!--<a class="button J_futures">马上体验</a>-->
+                                                         <span>敬请期待</span>
+						</div>
+					</li>
+					<li class="product-item item2 disable">
+						<p class="ptitle">外汇</p>
+						<p class="psubtitle">Foreign currency</p>
+						<div class="hover-block">
+							<p>外汇保证金交易</p>
+                                                                &nbsp;
+                                                             <p>T+0交易</p>
+							<!--<a class="button J_exchange">马上体验</a>-->
+                                                       <span>敬请期待</span>
+						</div>
+					</li>
+					<li class="product-item item3">
+						<p class="ptitle">股票</p>
+						<p class="psubtitle">Shares</p>
+						<div class="hover-block">
+							<p>中国A股股票</p>
+                                                             &nbsp;
+							<p>T+1交易</p>
+							<a href="https://tougu.edianjin.com/edj-spa/index.html#/product-stock"
+							   class="button J_stock">马上体验</a>
+						</div>
+					</li>
+					<li class="product-item item4 disable">
+						<p class="ptitle">商品期货</p>
+						<p class="psubtitle">Commodity futures</p>
+						<div class="hover-block">
+							<p>上海、大连、郑州三大商品交易所商品期货</p>
+                                                              &nbsp;
+                                                         <p>T+0交易</p>
+							<span>敬请期待</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="floor risk">
+		<div class="contain">
+			<p class="title">投资风险警示</p>
+			<div class="divider"></div>
+			<p class="risk-content">
+				杠杆化交易产品较普通交易产品存在更大的投资风险，极限状态下存在丧失所有投资本金的可能。虽然投资者多年的投资经验以及多样化的投资手段虽然可以帮助分散风险，但是任何交易产品的历史数据都不能保证其未来的表现及回报，并且不能确保您一定获益或防止损失。投资者在进行杠杆化交易投资前，请理性评估自身的风险承受能力，选择适应自身风险承受能力的交易产品。
+			</p>
+		</div>
+	</div>
+	<div class="floor progresses">
+		<div class="contain">
+			<p class="title">如何开启交易？</p>
+			<div class="divider"></div>
+		</div>
+	</div>
+
+[#include '../include/foot.html'/]
+<script type="application/javascript">
+	var mobileHover = function () {
+		$('*').on('touchstart', function () {
+			$(this).trigger('hover');
+		}).on('touchend', function () {
+			$(this).trigger('hover');
+		});
+	};
+
+	mobileHover();
+	function loginFail() {
+		location.href = "${frontbaseUrl}#/login";
+	}
+
+</script>
+</body>
+</html>

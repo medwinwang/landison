@@ -1,0 +1,100 @@
+<!-- header -->
+<header class="header">
+	<h1 class="logo"><a href="/">雷迪森旅业</a></h1>
+	<a href="javascript:;" id="navToggle" class="navToggle ic24"></a>
+	<nav class="nav">
+		<ul>
+			<li><a href="/">首页</a></li>
+			<li class="hotelShow">
+				[@cms_channel id='125']
+				<a href="${tag_bean.url}">旗下酒店</a>
+				[/@cms_channel]
+			</li>
+			<li><a href="#">优惠精选</a></li>
+			<li><a href="#">会议及宴会</a></li>
+			<li>[@cms_channel id='117']
+				<a href="${tag_bean.url}">怿旅惠</a>
+				[/@cms_channel]
+			</li>
+			<li><a href="/aboutus.html">关于雷迪森旅业</a></li>
+		</ul>
+	</nav>
+	<div class="hotelList hotelShow clearfix">
+		<dl>
+			<dt>已开业酒店</dt>
+			<dd>
+				<ul>
+					[@cms_channel_list parentId=125 channelOption='1']
+					[#list tag_list as sub]
+					<li><a href="/${sub.path}.html">${sub.name}</a></li>
+					[/#list]
+					[/@cms_channel_list]
+				</ul>
+			</dd>
+		</dl>
+		<dl>
+			<dt>即将开业酒店</dt>
+			<dd>
+				<ul>
+					[@cms_channel_list parentId=126 channelOption='1']
+					[#list tag_list as sub]
+					<li><a href="${sub.url}">${sub.name}</a></li>
+					[/#list]
+					[/@cms_channel_list]
+				</ul>
+			</dd>
+		</dl>
+	</div>
+
+	<div class="site-nav">
+		<a href="javascript:;" class="login j_no_user">登录</a>
+		<a href="javascript:;" class="register j_no_user">注册</a>
+		<a href="javascript:;" id="username" class="j_user" style="display: none"></a>
+		<a href="javascript:;" class="logout j_user" style="display: none">退出</a>
+		[@cms_channel id='119']
+		<a href="${tag_bean.url}">预订</a>
+		[/@cms_channel]
+		[@cms_channel id='117']
+		<a href="${tag_bean.url}" class="club"></a>
+		[/@cms_channel]
+		<!--<a href="#" class="en">ENGLISH</a>-->
+	</div>
+</header>
+
+<div class="mask"></div>
+<div class="modal" id="loginModal">
+	<a href="javascript:modalClose();" class="modalClose"></a>
+	<div class="modalHead clearfix">登录</div>
+	<div class="modalCon">
+		<div class="ipt">
+			<span class="country-code">+86</span><input type="text" value="" id="mobile" maxlength="11" placeholder="请输入您的手机号码">
+		</div>
+		<div class="ipt">
+			<input type="password" placeholder="请输入您的密码" id="password" maxlength="32">
+		</div>
+		<button id="loginBtn">立即登录</button>
+		<div class="auxiliary"><span class="fr">没有账号<a href="javascript:;" class="register">成为会员</a></span><a href="#">忘记密码？</a></div>
+	</div>
+</div>
+
+<div class="modal" id="regModal">
+	<a href="javascript:modalClose();" class="modalClose"></a>
+	<div class="modalHead clearfix">注册</div>
+	<div class="modalCon">
+		<div class="ipt">
+			<span class="country-code">+86</span><input type="text" value="" placeholder="请输入您的手机号码" id="reg_mobile" maxlength="11">
+		</div>
+		<div class="ipt">
+			<input type="text" placeholder="请输入您的昵称" id="reg_name" maxlength="64">
+		</div>
+		<div class="ipt">
+			<input type="password" placeholder="请输入您的密码" id="reg_password" maxlength="16">
+		</div>
+		<div class="ipt">
+			<input type="text" placeholder="请输入验证码" maxlength="4" id="code">
+			<a href="javascript:void(0)" class="getCode">获取验证码</a>
+		</div>
+		<button id="regBtn">立即注册</button>
+		<div class="auxiliary"><span class="fr">已有账号<a href="javascript:;" class="login">立即登录</a></span></div>
+	</div>
+</div>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <title>${channel.title!channel.name}-${site.name}</title>
+    <meta name="description" content="${channel.description!}" />
+    <meta name="keywords" content="${channel.keywords!}">
+    [#include '../include/head_meta.html'/]
+    <link type="text/css" href="/${res}/css/help.css" rel="stylesheet" />
+    <link type="text/css" href="/${res}/css/manage.css" rel="stylesheet" />
+</head>
+<body>
+
+[#include '../include/header_nav.html'/]
+
+<div class="floor help banner">
+    <div class="contain">
+        <form action="${base}/search.htm" target="_blank" name="searchForm">
+            <div class="searchBar clearfix">
+                <input class="searchbox " name="q" value="${q!'请输入关键词'}"
+                       type="text" id="txtKey"
+                       onfocus="if(this.value=='请输入关键词')this.value=''"
+                       onblur="if(this.value=='')this.value='请输入关键词'" maxlength="24"
+                       autocomplete="off" placeholder="请输入关键词"/>
+                <a class="button j_search_button">搜索</a>
+            </div>
+        </form>
+        <div class="hintBar">
+            <span>热搜：</span>
+            [@cms_tag_list count='5'][#list tag_list as tag]
+            <a href="javascript:void(0);" onclick="goSearch('${tag.name?html}')">${tag.name}</a>[#if
+            tag_has_next] &nbsp;&nbsp;[/#if][/#list][/@cms_tag_list]
+        </div>
+    </div>
+
+</div>
+<div class="floor cs-online">
+    <div class="contain">
+        <p class="tt">
+            在线客服
+        </p>
+        <ul class="type-list clearfix" id="zxkf" style="display: none">
+            <li class="type-item item1">
+                <p class="type-title">产品咨询</p>
+                <a class="button" href="https://edianjin.kf5.com/kchat/7204?from=%E5%9C%A8%E7%BA%BF%E6%94%AF%E6%8C%81"  target="_blank">在线咨询</a>
+            </li>
+            <li class="type-item item2">
+                <p class="type-title">充值提现</p>
+                <a class="button" href="https://edianjin.kf5.com/kchat/7204?from=%E5%9C%A8%E7%BA%BF%E6%94%AF%E6%8C%81"  target="_blank">在线咨询</a>
+            </li>
+            <li class="type-item item3">
+                <p class="type-title">其他咨询</p>
+                <a class="button" href="https://edianjin.kf5.com/kchat/7204?from=%E5%9C%A8%E7%BA%BF%E6%94%AF%E6%8C%81"  target="_blank">在线咨询</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="floor contact cs-online">
+    <div class="contain">
+        <ul class="type-list clearfix">
+            <li class="type-item item1">
+                <p class="type-title">400-816-3579</p>
+                <p class="type-content">周一至周五 9:00—18:00</p>
+                <p class="type-content">节假日另行通知</p>
+
+            </li>
+            <li class="type-item item2">
+                <p class="type-title">微信公众号</p>
+                <a class="button" >在线咨询</a>
+            </li>
+            <li class="type-item item3">
+                <p class="type-title">新浪微博</p>
+                <a class="button">在线咨询</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="floor qd">
+    <div class="contain">
+        <p class="tt">
+            问题分类
+        </p>
+        <div class="qList clearfix">
+            [@cms_channel_list parentId='105' titLen='100' descLen='40' append='...' channelOption='1']
+            [#list tag_list as c]
+            <a class="q-item" style="background: url(${c.contentImg!?html}) center no-repeat;"
+               href="${c.url}"></a>
+            [/#list]
+            [/@cms_channel_list]
+        </div>
+    </div>
+</div>
+
+[#include '../include/foot.html'/]
+<script type="application/javascript">
+    $(function(){
+        $('.j_search_button').on('click',function(){
+            var val = $('.searchbox').val();
+            if(val && val.length>0&&val!='请输入关键词'){
+//                $(".j_search_button").addClass("loading");
+                $('form[name=searchForm]').submit();
+            }
+        });
+    });
+
+    function goSearch(key) {
+        window.open("/search.htm?q=" + encodeURI(key));
+    }
+
+    function loginFail() {
+        location.href = "${frontbaseUrl}#/login";
+    }
+
+</script>
+
+</body>
+</html>

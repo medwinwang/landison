@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    [#include '../include/head_meta.html'/]
+    <title>${channel.title!channel.name}-${site.name}</title>
+    <meta name="description" content="${channel.description!}" />
+    <meta name="keywords" content="${channel.keywords!}">
+    <link rel="dns-prefetch" href="">
+    <link rel="stylesheet" href="${static}/css/base.css">
+    <link rel="stylesheet" href="${static}/css/yearning-club.css">
+</head>
+<body>
+
+[#include '../include/header_nav.html'/]
+
+<!-- container -->
+<div class="container">
+
+    [#include '../include/inc_yearning_club.html'/]
+
+    <div class="wrap reserve">
+        <img src="${static}/img/yearning-club/logo.png" class="yearning-club" alt="忆旅慧 YEAENING CLUB">
+
+        <ul class="step clearfix" id="step">
+            <li><span class="pass">选择酒店</span></li>
+            <li class="connect"></li>
+            <li><span>选择房型</span></li>
+            <li class="connect"></li>
+            <li><span>详情确认</span></li>
+            <li class="connect"></li>
+            <li><span>在线支付</span></li>
+        </ul>
+
+        [#include '../include/inc_reserve_bar.html'/]
+
+        <!-- item -->
+        <div id="rooms">
+        </div>
+
+        <div id="addOrder" style="display: none">
+            <h2 class="title none">您的房价为：<span id="totalPrice"></span></h2>
+            <div class="form">
+                <h2 class="title">请填写详情</h2>
+                <ul>
+                    <li>
+                        <label class="label">姓名</label>
+                        <div class="block">
+                            <input type="text" size="20" placeholder="中文姓" id="lastName" name="lastName">
+                        </div>
+                    </li>
+                    <li>
+                        <label class="label">手机号</label>
+                        <div class="block">
+                            <input type="text" size="40" placeholder="请输入..." id="orderMobile" name="orderMobile">
+                        </div>
+                    </li>
+                    <li>
+                        <label class="label">邮箱</label>
+                        <div class="block">
+                            <input type="email" size="40" placeholder="请输入..." id="email" name="email">
+                        </div>
+                    </li>
+                    <li>
+                        <label class="label">其他要求</label>
+                        <div class="block">
+                            <div class="inline"><textarea rows="3" cols="60" placeholder="其他要求..." id="comments"></textarea></div>
+                        </div>
+                    </li>
+                </ul>
+                <h2 class="title">选择支付方式</h2>
+                <ul class="pay-way">
+                    <li>
+                        <label class="label"><input type="radio" name="addType" value="10" checked></label>
+                        <div class="block">
+                            <dl>
+                                <dt>网上在线支付</dt>
+                                <dd>（支持银联支付、支付宝支付、账户余额支付）
+                                    <br>订单支付成功后，订单不可变更、不可取消、不可退款！我们将为您预订的客房保留至退房当日中午12:00。</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="label"><input type="radio" name="addType" value="1"></label>
+                        <div class="block">
+                            <dl>
+                                <dt>酒店前台支付</dt>
+                                <dd>我们将为您预订的客房保留至抵店之日下午18:00；如需18:00后入住，请提前致电酒店前台告知到店时间；<br>
+                                对于到店时间晚于18:00，且不告知酒店前台到店留房时间的客人，酒店有权在不提前告知客人的情况下取消预订。</dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <label class="label"><input type="checkbox" id="protocol"></label>
+                        <div class="block">
+                            <dl>
+                                <dt>我已阅读并同意<a id="contract" href="javascript:void(0)">《预订须知》</a></dt>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="block">
+                            <button class="btn" id="addOrderSubmit">提交订单</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- item -->
+    </div>
+</div>
+<script type="application/javascript">
+
+
+    function isLogin(user) {
+
+        $("#lastName").val(user.lastName);
+        $("#orderMobile").val(user.mobile);
+//        $("#mobile").val((user.addressProvince? user.addressProvince.name.split("|")[0]:'')+ user.addressCityName+user.addressStreet);
+        $("#email").val(user.email);
+        queryAvaFromPage();
+    }
+    function noLogin() {
+        queryAvaFromPage();
+    }
+</script>
+
+[#include '../include/foot.html'/]
+<script type="application/javascript">
+
+    $("#contract").click(function () {
+
+        layer.open({
+            type: 1 //Page层类型
+            ,area: ['800px', '500px']
+            ,title: '预订须知'
+            ,shade: 0.6 //遮罩透明度
+            // ,maxmin: true //允许全屏最小化
+            ,anim: -1 //0-6的动画形式，-1不开启
+            ,content: '<div style="padding:25px;">基本政策<br>' +
+            '1.为方便您在酒店前台办理入住手续，请正确填写每位入住客人的真实姓名。您所提出的特殊入住要求，我们及时为您协调，但能否实现需视酒店的实际情况而定，对于部分要求酒店有可能需要加收相应费用，酒店会及时将确认的信息反馈给您。' +
+            '<br>2.在您填写预订资料时，请务必留下正确的联系方式，以便于我们与您联系预订的相关事宜。' +
+            '<br><br>保留和取消政策<br>' +
+            '1.无担保的预订正常预留时间为抵店当日18:00之前。入住时间为当天14:00以后，如您需要提早到店，为了缩短您等候的时间，建议您在到店前联系酒店前台，了解当天的房间情况。' +
+            '<br>2.如果在18:00之后入住，请告诉我们您的航班号或车次，酒店将视当天的住房情况看是否能为您保留房间。为了保证您的顺利入住，建议您使用在线支付功能预付您的房费。担保订单和预付房费订单，酒店会将房间保留至到店次日中午12时，取消必须提前24小时通知酒店。如果未在规定的时间内取消（或当晚未到店），酒店将收取一晚房费。 ' +
+            '<br><br>订单变更政策<br>1.正常退房时间是中午12:00之前，如您需要续住，请及时通知酒店前台。离店当日12:00之后，18:00之前退房将加收半天房费；18:00之后退房加收全天房费。 ' +
+            '<br>2.如您行程有变，不能及时入住或需提前离店，请提前通知我们或酒店前台。</div>'
+        });
+    });
+
+    var hotelCode = getQueryString("hotelCode");
+    var hotelName = getQueryString("hotelName");
+    var arrival = getQueryString("arrival");
+    var departure = getQueryString("departure");
+    var adults = getQueryString("adults");
+    var roomNum = getQueryString("roomNum");
+    var selectRateCode = null;
+    var selectRoomCode = null;
+    var selectFirstNightPrice = null;
+    var selectTotalPrice = null;
+
+    var checkSubmitFlg = false;
+
+    function queryAvaFromPage() {
+
+        if(hotelCode && hotelName) {
+            $("#hotelCode").attr('code', hotelCode);
+            $("#hotelCode").val(hotelName);
+        }
+        if(arrival){
+            $("#arrival").val(arrival);
+        }
+        if(departure){
+            $("#departure").val(departure);
+        }
+        if(adults) {
+            $("#adults").attr('code', adults);
+            $("#adults").val(adults + " 人");
+        }
+        if(roomNum) {
+            $("#roomNum").attr('code', roomNum);
+            $("#roomNum").val(roomNum + " 间");
+        }
+        if(hotelCode && arrival && departure) {
+            queryAva(hotelCode, arrival, departure, adults, roomNum);
+
+            //提交订单
+            $("#addOrderSubmit").click(function () {
+
+                if(checkSubmitFlg) {
+                    return false;
+                }
+                if(!$('#protocol').is(':checked')) {
+                    alert("请选择 我已阅读并同意《预订须知》。");
+                    return false;
+                }
+
+                var addType = $("input[name='addType']:checked").val();
+                var lastName = $("#lastName").val();
+                var mobile = $("#orderMobile").val();
+                var email = $("#email").val();
+                var comments = $("#comments").val();
+                if(lastName== null || lastName == ""){
+                    alert("请输入姓名");
+                    return false;
+                }
+                if(mobile== null || mobile == ""){
+                    alert("请输入手机号");
+                    return false;
+                }
+                if(email== null || email == ""){
+                    alert("请输入邮箱");
+                    return false;
+                }
+                if(!checkEmail(email)){
+                    alert("请输入正确的邮箱格式");
+                    return false;
+                }
+                checkSubmitFlg = true;
+                $.ajax({
+                    url: path + "/hotel/addOrder",
+                    data: {arrival: arrival, departure: departure, roomNum: roomNum, adults: adults, rate: selectFirstNightPrice,
+                        lastName: lastName, totalRevenue: selectTotalPrice, hotelCode: hotelCode, roomtypeCode: selectRoomCode, comments: comments,
+                        reteCode: selectRateCode, reservationTypeCode: addType, mobile: mobile, email : email},
+                    type: 'post',
+                    dataType: 'json',
+                    success: function(result){
+                        checkSubmitFlg = false;
+                        if(result && result.code == 1) {
+                            if(addType == "10") {
+                                var r=confirm("支付完成？");
+                                if (r) {
+
+                                } else {
+
+                                }
+                                window.open("http://"+window.location.host+ path + "/alipay/pay?orderId="+ result.data.id);
+                            }else {
+                                alert("提交订单成功");
+                            }
+                        }else {
+                            alert(result.message);
+                        }
+                    }
+                });
+
+            })
+        }
+    }
+
+    function queryAva(hotelCode, arrival, departure, adults, roomNum) {
+
+        $.ajax({
+            url: path + "/info/availability",
+            data: {hotelCode: hotelCode, arrival: arrival, departure: departure, adults: adults, roomNum: roomNum},
+            type: 'get',
+            dataType: 'json',
+            success: function(result){
+                if(result && result.code == 1) {
+                    var data = result.data;
+                    showRooms(data);
+                    goStep(2);
+                }else {
+                    alert(result.message);
+                }
+            }
+        });
+
+    }
+
+    function showRooms(data) {
+        $("#rooms").html('');
+        var rateInfo = data.rateInfo;
+        for(var i = 0; i<rateInfo.length; i++) {
+            var roomRateDetails = rateInfo[i].roomRateDetails;
+            var rateCode = rateInfo[i].rate.code;
+            if(roomRateDetails && roomRateDetails.roomRateDetail) {
+                var rooms = roomRateDetails.roomRateDetail;
+                for(var j = 0; j< rooms.length; j++){
+                    var roomTypeDetail = rooms[j].roomTypeDetail;
+                    $("#rooms").append(showRoom(roomTypeDetail, rateCode));
+                }
+            }
+
+        }
+    }
+
+
+    function showRoom(data, rateCode) {
+        var html = '<div class="room-item clearfix"><dl><dt class="voucher">'+data.name.split("|")[0]
+            +'</dt><dd><b class="original-price">￥'+data.firstNightPrice
+            +'</b><p>'+data.des.split("|")[0]+'</p><ul>';
+        if(data.hotelInstallations &&data.hotelInstallations.commonInfo && data.hotelInstallations.commonInfo.length >0){
+            for(var i=0; i< data.hotelInstallations.commonInfo.length; i++){
+                var item = data.hotelInstallations.commonInfo[i];
+                html += '<li>'+item.name.split("|")[0]+'</li>';
+            }
+        }
+
+        html += '</ul></dd><dd><a href="#" class="more">更多详情</a></dd></dl>' +
+            '<img src="${static}/img/yearning-club/_490x345.jpg" class="goodsPic" alt="">' +
+            '<a href="javascript:void(0)" class="go-item" onclick="addRoomOrder(\''+rateCode+'\',\''+data.code+'\','+data.firstNightPrice+')">选择</a></div>';
+
+        return html;
+    }
+
+    function addRoomOrder(rateCode, roomCode, firstNightPrice) {
+        goStep(3);
+        selectTotalPrice = firstNightPrice*roomNum*getDateDiff(arrival, departure);
+        $("#totalPrice").html("￥"+ selectTotalPrice);
+
+        selectRateCode = rateCode;
+        selectRoomCode = roomCode;
+        selectFirstNightPrice = firstNightPrice;
+
+    }
+
+    function getDateDiff(startDate,endDate) {
+        var startTime = new Date(Date.parse(startDate.replace(/-/g,   "/"))).getTime();
+        var endTime = new Date(Date.parse(endDate.replace(/-/g,   "/"))).getTime();
+        var dates = Math.abs((startTime - endTime))/(1000*60*60*24);
+        return  dates;
+    }
+
+    function goStep(num) {
+
+        var html = '<li><span class="pass">选择酒店</span></li>';
+        html += '<li class="connect"></li><li><span '+(num > 1? 'class="pass"': '')+'>选择房型</span></li>';
+        html += '<li class="connect"></li><li><span '+(num > 2? 'class="pass"': '')+'>详情确认</span></li>';
+        html += '<li class="connect"></li><li><span '+(num > 3? 'class="pass"': '')+'>在线支付</span></li>';
+        $("#step").html(html);
+
+        if(num == 2){
+            $("#rooms").show();
+            $("#addOrder").hide();
+        }
+        if(num == 3){
+            $("#rooms").hide();
+            $("#addOrder").show();
+        }
+
+    }
+</script>
+</body>
+</html>

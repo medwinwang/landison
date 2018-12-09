@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    [#include '../include/head_meta.html'/]
+    <title>${channel.title!channel.name}-${site.name}</title>
+    <meta name="description" content="${channel.description!}" />
+    <meta name="keywords" content="${channel.keywords!}">
+    <link rel="dns-prefetch" href="">
+    <link rel="stylesheet" href="${static}/css/base.css">
+    <link rel="stylesheet" href="${static}/css/yearning-club.css">
+</head>
+<body>
+
+[#include '../include/header_nav.html'/]
+
+<!-- container -->
+<div class="container">
+
+    [#include '../include/inc_yearning_club.html'/]
+
+    <div class="wrap join">
+        <img src="${static}/img/yearning-club/logo.png" class="yearning-club" alt="忆旅慧 YEAENING CLUB">
+
+        <h2 class="sub-title">提供您的信息与赢取偏好，轻松畅享会员福利加独享优惠！<br>立即加入</h2>
+
+        <div class="form">
+            <h2 class="title">联系信息</h2>
+            <ul>
+                <li>
+                    <label class="label must">姓名</label>
+                    <div class="block">
+                        <div class="inline"><input type="text" size="10" placeholder="中文姓"></div>
+                        <div class="inline"><input type="text" size="10" placeholder="中文名"></div>
+                    </div>
+                </li>
+                <li>
+                    <label class="label must">拼音姓名</label>
+                    <div class="block">
+                        <div class="inline"><input type="text" size="10" placeholder="拼音姓"></div>
+                        <div class="inline"><input type="text" size="10" placeholder="拼音名"></div>
+                    </div>
+                </li>
+                <li>
+                    <label class="label must">性别</label>
+                    <div class="block">
+                        <label><input type="radio" name="sex"> 先生</label>
+                        <label><input type="radio" name="sex"> 女士</label>
+                    </div>
+                </li>
+                <li>
+                    <label class="label must">证件类型</label>
+                    <div class="block">
+                        <div class="inline">
+                            <div class="sel">
+                                <select>
+                                    <option value="">-请选择-　　　　　</option>
+                                    <option value="">-身份证</option>
+                                    <option value="">-………………………………………</option>
+                                    <option value="">-……</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <label class="label must">证件号码</label>
+                    <div class="block">
+                        <input type="text" size="40" placeholder="请输入...">
+                    </div>
+                </li>
+                <li>
+                    <label class="label must">联系电话</label>
+                    <div class="block">
+                        <input type="text" size="20" placeholder="请输入...">
+                    </div>
+                </li>
+                <li>
+                    <label class="label">出入日期</label>
+                    <div class="block">
+                        <input type="date" size="20" placeholder="请输入...">
+                    </div>
+                </li>
+                <li>
+                    <label class="label">电子邮箱</label>
+                    <div class="block">
+                        <input type="email" size="40" placeholder="请输入...">
+                    </div>
+                </li>
+                <li>
+                    <label class="label">联系地址</label>
+                    <div class="block">
+                        <input type="text" size="40" placeholder="请输入...">
+                    </div>
+                </li>
+                <li>
+                    <label class="label must">为必填项</label>
+                </li>
+                <li>
+                    <div class="block">
+                        <button class="btn">免费加入</button>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+
+[#include '../include/foot.html'/]
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <title>${channel.title!channel.name}-${site.name}</title>
+    <meta name="description" content="${channel.description!}" />
+    <meta name="keywords" content="${channel.keywords!}">
+    [#include '../include/head_meta.html'/]
+    <link type="text/css" href="/${res}/css/moving.css" rel="stylesheet" />
+</head>
+<body class="moving">
+
+[#include '../include/header_nav.html'/]
+
+<div class="floor banner">
+</div>
+<div class="floor board">
+    <div class="contain">
+        <h4 class="title">最新公告</h4>
+        <div class="divider"></div>
+        <div class="board-list-wrap">
+            <ul class="board-list">
+            </ul>
+            <a class="more-info" href="javascript:void (0)">
+                更多公告<i class="arrow"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="floor progresswrap">
+    <div class="contain">
+        <h3 class="title">进&nbsp;步</h3>
+        <div class="divider light"></div>
+        <div class="time-line">
+            <ul class="time-line-wrap">
+                [#assign isHelp = true /]
+                [@cms_channel_list parentId='162' channelOption='1']
+                [#list tag_list as c]
+                <li class="year-item">
+                    <p class="year">${c.name}</p>
+                    <div class="year-list">
+                        [@cms_content_list channelId=c.id  orderBy='9' channelOption='1']
+                        [#list tag_list as a]
+                        <div class="sub-item">
+                            <p class="date">${a.shortTitle}</p>
+                            <div class="dot"></div>
+                            <div class="time-line-content">
+                                <div class="arrow"></div>
+                                <div class="ct">
+                                    <h4 class="item-title">${a.title}</h4>
+                                    <p class="item-content">${a.description}</p>
+                                </div>
+                            </div>
+                        </div>
+                        [/#list]
+                        [/@cms_content_list]
+                    </div>
+                </li>
+                [/#list]
+                [/@cms_channel_list]
+            </ul>
+        </div>
+    </div>
+</div>
+[#include '../include/foot.html'/]
+<script type="application/javascript">
+
+    var pageSize = ${channel.pageSize};
+    var pageNo = 1;
+    var channelId = ${channel.id};
+
+    $(".more-info").click(function () {
+        pageNo++;
+        getContentPage(pageNo);
+    });
+    function getContentPage(pno) {
+        $.ajax({
+            url: "${base}/searchContentsByChannelId.htm",
+            data: {channelId: channelId, pageNo: pno, pageSize: pageSize},
+            dataType: 'json',
+            success: function(result){
+                if(result && result.success){
+                    if(result.data && result.data.length > 0) {
+                        for(var i=0; i < result.data.length; i++) {
+                            var content = result.data[i];
+                            var newDate = new Date();
+                            newDate.setTime(content.date);
+                            var html = '<li class="board-item">' +
+                                    '<h4 class="bi-title"><a href="'+content.url+'">'+content.title+'</a>' +
+                                    '<span>'+ StringFormatter.format("{Date: {format: 'YYYY-MM-DD'}}", newDate)+'</span></h4>' +
+                                    '<p class="board-content">'+content.description+'<a class="more" href="'+content.url+'">查看全文&gt;</a> </p>' +
+                                    '</li>';
+                            $(".board-list").append(html);
+                        }
+                    } else {
+                        $(".more-info").html('没有更多公告<i class="arrow"></i>');
+                    }
+                } else  {
+                    console.log("加载失败");
+                }
+            }
+        });
+    }
+
+    getContentPage(pageNo);
+
+</script>
+</body>
+</html>
