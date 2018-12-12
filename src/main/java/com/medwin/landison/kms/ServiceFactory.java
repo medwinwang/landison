@@ -2,6 +2,10 @@ package com.medwin.landison.kms;
 
 import com.medwin.landison.common.KmsAddSoapHeader;
 import com.medwin.landison.common.KmsClientHandler;
+import com.medwin.landison.common.strategy.AvailabilityServiceHandler;
+import com.medwin.landison.common.strategy.InformationServiceHandler;
+import com.medwin.landison.common.strategy.ReservationServiceHandler;
+import com.medwin.landison.common.strategy.SecurityServiceHandler;
 import com.medwin.landison.config.KmsConfig;
 import com.medwin.landison.kms.availabilityservice.AvailabilityQuerySoap;
 import com.medwin.landison.kms.informationservice.InformationServiceSoap;
@@ -36,9 +40,6 @@ public class ServiceFactory {
     @Autowired
     private KmsAddSoapHeader kmsAddSoapHeader;
 
-    @Autowired
-    private KmsClientHandler kmsClientHandler;
-
     @Bean
     public SecurityServiceSoap getSecurityServiceSoap(){
 
@@ -55,6 +56,7 @@ public class ServiceFactory {
             @Override
             public List<Handler> getHandlerChain(PortInfo portInfo) {
                 List<Handler> handlerList = new ArrayList<Handler>();
+                KmsClientHandler kmsClientHandler = new KmsClientHandler(new SecurityServiceHandler());
                 handlerList.add(kmsClientHandler);
                 return handlerList;
             }
@@ -77,7 +79,8 @@ public class ServiceFactory {
         factory.getInInterceptors().add(new LoggingInInterceptor());
 
         List<Handler> handlerList = new ArrayList<Handler>();
-        handlerList.add(kmsClientHandler);
+        handlerList.add(new KmsClientHandler(new InformationServiceHandler()));
+
         factory.setHandlers(handlerList);
 
         factory.setAddress(kmsConfig.getUrl() + "/InformationService.asmx");
@@ -100,7 +103,7 @@ public class ServiceFactory {
         factory.getInInterceptors().add(new LoggingInInterceptor());
 
         List<Handler> handlerList = new ArrayList<Handler>();
-        handlerList.add(kmsClientHandler);
+        handlerList.add(new KmsClientHandler(new AvailabilityServiceHandler()));
         factory.setHandlers(handlerList);
 
         factory.setAddress(kmsConfig.getUrl() + "/AvailabilityService.asmx");
@@ -123,7 +126,7 @@ public class ServiceFactory {
         factory.getInInterceptors().add(new LoggingInInterceptor());
 
         List<Handler> handlerList = new ArrayList<Handler>();
-        handlerList.add(kmsClientHandler);
+        handlerList.add(new KmsClientHandler(new ReservationServiceHandler()));
         factory.setHandlers(handlerList);
 
         factory.setAddress(kmsConfig.getUrl() + "/ReservationService.asmx");

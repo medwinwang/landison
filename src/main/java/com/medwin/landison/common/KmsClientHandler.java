@@ -1,5 +1,6 @@
 package com.medwin.landison.common;
 
+import com.medwin.landison.common.strategy.HandlerStrategy;
 import com.medwin.landison.config.KmsConfig;
 import com.medwin.landison.exception.KmsSystemException;
 import lombok.extern.slf4j.Slf4j;
@@ -31,16 +32,17 @@ import java.util.Set;
 /**
  * Created by medwin on 2018/10/17.
  */
-@Component
 @Slf4j
 public class KmsClientHandler implements SOAPHandler<SOAPMessageContext> {
 
     public static final String RET_CODE = "RetCode";
     public static final String ERR_REASON = "ErrReason";
 
+    private HandlerStrategy handlerStrategy;
 
-    @Autowired
-    private KmsConfig kmsConfig;
+    public KmsClientHandler(HandlerStrategy handlerStrategy){
+        this.handlerStrategy = handlerStrategy;
+    }
 
     @Override
     public Set<QName> getHeaders() {
@@ -56,38 +58,7 @@ public class KmsClientHandler implements SOAPHandler<SOAPMessageContext> {
             SOAPHeader soapHeader = context.getMessage().getSOAPHeader();
 
             if(soapHeader != null ) {
-
-                if(point.indexOf("SecurityService") != -1) {
-
-                    String sessionId = getValueByEle(soapHeader, "SessionId");
-                    if(!StringUtils.isEmpty(sessionId)){
-                        kmsConfig.setSessionId(sessionId);
-                    }
-                } else if(point.indexOf("ReservationService") != -1){
-
-                    String retCode = getValueByEle(soapHeader, RET_CODE);
-                    if(!StringUtils.isEmpty(retCode) && !"5001".equals(retCode)) {
-                        String errReason = getValueByEle(soapHeader, ERR_REASON);
-                        throw new KmsSystemException(retCode, errReason);
-                    }
-
-                } else if(point.indexOf("AvailabilityService") != -1){
-
-                    String retCode = getValueByEle(soapHeader, RET_CODE);
-                    if(!StringUtils.isEmpty(retCode) && !"4001".equals(retCode)) {
-                        String errReason = getValueByEle(soapHeader, ERR_REASON);
-                        throw new KmsSystemException(retCode, errReason);
-                    }
-
-                } else if(point.indexOf("InformationService") != -1){
-
-                    String retCode = getValueByEle(soapHeader, RET_CODE);
-                    if(!StringUtils.isEmpty(retCode) && !"2001".equals(retCode)) {
-                        String errReason = getValueByEle(soapHeader, ERR_REASON);
-                        throw new KmsSystemException(retCode, errReason);
-                    }
-
-                }
+                handlerStrategy.handler(soapHeader);
             }
 
         } catch (SOAPException e) {
@@ -106,7 +77,7 @@ public class KmsClientHandler implements SOAPHandler<SOAPMessageContext> {
 
     }
 
-    private String getValueByEle(SOAPHeader header, String ele){
+    public static String getValueByEle(SOAPHeader header, String ele){
 
         NodeList nodeList = header.getOwnerDocument().getElementsByTagName(ele);
         if (nodeList.getLength() > 0) {
