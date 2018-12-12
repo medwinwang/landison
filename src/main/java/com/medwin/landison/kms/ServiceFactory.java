@@ -56,7 +56,7 @@ public class ServiceFactory {
             @Override
             public List<Handler> getHandlerChain(PortInfo portInfo) {
                 List<Handler> handlerList = new ArrayList<Handler>();
-                KmsClientHandler kmsClientHandler = new KmsClientHandler(new SecurityServiceHandler());
+                KmsClientHandler kmsClientHandler = new KmsClientHandler(new SecurityServiceHandler(kmsConfig));
                 handlerList.add(kmsClientHandler);
                 return handlerList;
             }

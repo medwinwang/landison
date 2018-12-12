@@ -13,8 +13,11 @@ import static com.medwin.landison.common.KmsClientHandler.getValueByEle;
  */
 public class SecurityServiceHandler implements HandlerStrategy {
 
-    @Autowired
     private KmsConfig kmsConfig;
+
+    public SecurityServiceHandler(KmsConfig config) {
+        this.kmsConfig = config;
+    }
 
     @Override
     public void handler(SOAPHeader soapHeader) {
