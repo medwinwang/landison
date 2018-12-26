@@ -317,6 +317,9 @@
                     $(".j_user").show();
                     var user = result.data;
                     $("#username").html(user.lastName);
+                    $("#username").click(function () {
+						location.href = "/member/index.html";
+                    });
                     if(typeof isLogin === "function"){
 
                         isLogin(user);

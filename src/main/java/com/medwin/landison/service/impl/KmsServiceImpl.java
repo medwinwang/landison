@@ -19,6 +19,7 @@ import org.apache.cxf.message.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.xml.ws.handler.Handler;
 import javax.xml.ws.handler.HandlerResolver;
@@ -145,6 +146,18 @@ public class KmsServiceImpl implements KmsService {
                                                            String firstname, String lastname, String guestId, String account,
                                                            String guestType, int pageSize, int currentPage) {
 
+        if(StringUtils.isEmpty(beginMakedate)) {
+            beginMakedate = null;
+        }
+        if(StringUtils.isEmpty(endMakedate)) {
+            endMakedate = null;
+        }
+        if(StringUtils.isEmpty(arrival)) {
+            arrival = null;
+        }
+        if(StringUtils.isEmpty(departure)) {
+            departure = null;
+        }
         ExtraOrderInfoSummary infoSummary = reservationSoap.orderQueryPerPage(id, beginMakedate, endMakedate,
                 arrival, departure, statusCode, reservationType, hotelCode, firstname, lastname, guestId,
                 account, guestType, pageSize, currentPage);

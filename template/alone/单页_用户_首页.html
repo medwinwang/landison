@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="${static}/css/base.css">
     <link rel="stylesheet" href="${static}/css/original/member.css">
     <script src="${static}/js/common.js"></script>
-    <script src="${static}/js/template-web.js"></script>
-    <script src="${static}/js/jquery.page2.js"></script>
 </head>
 <body>
 [#include '../include/header_nav.html'/]
@@ -73,7 +71,7 @@
                         <input type="text" name="lastname" id="lastname" value="" maxlength="10">
                     </div>
                     <div class="search-date">
-                        <p>订单创建日期</p>
+                        <p>订单日期</p>
                         <input type="text" size="6" value="" class="date_picker" id="beginMakedate" name="beginMakedate">
                         ——
                         <input type="text" size="6" value="" class="date_picker" id="endMakedate" name="endMakedate">
@@ -167,6 +165,8 @@
     {{ /if}}
 </script>
 [#include '../include/foot.html'/]
+<script src="${static}/js/template-web.js"></script>
+<script src="${static}/js/jquery.page2.js"></script>
 <script type="application/javascript">
     DataInit = {
         pages : {
@@ -176,10 +176,13 @@
             hasPrvPage: false
         }
     };
-
-    $(function(){
+    function  initMemberPage(user) {
         recordInfo();
-    });
+    }
+
+    function noLogin() {
+        location.href = "/index.html";
+    }
 
     function cancelOrder(id) {
         layer.prompt({
