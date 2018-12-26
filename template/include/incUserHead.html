@@ -1,0 +1,53 @@
+<div>
+	<div class="banner-left">
+		<div class="left-top">
+			<p><span class="j_username"></span>,您好</p>
+			<ul>
+				<li>待支付<span>（1）</span></li>
+				<li>待入住<span>（1）</span></li>
+				<li>优惠券<span id="couponNum"></span></li>
+			</ul>
+		</div>
+		<div class="left-bottom">
+			<h2>会员等级：<span class="j_level">--</span></h2>
+			<p>等级有效期限：<span class="j_cardEndDate">--</span></p>
+			<p>可用积分：<span class="j_points">--</span><span class="use">使用</span></p>
+		</div>
+	</div>
+	<div class="banner-right">
+		<ul>
+			<li>会员等级：<span class="j_level">--</span></li>
+			<li>会员卡号：<span id="cardCode">--</span></li>
+			<li>会员积分：<span class="j_points">--</span><span>兑换</span></li>
+			<li><a href="/member/index.html">我的订单</a></li>
+			<li><a href="/member/coupon.html">我的优惠券</a></li>
+			<li><a href="/member/index.html">我的账户</a></li>
+			<li><a href="javascript:void(0)" class="logout">【退出】</a></li>
+		</ul>
+	</div>
+</div>
+<script type="application/javascript">
+   function  isLogin(user) {
+
+       var card = getMembershipCard(user);
+       $(".j_level").html(card.membershipCardLevel.level);
+       $(".j_username").html(user.lastName);
+       $("#cardCode").html(card.membershipCardNumber);
+       $("#storedValue").html(getAccountValue(card, "storedValue").value);
+       $(".j_points").html(getAccountValue(card, "points").value);
+       $(".j_cardEndDate").html(card.membershipCardLevel.retentionPeriodEndDate.split("T")[0]);
+
+       $.ajax({
+           url: path + "/user/coupons?time="+ new Date().getTime(),
+           data: {status:"notUsed", pageSize: 20},
+           type: 'get',
+           dataType: 'json',
+           success: function(result){
+               if(result && result.code == 1) {
+				   $("#couponNum").html("（"+result.data.length+"）");
+               }
+           }
+       });
+
+   }
+</script>

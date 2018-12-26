@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.util.StringUtils;
 
 /**
  * Created by medwin on 2018/10/17.
@@ -22,9 +23,23 @@ public class BaseResult {
     Object data;
 
     public void setDataString(String dataStr){
-        JSONObject jsonObject = JSON.parseObject(dataStr);
-        this.data = jsonObject;
-        this.message = jsonObject.getString("message");
+
+        try {
+            if(!StringUtils.isEmpty(dataStr)) {
+
+                if(dataStr.indexOf("[") == 0) {
+
+                    this.data = JSON.parseArray(dataStr);
+                } else {
+
+                    JSONObject jsonObject = JSON.parseObject(dataStr);
+                    this.data = jsonObject;
+                    this.message = jsonObject.getString("message");
+                }
+            }
+        } catch (Exception e) {
+            this.data = dataStr;
+        }
     }
 
     public void setBooleanCode(boolean code){

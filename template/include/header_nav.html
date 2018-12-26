@@ -10,8 +10,16 @@
 				<a href="${tag_bean.url}">旗下酒店</a>
 				[/@cms_channel]
 			</li>
-			<li><a href="#">优惠精选</a></li>
-			<li><a href="#">会议及宴会</a></li>
+			<li>
+				[@cms_channel id='134']
+				<a href="${tag_bean.url}">优惠精选</a>
+				[/@cms_channel]
+			</li>
+			<li>
+				[@cms_channel id='135']
+				<a href="${tag_bean.url}">会议及宴会</a>
+				[/@cms_channel]
+			</li>
 			<li>[@cms_channel id='117']
 				<a href="${tag_bean.url}">怿旅惠</a>
 				[/@cms_channel]
@@ -70,7 +78,8 @@
 			<span class="country-code">+86</span><input type="text" value="" id="mobile" maxlength="11" placeholder="请输入您的手机号码">
 		</div>
 		<div class="ipt">
-			<input type="password" placeholder="请输入您的密码" id="password" maxlength="32">
+			<input type="text" placeholder="请输入验证码" maxlength="4" id="login_code">
+			<a href="javascript:void(0)" class="getCode">获取验证码</a>
 		</div>
 		<button id="loginBtn">立即登录</button>
 		<div class="auxiliary"><span class="fr">没有账号<a href="javascript:;" class="register">成为会员</a></span><a href="#">忘记密码？</a></div>
@@ -87,9 +96,9 @@
 		<div class="ipt">
 			<input type="text" placeholder="请输入您的昵称" id="reg_name" maxlength="64">
 		</div>
-		<div class="ipt">
-			<input type="password" placeholder="请输入您的密码" id="reg_password" maxlength="16">
-		</div>
+		<!--<div class="ipt">-->
+			<!--<input type="password" placeholder="请输入您的密码" id="reg_password" maxlength="16">-->
+		<!--</div>-->
 		<div class="ipt">
 			<input type="text" placeholder="请输入验证码" maxlength="4" id="code">
 			<a href="javascript:void(0)" class="getCode">获取验证码</a>

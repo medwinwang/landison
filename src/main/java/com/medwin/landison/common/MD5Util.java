@@ -1,5 +1,7 @@
 package com.medwin.landison.common;
 
+import org.springframework.util.StringUtils;
+
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -12,6 +14,11 @@ import java.security.NoSuchAlgorithmException;
 public class MD5Util {
 
     public static String md5(String string) {
+
+        if(StringUtils.isEmpty(string)){
+            return string;
+        }
+
         byte[] hash;
         try {
             hash = MessageDigest.getInstance("MD5").digest(string.getBytes("UTF-8"));

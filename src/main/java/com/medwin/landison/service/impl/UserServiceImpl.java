@@ -1,5 +1,6 @@
 package com.medwin.landison.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.config.LpsConfig;
@@ -98,13 +99,65 @@ public class UserServiceImpl implements UserService {
     @Override
     public BaseResult login(String mobile, String password, String mobileCountryNumber) {
 
-        BaseResult baseResult = lpsService.checkUser(mobile, password, mobileCountryNumber);
-        if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())){
+        boolean isReg = false;
+        BaseResult baseResult;
+
+        if(StringUtils.isEmpty(password)) {
+
+            baseResult = getUser(mobileCountryNumber, mobile);
+            if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())) {
+                isReg = true;
+            }
+        }else  {
+
+            baseResult = lpsService.checkUser(mobile, password, mobileCountryNumber);
+            if(BaseResult.SUCCESS_CODE.equals(baseResult.getCode())){
+                isReg = true;
+            }
+        }
+        if(isReg){
+
             ldsService.loginUser(mobile, password, baseResult.getData().toString());
         } else {
+
             baseResult.setMessage("手机号或密码错误");
+            baseResult.setCode("2");
             baseResult.setData(null);
         }
+
+        return baseResult;
+    }
+
+    @Override
+    public BaseResult sendLoginSms(String mobileCountryNumber, String mobile, String code) {
+
+        BaseResult baseResult = new BaseResult();
+
+        BaseResult userBaseResult = getUser(mobileCountryNumber, mobile);
+        if(!BaseResult.SUCCESS_CODE.equals(userBaseResult.getCode())) {
+            baseResult.setCode("2");
+            baseResult.setMessage("手机号未注册");
+            return baseResult;
+        }
+
+        SendInfo sendInfo = new SendInfo();
+        sendInfo.setSendType("3");
+        sendInfo.setRecipientName(((JSONObject)userBaseResult.getData()).getString("lastName"));
+        sendInfo.setAddress(mobile);
+        sendInfo.setTitle("登录验证码");
+        sendInfo.setContent("您的验证码是【"+code+"】");
+        sendInfo.setContentFlag("S");
+
+        LocalDateTime arrivalDate = LocalDateTime.now();
+        arrivalDate.plus(1, ChronoUnit.DAYS);
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        sendInfo.setEndTime(arrivalDate.format(format));
+
+        sendInfo.setHotelCode("000001");
+        boolean ret = kmsService.addSendInfo(sendInfo);
+        baseResult.setBooleanCode(ret);
+
+        ldsService.addSmsLog(null, sendInfo.getContent(), 2);
 
         return baseResult;
     }

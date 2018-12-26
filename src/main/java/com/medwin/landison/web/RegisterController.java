@@ -32,10 +32,10 @@ public class RegisterController {
     private EnvUtil envUtil;
 
 
-    @RequestMapping(value = "/check", method = RequestMethod.GET)
-    public BaseResult check(String  mobileCountryNumber, String mobile) {
-        return userService.getUser(mobileCountryNumber, mobile);
-    }
+//    @RequestMapping(value = "/check", method = RequestMethod.GET)
+//    public BaseResult check(String  mobileCountryNumber, String mobile) {
+//        return userService.getUser(mobileCountryNumber, mobile);
+//    }
 
     @RequestMapping(value = "/sendRegisterSms", method = RequestMethod.POST)
     public BaseResult sendRegisterSms(String  mobileCountryNumber, String mobile, String name, HttpSession httpSession) {

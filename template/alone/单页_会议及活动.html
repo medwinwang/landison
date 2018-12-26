@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    [#include '../include/head_meta.html'/]
+    <title>${channel.title!channel.name}-${site.name}</title>
+    <meta name="description" content="${channel.description!}" />
+    <meta name="keywords" content="${channel.keywords!}">
+    <link rel="dns-prefetch" href="">
+    <link rel="stylesheet" href="${static}/css/base.css">
+    <link rel="stylesheet" href="${static}/css/activity.css">
+</head>
+<body>
+[#include '../include/header_nav.html'/]
+<!-- container -->
+<div class="container">
+    <!--[#include '../include/incActivityHead.html'/]-->
+
+    <div class="banner"><img src="${static}/img/activity/meetings-activities.jpg" alt=""></div>
+
+    <div class="a-filter">
+        <div class="wrap clearfix">
+            <p>查询您所需要的会议室或活动地点</p>
+            <ul>
+                <li class="drop">
+                    <p>目的地</p>
+                    <input type="text" value="选择" readonly>
+                    <div class="dropList numDrop">
+                        <ul>
+                            <li>杭州国大雷迪森广场酒店</li>
+                            <li>金华伟达雷迪森广场酒店</li>
+                            <li>莫干山久祺雷迪森庄园</li>
+                            <li>仓前居颐墅</li>
+                            <li>舟山普陀山雷迪森庄园</li>
+                            <li>桐庐雷迪森度假酒店</li>
+                            <li>东阳龙景雷迪森庄园</li>
+                            <li>杭州嘉丰维嘉大酒店</li>
+                            <li>舟山梵客度假酒店</li>
+                            <li>新昌绿城雷迪森大酒店</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="drop">
+                    <p>事件类型</p>
+                    <input type="text" value="选择" readonly>
+                    <div class="dropList numDrop">
+                        <ul>
+                            <li>婚礼</li>
+                            <li>培训</li>
+                            <li>会议</li>
+                            <li>商务会议</li>
+                            <li>社会事件</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="drop">
+                    <p>与会人员</p>
+                    <input type="text" value="选择" readonly>
+                    <div class="dropList numDrop">
+                        <ul>
+                            <li>1-20</li>
+                            <li>21-50</li>
+                            <li>51-100</li>
+                            <li>101-300</li>
+                            <li>301-500</li>
+                            <li>超过500</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <ul class="intro wrap clearfix">
+        <li class="fr">
+            <img src="${static}/img/activity/380x400.jpg" alt="">
+            <dl>
+                <dt>饕餮盛宴<span>A Wonderful Romantic Banquet</span></dt>
+            </dl>
+        </li>
+        <li class="fl">
+            <img src="${static}/img/activity/750x400.jpg" alt="">
+            <dl>
+                <dt>商务会议<span>Business meeting</span></dt>
+                <dd>
+                    <p>雷迪森(LANDISON)品牌的核心价值是与众不同、非凡感受。超群的地理位置、别具匠心和尽显奢华的环境设施，自豪而不矜持的的服务构成了酒店的主要特色。优雅、温馨、舒适的环境，精美的佳肴美食，细致入微的服务，无论从视觉、味觉、听觉都能给客人带来无比愉悦的入住感受与体验，并在合适的时机为客人创造特别感受。</p>
+                    <p>集团致力于培养自有民族品牌，强化和完善标准体系。“雷迪森”品牌在国内外旅游业各项评选中屡获殊荣，“雷迪森”已成为中国区域性著名商标</p>
+                    <p>集团也成功跻身中国500强企业，投资经营管理覆盖上海、浙江、江苏、甘肃、江西、湖南等省份。 </p>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+
+    <div class="wrap wedding-babquet">
+        <ul class="clearfix">
+            <li>
+                <dl>
+                    <dt>浪漫有你 始终如一<em><span>THE</span> WEDDING</em></dt>
+                    <dd>度身定制的婚礼彰显品位个性，细节之处的体验督导，让您的婚宴更臻完美。</dd>
+                </dl>
+            </li>
+            <li><img src="${static}/img/activity/600x395.jpg" alt=""></li>
+            <li><img src="${static}/img/activity/600x395_2.jpg" alt=""></li>
+            <li>
+                <dl>
+                    <dt>浪漫有你 始终如一<em>THE BABQ<span>UET</span></em></dt>
+                    <dd>度身定制的婚礼彰显品位个性，细节之处的体验督导，让您的婚宴更臻完美。</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <div class="banner"><img src="${static}/img/activity/meetings-activities2.jpg" alt=""></div>
+
+    <div class="wrap reserve-list">
+        <ul>
+            <li>
+                <img src="${static}/img/activity/380x500.jpg" alt="">
+                <p>
+                    <a href="#">立即预定</a>
+                </p>
+            </li>
+            <li>
+                <img src="${static}/img/activity/380x500.jpg" alt="">
+                <p>
+                    <a href="#">立即预定</a>
+                </p>
+            </li>
+            <li>
+                <img src="${static}/img/activity/380x500.jpg" alt="">
+                <p>
+                    <a href="#">立即预定</a>
+                </p>
+            </li>
+            <li>
+                <img src="${static}/img/activity/380x500.jpg" alt="">
+                <p>
+                    <a href="#">立即预定</a>
+                </p>
+            </li>
+            <li>
+                <img src="${static}/img/activity/380x500.jpg" alt="">
+                <p>
+                    <a href="#">立即预定</a>
+                </p>
+            </li>
+            <li>
+                <img src="${static}/img/activity/380x500.jpg" alt="">
+                <p>
+                    <a href="#">立即预定</a>
+                </p>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+[#include '../include/foot.html'/]
+</body>
+</html>
