@@ -98,6 +98,17 @@ public class LdsServiceImpl implements LdsService {
     }
 
     @Override
+    public void cancelOrder(int orderId, String status, String msg) {
+        LdsOrderEntity entity = orderRepository.findByOrOrderId(String.valueOf(orderId));
+        if(entity != null) {
+            entity.setStatus(status);
+            entity.setCancelMsg(msg);
+            entity.setCancelTime(new Date());
+            orderRepository.save(entity);
+        }
+    }
+
+    @Override
     public LdsOrderEntity getOrderByOrderId(String orderId) {
         return orderRepository.findByOrOrderId(orderId);
     }

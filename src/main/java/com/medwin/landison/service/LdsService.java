@@ -20,6 +20,8 @@ public interface LdsService {
 
     void checkOrder(String orderId, String payInfo, String status,String payCode, String tradeNo, String buyerId);
 
+    void cancelOrder(int orderId, String status, String msg);
+
     LdsOrderEntity getOrderByOrderId(String orderId);
 
 }

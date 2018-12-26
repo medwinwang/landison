@@ -7,10 +7,8 @@ import com.medwin.landison.config.KmsConfig;
 import com.medwin.landison.kms.availabilityservice.Availability;
 import com.medwin.landison.kms.availabilityservice.AvailabilityQuerySoap;
 import com.medwin.landison.kms.informationservice.*;
-import com.medwin.landison.kms.reservationservice.ArrayOfOrderInfo;
-import com.medwin.landison.kms.reservationservice.OrderInfo;
-import com.medwin.landison.kms.reservationservice.OrderInfoPaymentGateway;
-import com.medwin.landison.kms.reservationservice.ReservationSoap;
+import com.medwin.landison.kms.informationservice.CommonInfo;
+import com.medwin.landison.kms.reservationservice.*;
 import com.medwin.landison.kms.securityservice.SecurityService;
 import com.medwin.landison.kms.securityservice.SecurityServiceSoap;
 import com.medwin.landison.service.KmsService;
@@ -134,6 +132,23 @@ public class KmsServiceImpl implements KmsService {
             return arrayOfOrderInfo.getOrderInfo();
         }
         return null;
+    }
+
+    public boolean cancelOrder(int id, String comments, String croPermission){
+
+        return reservationSoap.cancelOrder(id, comments, croPermission);
+    }
+
+    @Override
+    public ExtraOrderInfoSummary orderQueryPerPage(int id, String beginMakedate, String endMakedate, String arrival, String departure,
+                                                           String statusCode, String reservationType, String hotelCode,
+                                                           String firstname, String lastname, String guestId, String account,
+                                                           String guestType, int pageSize, int currentPage) {
+
+        ExtraOrderInfoSummary infoSummary = reservationSoap.orderQueryPerPage(id, beginMakedate, endMakedate,
+                arrival, departure, statusCode, reservationType, hotelCode, firstname, lastname, guestId,
+                account, guestType, pageSize, currentPage);
+        return infoSummary;
     }
 
     @Override

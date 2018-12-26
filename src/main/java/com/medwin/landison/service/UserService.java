@@ -41,8 +41,15 @@ public interface UserService {
                         String reteCode, String memberId, String reservationTypeCode, String comments, String address,
                         String email, String mobile);
 
+    BaseResult queryOrder(int id, String beginMakedate, String endMakedate, String arrival, String departure,
+                          String statusCode, String reservationType, String hotelCode,
+                          String firstname, String lastname, String guestId, String account,
+                          String guestType, int pageSize, int currentPage);
+
 
     BaseResult checkOrder(String orderId, Double amount, String gatewayIdentification,
                           String gatewayReferenceNo, PayMentStatus status, String remark, String paymentCode,
                           DataType orderType, PayMentStatus updateStatus);
+
+    BaseResult cancelOrder(int id, String comments, String croPermission);
 }

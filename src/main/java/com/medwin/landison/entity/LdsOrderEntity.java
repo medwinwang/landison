@@ -31,8 +31,32 @@ public class LdsOrderEntity {
     private BigDecimal totalAmount;
     private String buyerId;
 
+    private String cancelMsg;
+    private Date cancelTime;
+
     public static final String TYPE_PRE = "10"; //预付订单
     public static final String TYPE_NO_PRE = "1"; //前台支付
+
+
+    @Basic
+    @Column(name = "cancel_msg")
+    public String getCancelMsg() {
+        return cancelMsg;
+    }
+
+    public void setCancelMsg(String cancelMsg) {
+        this.cancelMsg = cancelMsg;
+    }
+
+    @Basic
+    @Column(name = "cancel_time")
+    public Date getCancelTime() {
+        return cancelTime;
+    }
+
+    public void setCancelTime(Date cancelTime) {
+        this.cancelTime = cancelTime;
+    }
 
     @Basic
     @Column(name = "buyer_id")

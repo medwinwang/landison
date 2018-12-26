@@ -265,6 +265,20 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public BaseResult queryOrder(int id, String beginMakedate, String endMakedate, String arrival, String departure,
+                                 String statusCode, String reservationType, String hotelCode, String firstname,
+                                 String lastname, String guestId, String account, String guestType,
+                                 int pageSize, int currentPage) {
+
+        ExtraOrderInfoSummary infoSummary = kmsService.orderQueryPerPage(id, beginMakedate, endMakedate,
+                arrival, departure, statusCode, reservationType, hotelCode, firstname, lastname, guestId,
+                account, guestType, pageSize, currentPage);
+
+        return new BaseResult(BaseResult.SUCCESS_CODE, "", infoSummary);
+    }
+
+
+    @Override
     @Transactional
     public BaseResult checkOrder(String orderId, Double amount, String gatewayIdentification,
                                  String gatewayReferenceNo, PayMentStatus status, String remark, String paymentCode,
@@ -288,5 +302,15 @@ public class UserServiceImpl implements UserService {
 
         return new BaseResult(BaseResult.SUCCESS_CODE, "提交成功", gateway);
 
+    }
+
+    @Override
+    public BaseResult cancelOrder(int id, String comments, String croPermission) {
+
+        boolean ret = kmsService.cancelOrder(id, comments, croPermission);
+        if(ret) {
+            ldsService.cancelOrder(id, "0003", comments);
+        }
+        return new BaseResult(BaseResult.SUCCESS_CODE, "", ret) ;
     }
 }

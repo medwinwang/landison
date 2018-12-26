@@ -2,6 +2,7 @@ package com.medwin.landison.service;
 
 import com.medwin.landison.kms.availabilityservice.Availability;
 import com.medwin.landison.kms.informationservice.*;
+import com.medwin.landison.kms.reservationservice.ExtraOrderInfoSummary;
 import com.medwin.landison.kms.reservationservice.OrderInfo;
 import com.medwin.landison.kms.reservationservice.OrderInfoPaymentGateway;
 
@@ -36,6 +37,13 @@ public interface KmsService {
 
     List<OrderInfo> getOrderInfoByGuestType(String guestType, String account, String beginMakedate,
                                             String endMakedate);
+
+    boolean cancelOrder(int id, String comments, String croPermission);
+
+    ExtraOrderInfoSummary orderQueryPerPage(int id, String beginMakedate, String endMakedate, String arrival, String departure,
+                                            String statusCode, String reservationType, String hotelCode,
+                                            String firstname, String lastname, String guestId, String account,
+                                            String guestType, int pageSize, int currentPage);
 
     OrderInfoPaymentGateway addorderInfoPaymentGateway(OrderInfoPaymentGateway orderInfoPaymentGateway);
 

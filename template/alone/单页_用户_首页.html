@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="${static}/css/base.css">
     <link rel="stylesheet" href="${static}/css/original/member.css">
     <script src="${static}/js/common.js"></script>
+    <script src="${static}/js/template-web.js"></script>
+    <script src="${static}/js/jquery.page2.js"></script>
 </head>
 <body>
 [#include '../include/header_nav.html'/]
@@ -68,24 +70,28 @@
                 <div class="search-option">
                     <div class="search-name">
                         <p>入住客人</p>
-                        <input type="" name="" value="方哈哈">
+                        <input type="text" name="lastname" id="lastname" value="" maxlength="10">
                     </div>
                     <div class="search-date">
-                        <p>入住日期</p>
-                        <input type="" name="" value="2018-03-18">
+                        <p>订单创建日期</p>
+                        <input type="text" size="6" value="" class="date_picker" id="beginMakedate" name="beginMakedate">
                         ——
-                        <input type="" name="" value="2018-04-01">
+                        <input type="text" size="6" value="" class="date_picker" id="endMakedate" name="endMakedate">
                     </div>
                     <div class="search-state">
                         <p>订单状态</p>
-                        <select>
-                            <option>全部订单</option>
-                            <option>未支付</option>
+                        <select id="statusCode">
+                            <option value="">全部订单</option>
+                            <option value="0001">RESERVED</option>
+                            <option value="0003">CANCELED</option>
+                            <option value="0005">WAITING</option>
+                            <option value="0004">CHECK IN</option>
+                            <option value="0006">CHECK OUT</option>
                         </select>
                     </div>
                 </div>
                 <div class="search-btn">
-                    <p class="button">立即查询</p>
+                    <p class="button" onclick="recordInfo()">立即查询</p>
                 </div>
             </div>
             <div class="order">
@@ -104,113 +110,157 @@
                     <li  class="order-5">订单状态</li>
                     <li  class="order-6">操作</li>
                 </ul>
-                <div class="order-list">
-                    <div class="order-item">
-                        <div class="order-title">
-                            <div>
-                                <input type="checkbox" name="">
-                                订单编号：
-                                <span class="color">1111111</span>
-                            </div>
-                            <div>
-                                预订时间：
-                                <span class="color">121212121212</span>
-                            </div>
-                            <div>
-                                <a href="" class="color">删除订单</a>
-                            </div>
-                        </div>
-                        <ul>
-                            <li class="order-1">
-                                <img src="${static}/img/original/member/2.png">
-                                <div>杭州国大雷迪森广场酒店</div>
-                            </li>
-                            <li class="order-2">
-                                方哈哈
-                            </li>
-                            <li class="order-3">
-                                2018-1-1
-                            </li>
-                            <li class="order-4">
-                                121元
-                            </li>
-                            <li class="order-5">已完成</li>
-                            <li class="order-6"><a href="" class="color">点评酒店</a></li>
-                        </ul>
-                    </div>
-                    <div class="order-item">
-                        <div class="order-title">
-                            <div>
-                                <input type="checkbox" name="">
-                                订单编号：
-                                <span class="color">1111111</span>
-                            </div>
-                            <div>
-                                预订时间：
-                                <span class="color">121212121212</span>
-                            </div>
-                            <div>
-                                <a href="" class="color">删除订单</a>
-                            </div>
-                        </div>
-                        <ul>
-                            <li class="order-1">
-                                <img src="${static}/img/original/member/2.png">
-                                <div>杭州国大雷迪森广场酒店</div>
-                            </li>
-                            <li class="order-2">
-                                方哈哈
-                            </li>
-                            <li class="order-3">
-                                2018-1-1
-                            </li>
-                            <li class="order-4">
-                                121元
-                            </li>
-                            <li class="order-5">已完成</li>
-                            <li class="order-6"><a href="" class="color">点评酒店</a></li>
-                        </ul>
-                    </div>
-                    <div class="order-item">
-                        <div class="order-title">
-                            <div>
-                                <input type="checkbox" name="">
-                                订单编号：
-                                <span class="color">1111111</span>
-                            </div>
-                            <div>
-                                预订时间：
-                                <span class="color">121212121212</span>
-                            </div>
-                            <div>
-                                <a href="" class="color">删除订单</a>
-                            </div>
-                        </div>
-                        <ul>
-                            <li class="order-1">
-                                <img src="${static}/img/original/member/2.png">
-                                <div>杭州国大雷迪森广场酒店</div>
-                            </li>
-                            <li class="order-2">
-                                方哈哈
-                            </li>
-                            <li class="order-3">
-                                2018-1-1
-                            </li>
-                            <li class="order-4">
-                                121元
-                            </li>
-                            <li class="order-5">已完成</li>
-                            <li class="order-6"><a href="" class="color">点评酒店</a></li>
-                        </ul>
-                    </div>
+                <div class="order-list" id="logList">
+
                 </div>
+                <div class="paging tcdPageCode"></div>
             </div>
         </div>
     </div>
 
 </div>
-
+<script id="log_show" type="text/html">
+    {{ if list.length == 0 }}
+        暂无记录
+    {{ else }}
+    {{each list value i}}
+    <div class="order-item">
+        <div class="order-title">
+            <div>
+                <input type="checkbox" name="">
+                订单编号：
+                <span class="color">{{value.id}}</span>
+            </div>
+            <div>
+                预订时间：
+                <span class="color">{{value.makedate}}</span>
+            </div>
+            <div>
+            {{if value.statusCode.code=='0001'}}
+                <a href="javascript:void(0)" onclick="cancelOrder({{value.id}})" class="color">取消订单</a>
+            {{/if}}
+            </div>
+        </div>
+        <ul>
+            <li class="order-1">
+                <img src="${static}/img/original/member/2.png">
+                <div>{{value.hotelCode.name}}</div>
+            </li>
+            <li class="order-2">
+                {{value.lastname}}
+            </li>
+            <li class="order-3">
+                {{value.arrival}}
+            </li>
+            <li class="order-4">
+                {{value.totalRevenue}}元
+            </li>
+            <li class="order-5">{{value.statusCode.name}}</li>
+            <li class="order-6">
+                {{if value.statusCode.code=='0006'}}
+                <a href="" class="color">点评酒店</a>
+                {{/if}}
+            </li>
+        </ul>
+    </div>
+    {{/each}}
+    {{ /if}}
+</script>
 [#include '../include/foot.html'/]
+<script type="application/javascript">
+    DataInit = {
+        pages : {
+            curPage : 1,
+            pageSize: 10,
+            hasNextPage: false,
+            hasPrvPage: false
+        }
+    };
+
+    $(function(){
+        recordInfo();
+    });
+
+    function cancelOrder(id) {
+        layer.prompt({
+            formType: 2,
+            value: '',
+            title: '确实取消预订,请输入取消原因',
+            maxlength: 200,
+            area: ['300px', '100px']//自定义文本域宽高
+        }, function(value, index, elem){
+
+            $.ajax({
+                url: path + "/hotel/cancelOrder" + "?" + new Date().getTime(),
+                data: {id: id, comments:value},
+                type: 'post',
+                dataType: 'json',
+                success: function(result){
+                    if(result && result.code == 1) {
+                        if(result.data) {
+                            alert("取消成功");
+                            layer.close(index);
+                            window.location.reload();
+                        } else {
+                            alert("取消失败");
+                        }
+                    }else {
+                        alert(result.message);
+                    }
+                }
+            });
+        });
+    }
+
+    //记录
+    function recordInfo(){
+
+        var lastname = $("#lastname").val();
+        var beginMakedate = $("#beginMakedate").val();
+        var endMakedate = $("#endMakedate").val();
+        var statusCode = $("#statusCode").val();
+
+        $.ajax({
+            url: path + "/hotel/orderList?time="+ new Date().getTime(),
+            data: {
+                pageNo: DataInit.pages.curPage,
+                pageSize: DataInit.pages.pageSize,
+                lastname:lastname,
+                beginMakedate:beginMakedate,
+                endMakedate: endMakedate,
+                statusCode: statusCode
+            },
+            type: 'get',
+            dataType: 'json',
+            success: function(result){
+                if(result && result.code == 1) {
+
+                    var res = result.data;
+                    var d = {
+                        list: res.oorderArr.orderInfo,
+                        statusList: {"0001":"预定", "0003":"已取消", "0005":"等待", "0004":"已入住", "0006":"已离店", "0007":"不显示"}
+                    };
+                    var html = template('log_show', d);
+                    $("#logList").html(html);
+
+                    if (DataInit.pages.curPage==1) {
+                        $(".paging").createPage({
+                            pageCount:Math.ceil(res.countNums/DataInit.pages.pageSize),
+                            current:DataInit.pages.curPage,
+                            backFn:function(p){
+                                DataInit.pages.curPage=p;
+                                recordInfo();
+                            }
+                        });
+                    }
+                } else {
+                    alert(data.message);
+                }
+            }
+        });
+
+    }
+</script>
+
 </body>
 </html>
