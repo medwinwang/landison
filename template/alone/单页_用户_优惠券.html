@@ -9,6 +9,7 @@
     <link rel="dns-prefetch" href="">
     <link rel="stylesheet" href="${static}/css/base.css">
     <link rel="stylesheet" href="${static}/css/original/member.css">
+    <script src="${static}/js/common.js"></script>
 </head>
 <body>
 [#include '../include/header_nav.html'/]
@@ -26,7 +27,7 @@
                 <p>订单管理</p>
                 <ul>
                     <li >
-                        <a href="">客房订单</a>
+                        <a href="/member/index.html">客房订单</a>
                     </li>
                 </ul>
             </div>
@@ -34,10 +35,10 @@
                 <p>我的账户</p>
                 <ul>
                     <li class="active">
-                        <a href="">我的优惠券</a>
+                        <a href="javascript:void(0)" onclick="window.location.reload();">我的优惠券</a>
                     </li>
                     <li>
-                        <a href="">我的积分记录</a>
+                        <a href="/member/pointRecord.html">我的积分记录</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +52,7 @@
                         <!--<a href="">会员等级及有效期</a>-->
                     <!--</li>-->
                     <li>
-                        <a href="">会员基本信息</a>
+                        <a href="/member/center.html">会员基本信息</a>
                     </li>
                     <li>
                         <a href="">账户安全</a>
@@ -66,282 +67,106 @@
             </div>
             <div class="discount-tab">
                 <ul>
-                    <li class="tab-active tab-item">未使用(6)</li>
-                    <li class="tab-item">已使用(6)</li>
-                    <li class="tab-item">已过期(6)</li>
+                    <li class="tab-active tab-item j_coupon_item" data="notUsed">未使用(6)</li>
+                    <li class="tab-item j_coupon_item" data="used">已使用(6)</li>
+                    <li class="tab-item j_coupon_item" data="expired">已过期(6)</li>
                 </ul>
             </div>
             <div>
                 <div class="tab-active tab-content tab-1">
-                    <ul>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
                 <div class="tab-content tab-2">
-                    <ul>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
                 <div class="tab-content tab-3">
-                    <ul>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card-top">
-                                <p>
-                                    <span>￥</span>
-                                    50
-                                </p>
-                                <p>立减券</p>
-                            </div>
-                            <div class="card-bottom">
-                                <h2>-酒店专享-</h2>
-                                <p>酒店最高立减50元</p>
-                                <p>有效期2018.03.14-2018.04.01</p>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
 </div>
-
+<script id="log_show" type="text/html">
+    <ul>
+        {{each list value i}}
+        <li>
+            <div class="card-top">
+                <p>
+                    <span>￥</span>
+                    50
+                </p>
+                <p>立减券</p>
+            </div>
+            <div class="card-bottom">
+                <h2>{{value.name}}</h2>
+                <p>{{description}}</p>
+                <p>有效期{{value.beginDate}}-{{value.endDate}}</p>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
 [#include '../include/foot.html'/]
+<script src="${static}/js/template-web.js"></script>
+<script src="${static}/js/jquery.page2.js"></script>
+<script type="application/javascript">
+
+    DataInit = {
+        pages : {
+            curPage : 1,
+            pageSize: 10,
+            hasNextPage: false,
+            hasPrvPage: false
+        }
+    };
+
+    $(".j_coupon_item").click(function () {
+
+        $(".j_coupon_item").removeClass("tab-active");
+        $(this).addClass("tab-active");
+        var index = $(this).index()+1;
+        $(".tab-content").removeClass("tab-active");
+        $(".tab-"+index).addClass("tab-active");
+        recordInfo(index, $(this).attr("data"));
+    });
+
+    function recordInfo(index, status){
+
+        $.ajax({
+            url: path + "/user/coupons?time="+ new Date().getTime(),
+            data: {
+                page: DataInit.pages.curPage,
+                pageSize: DataInit.pages.pageSize,
+                status:status
+            },
+            type: 'get',
+            dataType: 'json',
+            success: function(result){
+                if(result && result.code == 1) {
+
+                    var res = result.data;
+                    var d = {
+                        list: res,
+                        statusList: {"0001":"预定", "0003":"已取消", "0005":"等待", "0004":"已入住", "0006":"已离店", "0007":"不显示"}
+                    };
+                    var html = template('log_show', d);
+                    $(".tab-"+index).html(html);
+
+                    if (DataInit.pages.curPage==1) {
+                        $(".paging-"+index).createPage({
+                            pageCount:Math.ceil(res.countNums/DataInit.pages.pageSize),
+                            current:DataInit.pages.curPage,
+                            backFn:function(p){
+                                DataInit.pages.curPage=p;
+                                recordInfo();
+                            }
+                        });
+                    }
+                } else {
+                    alert(data.message);
+                }
+            }
+        });
+
+    }
+</script>
 </body>
 </html>

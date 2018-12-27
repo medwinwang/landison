@@ -9,6 +9,7 @@
     <link rel="dns-prefetch" href="">
     <link rel="stylesheet" href="${static}/css/base.css">
     <link rel="stylesheet" href="${static}/css/original/member.css">
+    <script src="${static}/js/common.js"></script>
 </head>
 <body>
 [#include '../include/header_nav.html'/]
@@ -26,7 +27,7 @@
                 <p>订单管理</p>
                 <ul>
                     <li >
-                        <a href="">客房订单</a>
+                        <a href="/member/index.html">客房订单</a>
                     </li>
                 </ul>
             </div>
@@ -34,10 +35,10 @@
                 <p>我的账户</p>
                 <ul>
                     <li >
-                        <a href="">我的优惠券</a>
+                        <a href="/member/coupon.html">我的优惠券</a>
                     </li>
                     <li class="active">
-                        <a href="">我的积分记录</a>
+                        <a href="javascript:void(0)" onclick="window.location.reload();">我的积分记录</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +52,7 @@
                         <!--<a href="">会员等级及有效期</a>-->
                     <!--</li>-->
                     <li>
-                        <a href="">会员基本信息</a>
+                        <a href="/member/center.html">会员基本信息</a>
                     </li>
                     <li>
                         <a href="">账户安全</a>
@@ -65,32 +66,103 @@
                 我的积分记录
             </div>
             <div class="record">
-                当前积分：<span class="">100</span><span class="exchange">[兑换礼品]</span>
+                当前积分：<span class="j_points">--</span><span class="exchange">[兑换礼品]</span>
             </div>
             <div class="integral-record">
-                <div>共<span>4</span>条记录</div>
-                <ul class="record-title">
-                    <li class="">积分日期</li>
-                    <li>积分来源</li>
-                    <li>基本积分</li>
-                    <li>积分数</li>
-                    <li>可兑换积分</li>
-                    <li>积分有效期</li>
-                </ul>
-                <ul class="record-list">
-                    <li>2018-01-01</li>
-                    <li>会员注册</li>
-                    <li>--</li>
-                    <li>+1000</li>
-                    <li>1000</li>
-                    <li>2018-01-01</li>
-                </ul>
+
             </div>
         </div>
     </div>
 
 </div>
+<script id="log_show" type="text/html">
 
+    <div>共<span>{{total}}</span>条记录</div>
+    <ul class="record-title">
+        <li class="">积分日期</li>
+        <li>积分来源</li>
+        <li>基本积分</li>
+        <li>积分数</li>
+        <li>可兑换积分</li>
+        <li>积分有效期</li>
+    </ul>
+    {{ if list.length == 0 }}
+    暂无记录
+    {{ else }}
+    {{each list value i}}
+    <ul class="record-list">
+        <li>{{value.transactionTime}}</li>
+        <li>{{value.description}}</li>
+        <li>--</li>
+        <li>{{points}}</li>
+        <li>1000</li>
+        <li>2018-01-01</li>
+    </ul>
+    {{/each}}
+    {{ /if}}
+
+</script>
 [#include '../include/foot.html'/]
+<script src="${static}/js/template-web.js"></script>
+<script src="${static}/js/jquery.page2.js"></script>
+<script type="application/javascript">
+
+    DataInit = {
+        pages : {
+            curPage : 1,
+            pageSize: 10,
+            hasNextPage: false,
+            hasPrvPage: false
+        }
+    };
+
+    function  initMemberPage(user) {
+        recordInfo();
+    }
+
+    function noLogin() {
+        location.href = "/index.html";
+    }
+
+    //记录
+    function recordInfo(){
+
+        $.ajax({
+            url: path + "/user/pointsHistory?time="+ new Date().getTime(),
+            data: {
+                page: DataInit.pages.curPage,
+                pageSize: DataInit.pages.pageSize
+            },
+            type: 'get',
+            dataType: 'json',
+            success: function(result){
+                if(result && result.code == 1) {
+
+                    var res = result.data;
+                    var d = {
+                        list: res,
+                        total: 10,
+                    };
+                    var html = template('log_show', d);
+                    $(".integral-record").html(html);
+
+                    if (DataInit.pages.curPage==1) {
+                        $(".paging").createPage({
+                            pageCount:Math.ceil(res.countNums/DataInit.pages.pageSize),
+                            current:DataInit.pages.curPage,
+                            backFn:function(p){
+                                DataInit.pages.curPage=p;
+                                recordInfo();
+                            }
+                        });
+                    }
+                } else {
+                    alert(data.message);
+                }
+            }
+        });
+
+    }
+</script>
 </body>
 </html>

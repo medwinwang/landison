@@ -27,7 +27,7 @@
                 <p>订单管理</p>
                 <ul>
                     <li class="active">
-                        <a href="">客房订单</a>
+                        <a href="javascript:void(0)" onclick="window.location.reload();">客房订单</a>
                     </li>
                 </ul>
             </div>
@@ -35,10 +35,10 @@
                 <p>我的账户</p>
                 <ul>
                     <li>
-                        <a href="">我的优惠券</a>
+                        <a href="/member/coupon.html">我的优惠券</a>
                     </li>
                     <li>
-                        <a href="">我的积分记录</a>
+                        <a href="/member/pointRecord.html">我的积分记录</a>
                     </li>
                 </ul>
             </div>
@@ -52,7 +52,7 @@
                         <!--<a href="">会员等级及有效期</a>-->
                     <!--</li>-->
                     <li>
-                        <a href="">会员基本信息</a>
+                        <a href="/member/center.html">会员基本信息</a>
                     </li>
                     <li>
                         <a href="">账户安全</a>
@@ -226,7 +226,7 @@
         $.ajax({
             url: path + "/hotel/orderList?time="+ new Date().getTime(),
             data: {
-                pageNo: DataInit.pages.curPage,
+                currentPage: DataInit.pages.curPage,
                 pageSize: DataInit.pages.pageSize,
                 lastname:lastname,
                 beginMakedate:beginMakedate,
