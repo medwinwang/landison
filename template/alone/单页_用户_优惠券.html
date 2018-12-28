@@ -67,9 +67,9 @@
             </div>
             <div class="discount-tab">
                 <ul>
-                    <li class="tab-active tab-item j_coupon_item" data="notUsed">未使用(6)</li>
-                    <li class="tab-item j_coupon_item" data="used">已使用(6)</li>
-                    <li class="tab-item j_coupon_item" data="expired">已过期(6)</li>
+                    <li class="tab-active tab-item j_coupon_item" data="notUsed">未使用</li>
+                    <li class="tab-item j_coupon_item" data="used">已使用</li>
+                    <li class="tab-item j_coupon_item" data="expired">已过期</li>
                 </ul>
             </div>
             <div>
@@ -91,9 +91,9 @@
             <div class="card-top">
                 <p>
                     <span>￥</span>
-                    50
+                    {{value.detail.cash.faceValue}}
                 </p>
-                <p>立减券</p>
+                <p>{{categoryList[value.category]}}</p>
             </div>
             <div class="card-bottom">
                 <h2>{{value.name}}</h2>
@@ -112,11 +112,17 @@
     DataInit = {
         pages : {
             curPage : 1,
-            pageSize: 10,
+            pageSize: 30,
             hasNextPage: false,
             hasPrvPage: false
         }
     };
+
+
+    function  initMemberPage(user) {
+
+        $(".tab-active .tab-item").click();
+    }
 
     $(".j_coupon_item").click(function () {
 
@@ -145,7 +151,7 @@
                     var res = result.data;
                     var d = {
                         list: res,
-                        statusList: {"0001":"预定", "0003":"已取消", "0005":"等待", "0004":"已入住", "0006":"已离店", "0007":"不显示"}
+                        categoryList: {"cash":"代金券", "gift":"礼品券"}
                     };
                     var html = template('log_show', d);
                     $(".tab-"+index).html(html);

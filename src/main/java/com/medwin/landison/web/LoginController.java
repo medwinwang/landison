@@ -3,6 +3,7 @@ package com.medwin.landison.web;
 import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.common.EnvUtil;
 import com.medwin.landison.exception.LpsSystemException;
+import com.medwin.landison.exception.SystemException;
 import com.medwin.landison.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,7 +35,7 @@ public class LoginController {
     private EnvUtil envUtil;
 
     @RequestMapping(method = RequestMethod.POST)
-    public BaseResult login(String mobile, String code, String mobileCountryNumber, HttpSession httpSession) {
+    public BaseResult login(String mobile, String code, String mobileCountryNumber, HttpSession httpSession) throws SystemException {
 
         Integer sessionCode = (Integer) httpSession.getAttribute(SMS_CODE);
         if(sessionCode == null) {

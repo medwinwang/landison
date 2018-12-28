@@ -4,18 +4,24 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.config.LpsConfig;
+import com.medwin.landison.exception.KmsSystemException;
+import com.medwin.landison.exception.SystemException;
 import com.medwin.landison.kms.informationservice.SendInfo;
+import com.medwin.landison.kms.profileservice.GuestInfo;
+import com.medwin.landison.kms.profileservice.QueryGuestInfoOut;
 import com.medwin.landison.kms.reservationservice.*;
 import com.medwin.landison.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.util.List;
 
 /**
  * Created by medwin on 2018/10/16.
@@ -97,7 +103,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public BaseResult login(String mobile, String password, String mobileCountryNumber) {
+    public BaseResult login(String mobile, String password, String mobileCountryNumber) throws SystemException {
 
         boolean isReg = false;
         BaseResult baseResult;
@@ -116,6 +122,15 @@ public class UserServiceImpl implements UserService {
             }
         }
         if(isReg){
+
+//            QueryGuestInfoOut queryGuestInfoOut = kmsService.queryGuestInfo(mobile);
+//            List<GuestInfo> guestInfos = queryGuestInfoOut.getGuestInfoList().getGuestInfo();
+//            if(CollectionUtils.isEmpty(guestInfos)) {
+//                throw new SystemException("查询散客信息失败");
+//            }
+//
+//            JSONObject user = (JSONObject) baseResult.getData();
+//            user.put("guest_id", guestInfos.get(0).getGuestCode());
 
             ldsService.loginUser(mobile, password, baseResult.getData().toString());
         } else {
@@ -199,7 +214,7 @@ public class UserServiceImpl implements UserService {
     public BaseResult addOrder(String arrival, String departure, int roomNum, int extraBed, int adults, int children,
                                double rate, String lastName, double totalRevenue, String hotelCode, String guesttypeCode,
                                String roomtypeCode, String reteCode, String memberId, String reservationTypeCode, String comments,
-                               String address, String email, String mobile) {
+                               String address, String email, String mobile, String arrivalTime) {
 
 
         OrderInfo orderInfo = new OrderInfo();
@@ -214,6 +229,7 @@ public class UserServiceImpl implements UserService {
         orderInfo.setTotalRevenue(new BigDecimal(totalRevenue).setScale(2,BigDecimal.ROUND_HALF_UP));
         orderInfo.setComments(comments);
         orderInfo.setAddress(address);
+        orderInfo.setArrivalTime(arrivalTime);
         if(!StringUtils.isEmpty(email)) {
             orderInfo.setEmail(email);
             orderInfo.setEmailConfirm("1");

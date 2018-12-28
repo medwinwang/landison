@@ -71,40 +71,34 @@
             <div class="integral-record">
 
             </div>
+            <div class="j_page" style="display: none"><a href="javascript:void(0)" class="want" onclick="nextPage()">上一页</a>&nbsp;
+                <a href="javascript:void(0)" class="want" onclick="beforePage()">下一页</a></div>
         </div>
     </div>
 
 </div>
 <script id="log_show" type="text/html">
 
-    <div>共<span>{{total}}</span>条记录</div>
     <ul class="record-title">
         <li class="">积分日期</li>
-        <li>积分来源</li>
-        <li>基本积分</li>
-        <li>积分数</li>
-        <li>可兑换积分</li>
-        <li>积分有效期</li>
+        <li>类型</li>
+        <li>所获积分</li>
+        <li>酒店</li>
+        <li>描述</li>
     </ul>
-    {{ if list.length == 0 }}
-    暂无记录
-    {{ else }}
     {{each list value i}}
     <ul class="record-list">
         <li>{{value.transactionTime}}</li>
+        <li>{{value.type}}</li>
+        <li>{{value.points}}</li>
+        <li>{{value.hotel.name}}</li>
         <li>{{value.description}}</li>
-        <li>--</li>
-        <li>{{points}}</li>
-        <li>1000</li>
-        <li>2018-01-01</li>
     </ul>
     {{/each}}
-    {{ /if}}
 
 </script>
 [#include '../include/foot.html'/]
 <script src="${static}/js/template-web.js"></script>
-<script src="${static}/js/jquery.page2.js"></script>
 <script type="application/javascript">
 
     DataInit = {
@@ -120,8 +114,18 @@
         recordInfo();
     }
 
-    function noLogin() {
-        location.href = "/index.html";
+    function nextPage() {
+        if(DataInit.pages.hasNextPage) {
+            DataInit.pages.curPage++;
+            recordInfo();
+        }
+    }
+
+    function beforePage() {
+        if(DataInit.pages.curPage > 1) {
+            DataInit.pages.curPage--;
+            recordInfo();
+        }
     }
 
     //记录
@@ -140,23 +144,17 @@
 
                     var res = result.data;
                     var d = {
-                        list: res,
-                        total: 10,
+                        list: res
                     };
                     var html = template('log_show', d);
                     $(".integral-record").html(html);
 
-                    if (DataInit.pages.curPage==1) {
-                        $(".paging").createPage({
-                            pageCount:Math.ceil(res.countNums/DataInit.pages.pageSize),
-                            current:DataInit.pages.curPage,
-                            backFn:function(p){
-                                DataInit.pages.curPage=p;
-                                recordInfo();
-                            }
-                        });
+                    if (DataInit.pages.curPage==1 && res.length > 0) {
+                        $(".j_page").show();
                     }
+                    DataInit.pages.hasNextPage = res.length > 0;
                 } else {
+
                     alert(data.message);
                 }
             }

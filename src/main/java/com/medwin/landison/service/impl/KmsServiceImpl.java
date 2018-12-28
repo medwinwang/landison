@@ -8,6 +8,10 @@ import com.medwin.landison.kms.availabilityservice.Availability;
 import com.medwin.landison.kms.availabilityservice.AvailabilityQuerySoap;
 import com.medwin.landison.kms.informationservice.*;
 import com.medwin.landison.kms.informationservice.CommonInfo;
+import com.medwin.landison.kms.profileservice.PhoneType;
+import com.medwin.landison.kms.profileservice.ProfileSoap;
+import com.medwin.landison.kms.profileservice.QueryGuestInfoIn;
+import com.medwin.landison.kms.profileservice.QueryGuestInfoOut;
 import com.medwin.landison.kms.reservationservice.*;
 import com.medwin.landison.kms.securityservice.SecurityService;
 import com.medwin.landison.kms.securityservice.SecurityServiceSoap;
@@ -50,6 +54,9 @@ public class KmsServiceImpl implements KmsService {
 
     @Autowired
     private SecurityServiceSoap securityServiceSoap;
+
+    @Autowired
+    private ProfileSoap profileSoap;
 
     @Override
     public boolean appLogin() {
@@ -132,6 +139,7 @@ public class KmsServiceImpl implements KmsService {
         if(arrayOfOrderInfo != null) {
             return arrayOfOrderInfo.getOrderInfo();
         }
+
         return null;
     }
 
@@ -146,6 +154,8 @@ public class KmsServiceImpl implements KmsService {
                                                            String firstname, String lastname, String guestId, String account,
                                                            String guestType, int pageSize, int currentPage) {
 
+        QueryGuestInfoIn queryGuestInfoIn = new QueryGuestInfoIn();
+//        profileSoap.queryGuestInfo()
         if(StringUtils.isEmpty(beginMakedate)) {
             beginMakedate = null;
         }
@@ -164,9 +174,21 @@ public class KmsServiceImpl implements KmsService {
         return infoSummary;
     }
 
+
+
+
     @Override
     public OrderInfoPaymentGateway addorderInfoPaymentGateway(OrderInfoPaymentGateway orderInfoPaymentGateway){
         return reservationSoap.addorderInfoPaymentGateway(orderInfoPaymentGateway);
+    }
+
+    @Override
+    public QueryGuestInfoOut queryGuestInfo(String mobile) {
+
+        QueryGuestInfoIn queryGuestInfoIn = new QueryGuestInfoIn();
+        queryGuestInfoIn.setPhoneNumber(mobile);
+        queryGuestInfoIn.setPhoneType(PhoneType.ALL);
+        return profileSoap.queryGuestInfo(queryGuestInfoIn);
     }
 
 }

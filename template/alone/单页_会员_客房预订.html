@@ -55,6 +55,12 @@
                             <input type="text" size="40" placeholder="请输入..." id="orderMobile" name="orderMobile">
                         </div>
                     </li>
+                    <li id="arrivalTimeInput">
+                        <label class="label">到店时间</label>
+                        <div class="block">
+                            <input type="text" size="40" placeholder="请输入到店时间..." id="arrivalTime" name="arrivalTime">
+                        </div>
+                    </li>
                     <li>
                         <label class="label">邮箱</label>
                         <div class="block">
@@ -200,6 +206,7 @@
                 var mobile = $("#orderMobile").val();
                 var email = $("#email").val();
                 var comments = $("#comments").val();
+                var arrivalTime = $("#arrivalTime").val();
                 if(lastName== null || lastName == ""){
                     alert("请输入姓名");
                     return false;
@@ -221,7 +228,7 @@
                     url: path + "/hotel/addOrder",
                     data: {arrival: arrival, departure: departure, roomNum: roomNum, adults: adults, rate: selectFirstNightPrice,
                         lastName: lastName, totalRevenue: selectTotalPrice, hotelCode: hotelCode, roomtypeCode: selectRoomCode, comments: comments,
-                        reteCode: selectRateCode, reservationTypeCode: addType, mobile: mobile, email : email},
+                        reteCode: selectRateCode, reservationTypeCode: addType, mobile: mobile, email : email, arrivalTime: arrivalTime},
                     type: 'post',
                     dataType: 'json',
                     success: function(result){

@@ -2,13 +2,11 @@ package com.medwin.landison.kms;
 
 import com.medwin.landison.common.KmsAddSoapHeader;
 import com.medwin.landison.common.KmsClientHandler;
-import com.medwin.landison.common.strategy.AvailabilityServiceHandler;
-import com.medwin.landison.common.strategy.InformationServiceHandler;
-import com.medwin.landison.common.strategy.ReservationServiceHandler;
-import com.medwin.landison.common.strategy.SecurityServiceHandler;
+import com.medwin.landison.common.strategy.*;
 import com.medwin.landison.config.KmsConfig;
 import com.medwin.landison.kms.availabilityservice.AvailabilityQuerySoap;
 import com.medwin.landison.kms.informationservice.InformationServiceSoap;
+import com.medwin.landison.kms.profileservice.ProfileSoap;
 import com.medwin.landison.kms.reservationservice.ReservationSoap;
 import com.medwin.landison.kms.securityservice.SecurityService;
 import com.medwin.landison.kms.securityservice.SecurityServiceSoap;
@@ -132,5 +130,28 @@ public class ServiceFactory {
         factory.setAddress(kmsConfig.getUrl() + "/ReservationService.asmx");
         factory.setServiceClass(ReservationSoap.class);
         return (ReservationSoap) factory.create();
+    }
+
+    @Bean
+    public ProfileSoap getProfileSoap(){
+
+        JaxWsProxyFactoryBean factory = new JaxWsProxyFactoryBean();
+
+        List<Interceptor<? extends Message>> list = new ArrayList();
+        // 添加soap header 信息
+        list.add(kmsAddSoapHeader);
+
+        // 添加soap消息日志打印
+        list.add(new org.apache.cxf.interceptor.LoggingOutInterceptor());
+        factory.setOutInterceptors(list);
+        factory.getInInterceptors().add(new LoggingInInterceptor());
+
+        List<Handler> handlerList = new ArrayList<Handler>();
+        handlerList.add(new KmsClientHandler(new ProfileServiceHandler()));
+        factory.setHandlers(handlerList);
+
+        factory.setAddress(kmsConfig.getUrl() + "/ProfileService.asmx");
+        factory.setServiceClass(ProfileSoap.class);
+        return (ProfileSoap) factory.create();
     }
 }

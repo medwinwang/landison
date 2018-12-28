@@ -2,6 +2,7 @@ package com.medwin.landison.service;
 
 import com.medwin.landison.kms.availabilityservice.Availability;
 import com.medwin.landison.kms.informationservice.*;
+import com.medwin.landison.kms.profileservice.QueryGuestInfoOut;
 import com.medwin.landison.kms.reservationservice.ExtraOrderInfoSummary;
 import com.medwin.landison.kms.reservationservice.OrderInfo;
 import com.medwin.landison.kms.reservationservice.OrderInfoPaymentGateway;
@@ -46,5 +47,7 @@ public interface KmsService {
                                             String guestType, int pageSize, int currentPage);
 
     OrderInfoPaymentGateway addorderInfoPaymentGateway(OrderInfoPaymentGateway orderInfoPaymentGateway);
+
+    QueryGuestInfoOut queryGuestInfo(String mobile);
 
 }

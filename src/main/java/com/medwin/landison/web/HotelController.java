@@ -38,7 +38,7 @@ public class HotelController {
                                @RequestParam(value="adults", defaultValue="1")int adults,
                                @RequestParam(value="children", defaultValue="0")int children, double rate,
                                String lastName, double totalRevenue, String hotelCode, String roomtypeCode, String comments,
-                               String reteCode, String reservationTypeCode,String address, String email,String mobile,
+                               String reteCode, String reservationTypeCode,String address, String email,String mobile, String arrivalTime,
                                HttpSession httpSession) {
 
         JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
@@ -46,7 +46,7 @@ public class HotelController {
 
         BaseResult baseResult = userService.addOrder(arrival,departure, roomNum, extraBed, adults, children, rate,
                 lastName, totalRevenue, hotelCode, info.get(0),
-                roomtypeCode, reteCode, info.get(1), reservationTypeCode, comments, address, email, mobile);
+                roomtypeCode, reteCode, info.get(1), reservationTypeCode, comments, address, email, mobile, arrivalTime);
 
         return baseResult;
     }

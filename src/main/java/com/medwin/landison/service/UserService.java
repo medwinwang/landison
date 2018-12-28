@@ -2,6 +2,7 @@ package com.medwin.landison.service;
 
 import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.exception.LpsSystemException;
+import com.medwin.landison.exception.SystemException;
 import com.medwin.landison.kms.reservationservice.DataType;
 import com.medwin.landison.kms.reservationservice.PayMentStatus;
 
@@ -18,7 +19,7 @@ public interface UserService {
 
     BaseResult register(String mobile, String firstName, String lastName, String password, String mobileCountryNumber);
 
-    BaseResult login(String mobile, String password, String mobileCountryNumber);
+    BaseResult login(String mobile, String password, String mobileCountryNumber) throws SystemException;
 
     BaseResult sendLoginSms(String mobileCountryNumber, String mobile, String code);
 
@@ -39,7 +40,7 @@ public interface UserService {
     BaseResult addOrder(String arrival, String departure,int roomNum, int extraBed, int adults,int children, double rate,
                         String lastName, double totalRevenue, String hotelCode, String guesttypeCode, String roomtypeCode,
                         String reteCode, String memberId, String reservationTypeCode, String comments, String address,
-                        String email, String mobile);
+                        String email, String mobile, String arrivalTime);
 
     BaseResult queryOrder(int id, String beginMakedate, String endMakedate, String arrival, String departure,
                           String statusCode, String reservationType, String hotelCode,
