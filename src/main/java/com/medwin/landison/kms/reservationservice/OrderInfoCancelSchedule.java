@@ -2,18 +2,19 @@
 package com.medwin.landison.kms.reservationservice;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>OrderInfoCancelSchedule complex type�� Java �ࡣ
+ * <p>OrderInfoCancelSchedule complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="OrderInfoCancelSchedule"&gt;
@@ -53,14 +54,15 @@ public class OrderInfoCancelSchedule {
     protected String description;
     @XmlElement(name = "Amount", required = true)
     protected BigDecimal amount;
-    @XmlElement(name = "DueDate", required = true)
+    @XmlElement(name = "DueDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String dueDate;
+    protected Date dueDate;
     @XmlElement(name = "ExternalUser")
     protected String externalUser;
 
     /**
-     * ��ȡorderId���Ե�ֵ��
+     * 获取orderId属性的值。
      * 
      */
     public int getOrderId() {
@@ -68,7 +70,7 @@ public class OrderInfoCancelSchedule {
     }
 
     /**
-     * ����orderId���Ե�ֵ��
+     * 设置orderId属性的值。
      * 
      */
     public void setOrderId(int value) {
@@ -76,7 +78,7 @@ public class OrderInfoCancelSchedule {
     }
 
     /**
-     * ��ȡcancelRuleCode���Ե�ֵ��
+     * 获取cancelRuleCode属性的值。
      * 
      * @return
      *     possible object is
@@ -88,7 +90,7 @@ public class OrderInfoCancelSchedule {
     }
 
     /**
-     * ����cancelRuleCode���Ե�ֵ��
+     * 设置cancelRuleCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -100,7 +102,7 @@ public class OrderInfoCancelSchedule {
     }
 
     /**
-     * ��ȡdescription���Ե�ֵ��
+     * 获取description属性的值。
      * 
      * @return
      *     possible object is
@@ -112,7 +114,7 @@ public class OrderInfoCancelSchedule {
     }
 
     /**
-     * ����description���Ե�ֵ��
+     * 设置description属性的值。
      * 
      * @param value
      *     allowed object is
@@ -124,7 +126,7 @@ public class OrderInfoCancelSchedule {
     }
 
     /**
-     * ��ȡamount���Ե�ֵ��
+     * 获取amount属性的值。
      * 
      * @return
      *     possible object is
@@ -136,7 +138,7 @@ public class OrderInfoCancelSchedule {
     }
 
     /**
-     * ����amount���Ե�ֵ��
+     * 设置amount属性的值。
      * 
      * @param value
      *     allowed object is
@@ -148,31 +150,31 @@ public class OrderInfoCancelSchedule {
     }
 
     /**
-     * ��ȡdueDate���Ե�ֵ��
+     * 获取dueDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDueDate() {
+    public Date getDueDate() {
         return dueDate;
     }
 
     /**
-     * ����dueDate���Ե�ֵ��
+     * 设置dueDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDueDate(String value) {
+    public void setDueDate(Date value) {
         this.dueDate = value;
     }
 
     /**
-     * ��ȡexternalUser���Ե�ֵ��
+     * 获取externalUser属性的值。
      * 
      * @return
      *     possible object is
@@ -184,7 +186,7 @@ public class OrderInfoCancelSchedule {
     }
 
     /**
-     * ����externalUser���Ե�ֵ��
+     * 设置externalUser属性的值。
      * 
      * @param value
      *     allowed object is

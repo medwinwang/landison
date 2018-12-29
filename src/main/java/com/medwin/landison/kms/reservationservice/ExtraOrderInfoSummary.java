@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>ExtraOrderInfoSummary complex typeµÄ Java Àà¡£
+ * <p>ExtraOrderInfoSummary complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="ExtraOrderInfoSummary"&gt;
@@ -40,7 +40,7 @@ public class ExtraOrderInfoSummary {
     protected ArrayOfOrderInfo oOrderArr;
 
     /**
-     * »ñÈ¡countNumsÊôĞÔµÄÖµ¡£
+     * è·å–countNumså±æ€§çš„å€¼ã€‚
      * 
      */
     public int getCountNums() {
@@ -48,7 +48,7 @@ public class ExtraOrderInfoSummary {
     }
 
     /**
-     * ÉèÖÃcountNumsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®countNumså±æ€§çš„å€¼ã€‚
      * 
      */
     public void setCountNums(int value) {
@@ -56,7 +56,7 @@ public class ExtraOrderInfoSummary {
     }
 
     /**
-     * »ñÈ¡oOrderArrÊôĞÔµÄÖµ¡£
+     * è·å–oOrderArrå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -68,7 +68,7 @@ public class ExtraOrderInfoSummary {
     }
 
     /**
-     * ÉèÖÃoOrderArrÊôĞÔµÄÖµ¡£
+     * è®¾ç½®oOrderArrå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

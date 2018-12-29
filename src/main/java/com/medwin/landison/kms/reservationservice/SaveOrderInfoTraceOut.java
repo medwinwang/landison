@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>SaveOrderInfoTraceOut complex typeµÄ Java Àà¡£
+ * <p>SaveOrderInfoTraceOut complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="SaveOrderInfoTraceOut"&gt;
@@ -40,7 +40,7 @@ public class SaveOrderInfoTraceOut {
     protected OrderInfoTraceTexts orderInfoTraceTexts;
 
     /**
-     * »ñÈ¡resultÊôĞÔµÄÖµ¡£
+     * è·å–resultå±æ€§çš„å€¼ã€‚
      * 
      */
     public boolean isResult() {
@@ -48,7 +48,7 @@ public class SaveOrderInfoTraceOut {
     }
 
     /**
-     * ÉèÖÃresultÊôĞÔµÄÖµ¡£
+     * è®¾ç½®resultå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setResult(boolean value) {
@@ -56,7 +56,7 @@ public class SaveOrderInfoTraceOut {
     }
 
     /**
-     * »ñÈ¡orderInfoTraceTextsÊôĞÔµÄÖµ¡£
+     * è·å–orderInfoTraceTextså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -68,7 +68,7 @@ public class SaveOrderInfoTraceOut {
     }
 
     /**
-     * ÉèÖÃorderInfoTraceTextsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderInfoTraceTextså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

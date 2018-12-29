@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -39,7 +39,7 @@ public class CancelReservation {
     protected String comments;
 
     /**
-     * »ñÈ¡idÊôĞÔµÄÖµ¡£
+     * è·å–idå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getId() {
@@ -47,7 +47,7 @@ public class CancelReservation {
     }
 
     /**
-     * ÉèÖÃidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®idå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setId(int value) {
@@ -55,7 +55,7 @@ public class CancelReservation {
     }
 
     /**
-     * »ñÈ¡commentsÊôĞÔµÄÖµ¡£
+     * è·å–commentså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -67,7 +67,7 @@ public class CancelReservation {
     }
 
     /**
-     * ÉèÖÃcommentsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®commentså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

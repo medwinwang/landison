@@ -2,18 +2,19 @@
 package com.medwin.landison.kms.reservationservice;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>OrderRoomStayInfo complex type�� Java �ࡣ
+ * <p>OrderRoomStayInfo complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="OrderRoomStayInfo"&gt;
@@ -101,9 +102,10 @@ public class OrderRoomStayInfo
     protected int id;
     @XmlElement(name = "OrderID")
     protected int orderID;
-    @XmlElement(name = "DT", required = true)
+    @XmlElement(name = "DT", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String dt;
+    protected Date dt;
     @XmlElement(name = "RoomTypeCode")
     protected String roomTypeCode;
     @XmlElement(name = "RateAmount", required = true)
@@ -162,7 +164,7 @@ public class OrderRoomStayInfo
     protected boolean isInverse;
 
     /**
-     * ��ȡid���Ե�ֵ��
+     * 获取id属性的值。
      * 
      */
     public int getID() {
@@ -170,7 +172,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����id���Ե�ֵ��
+     * 设置id属性的值。
      * 
      */
     public void setID(int value) {
@@ -178,7 +180,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡorderID���Ե�ֵ��
+     * 获取orderID属性的值。
      * 
      */
     public int getOrderID() {
@@ -186,7 +188,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����orderID���Ե�ֵ��
+     * 设置orderID属性的值。
      * 
      */
     public void setOrderID(int value) {
@@ -194,31 +196,31 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡdt���Ե�ֵ��
+     * 获取dt属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDT() {
+    public Date getDT() {
         return dt;
     }
 
     /**
-     * ����dt���Ե�ֵ��
+     * 设置dt属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDT(String value) {
+    public void setDT(Date value) {
         this.dt = value;
     }
 
     /**
-     * ��ȡroomTypeCode���Ե�ֵ��
+     * 获取roomTypeCode属性的值。
      * 
      * @return
      *     possible object is
@@ -230,7 +232,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����roomTypeCode���Ե�ֵ��
+     * 设置roomTypeCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -242,7 +244,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡrateAmount���Ե�ֵ��
+     * 获取rateAmount属性的值。
      * 
      * @return
      *     possible object is
@@ -254,7 +256,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����rateAmount���Ե�ֵ��
+     * 设置rateAmount属性的值。
      * 
      * @param value
      *     allowed object is
@@ -266,7 +268,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡtax���Ե�ֵ��
+     * 获取tax属性的值。
      * 
      * @return
      *     possible object is
@@ -278,7 +280,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����tax���Ե�ֵ��
+     * 设置tax属性的值。
      * 
      * @param value
      *     allowed object is
@@ -290,7 +292,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡdiscountPercentage���Ե�ֵ��
+     * 获取discountPercentage属性的值。
      * 
      * @return
      *     possible object is
@@ -302,7 +304,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����discountPercentage���Ե�ֵ��
+     * 设置discountPercentage属性的值。
      * 
      * @param value
      *     allowed object is
@@ -314,7 +316,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡserviceCharge���Ե�ֵ��
+     * 获取serviceCharge属性的值。
      * 
      * @return
      *     possible object is
@@ -326,7 +328,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����serviceCharge���Ե�ֵ��
+     * 设置serviceCharge属性的值。
      * 
      * @param value
      *     allowed object is
@@ -338,7 +340,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡcurrencyType���Ե�ֵ��
+     * 获取currencyType属性的值。
      * 
      * @return
      *     possible object is
@@ -350,7 +352,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����currencyType���Ե�ֵ��
+     * 设置currencyType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -362,7 +364,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡdiscountAmount���Ե�ֵ��
+     * 获取discountAmount属性的值。
      * 
      * @return
      *     possible object is
@@ -374,7 +376,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����discountAmount���Ե�ֵ��
+     * 设置discountAmount属性的值。
      * 
      * @param value
      *     allowed object is
@@ -386,7 +388,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡdiscountPercent���Ե�ֵ��
+     * 获取discountPercent属性的值。
      * 
      * @return
      *     possible object is
@@ -398,7 +400,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����discountPercent���Ե�ֵ��
+     * 设置discountPercent属性的值。
      * 
      * @param value
      *     allowed object is
@@ -410,7 +412,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡdiscountReason���Ե�ֵ��
+     * 获取discountReason属性的值。
      * 
      * @return
      *     possible object is
@@ -422,7 +424,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����discountReason���Ե�ֵ��
+     * 设置discountReason属性的值。
      * 
      * @param value
      *     allowed object is
@@ -434,7 +436,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡstatusCode���Ե�ֵ��
+     * 获取statusCode属性的值。
      * 
      * @return
      *     possible object is
@@ -446,7 +448,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����statusCode���Ե�ֵ��
+     * 设置statusCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -458,7 +460,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡroomNum���Ե�ֵ��
+     * 获取roomNum属性的值。
      * 
      */
     public int getRoomNum() {
@@ -466,7 +468,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����roomNum���Ե�ֵ��
+     * 设置roomNum属性的值。
      * 
      */
     public void setRoomNum(int value) {
@@ -474,7 +476,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡadults���Ե�ֵ��
+     * 获取adults属性的值。
      * 
      */
     public int getAdults() {
@@ -482,7 +484,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����adults���Ե�ֵ��
+     * 设置adults属性的值。
      * 
      */
     public void setAdults(int value) {
@@ -490,7 +492,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡcomments���Ե�ֵ��
+     * 获取comments属性的值。
      * 
      * @return
      *     possible object is
@@ -502,7 +504,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����comments���Ե�ֵ��
+     * 设置comments属性的值。
      * 
      * @param value
      *     allowed object is
@@ -514,7 +516,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡlastOperator���Ե�ֵ��
+     * 获取lastOperator属性的值。
      * 
      * @return
      *     possible object is
@@ -526,7 +528,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����lastOperator���Ե�ֵ��
+     * 设置lastOperator属性的值。
      * 
      * @param value
      *     allowed object is
@@ -538,7 +540,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡextraBed���Ե�ֵ��
+     * 获取extraBed属性的值。
      * 
      */
     public int getExtraBed() {
@@ -546,7 +548,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����extraBed���Ե�ֵ��
+     * 设置extraBed属性的值。
      * 
      */
     public void setExtraBed(int value) {
@@ -554,7 +556,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡroomNo���Ե�ֵ��
+     * 获取roomNo属性的值。
      * 
      * @return
      *     possible object is
@@ -566,7 +568,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����roomNo���Ե�ֵ��
+     * 设置roomNo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -578,7 +580,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡchildren���Ե�ֵ��
+     * 获取children属性的值。
      * 
      */
     public int getChildren() {
@@ -586,7 +588,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����children���Ե�ֵ��
+     * 设置children属性的值。
      * 
      */
     public void setChildren(int value) {
@@ -594,7 +596,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡrateCode���Ե�ֵ��
+     * 获取rateCode属性的值。
      * 
      * @return
      *     possible object is
@@ -606,7 +608,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����rateCode���Ե�ֵ��
+     * 设置rateCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -618,7 +620,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡfixedRate���Ե�ֵ��
+     * 获取fixedRate属性的值。
      * 
      * @return
      *     possible object is
@@ -630,7 +632,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����fixedRate���Ե�ֵ��
+     * 设置fixedRate属性的值。
      * 
      * @param value
      *     allowed object is
@@ -642,7 +644,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡsource���Ե�ֵ��
+     * 获取source属性的值。
      * 
      * @return
      *     possible object is
@@ -654,7 +656,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����source���Ե�ֵ��
+     * 设置source属性的值。
      * 
      * @param value
      *     allowed object is
@@ -666,7 +668,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡmarket���Ե�ֵ��
+     * 获取market属性的值。
      * 
      * @return
      *     possible object is
@@ -678,7 +680,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����market���Ե�ֵ��
+     * 设置market属性的值。
      * 
      * @param value
      *     allowed object is
@@ -690,7 +692,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡrtc���Ե�ֵ��
+     * 获取rtc属性的值。
      * 
      * @return
      *     possible object is
@@ -702,7 +704,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����rtc���Ե�ֵ��
+     * 设置rtc属性的值。
      * 
      * @param value
      *     allowed object is
@@ -714,7 +716,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡcouponcode���Ե�ֵ��
+     * 获取couponcode属性的值。
      * 
      * @return
      *     possible object is
@@ -726,7 +728,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����couponcode���Ե�ֵ��
+     * 设置couponcode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -738,7 +740,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡpoints���Ե�ֵ��
+     * 获取points属性的值。
      * 
      */
     public int getPoints() {
@@ -746,7 +748,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����points���Ե�ֵ��
+     * 设置points属性的值。
      * 
      */
     public void setPoints(int value) {
@@ -754,7 +756,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡcouponNum���Ե�ֵ��
+     * 获取couponNum属性的值。
      * 
      */
     public int getCouponNum() {
@@ -762,7 +764,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����couponNum���Ե�ֵ��
+     * 设置couponNum属性的值。
      * 
      */
     public void setCouponNum(int value) {
@@ -770,7 +772,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡaavailableRooms���Ե�ֵ��
+     * 获取aavailableRooms属性的值。
      * 
      */
     public int getAavailableRooms() {
@@ -778,7 +780,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����aavailableRooms���Ե�ֵ��
+     * 设置aavailableRooms属性的值。
      * 
      */
     public void setAavailableRooms(int value) {
@@ -786,7 +788,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡserialNumber���Ե�ֵ��
+     * 获取serialNumber属性的值。
      * 
      * @return
      *     possible object is
@@ -798,7 +800,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����serialNumber���Ե�ֵ��
+     * 设置serialNumber属性的值。
      * 
      * @param value
      *     allowed object is
@@ -810,7 +812,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ��ȡisInverse���Ե�ֵ��
+     * 获取isInverse属性的值。
      * 
      */
     public boolean isIsInverse() {
@@ -818,7 +820,7 @@ public class OrderRoomStayInfo
     }
 
     /**
-     * ����isInverse���Ե�ֵ��
+     * 设置isInverse属性的值。
      * 
      */
     public void setIsInverse(boolean value) {

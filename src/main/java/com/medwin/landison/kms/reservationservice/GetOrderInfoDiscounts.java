@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -36,7 +36,7 @@ public class GetOrderInfoDiscounts {
     protected int orderID;
 
     /**
-     * »ñÈ¡orderIDÊôĞÔµÄÖµ¡£
+     * è·å–orderIDå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getOrderID() {
@@ -44,7 +44,7 @@ public class GetOrderInfoDiscounts {
     }
 
     /**
-     * ÉèÖÃorderIDÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderIDå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setOrderID(int value) {

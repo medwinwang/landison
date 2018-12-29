@@ -6,6 +6,7 @@ import com.medwin.landison.kms.profileservice.QueryGuestInfoOut;
 import com.medwin.landison.kms.reservationservice.ExtraOrderInfoSummary;
 import com.medwin.landison.kms.reservationservice.OrderInfo;
 import com.medwin.landison.kms.reservationservice.OrderInfoPaymentGateway;
+import com.medwin.landison.kms.reservationservice.QueryOrderPageOut;
 
 import java.util.List;
 
@@ -36,15 +37,12 @@ public interface KmsService {
 
     OrderInfo greateReservation(OrderInfo orderInfo);
 
-    List<OrderInfo> getOrderInfoByGuestType(String guestType, String account, String beginMakedate,
-                                            String endMakedate);
-
     boolean cancelOrder(int id, String comments, String croPermission);
 
-    ExtraOrderInfoSummary orderQueryPerPage(int id, String beginMakedate, String endMakedate, String arrival, String departure,
-                                            String statusCode, String reservationType, String hotelCode,
-                                            String firstname, String lastname, String guestId, String account,
-                                            String guestType, int pageSize, int currentPage);
+    QueryOrderPageOut queryOrderPage(int id, String beginArrivalDate, String endArrivalDate, String beginDepartureDate, String endDepartureDate,
+                                        String beginInsertDate, String endInsertDate, String hotels, String firstName,
+                                        String lastName, int profileId, String account, String cardNumber,
+                                        String phoneNumber, String statusCode, int pageIndex, int pageSize);
 
     OrderInfoPaymentGateway addorderInfoPaymentGateway(OrderInfoPaymentGateway orderInfoPaymentGateway);
 

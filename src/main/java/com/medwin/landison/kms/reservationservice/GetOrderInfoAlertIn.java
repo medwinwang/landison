@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>GetOrderInfoAlertIn complex typeµÄ Java Àà¡£
+ * <p>GetOrderInfoAlertIn complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="GetOrderInfoAlertIn"&gt;
@@ -36,7 +36,7 @@ public class GetOrderInfoAlertIn {
     protected int orderId;
 
     /**
-     * »ñÈ¡orderIdÊôĞÔµÄÖµ¡£
+     * è·å–orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getOrderId() {
@@ -44,7 +44,7 @@ public class GetOrderInfoAlertIn {
     }
 
     /**
-     * ÉèÖÃorderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setOrderId(int value) {

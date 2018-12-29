@@ -450,6 +450,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link EditOrderInfoComments }
+     * 
+     */
+    public EditOrderInfoComments createEditOrderInfoComments() {
+        return new EditOrderInfoComments();
+    }
+
+    /**
+     * Create an instance of {@link EditOrderInfoCommentsResponse }
+     * 
+     */
+    public EditOrderInfoCommentsResponse createEditOrderInfoCommentsResponse() {
+        return new EditOrderInfoCommentsResponse();
+    }
+
+    /**
      * Create an instance of {@link SelfCheckInAllowed }
      * 
      */

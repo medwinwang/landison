@@ -1,19 +1,20 @@
 
 package com.medwin.landison.kms.reservationservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>anonymous complex type�� Java �ࡣ
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -44,15 +45,17 @@ public class GetOrderInfoByGuestType {
 
     protected String guestType;
     protected String account;
-    @XmlElement(required = true)
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginMakedate;
-    @XmlElement(required = true)
+    protected Date beginMakedate;
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endMakedate;
+    protected Date endMakedate;
 
     /**
-     * ��ȡguestType���Ե�ֵ��
+     * 获取guestType属性的值。
      * 
      * @return
      *     possible object is
@@ -64,7 +67,7 @@ public class GetOrderInfoByGuestType {
     }
 
     /**
-     * ����guestType���Ե�ֵ��
+     * 设置guestType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -76,7 +79,7 @@ public class GetOrderInfoByGuestType {
     }
 
     /**
-     * ��ȡaccount���Ե�ֵ��
+     * 获取account属性的值。
      * 
      * @return
      *     possible object is
@@ -88,7 +91,7 @@ public class GetOrderInfoByGuestType {
     }
 
     /**
-     * ����account���Ե�ֵ��
+     * 设置account属性的值。
      * 
      * @param value
      *     allowed object is
@@ -100,50 +103,50 @@ public class GetOrderInfoByGuestType {
     }
 
     /**
-     * ��ȡbeginMakedate���Ե�ֵ��
+     * 获取beginMakedate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBeginMakedate() {
+    public Date getBeginMakedate() {
         return beginMakedate;
     }
 
     /**
-     * ����beginMakedate���Ե�ֵ��
+     * 设置beginMakedate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginMakedate(String value) {
+    public void setBeginMakedate(Date value) {
         this.beginMakedate = value;
     }
 
     /**
-     * ��ȡendMakedate���Ե�ֵ��
+     * 获取endMakedate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndMakedate() {
+    public Date getEndMakedate() {
         return endMakedate;
     }
 
     /**
-     * ����endMakedate���Ե�ֵ��
+     * 设置endMakedate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndMakedate(String value) {
+    public void setEndMakedate(Date value) {
         this.endMakedate = value;
     }
 

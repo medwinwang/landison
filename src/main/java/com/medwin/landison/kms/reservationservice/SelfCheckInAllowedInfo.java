@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.reservationservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>SelfCheckInAllowedInfo complex type�� Java �ࡣ
+ * <p>SelfCheckInAllowedInfo complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="SelfCheckInAllowedInfo"&gt;
@@ -38,12 +39,13 @@ public class SelfCheckInAllowedInfo {
 
     @XmlElement(name = "Allowed")
     protected boolean allowed;
-    @XmlElement(name = "AllowedTime", required = true)
+    @XmlElement(name = "AllowedTime", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String allowedTime;
+    protected Date allowedTime;
 
     /**
-     * ��ȡallowed���Ե�ֵ��
+     * 获取allowed属性的值。
      * 
      */
     public boolean isAllowed() {
@@ -51,7 +53,7 @@ public class SelfCheckInAllowedInfo {
     }
 
     /**
-     * ����allowed���Ե�ֵ��
+     * 设置allowed属性的值。
      * 
      */
     public void setAllowed(boolean value) {
@@ -59,26 +61,26 @@ public class SelfCheckInAllowedInfo {
     }
 
     /**
-     * ��ȡallowedTime���Ե�ֵ��
+     * 获取allowedTime属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getAllowedTime() {
+    public Date getAllowedTime() {
         return allowedTime;
     }
 
     /**
-     * ����allowedTime���Ե�ֵ��
+     * 设置allowedTime属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setAllowedTime(String value) {
+    public void setAllowedTime(Date value) {
         this.allowedTime = value;
     }
 

@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>OrderInfoAlerts complex typeµÄ Java Àà¡£
+ * <p>OrderInfoAlerts complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="OrderInfoAlerts"&gt;
@@ -56,7 +56,7 @@ public class OrderInfoAlerts {
     protected int sortId;
 
     /**
-     * »ñÈ¡idÊôĞÔµÄÖµ¡£
+     * è·å–idå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getId() {
@@ -64,7 +64,7 @@ public class OrderInfoAlerts {
     }
 
     /**
-     * ÉèÖÃidÊôĞÔµÄÖµ¡£
+     * è®¾ç½®idå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setId(int value) {
@@ -72,7 +72,7 @@ public class OrderInfoAlerts {
     }
 
     /**
-     * »ñÈ¡orderIdÊôĞÔµÄÖµ¡£
+     * è·å–orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getOrderId() {
@@ -80,7 +80,7 @@ public class OrderInfoAlerts {
     }
 
     /**
-     * ÉèÖÃorderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setOrderId(int value) {
@@ -88,7 +88,7 @@ public class OrderInfoAlerts {
     }
 
     /**
-     * »ñÈ¡alertCodeÊôĞÔµÄÖµ¡£
+     * è·å–alertCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -100,7 +100,7 @@ public class OrderInfoAlerts {
     }
 
     /**
-     * ÉèÖÃalertCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®alertCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -112,7 +112,7 @@ public class OrderInfoAlerts {
     }
 
     /**
-     * »ñÈ¡areaÊôĞÔµÄÖµ¡£
+     * è·å–areaå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -124,7 +124,7 @@ public class OrderInfoAlerts {
     }
 
     /**
-     * ÉèÖÃareaÊôĞÔµÄÖµ¡£
+     * è®¾ç½®areaå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -136,7 +136,7 @@ public class OrderInfoAlerts {
     }
 
     /**
-     * »ñÈ¡descriptionÊôĞÔµÄÖµ¡£
+     * è·å–descriptionå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -148,7 +148,7 @@ public class OrderInfoAlerts {
     }
 
     /**
-     * ÉèÖÃdescriptionÊôĞÔµÄÖµ¡£
+     * è®¾ç½®descriptionå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -160,7 +160,7 @@ public class OrderInfoAlerts {
     }
 
     /**
-     * »ñÈ¡sortIdÊôĞÔµÄÖµ¡£
+     * è·å–sortIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getSortId() {
@@ -168,7 +168,7 @@ public class OrderInfoAlerts {
     }
 
     /**
-     * ÉèÖÃsortIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®sortIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setSortId(int value) {

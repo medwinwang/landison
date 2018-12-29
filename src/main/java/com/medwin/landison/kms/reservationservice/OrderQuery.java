@@ -1,19 +1,20 @@
 
 package com.medwin.landison.kms.reservationservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>anonymous complex type�� Java �ࡣ
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -61,18 +62,22 @@ import java.lang.String;
 public class OrderQuery {
 
     protected int id;
-    @XmlElement(required = true)
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginMakedate;
-    @XmlElement(required = true)
+    protected Date beginMakedate;
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endMakedate;
-    @XmlElement(required = true)
+    protected Date endMakedate;
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String arrival;
-    @XmlElement(required = true)
+    protected Date arrival;
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String departure;
+    protected Date departure;
     @XmlElement(name = "status_code")
     protected String statusCode;
     @XmlElement(name = "reservation_type")
@@ -87,7 +92,7 @@ public class OrderQuery {
     protected String guestType;
 
     /**
-     * ��ȡid���Ե�ֵ��
+     * 获取id属性的值。
      * 
      */
     public int getId() {
@@ -95,7 +100,7 @@ public class OrderQuery {
     }
 
     /**
-     * ����id���Ե�ֵ��
+     * 设置id属性的值。
      * 
      */
     public void setId(int value) {
@@ -103,103 +108,103 @@ public class OrderQuery {
     }
 
     /**
-     * ��ȡbeginMakedate���Ե�ֵ��
+     * 获取beginMakedate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBeginMakedate() {
+    public Date getBeginMakedate() {
         return beginMakedate;
     }
 
     /**
-     * ����beginMakedate���Ե�ֵ��
+     * 设置beginMakedate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginMakedate(String value) {
+    public void setBeginMakedate(Date value) {
         this.beginMakedate = value;
     }
 
     /**
-     * ��ȡendMakedate���Ե�ֵ��
+     * 获取endMakedate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndMakedate() {
+    public Date getEndMakedate() {
         return endMakedate;
     }
 
     /**
-     * ����endMakedate���Ե�ֵ��
+     * 设置endMakedate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndMakedate(String value) {
+    public void setEndMakedate(Date value) {
         this.endMakedate = value;
     }
 
     /**
-     * ��ȡarrival���Ե�ֵ��
+     * 获取arrival属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getArrival() {
+    public Date getArrival() {
         return arrival;
     }
 
     /**
-     * ����arrival���Ե�ֵ��
+     * 设置arrival属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setArrival(String value) {
+    public void setArrival(Date value) {
         this.arrival = value;
     }
 
     /**
-     * ��ȡdeparture���Ե�ֵ��
+     * 获取departure属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDeparture() {
+    public Date getDeparture() {
         return departure;
     }
 
     /**
-     * ����departure���Ե�ֵ��
+     * 设置departure属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDeparture(String value) {
+    public void setDeparture(Date value) {
         this.departure = value;
     }
 
     /**
-     * ��ȡstatusCode���Ե�ֵ��
+     * 获取statusCode属性的值。
      * 
      * @return
      *     possible object is
@@ -211,7 +216,7 @@ public class OrderQuery {
     }
 
     /**
-     * ����statusCode���Ե�ֵ��
+     * 设置statusCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -223,7 +228,7 @@ public class OrderQuery {
     }
 
     /**
-     * ��ȡreservationType���Ե�ֵ��
+     * 获取reservationType属性的值。
      * 
      * @return
      *     possible object is
@@ -235,7 +240,7 @@ public class OrderQuery {
     }
 
     /**
-     * ����reservationType���Ե�ֵ��
+     * 设置reservationType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -247,7 +252,7 @@ public class OrderQuery {
     }
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -259,7 +264,7 @@ public class OrderQuery {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -271,7 +276,7 @@ public class OrderQuery {
     }
 
     /**
-     * ��ȡfirstname���Ե�ֵ��
+     * 获取firstname属性的值。
      * 
      * @return
      *     possible object is
@@ -283,7 +288,7 @@ public class OrderQuery {
     }
 
     /**
-     * ����firstname���Ե�ֵ��
+     * 设置firstname属性的值。
      * 
      * @param value
      *     allowed object is
@@ -295,7 +300,7 @@ public class OrderQuery {
     }
 
     /**
-     * ��ȡlastname���Ե�ֵ��
+     * 获取lastname属性的值。
      * 
      * @return
      *     possible object is
@@ -307,7 +312,7 @@ public class OrderQuery {
     }
 
     /**
-     * ����lastname���Ե�ֵ��
+     * 设置lastname属性的值。
      * 
      * @param value
      *     allowed object is
@@ -319,7 +324,7 @@ public class OrderQuery {
     }
 
     /**
-     * ��ȡguestId���Ե�ֵ��
+     * 获取guestId属性的值。
      * 
      * @return
      *     possible object is
@@ -331,7 +336,7 @@ public class OrderQuery {
     }
 
     /**
-     * ����guestId���Ե�ֵ��
+     * 设置guestId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -343,7 +348,7 @@ public class OrderQuery {
     }
 
     /**
-     * ��ȡaccount���Ե�ֵ��
+     * 获取account属性的值。
      * 
      * @return
      *     possible object is
@@ -355,7 +360,7 @@ public class OrderQuery {
     }
 
     /**
-     * ����account���Ե�ֵ��
+     * 设置account属性的值。
      * 
      * @param value
      *     allowed object is
@@ -367,7 +372,7 @@ public class OrderQuery {
     }
 
     /**
-     * ��ȡguestType���Ե�ֵ��
+     * 获取guestType属性的值。
      * 
      * @return
      *     possible object is
@@ -379,7 +384,7 @@ public class OrderQuery {
     }
 
     /**
-     * ����guestType���Ե�ֵ��
+     * 设置guestType属性的值。
      * 
      * @param value
      *     allowed object is

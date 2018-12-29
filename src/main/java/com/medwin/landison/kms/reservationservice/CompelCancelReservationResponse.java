@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -38,7 +38,7 @@ public class CompelCancelReservationResponse {
     protected boolean compelCancelReservationResult;
 
     /**
-     * »ñÈ¡compelCancelReservationResultÊôĞÔµÄÖµ¡£
+     * è·å–compelCancelReservationResultå±æ€§çš„å€¼ã€‚
      * 
      */
     public boolean isCompelCancelReservationResult() {
@@ -46,7 +46,7 @@ public class CompelCancelReservationResponse {
     }
 
     /**
-     * ÉèÖÃcompelCancelReservationResultÊôĞÔµÄÖµ¡£
+     * è®¾ç½®compelCancelReservationResultå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setCompelCancelReservationResult(boolean value) {

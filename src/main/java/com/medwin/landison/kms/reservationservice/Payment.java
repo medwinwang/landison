@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Payment complex typeµÄ Java Àà¡£
+ * <p>Payment complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="Payment"&gt;
@@ -46,7 +46,7 @@ public class Payment
     protected String category;
 
     /**
-     * »ñÈ¡resFlagÊôĞÔµÄÖµ¡£
+     * è·å–resFlagå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -58,7 +58,7 @@ public class Payment
     }
 
     /**
-     * ÉèÖÃresFlagÊôĞÔµÄÖµ¡£
+     * è®¾ç½®resFlagå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -70,7 +70,7 @@ public class Payment
     }
 
     /**
-     * »ñÈ¡validFnÊôĞÔµÄÖµ¡£
+     * è·å–validFnå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -82,7 +82,7 @@ public class Payment
     }
 
     /**
-     * ÉèÖÃvalidFnÊôĞÔµÄÖµ¡£
+     * è®¾ç½®validFnå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -94,7 +94,7 @@ public class Payment
     }
 
     /**
-     * »ñÈ¡categoryÊôĞÔµÄÖµ¡£
+     * è·å–categoryå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -106,7 +106,7 @@ public class Payment
     }
 
     /**
-     * ÉèÖÃcategoryÊôĞÔµÄÖµ¡£
+     * è®¾ç½®categoryå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

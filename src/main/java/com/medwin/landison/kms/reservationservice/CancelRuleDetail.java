@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>CancelRuleDetail complex typeµÄ Java Àà¡£
+ * <p>CancelRuleDetail complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="CancelRuleDetail"&gt;
@@ -60,7 +60,7 @@ public class CancelRuleDetail {
     protected BigDecimal penaltyFee;
 
     /**
-     * »ñÈ¡remarkÊôĞÔµÄÖµ¡£
+     * è·å–remarkå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -72,7 +72,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * ÉèÖÃremarkÊôĞÔµÄÖµ¡£
+     * è®¾ç½®remarkå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -84,7 +84,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * »ñÈ¡typeÊôĞÔµÄÖµ¡£
+     * è·å–typeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -96,7 +96,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * ÉèÖÃtypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®typeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -108,7 +108,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * »ñÈ¡dayBeforeArrivalÊôĞÔµÄÖµ¡£
+     * è·å–dayBeforeArrivalå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getDayBeforeArrival() {
@@ -116,7 +116,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * ÉèÖÃdayBeforeArrivalÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dayBeforeArrivalå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setDayBeforeArrival(int value) {
@@ -124,7 +124,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * »ñÈ¡cancelBeforeTimeÊôĞÔµÄÖµ¡£
+     * è·å–cancelBeforeTimeå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getCancelBeforeTime() {
@@ -132,7 +132,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * ÉèÖÃcancelBeforeTimeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®cancelBeforeTimeå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setCancelBeforeTime(int value) {
@@ -140,7 +140,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * »ñÈ¡cancelBeforeTimeMinitÊôĞÔµÄÖµ¡£
+     * è·å–cancelBeforeTimeMinitå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getCancelBeforeTimeMinit() {
@@ -148,7 +148,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * ÉèÖÃcancelBeforeTimeMinitÊôĞÔµÄÖµ¡£
+     * è®¾ç½®cancelBeforeTimeMinitå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setCancelBeforeTimeMinit(int value) {
@@ -156,7 +156,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * »ñÈ¡cancelBeforeTimeStrÊôĞÔµÄÖµ¡£
+     * è·å–cancelBeforeTimeStrå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -168,7 +168,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * ÉèÖÃcancelBeforeTimeStrÊôĞÔµÄÖµ¡£
+     * è®¾ç½®cancelBeforeTimeStrå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -180,7 +180,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * »ñÈ¡penaltyFeeÊôĞÔµÄÖµ¡£
+     * è·å–penaltyFeeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -192,7 +192,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * ÉèÖÃpenaltyFeeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®penaltyFeeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

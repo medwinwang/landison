@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>RemovePartyIn complex typeµÄ Java Àà¡£
+ * <p>RemovePartyIn complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="RemovePartyIn"&gt;
@@ -44,7 +44,7 @@ public class RemovePartyIn {
     protected String externalUser;
 
     /**
-     * »ñÈ¡orderIdÊôĞÔµÄÖµ¡£
+     * è·å–orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getOrderId() {
@@ -52,7 +52,7 @@ public class RemovePartyIn {
     }
 
     /**
-     * ÉèÖÃorderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setOrderId(int value) {
@@ -60,7 +60,7 @@ public class RemovePartyIn {
     }
 
     /**
-     * »ñÈ¡romoveOrderIDÊôĞÔµÄÖµ¡£
+     * è·å–romoveOrderIDå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getRomoveOrderID() {
@@ -68,7 +68,7 @@ public class RemovePartyIn {
     }
 
     /**
-     * ÉèÖÃromoveOrderIDÊôĞÔµÄÖµ¡£
+     * è®¾ç½®romoveOrderIDå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setRomoveOrderID(int value) {
@@ -76,7 +76,7 @@ public class RemovePartyIn {
     }
 
     /**
-     * »ñÈ¡externalUserÊôĞÔµÄÖµ¡£
+     * è·å–externalUserå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -88,7 +88,7 @@ public class RemovePartyIn {
     }
 
     /**
-     * ÉèÖÃexternalUserÊôĞÔµÄÖµ¡£
+     * è®¾ç½®externalUserå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

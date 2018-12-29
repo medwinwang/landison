@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.reservationservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>OrderLog complex type�� Java �ࡣ
+ * <p>OrderLog complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="OrderLog"&gt;
@@ -44,14 +45,15 @@ public class OrderLog {
     protected String content;
     @XmlElement(name = "InsertUser")
     protected CommonInfo insertUser;
-    @XmlElement(name = "InserDate", required = true)
+    @XmlElement(name = "InserDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String inserDate;
+    protected Date inserDate;
     @XmlElement(name = "ExternalUser")
     protected String externalUser;
 
     /**
-     * ��ȡcontent���Ե�ֵ��
+     * 获取content属性的值。
      * 
      * @return
      *     possible object is
@@ -63,7 +65,7 @@ public class OrderLog {
     }
 
     /**
-     * ����content���Ե�ֵ��
+     * 设置content属性的值。
      * 
      * @param value
      *     allowed object is
@@ -75,7 +77,7 @@ public class OrderLog {
     }
 
     /**
-     * ��ȡinsertUser���Ե�ֵ��
+     * 获取insertUser属性的值。
      * 
      * @return
      *     possible object is
@@ -87,7 +89,7 @@ public class OrderLog {
     }
 
     /**
-     * ����insertUser���Ե�ֵ��
+     * 设置insertUser属性的值。
      * 
      * @param value
      *     allowed object is
@@ -99,31 +101,31 @@ public class OrderLog {
     }
 
     /**
-     * ��ȡinserDate���Ե�ֵ��
+     * 获取inserDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getInserDate() {
+    public Date getInserDate() {
         return inserDate;
     }
 
     /**
-     * ����inserDate���Ե�ֵ��
+     * 设置inserDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setInserDate(String value) {
+    public void setInserDate(Date value) {
         this.inserDate = value;
     }
 
     /**
-     * ��ȡexternalUser���Ե�ֵ��
+     * 获取externalUser属性的值。
      * 
      * @return
      *     possible object is
@@ -135,7 +137,7 @@ public class OrderLog {
     }
 
     /**
-     * ����externalUser���Ե�ֵ��
+     * 设置externalUser属性的值。
      * 
      * @param value
      *     allowed object is

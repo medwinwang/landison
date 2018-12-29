@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.reservationservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>GiveUpOrderReserveReasonOut complex type�� Java �ࡣ
+ * <p>GiveUpOrderReserveReasonOut complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="GiveUpOrderReserveReasonOut"&gt;
@@ -64,9 +65,10 @@ public class GiveUpOrderReserveReasonOut {
     protected String channelCode;
     @XmlElement(name = "ExternalUserCode")
     protected String externalUserCode;
-    @XmlElement(name = "Dt", required = true)
+    @XmlElement(name = "Dt", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String dt;
+    protected Date dt;
     @XmlElement(name = "GuestType")
     protected String guestType;
     @XmlElement(name = "GuestID")
@@ -75,17 +77,19 @@ public class GiveUpOrderReserveReasonOut {
     protected String comment;
     @XmlElement(name = "InsertUser")
     protected String insertUser;
-    @XmlElement(name = "InsertDate", required = true)
+    @XmlElement(name = "InsertDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String insertDate;
+    protected Date insertDate;
     @XmlElement(name = "UpdateUser")
     protected String updateUser;
-    @XmlElement(name = "UpdateDate", required = true)
+    @XmlElement(name = "UpdateDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String updateDate;
+    protected Date updateDate;
 
     /**
-     * ��ȡreasonCode���Ե�ֵ��
+     * 获取reasonCode属性的值。
      * 
      * @return
      *     possible object is
@@ -97,7 +101,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ����reasonCode���Ե�ֵ��
+     * 设置reasonCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -109,7 +113,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -121,7 +125,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -133,7 +137,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ��ȡchannelCode���Ե�ֵ��
+     * 获取channelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -145,7 +149,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ����channelCode���Ե�ֵ��
+     * 设置channelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -157,7 +161,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ��ȡexternalUserCode���Ե�ֵ��
+     * 获取externalUserCode属性的值。
      * 
      * @return
      *     possible object is
@@ -169,7 +173,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ����externalUserCode���Ե�ֵ��
+     * 设置externalUserCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -181,31 +185,31 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ��ȡdt���Ե�ֵ��
+     * 获取dt属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDt() {
+    public Date getDt() {
         return dt;
     }
 
     /**
-     * ����dt���Ե�ֵ��
+     * 设置dt属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDt(String value) {
+    public void setDt(Date value) {
         this.dt = value;
     }
 
     /**
-     * ��ȡguestType���Ե�ֵ��
+     * 获取guestType属性的值。
      * 
      * @return
      *     possible object is
@@ -217,7 +221,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ����guestType���Ե�ֵ��
+     * 设置guestType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -229,7 +233,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ��ȡguestID���Ե�ֵ��
+     * 获取guestID属性的值。
      * 
      * @return
      *     possible object is
@@ -241,7 +245,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ����guestID���Ե�ֵ��
+     * 设置guestID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -253,7 +257,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ��ȡcomment���Ե�ֵ��
+     * 获取comment属性的值。
      * 
      * @return
      *     possible object is
@@ -265,7 +269,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ����comment���Ե�ֵ��
+     * 设置comment属性的值。
      * 
      * @param value
      *     allowed object is
@@ -277,7 +281,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ��ȡinsertUser���Ե�ֵ��
+     * 获取insertUser属性的值。
      * 
      * @return
      *     possible object is
@@ -289,7 +293,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ����insertUser���Ե�ֵ��
+     * 设置insertUser属性的值。
      * 
      * @param value
      *     allowed object is
@@ -301,31 +305,31 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ��ȡinsertDate���Ե�ֵ��
+     * 获取insertDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getInsertDate() {
+    public Date getInsertDate() {
         return insertDate;
     }
 
     /**
-     * ����insertDate���Ե�ֵ��
+     * 设置insertDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setInsertDate(String value) {
+    public void setInsertDate(Date value) {
         this.insertDate = value;
     }
 
     /**
-     * ��ȡupdateUser���Ե�ֵ��
+     * 获取updateUser属性的值。
      * 
      * @return
      *     possible object is
@@ -337,7 +341,7 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ����updateUser���Ե�ֵ��
+     * 设置updateUser属性的值。
      * 
      * @param value
      *     allowed object is
@@ -349,26 +353,26 @@ public class GiveUpOrderReserveReasonOut {
     }
 
     /**
-     * ��ȡupdateDate���Ե�ֵ��
+     * 获取updateDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getUpdateDate() {
+    public Date getUpdateDate() {
         return updateDate;
     }
 
     /**
-     * ����updateDate���Ե�ֵ��
+     * 设置updateDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setUpdateDate(String value) {
+    public void setUpdateDate(Date value) {
         this.updateDate = value;
     }
 

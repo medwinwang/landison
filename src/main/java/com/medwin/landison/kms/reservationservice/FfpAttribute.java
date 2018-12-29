@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>FfpAttribute complex typeµÄ Java Àà¡£
+ * <p>FfpAttribute complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="FfpAttribute"&gt;
@@ -54,7 +54,7 @@ public class FfpAttribute
     protected String ffpLevalCode;
 
     /**
-     * »ñÈ¡ffpTypeCodeÊôĞÔµÄÖµ¡£
+     * è·å–ffpTypeCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -66,7 +66,7 @@ public class FfpAttribute
     }
 
     /**
-     * ÉèÖÃffpTypeCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®ffpTypeCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -78,7 +78,7 @@ public class FfpAttribute
     }
 
     /**
-     * »ñÈ¡ffpTypeNameÊôĞÔµÄÖµ¡£
+     * è·å–ffpTypeNameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -90,7 +90,7 @@ public class FfpAttribute
     }
 
     /**
-     * ÉèÖÃffpTypeNameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®ffpTypeNameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -102,7 +102,7 @@ public class FfpAttribute
     }
 
     /**
-     * »ñÈ¡ffpTypeÊôĞÔµÄÖµ¡£
+     * è·å–ffpTypeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -114,7 +114,7 @@ public class FfpAttribute
     }
 
     /**
-     * ÉèÖÃffpTypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®ffpTypeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -126,7 +126,7 @@ public class FfpAttribute
     }
 
     /**
-     * »ñÈ¡ffpLevelNameÊôĞÔµÄÖµ¡£
+     * è·å–ffpLevelNameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -138,7 +138,7 @@ public class FfpAttribute
     }
 
     /**
-     * ÉèÖÃffpLevelNameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®ffpLevelNameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -150,7 +150,7 @@ public class FfpAttribute
     }
 
     /**
-     * »ñÈ¡ffpLevalCodeÊôĞÔµÄÖµ¡£
+     * è·å–ffpLevalCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -162,7 +162,7 @@ public class FfpAttribute
     }
 
     /**
-     * ÉèÖÃffpLevalCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®ffpLevalCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

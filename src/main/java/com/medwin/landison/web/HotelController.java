@@ -57,21 +57,4 @@ public class HotelController {
         return userService.cancelOrder(id, comments, null);
     }
 
-    @RequestMapping(value = "/orderList", method = RequestMethod.GET)
-    public BaseResult queryOrder(@RequestParam(value="id", defaultValue="-1")int id, String beginMakedate,
-                                String endMakedate, String arrival, String departure,
-                                String statusCode, String reservationType, String hotelCode,
-                                String firstname, String lastname, @RequestParam(value="pageSize", defaultValue="10")int pageSize,
-                                @RequestParam(value="currentPage", defaultValue="1")int currentPage, HttpSession httpSession) {
-
-        JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
-        List<String> info = UserUtil.getCardAndType(user,  lpsConfig.getRegister().getMembershipCardTypeCode());
-
-        BaseResult baseResult = userService.queryOrder(id, beginMakedate, endMakedate, arrival, departure, statusCode,
-                reservationType, hotelCode, firstname, lastname, null,
-                info.get(1), info.get(0), pageSize, currentPage);
-
-        return baseResult;
-    }
-
 }

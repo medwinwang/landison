@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>ChangeOrderToPartyIn complex typeµÄ Java Àà¡£
+ * <p>ChangeOrderToPartyIn complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="ChangeOrderToPartyIn"&gt;
@@ -48,7 +48,7 @@ public class ChangeOrderToPartyIn {
     protected String externalUser;
 
     /**
-     * »ñÈ¡orderIdÊôĞÔµÄÖµ¡£
+     * è·å–orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getOrderId() {
@@ -56,7 +56,7 @@ public class ChangeOrderToPartyIn {
     }
 
     /**
-     * ÉèÖÃorderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setOrderId(int value) {
@@ -64,7 +64,7 @@ public class ChangeOrderToPartyIn {
     }
 
     /**
-     * »ñÈ¡fromOrderIdÊôĞÔµÄÖµ¡£
+     * è·å–fromOrderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getFromOrderId() {
@@ -72,7 +72,7 @@ public class ChangeOrderToPartyIn {
     }
 
     /**
-     * ÉèÖÃfromOrderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®fromOrderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setFromOrderId(int value) {
@@ -80,7 +80,7 @@ public class ChangeOrderToPartyIn {
     }
 
     /**
-     * »ñÈ¡toOrderIdÊôĞÔµÄÖµ¡£
+     * è·å–toOrderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getToOrderId() {
@@ -88,7 +88,7 @@ public class ChangeOrderToPartyIn {
     }
 
     /**
-     * ÉèÖÃtoOrderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®toOrderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setToOrderId(int value) {
@@ -96,7 +96,7 @@ public class ChangeOrderToPartyIn {
     }
 
     /**
-     * »ñÈ¡externalUserÊôĞÔµÄÖµ¡£
+     * è·å–externalUserå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -108,7 +108,7 @@ public class ChangeOrderToPartyIn {
     }
 
     /**
-     * ÉèÖÃexternalUserÊôĞÔµÄÖµ¡£
+     * è®¾ç½®externalUserå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

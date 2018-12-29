@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>OrderInfoPackage complex typeµÄ Java Àà¡£
+ * <p>OrderInfoPackage complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="OrderInfoPackage"&gt;
@@ -40,7 +40,7 @@ public class OrderInfoPackage {
     protected ArrayOfDailyPackage dailyPackages;
 
     /**
-     * »ñÈ¡packageÊôĞÔµÄÖµ¡£
+     * è·å–packageå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class OrderInfoPackage {
     }
 
     /**
-     * ÉèÖÃpackageÊôĞÔµÄÖµ¡£
+     * è®¾ç½®packageå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class OrderInfoPackage {
     }
 
     /**
-     * »ñÈ¡dailyPackagesÊôĞÔµÄÖµ¡£
+     * è·å–dailyPackageså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class OrderInfoPackage {
     }
 
     /**
-     * ÉèÖÃdailyPackagesÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dailyPackageså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

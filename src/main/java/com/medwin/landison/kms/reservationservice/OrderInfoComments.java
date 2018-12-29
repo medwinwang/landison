@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>OrderInfoComments complex typeµÄ Java Àà¡£
+ * <p>OrderInfoComments complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="OrderInfoComments"&gt;
@@ -46,7 +46,7 @@ public class OrderInfoComments
     protected String comments;
 
     /**
-     * »ñÈ¡orderIDÊôĞÔµÄÖµ¡£
+     * è·å–orderIDå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getOrderID() {
@@ -54,7 +54,7 @@ public class OrderInfoComments
     }
 
     /**
-     * ÉèÖÃorderIDÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderIDå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setOrderID(int value) {
@@ -62,7 +62,7 @@ public class OrderInfoComments
     }
 
     /**
-     * »ñÈ¡reservationTypeÊôĞÔµÄÖµ¡£
+     * è·å–reservationTypeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -74,7 +74,7 @@ public class OrderInfoComments
     }
 
     /**
-     * ÉèÖÃreservationTypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®reservationTypeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -86,7 +86,7 @@ public class OrderInfoComments
     }
 
     /**
-     * »ñÈ¡commentsÊôĞÔµÄÖµ¡£
+     * è·å–commentså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -98,7 +98,7 @@ public class OrderInfoComments
     }
 
     /**
-     * ÉèÖÃcommentsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®commentså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

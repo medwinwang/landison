@@ -3,6 +3,7 @@ package com.medwin.landison.kms.reservationservice;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -17,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="request" type="{http://www.shijinet.com.cn/kunlun/kws/1.1/}RemovePartyIn" minOccurs="0"/&gt;
+ *         &lt;element name="EditOrderInfoCommentsResult" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -28,35 +29,28 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "request"
+    "editOrderInfoCommentsResult"
 })
-@XmlRootElement(name = "RemoveParty")
-public class RemoveParty {
+@XmlRootElement(name = "EditOrderInfoCommentsResponse")
+public class EditOrderInfoCommentsResponse {
 
-    protected RemovePartyIn request;
+    @XmlElement(name = "EditOrderInfoCommentsResult")
+    protected boolean editOrderInfoCommentsResult;
 
     /**
-     * 获取request属性的值。
+     * 获取editOrderInfoCommentsResult属性的值。
      * 
-     * @return
-     *     possible object is
-     *     {@link RemovePartyIn }
-     *     
      */
-    public RemovePartyIn getRequest() {
-        return request;
+    public boolean isEditOrderInfoCommentsResult() {
+        return editOrderInfoCommentsResult;
     }
 
     /**
-     * 设置request属性的值。
+     * 设置editOrderInfoCommentsResult属性的值。
      * 
-     * @param value
-     *     allowed object is
-     *     {@link RemovePartyIn }
-     *     
      */
-    public void setRequest(RemovePartyIn value) {
-        this.request = value;
+    public void setEditOrderInfoCommentsResult(boolean value) {
+        this.editOrderInfoCommentsResult = value;
     }
 
 }

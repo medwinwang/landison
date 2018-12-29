@@ -2,18 +2,19 @@
 package com.medwin.landison.kms.reservationservice;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>OrderInfoDiscount complex type�� Java �ࡣ
+ * <p>OrderInfoDiscount complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="OrderInfoDiscount"&gt;
@@ -59,9 +60,10 @@ public class OrderInfoDiscount
     protected int id;
     @XmlElement(name = "OrderID")
     protected int orderID;
-    @XmlElement(name = "DiscountDt", required = true)
+    @XmlElement(name = "DiscountDt", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String discountDt;
+    protected Date discountDt;
     @XmlElement(name = "DiscountMethod")
     protected String discountMethod;
     @XmlElement(name = "DiscountAmount", required = true)
@@ -78,7 +80,7 @@ public class OrderInfoDiscount
     protected String discountPercentage;
 
     /**
-     * ��ȡid���Ե�ֵ��
+     * 获取id属性的值。
      * 
      */
     public int getID() {
@@ -86,7 +88,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ����id���Ե�ֵ��
+     * 设置id属性的值。
      * 
      */
     public void setID(int value) {
@@ -94,7 +96,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ��ȡorderID���Ե�ֵ��
+     * 获取orderID属性的值。
      * 
      */
     public int getOrderID() {
@@ -102,7 +104,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ����orderID���Ե�ֵ��
+     * 设置orderID属性的值。
      * 
      */
     public void setOrderID(int value) {
@@ -110,31 +112,31 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ��ȡdiscountDt���Ե�ֵ��
+     * 获取discountDt属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDiscountDt() {
+    public Date getDiscountDt() {
         return discountDt;
     }
 
     /**
-     * ����discountDt���Ե�ֵ��
+     * 设置discountDt属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDiscountDt(String value) {
+    public void setDiscountDt(Date value) {
         this.discountDt = value;
     }
 
     /**
-     * ��ȡdiscountMethod���Ե�ֵ��
+     * 获取discountMethod属性的值。
      * 
      * @return
      *     possible object is
@@ -146,7 +148,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ����discountMethod���Ե�ֵ��
+     * 设置discountMethod属性的值。
      * 
      * @param value
      *     allowed object is
@@ -158,7 +160,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ��ȡdiscountAmount���Ե�ֵ��
+     * 获取discountAmount属性的值。
      * 
      * @return
      *     possible object is
@@ -170,7 +172,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ����discountAmount���Ե�ֵ��
+     * 设置discountAmount属性的值。
      * 
      * @param value
      *     allowed object is
@@ -182,7 +184,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ��ȡserialNumber���Ե�ֵ��
+     * 获取serialNumber属性的值。
      * 
      * @return
      *     possible object is
@@ -194,7 +196,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ����serialNumber���Ե�ֵ��
+     * 设置serialNumber属性的值。
      * 
      * @param value
      *     allowed object is
@@ -206,7 +208,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ��ȡrecordNumber���Ե�ֵ��
+     * 获取recordNumber属性的值。
      * 
      * @return
      *     possible object is
@@ -218,7 +220,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ����recordNumber���Ե�ֵ��
+     * 设置recordNumber属性的值。
      * 
      * @param value
      *     allowed object is
@@ -230,7 +232,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ��ȡdiscountReasonCode���Ե�ֵ��
+     * 获取discountReasonCode属性的值。
      * 
      * @return
      *     possible object is
@@ -242,7 +244,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ����discountReasonCode���Ե�ֵ��
+     * 设置discountReasonCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -254,7 +256,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ��ȡdiscountReasonName���Ե�ֵ��
+     * 获取discountReasonName属性的值。
      * 
      * @return
      *     possible object is
@@ -266,7 +268,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ����discountReasonName���Ե�ֵ��
+     * 设置discountReasonName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -278,7 +280,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ��ȡdiscountPercentage���Ե�ֵ��
+     * 获取discountPercentage属性的值。
      * 
      * @return
      *     possible object is
@@ -290,7 +292,7 @@ public class OrderInfoDiscount
     }
 
     /**
-     * ����discountPercentage���Ե�ֵ��
+     * 设置discountPercentage属性的值。
      * 
      * @param value
      *     allowed object is

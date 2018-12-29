@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>OriginalOrderInfo complex typeµÄ Java Àà¡£
+ * <p>OriginalOrderInfo complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="OriginalOrderInfo"&gt;
@@ -64,7 +64,7 @@ public class OriginalOrderInfo {
     protected String originalOrderId;
 
     /**
-     * »ñÈ¡originalFirstNameÊôĞÔµÄÖµ¡£
+     * è·å–originalFirstNameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * ÉèÖÃoriginalFirstNameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®originalFirstNameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -88,7 +88,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * »ñÈ¡originalBundledRoomCodeÊôĞÔµÄÖµ¡£
+     * è·å–originalBundledRoomCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -100,7 +100,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * ÉèÖÃoriginalBundledRoomCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®originalBundledRoomCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -112,7 +112,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * »ñÈ¡originalIdListÊôĞÔµÄÖµ¡£
+     * è·å–originalIdListå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -124,7 +124,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * ÉèÖÃoriginalIdListÊôĞÔµÄÖµ¡£
+     * è®¾ç½®originalIdListå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -136,7 +136,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * »ñÈ¡originalIdÊôĞÔµÄÖµ¡£
+     * è·å–originalIdå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -148,7 +148,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * ÉèÖÃoriginalIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®originalIdå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -160,7 +160,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * »ñÈ¡originaStatusÊôĞÔµÄÖµ¡£
+     * è·å–originaStatuså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -172,7 +172,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * ÉèÖÃoriginaStatusÊôĞÔµÄÖµ¡£
+     * è®¾ç½®originaStatuså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -184,7 +184,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * »ñÈ¡originalTotalRevenueÊôĞÔµÄÖµ¡£
+     * è·å–originalTotalRevenueå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -196,7 +196,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * ÉèÖÃoriginalTotalRevenueÊôĞÔµÄÖµ¡£
+     * è®¾ç½®originalTotalRevenueå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -208,7 +208,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * »ñÈ¡originalRoomNumÊôĞÔµÄÖµ¡£
+     * è·å–originalRoomNumå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -220,7 +220,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * ÉèÖÃoriginalRoomNumÊôĞÔµÄÖµ¡£
+     * è®¾ç½®originalRoomNumå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -232,7 +232,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * »ñÈ¡originalOrderIdÊôĞÔµÄÖµ¡£
+     * è·å–originalOrderIdå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -244,7 +244,7 @@ public class OriginalOrderInfo {
     }
 
     /**
-     * ÉèÖÃoriginalOrderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®originalOrderIdå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

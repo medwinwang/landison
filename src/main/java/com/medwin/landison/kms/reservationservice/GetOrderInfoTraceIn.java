@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>GetOrderInfoTraceIn complex typeµÄ Java Àà¡£
+ * <p>GetOrderInfoTraceIn complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="GetOrderInfoTraceIn"&gt;
@@ -36,7 +36,7 @@ public class GetOrderInfoTraceIn {
     protected int orderId;
 
     /**
-     * »ñÈ¡orderIdÊôĞÔµÄÖµ¡£
+     * è·å–orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getOrderId() {
@@ -44,7 +44,7 @@ public class GetOrderInfoTraceIn {
     }
 
     /**
-     * ÉèÖÃorderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setOrderId(int value) {

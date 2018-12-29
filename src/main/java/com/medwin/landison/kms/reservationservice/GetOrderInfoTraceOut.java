@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>GetOrderInfoTraceOut complex typeµÄ Java Àà¡£
+ * <p>GetOrderInfoTraceOut complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="GetOrderInfoTraceOut"&gt;
@@ -36,7 +36,7 @@ public class GetOrderInfoTraceOut {
     protected ArrayOfOrderInfoTraceTexts orderInfoTraceList;
 
     /**
-     * »ñÈ¡orderInfoTraceListÊôĞÔµÄÖµ¡£
+     * è·å–orderInfoTraceListå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class GetOrderInfoTraceOut {
     }
 
     /**
-     * ÉèÖÃorderInfoTraceListÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderInfoTraceListå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

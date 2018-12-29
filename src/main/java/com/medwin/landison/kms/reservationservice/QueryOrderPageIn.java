@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.reservationservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>QueryOrderPageIn complex type�� Java �ࡣ
+ * <p>QueryOrderPageIn complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="QueryOrderPageIn"&gt;
@@ -97,24 +98,30 @@ import java.lang.String;
 public class QueryOrderPageIn {
 
     protected int id;
-    @XmlElement(name = "BeginArrivalDate", required = true)
+    @XmlElement(name = "BeginArrivalDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginArrivalDate;
-    @XmlElement(name = "EndArrivalDate", required = true)
+    protected Date beginArrivalDate;
+    @XmlElement(name = "EndArrivalDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endArrivalDate;
-    @XmlElement(name = "BeginDepartureDate", required = true)
+    protected Date endArrivalDate;
+    @XmlElement(name = "BeginDepartureDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginDepartureDate;
-    @XmlElement(name = "EndDepartureDate", required = true)
+    protected Date beginDepartureDate;
+    @XmlElement(name = "EndDepartureDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endDepartureDate;
-    @XmlElement(name = "BeginInsertDate", required = true)
+    protected Date endDepartureDate;
+    @XmlElement(name = "BeginInsertDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginInsertDate;
-    @XmlElement(name = "EndInsertDate", required = true)
+    protected Date beginInsertDate;
+    @XmlElement(name = "EndInsertDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endInsertDate;
+    protected Date endInsertDate;
     @XmlElement(name = "Hotels")
     protected String hotels;
     @XmlElement(name = "FirstName")
@@ -122,7 +129,7 @@ public class QueryOrderPageIn {
     @XmlElement(name = "LastName")
     protected String lastName;
     @XmlElement(name = "ProfileId")
-    protected int profileId;
+    protected Integer profileId;
     @XmlElement(name = "Account")
     protected String account;
     @XmlElement(name = "CardNumber")
@@ -167,7 +174,7 @@ public class QueryOrderPageIn {
     protected String isRtOrigOrder;
 
     /**
-     * ��ȡid���Ե�ֵ��
+     * 获取id属性的值。
      * 
      */
     public int getId() {
@@ -175,7 +182,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����id���Ե�ֵ��
+     * 设置id属性的值。
      * 
      */
     public void setId(int value) {
@@ -183,151 +190,151 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡbeginArrivalDate���Ե�ֵ��
+     * 获取beginArrivalDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBeginArrivalDate() {
+    public Date getBeginArrivalDate() {
         return beginArrivalDate;
     }
 
     /**
-     * ����beginArrivalDate���Ե�ֵ��
+     * 设置beginArrivalDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginArrivalDate(String value) {
+    public void setBeginArrivalDate(Date value) {
         this.beginArrivalDate = value;
     }
 
     /**
-     * ��ȡendArrivalDate���Ե�ֵ��
+     * 获取endArrivalDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndArrivalDate() {
+    public Date getEndArrivalDate() {
         return endArrivalDate;
     }
 
     /**
-     * ����endArrivalDate���Ե�ֵ��
+     * 设置endArrivalDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndArrivalDate(String value) {
+    public void setEndArrivalDate(Date value) {
         this.endArrivalDate = value;
     }
 
     /**
-     * ��ȡbeginDepartureDate���Ե�ֵ��
+     * 获取beginDepartureDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBeginDepartureDate() {
+    public Date getBeginDepartureDate() {
         return beginDepartureDate;
     }
 
     /**
-     * ����beginDepartureDate���Ե�ֵ��
+     * 设置beginDepartureDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginDepartureDate(String value) {
+    public void setBeginDepartureDate(Date value) {
         this.beginDepartureDate = value;
     }
 
     /**
-     * ��ȡendDepartureDate���Ե�ֵ��
+     * 获取endDepartureDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndDepartureDate() {
+    public Date getEndDepartureDate() {
         return endDepartureDate;
     }
 
     /**
-     * ����endDepartureDate���Ե�ֵ��
+     * 设置endDepartureDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndDepartureDate(String value) {
+    public void setEndDepartureDate(Date value) {
         this.endDepartureDate = value;
     }
 
     /**
-     * ��ȡbeginInsertDate���Ե�ֵ��
+     * 获取beginInsertDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBeginInsertDate() {
+    public Date getBeginInsertDate() {
         return beginInsertDate;
     }
 
     /**
-     * ����beginInsertDate���Ե�ֵ��
+     * 设置beginInsertDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginInsertDate(String value) {
+    public void setBeginInsertDate(Date value) {
         this.beginInsertDate = value;
     }
 
     /**
-     * ��ȡendInsertDate���Ե�ֵ��
+     * 获取endInsertDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndInsertDate() {
+    public Date getEndInsertDate() {
         return endInsertDate;
     }
 
     /**
-     * ����endInsertDate���Ե�ֵ��
+     * 设置endInsertDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndInsertDate(String value) {
+    public void setEndInsertDate(Date value) {
         this.endInsertDate = value;
     }
 
     /**
-     * ��ȡhotels���Ե�ֵ��
+     * 获取hotels属性的值。
      * 
      * @return
      *     possible object is
@@ -339,7 +346,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����hotels���Ե�ֵ��
+     * 设置hotels属性的值。
      * 
      * @param value
      *     allowed object is
@@ -351,7 +358,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡfirstName���Ե�ֵ��
+     * 获取firstName属性的值。
      * 
      * @return
      *     possible object is
@@ -363,7 +370,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����firstName���Ե�ֵ��
+     * 设置firstName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -375,7 +382,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡlastName���Ե�ֵ��
+     * 获取lastName属性的值。
      * 
      * @return
      *     possible object is
@@ -387,7 +394,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����lastName���Ե�ֵ��
+     * 设置lastName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -399,23 +406,23 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡprofileId���Ե�ֵ��
+     * 获取profileId属性的值。
      * 
      */
-    public int getProfileId() {
+    public Integer getProfileId() {
         return profileId;
     }
 
     /**
-     * ����profileId���Ե�ֵ��
+     * 设置profileId属性的值。
      * 
      */
-    public void setProfileId(int value) {
+    public void setProfileId(Integer value) {
         this.profileId = value;
     }
 
     /**
-     * ��ȡaccount���Ե�ֵ��
+     * 获取account属性的值。
      * 
      * @return
      *     possible object is
@@ -427,7 +434,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����account���Ե�ֵ��
+     * 设置account属性的值。
      * 
      * @param value
      *     allowed object is
@@ -439,7 +446,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡcardNumber���Ե�ֵ��
+     * 获取cardNumber属性的值。
      * 
      * @return
      *     possible object is
@@ -451,7 +458,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����cardNumber���Ե�ֵ��
+     * 设置cardNumber属性的值。
      * 
      * @param value
      *     allowed object is
@@ -463,7 +470,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡphoneNumber���Ե�ֵ��
+     * 获取phoneNumber属性的值。
      * 
      * @return
      *     possible object is
@@ -475,7 +482,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����phoneNumber���Ե�ֵ��
+     * 设置phoneNumber属性的值。
      * 
      * @param value
      *     allowed object is
@@ -487,7 +494,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡparty���Ե�ֵ��
+     * 获取party属性的值。
      * 
      * @return
      *     possible object is
@@ -499,7 +506,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����party���Ե�ֵ��
+     * 设置party属性的值。
      * 
      * @param value
      *     allowed object is
@@ -511,7 +518,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡpageInfo���Ե�ֵ��
+     * 获取pageInfo属性的值。
      * 
      * @return
      *     possible object is
@@ -523,7 +530,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����pageInfo���Ե�ֵ��
+     * 设置pageInfo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -535,7 +542,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡblockCode���Ե�ֵ��
+     * 获取blockCode属性的值。
      * 
      * @return
      *     possible object is
@@ -547,7 +554,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����blockCode���Ե�ֵ��
+     * 设置blockCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -559,7 +566,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡchannelConfirmID���Ե�ֵ��
+     * 获取channelConfirmID属性的值。
      * 
      * @return
      *     possible object is
@@ -571,7 +578,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����channelConfirmID���Ե�ֵ��
+     * 设置channelConfirmID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -583,7 +590,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡpmsId���Ե�ֵ��
+     * 获取pmsId属性的值。
      * 
      * @return
      *     possible object is
@@ -595,7 +602,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����pmsId���Ե�ֵ��
+     * 设置pmsId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -607,7 +614,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡshareCode���Ե�ֵ��
+     * 获取shareCode属性的值。
      * 
      * @return
      *     possible object is
@@ -619,7 +626,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����shareCode���Ե�ֵ��
+     * 设置shareCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -631,7 +638,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡchannel���Ե�ֵ��
+     * 获取channel属性的值。
      * 
      * @return
      *     possible object is
@@ -643,7 +650,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����channel���Ե�ֵ��
+     * 设置channel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -655,7 +662,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡinsertUser���Ե�ֵ��
+     * 获取insertUser属性的值。
      * 
      * @return
      *     possible object is
@@ -667,7 +674,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����insertUser���Ե�ֵ��
+     * 设置insertUser属性的值。
      * 
      * @param value
      *     allowed object is
@@ -679,7 +686,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡcancelId���Ե�ֵ��
+     * 获取cancelId属性的值。
      * 
      * @return
      *     possible object is
@@ -691,7 +698,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����cancelId���Ե�ֵ��
+     * 设置cancelId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -703,7 +710,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡchannelCancelId���Ե�ֵ��
+     * 获取channelCancelId属性的值。
      * 
      * @return
      *     possible object is
@@ -715,7 +722,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����channelCancelId���Ե�ֵ��
+     * 设置channelCancelId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -727,7 +734,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡpmsCancelId���Ե�ֵ��
+     * 获取pmsCancelId属性的值。
      * 
      * @return
      *     possible object is
@@ -739,7 +746,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����pmsCancelId���Ե�ֵ��
+     * 设置pmsCancelId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -751,7 +758,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡchineseName���Ե�ֵ��
+     * 获取chineseName属性的值。
      * 
      * @return
      *     possible object is
@@ -763,7 +770,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����chineseName���Ե�ֵ��
+     * 设置chineseName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -775,7 +782,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡbookerName���Ե�ֵ��
+     * 获取bookerName属性的值。
      * 
      * @return
      *     possible object is
@@ -787,7 +794,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����bookerName���Ե�ֵ��
+     * 设置bookerName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -799,7 +806,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡbookerMobile���Ե�ֵ��
+     * 获取bookerMobile属性的值。
      * 
      * @return
      *     possible object is
@@ -811,7 +818,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����bookerMobile���Ե�ֵ��
+     * 设置bookerMobile属性的值。
      * 
      * @param value
      *     allowed object is
@@ -823,7 +830,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡstatusCode���Ե�ֵ��
+     * 获取statusCode属性的值。
      * 
      * @return
      *     possible object is
@@ -835,7 +842,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����statusCode���Ե�ֵ��
+     * 设置statusCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -847,7 +854,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡcompanyType���Ե�ֵ��
+     * 获取companyType属性的值。
      * 
      * @return
      *     possible object is
@@ -859,7 +866,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����companyType���Ե�ֵ��
+     * 设置companyType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -871,7 +878,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡroomNo���Ե�ֵ��
+     * 获取roomNo属性的值。
      * 
      * @return
      *     possible object is
@@ -883,7 +890,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����roomNo���Ե�ֵ��
+     * 设置roomNo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -895,7 +902,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ��ȡisRtOrigOrder���Ե�ֵ��
+     * 获取isRtOrigOrder属性的值。
      * 
      * @return
      *     possible object is
@@ -907,7 +914,7 @@ public class QueryOrderPageIn {
     }
 
     /**
-     * ����isRtOrigOrder���Ե�ֵ��
+     * 设置isRtOrigOrder属性的值。
      * 
      * @param value
      *     allowed object is

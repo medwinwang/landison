@@ -1,19 +1,20 @@
 
 package com.medwin.landison.kms.reservationservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>anonymous complex type�� Java �ࡣ
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -54,13 +55,14 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     protected boolean isRequiredCredit;
     protected String creditId;
     protected String cardHolder;
-    @XmlElement(required = true)
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String expire;
+    protected Date expire;
     protected boolean isCancelPayment;
 
     /**
-     * ��ȡpaymentGateway���Ե�ֵ��
+     * 获取paymentGateway属性的值。
      * 
      * @return
      *     possible object is
@@ -72,7 +74,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * ����paymentGateway���Ե�ֵ��
+     * 设置paymentGateway属性的值。
      * 
      * @param value
      *     allowed object is
@@ -84,7 +86,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * ��ȡid���Ե�ֵ��
+     * 获取id属性的值。
      * 
      * @return
      *     possible object is
@@ -96,7 +98,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * ����id���Ե�ֵ��
+     * 设置id属性的值。
      * 
      * @param value
      *     allowed object is
@@ -108,7 +110,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * ��ȡisRequiredCredit���Ե�ֵ��
+     * 获取isRequiredCredit属性的值。
      * 
      */
     public boolean isIsRequiredCredit() {
@@ -116,7 +118,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * ����isRequiredCredit���Ե�ֵ��
+     * 设置isRequiredCredit属性的值。
      * 
      */
     public void setIsRequiredCredit(boolean value) {
@@ -124,7 +126,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * ��ȡcreditId���Ե�ֵ��
+     * 获取creditId属性的值。
      * 
      * @return
      *     possible object is
@@ -136,7 +138,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * ����creditId���Ե�ֵ��
+     * 设置creditId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -148,7 +150,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * ��ȡcardHolder���Ե�ֵ��
+     * 获取cardHolder属性的值。
      * 
      * @return
      *     possible object is
@@ -160,7 +162,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * ����cardHolder���Ե�ֵ��
+     * 设置cardHolder属性的值。
      * 
      * @param value
      *     allowed object is
@@ -172,31 +174,31 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * ��ȡexpire���Ե�ֵ��
+     * 获取expire属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getExpire() {
+    public Date getExpire() {
         return expire;
     }
 
     /**
-     * ����expire���Ե�ֵ��
+     * 设置expire属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setExpire(String value) {
+    public void setExpire(Date value) {
         this.expire = value;
     }
 
     /**
-     * ��ȡisCancelPayment���Ե�ֵ��
+     * 获取isCancelPayment属性的值。
      * 
      */
     public boolean isIsCancelPayment() {
@@ -204,7 +206,7 @@ public class AddAndUpdateOrderInfoPaymentGateway {
     }
 
     /**
-     * ����isCancelPayment���Ե�ֵ��
+     * 设置isCancelPayment属性的值。
      * 
      */
     public void setIsCancelPayment(boolean value) {

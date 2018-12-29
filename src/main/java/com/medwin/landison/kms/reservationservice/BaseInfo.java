@@ -1,19 +1,20 @@
 
 package com.medwin.landison.kms.reservationservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>BaseInfo complex type�� Java �ࡣ
+ * <p>BaseInfo complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="BaseInfo"&gt;
@@ -54,17 +55,19 @@ public abstract class BaseInfo {
 
     @XmlElement(name = "InsertUser")
     protected String insertUser;
-    @XmlElement(name = "InsertDate", required = true)
+    @XmlElement(name = "InsertDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String insertDate;
+    protected Date insertDate;
     @XmlElement(name = "UpdateUser")
     protected String updateUser;
-    @XmlElement(name = "UpdateDate", required = true)
+    @XmlElement(name = "UpdateDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String updateDate;
+    protected Date updateDate;
 
     /**
-     * ��ȡinsertUser���Ե�ֵ��
+     * 获取insertUser属性的值。
      * 
      * @return
      *     possible object is
@@ -76,7 +79,7 @@ public abstract class BaseInfo {
     }
 
     /**
-     * ����insertUser���Ե�ֵ��
+     * 设置insertUser属性的值。
      * 
      * @param value
      *     allowed object is
@@ -88,31 +91,31 @@ public abstract class BaseInfo {
     }
 
     /**
-     * ��ȡinsertDate���Ե�ֵ��
+     * 获取insertDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getInsertDate() {
+    public Date getInsertDate() {
         return insertDate;
     }
 
     /**
-     * ����insertDate���Ե�ֵ��
+     * 设置insertDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setInsertDate(String value) {
+    public void setInsertDate(Date value) {
         this.insertDate = value;
     }
 
     /**
-     * ��ȡupdateUser���Ե�ֵ��
+     * 获取updateUser属性的值。
      * 
      * @return
      *     possible object is
@@ -124,7 +127,7 @@ public abstract class BaseInfo {
     }
 
     /**
-     * ����updateUser���Ե�ֵ��
+     * 设置updateUser属性的值。
      * 
      * @param value
      *     allowed object is
@@ -136,26 +139,26 @@ public abstract class BaseInfo {
     }
 
     /**
-     * ��ȡupdateDate���Ե�ֵ��
+     * 获取updateDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getUpdateDate() {
+    public Date getUpdateDate() {
         return updateDate;
     }
 
     /**
-     * ����updateDate���Ե�ֵ��
+     * 设置updateDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setUpdateDate(String value) {
+    public void setUpdateDate(Date value) {
         this.updateDate = value;
     }
 

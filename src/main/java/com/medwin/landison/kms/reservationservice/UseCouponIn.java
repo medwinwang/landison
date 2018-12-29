@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>UseCouponIn complex typeµÄ Java Àà¡£
+ * <p>UseCouponIn complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="UseCouponIn"&gt;
@@ -44,7 +44,7 @@ public class UseCouponIn {
     protected String placeCode;
 
     /**
-     * »ñÈ¡serialNumberÊôĞÔµÄÖµ¡£
+     * è·å–serialNumberå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -56,7 +56,7 @@ public class UseCouponIn {
     }
 
     /**
-     * ÉèÖÃserialNumberÊôĞÔµÄÖµ¡£
+     * è®¾ç½®serialNumberå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -68,7 +68,7 @@ public class UseCouponIn {
     }
 
     /**
-     * »ñÈ¡cardNoÊôĞÔµÄÖµ¡£
+     * è·å–cardNoå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class UseCouponIn {
     }
 
     /**
-     * ÉèÖÃcardNoÊôĞÔµÄÖµ¡£
+     * è®¾ç½®cardNoå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -92,7 +92,7 @@ public class UseCouponIn {
     }
 
     /**
-     * »ñÈ¡placeCodeÊôĞÔµÄÖµ¡£
+     * è·å–placeCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -104,7 +104,7 @@ public class UseCouponIn {
     }
 
     /**
-     * ÉèÖÃplaceCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®placeCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>QueryOrderPageOut complex typeµÄ Java Àà¡£
+ * <p>QueryOrderPageOut complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="QueryOrderPageOut"&gt;
@@ -40,7 +40,7 @@ public class QueryOrderPageOut {
     protected PageInfo pageInfo;
 
     /**
-     * »ñÈ¡orderInfosÊôĞÔµÄÖµ¡£
+     * è·å–orderInfoså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class QueryOrderPageOut {
     }
 
     /**
-     * ÉèÖÃorderInfosÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderInfoså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class QueryOrderPageOut {
     }
 
     /**
-     * »ñÈ¡pageInfoÊôĞÔµÄÖµ¡£
+     * è·å–pageInfoå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class QueryOrderPageOut {
     }
 
     /**
-     * ÉèÖÃpageInfoÊôĞÔµÄÖµ¡£
+     * è®¾ç½®pageInfoå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

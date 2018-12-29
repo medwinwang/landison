@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>GiveUpOrderReserveReasonIn complex typeµÄ Java Àà¡£
+ * <p>GiveUpOrderReserveReasonIn complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="GiveUpOrderReserveReasonIn"&gt;
@@ -60,7 +60,7 @@ public class GiveUpOrderReserveReasonIn {
     protected String channelCode;
 
     /**
-     * »ñÈ¡externalUserCodeÊôĞÔµÄÖµ¡£
+     * è·å–externalUserCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -72,7 +72,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * ÉèÖÃexternalUserCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®externalUserCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -84,7 +84,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * »ñÈ¡reasonCodeÊôĞÔµÄÖµ¡£
+     * è·å–reasonCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -96,7 +96,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * ÉèÖÃreasonCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®reasonCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -108,7 +108,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * »ñÈ¡guestTypeÊôĞÔµÄÖµ¡£
+     * è·å–guestTypeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -120,7 +120,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * ÉèÖÃguestTypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®guestTypeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -132,7 +132,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * »ñÈ¡guestIDÊôĞÔµÄÖµ¡£
+     * è·å–guestIDå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -144,7 +144,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * ÉèÖÃguestIDÊôĞÔµÄÖµ¡£
+     * è®¾ç½®guestIDå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -156,7 +156,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * »ñÈ¡commentÊôĞÔµÄÖµ¡£
+     * è·å–commentå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -168,7 +168,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * ÉèÖÃcommentÊôĞÔµÄÖµ¡£
+     * è®¾ç½®commentå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -180,7 +180,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * »ñÈ¡hotelCodeÊôĞÔµÄÖµ¡£
+     * è·å–hotelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -192,7 +192,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®hotelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -204,7 +204,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * »ñÈ¡channelCodeÊôĞÔµÄÖµ¡£
+     * è·å–channelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -216,7 +216,7 @@ public class GiveUpOrderReserveReasonIn {
     }
 
     /**
-     * ÉèÖÃchannelCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®channelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

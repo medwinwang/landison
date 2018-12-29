@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>SaveOrderInfoAlertOut complex typeµÄ Java Àà¡£
+ * <p>SaveOrderInfoAlertOut complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="SaveOrderInfoAlertOut"&gt;
@@ -40,7 +40,7 @@ public class SaveOrderInfoAlertOut {
     protected OrderInfoAlerts orderInfoAlerts;
 
     /**
-     * »ñÈ¡resultÊôĞÔµÄÖµ¡£
+     * è·å–resultå±æ€§çš„å€¼ã€‚
      * 
      */
     public boolean isResult() {
@@ -48,7 +48,7 @@ public class SaveOrderInfoAlertOut {
     }
 
     /**
-     * ÉèÖÃresultÊôĞÔµÄÖµ¡£
+     * è®¾ç½®resultå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setResult(boolean value) {
@@ -56,7 +56,7 @@ public class SaveOrderInfoAlertOut {
     }
 
     /**
-     * »ñÈ¡orderInfoAlertsÊôĞÔµÄÖµ¡£
+     * è·å–orderInfoAlertså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -68,7 +68,7 @@ public class SaveOrderInfoAlertOut {
     }
 
     /**
-     * ÉèÖÃorderInfoAlertsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderInfoAlertså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

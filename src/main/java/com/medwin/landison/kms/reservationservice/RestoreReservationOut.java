@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>RestoreReservationOut complex typeµÄ Java Àà¡£
+ * <p>RestoreReservationOut complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="RestoreReservationOut"&gt;
@@ -36,7 +36,7 @@ public class RestoreReservationOut {
     protected boolean result;
 
     /**
-     * »ñÈ¡resultÊôĞÔµÄÖµ¡£
+     * è·å–resultå±æ€§çš„å€¼ã€‚
      * 
      */
     public boolean isResult() {
@@ -44,7 +44,7 @@ public class RestoreReservationOut {
     }
 
     /**
-     * ÉèÖÃresultÊôĞÔµÄÖµ¡£
+     * è®¾ç½®resultå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setResult(boolean value) {

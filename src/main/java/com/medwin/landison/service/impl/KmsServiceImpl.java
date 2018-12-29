@@ -20,6 +20,7 @@ import org.apache.cxf.interceptor.Interceptor;
 import org.apache.cxf.interceptor.LoggingInInterceptor;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.apache.cxf.message.Message;
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -130,18 +131,7 @@ public class KmsServiceImpl implements KmsService {
         return reservationSoap.createReservation(orderInfo);
     }
 
-    @Override
-    public List<OrderInfo> getOrderInfoByGuestType(String guestType, String account, String beginMakedate,
-                                                    String endMakedate) {
 
-        ArrayOfOrderInfo arrayOfOrderInfo =  reservationSoap.getOrderInfoByGuestType(guestType,
-                account, beginMakedate, endMakedate);
-        if(arrayOfOrderInfo != null) {
-            return arrayOfOrderInfo.getOrderInfo();
-        }
-
-        return null;
-    }
 
     public boolean cancelOrder(int id, String comments, String croPermission){
 
@@ -149,29 +139,53 @@ public class KmsServiceImpl implements KmsService {
     }
 
     @Override
-    public ExtraOrderInfoSummary orderQueryPerPage(int id, String beginMakedate, String endMakedate, String arrival, String departure,
-                                                           String statusCode, String reservationType, String hotelCode,
-                                                           String firstname, String lastname, String guestId, String account,
-                                                           String guestType, int pageSize, int currentPage) {
+    public QueryOrderPageOut queryOrderPage(int id, String beginArrivalDate, String endArrivalDate, String beginDepartureDate, String endDepartureDate,
+                                            String beginInsertDate, String endInsertDate, String hotels, String firstName,
+                                            String lastName, int profileId, String account, String cardNumber,
+                                            String phoneNumber, String statusCode, int pageIndex, int pageSize) {
 
-        QueryGuestInfoIn queryGuestInfoIn = new QueryGuestInfoIn();
-//        profileSoap.queryGuestInfo()
-        if(StringUtils.isEmpty(beginMakedate)) {
-            beginMakedate = null;
+        QueryOrderPageIn queryOrderPageIn = new QueryOrderPageIn();
+        queryOrderPageIn.setId(id);
+        if(!StringUtils.isEmpty(beginArrivalDate)) {
+            queryOrderPageIn.setBeginArrivalDate(new DateTime(beginArrivalDate).toDate());
         }
-        if(StringUtils.isEmpty(endMakedate)) {
-            endMakedate = null;
+        if(!StringUtils.isEmpty(endArrivalDate)) {
+            queryOrderPageIn.setBeginArrivalDate(new DateTime(endArrivalDate).toDate());
         }
-        if(StringUtils.isEmpty(arrival)) {
-            arrival = null;
+        if(!StringUtils.isEmpty(beginDepartureDate)) {
+            queryOrderPageIn.setBeginArrivalDate(new DateTime(beginDepartureDate).toDate());
         }
-        if(StringUtils.isEmpty(departure)) {
-            departure = null;
+        if(!StringUtils.isEmpty(endDepartureDate)) {
+            queryOrderPageIn.setBeginArrivalDate(new DateTime(endDepartureDate).toDate());
         }
-        ExtraOrderInfoSummary infoSummary = reservationSoap.orderQueryPerPage(id, beginMakedate, endMakedate,
-                arrival, departure, statusCode, reservationType, hotelCode, firstname, lastname, guestId,
-                account, guestType, pageSize, currentPage);
-        return infoSummary;
+        if(!StringUtils.isEmpty(beginInsertDate)) {
+            queryOrderPageIn.setBeginArrivalDate(new DateTime(beginInsertDate).toDate());
+        }
+        if(!StringUtils.isEmpty(endInsertDate)) {
+            queryOrderPageIn.setBeginArrivalDate(new DateTime(endInsertDate).toDate());
+        }
+        queryOrderPageIn.setHotels(hotels);
+        queryOrderPageIn.setFirstName(firstName);
+        queryOrderPageIn.setLastName(lastName);
+        if(profileId > 0) {
+            queryOrderPageIn.setProfileId(profileId);
+        }
+        queryOrderPageIn.setAccount(account);
+        queryOrderPageIn.setCardNumber(cardNumber);
+        queryOrderPageIn.setPhoneNumber(phoneNumber);
+        queryOrderPageIn.setStatusCode(statusCode);
+
+        PageInfo pageInfo = new PageInfo();
+        pageInfo.setPageIndex(pageIndex);
+        pageInfo.setPageSize(pageSize);
+        queryOrderPageIn.setPageInfo(pageInfo);
+
+        Party party = new Party();
+        party.setPartyAction(PartyAction.SELECT);
+        queryOrderPageIn.setParty(party);
+
+        QueryOrderPageOut queryOrderPageOut = reservationSoap.queryOrderPage(queryOrderPageIn);
+        return queryOrderPageOut;
     }
 
 

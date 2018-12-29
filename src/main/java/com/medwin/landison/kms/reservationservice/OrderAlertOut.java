@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>OrderAlertOut complex typeµÄ Java Àà¡£
+ * <p>OrderAlertOut complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="OrderAlertOut"&gt;
@@ -40,7 +40,7 @@ public class OrderAlertOut {
     protected PageInfo pageInfo;
 
     /**
-     * »ñÈ¡orderAlertListÊôĞÔµÄÖµ¡£
+     * è·å–orderAlertListå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class OrderAlertOut {
     }
 
     /**
-     * ÉèÖÃorderAlertListÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderAlertListå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class OrderAlertOut {
     }
 
     /**
-     * »ñÈ¡pageInfoÊôĞÔµÄÖµ¡£
+     * è·å–pageInfoå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class OrderAlertOut {
     }
 
     /**
-     * ÉèÖÃpageInfoÊôĞÔµÄÖµ¡£
+     * è®¾ç½®pageInfoå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

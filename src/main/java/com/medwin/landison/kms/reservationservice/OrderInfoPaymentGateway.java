@@ -2,18 +2,19 @@
 package com.medwin.landison.kms.reservationservice;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>OrderInfoPaymentGateway complex type�� Java �ࡣ
+ * <p>OrderInfoPaymentGateway complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="OrderInfoPaymentGateway"&gt;
@@ -77,9 +78,10 @@ public class OrderInfoPaymentGateway
     protected int id;
     @XmlElement(name = "OrderId")
     protected String orderId;
-    @XmlElement(name = "PaymentDate", required = true)
+    @XmlElement(name = "PaymentDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String paymentDate;
+    protected Date paymentDate;
     @XmlElement(name = "Amount_type", required = true)
     @XmlSchemaType(name = "string")
     protected AmountType amountType;
@@ -91,9 +93,10 @@ public class OrderInfoPaymentGateway
     protected String gatewayReferenceNo;
     @XmlElement(name = "GatewayIdentification")
     protected String gatewayIdentification;
-    @XmlElement(name = "ExpirePayment", required = true)
+    @XmlElement(name = "ExpirePayment", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String expirePayment;
+    protected Date expirePayment;
     @XmlElement(name = "CardHolderPayment")
     protected String cardHolderPayment;
     @XmlElement(name = "Category")
@@ -119,7 +122,7 @@ public class OrderInfoPaymentGateway
     protected boolean isCancelRule;
 
     /**
-     * ��ȡid���Ե�ֵ��
+     * 获取id属性的值。
      * 
      */
     public int getId() {
@@ -127,7 +130,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����id���Ե�ֵ��
+     * 设置id属性的值。
      * 
      */
     public void setId(int value) {
@@ -135,7 +138,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡorderId���Ե�ֵ��
+     * 获取orderId属性的值。
      * 
      * @return
      *     possible object is
@@ -147,7 +150,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����orderId���Ե�ֵ��
+     * 设置orderId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -159,31 +162,31 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡpaymentDate���Ե�ֵ��
+     * 获取paymentDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getPaymentDate() {
+    public Date getPaymentDate() {
         return paymentDate;
     }
 
     /**
-     * ����paymentDate���Ե�ֵ��
+     * 设置paymentDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setPaymentDate(String value) {
+    public void setPaymentDate(Date value) {
         this.paymentDate = value;
     }
 
     /**
-     * ��ȡamountType���Ե�ֵ��
+     * 获取amountType属性的值。
      * 
      * @return
      *     possible object is
@@ -195,7 +198,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����amountType���Ե�ֵ��
+     * 设置amountType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -207,7 +210,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡcurrency���Ե�ֵ��
+     * 获取currency属性的值。
      * 
      * @return
      *     possible object is
@@ -219,7 +222,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����currency���Ե�ֵ��
+     * 设置currency属性的值。
      * 
      * @param value
      *     allowed object is
@@ -231,7 +234,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡamount���Ե�ֵ��
+     * 获取amount属性的值。
      * 
      * @return
      *     possible object is
@@ -243,7 +246,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����amount���Ե�ֵ��
+     * 设置amount属性的值。
      * 
      * @param value
      *     allowed object is
@@ -255,7 +258,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡgatewayReferenceNo���Ե�ֵ��
+     * 获取gatewayReferenceNo属性的值。
      * 
      * @return
      *     possible object is
@@ -267,7 +270,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����gatewayReferenceNo���Ե�ֵ��
+     * 设置gatewayReferenceNo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -279,7 +282,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡgatewayIdentification���Ե�ֵ��
+     * 获取gatewayIdentification属性的值。
      * 
      * @return
      *     possible object is
@@ -291,7 +294,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����gatewayIdentification���Ե�ֵ��
+     * 设置gatewayIdentification属性的值。
      * 
      * @param value
      *     allowed object is
@@ -303,31 +306,31 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡexpirePayment���Ե�ֵ��
+     * 获取expirePayment属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getExpirePayment() {
+    public Date getExpirePayment() {
         return expirePayment;
     }
 
     /**
-     * ����expirePayment���Ե�ֵ��
+     * 设置expirePayment属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setExpirePayment(String value) {
+    public void setExpirePayment(Date value) {
         this.expirePayment = value;
     }
 
     /**
-     * ��ȡcardHolderPayment���Ե�ֵ��
+     * 获取cardHolderPayment属性的值。
      * 
      * @return
      *     possible object is
@@ -339,7 +342,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����cardHolderPayment���Ե�ֵ��
+     * 设置cardHolderPayment属性的值。
      * 
      * @param value
      *     allowed object is
@@ -351,7 +354,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡcategory���Ե�ֵ��
+     * 获取category属性的值。
      * 
      * @return
      *     possible object is
@@ -363,7 +366,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����category���Ե�ֵ��
+     * 设置category属性的值。
      * 
      * @param value
      *     allowed object is
@@ -375,7 +378,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡstatus���Ե�ֵ��
+     * 获取status属性的值。
      * 
      * @return
      *     possible object is
@@ -387,7 +390,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����status���Ե�ֵ��
+     * 设置status属性的值。
      * 
      * @param value
      *     allowed object is
@@ -399,7 +402,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡremark���Ե�ֵ��
+     * 获取remark属性的值。
      * 
      * @return
      *     possible object is
@@ -411,7 +414,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����remark���Ե�ֵ��
+     * 设置remark属性的值。
      * 
      * @param value
      *     allowed object is
@@ -423,7 +426,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡpoints���Ե�ֵ��
+     * 获取points属性的值。
      * 
      * @return
      *     possible object is
@@ -435,7 +438,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����points���Ե�ֵ��
+     * 设置points属性的值。
      * 
      * @param value
      *     allowed object is
@@ -447,7 +450,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡpaymentCode���Ե�ֵ��
+     * 获取paymentCode属性的值。
      * 
      * @return
      *     possible object is
@@ -459,7 +462,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����paymentCode���Ե�ֵ��
+     * 设置paymentCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -471,7 +474,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡorderType���Ե�ֵ��
+     * 获取orderType属性的值。
      * 
      * @return
      *     possible object is
@@ -483,7 +486,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����orderType���Ե�ֵ��
+     * 设置orderType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -495,7 +498,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡupdateStatus���Ե�ֵ��
+     * 获取updateStatus属性的值。
      * 
      * @return
      *     possible object is
@@ -507,7 +510,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����updateStatus���Ե�ֵ��
+     * 设置updateStatus属性的值。
      * 
      * @param value
      *     allowed object is
@@ -519,7 +522,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡuseCouponIn���Ե�ֵ��
+     * 获取useCouponIn属性的值。
      * 
      * @return
      *     possible object is
@@ -531,7 +534,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����useCouponIn���Ե�ֵ��
+     * 设置useCouponIn属性的值。
      * 
      * @param value
      *     allowed object is
@@ -543,7 +546,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ��ȡisCancelRule���Ե�ֵ��
+     * 获取isCancelRule属性的值。
      * 
      */
     public boolean isIsCancelRule() {
@@ -551,7 +554,7 @@ public class OrderInfoPaymentGateway
     }
 
     /**
-     * ����isCancelRule���Ե�ֵ��
+     * 设置isCancelRule属性的值。
      * 
      */
     public void setIsCancelRule(boolean value) {

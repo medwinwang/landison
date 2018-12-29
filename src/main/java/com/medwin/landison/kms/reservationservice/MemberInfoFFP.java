@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>MemberInfoFFP complex typeµÄ Java Àà¡£
+ * <p>MemberInfoFFP complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="MemberInfoFFP"&gt;
@@ -71,7 +71,7 @@ public class MemberInfoFFP
     protected BigDecimal mileages;
 
     /**
-     * »ñÈ¡memberNoÊôĞÔµÄÖµ¡£
+     * è·å–memberNoå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -83,7 +83,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * ÉèÖÃmemberNoÊôĞÔµÄÖµ¡£
+     * è®¾ç½®memberNoå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -95,7 +95,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * »ñÈ¡ffpIdÊôĞÔµÄÖµ¡£
+     * è·å–ffpIdå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -107,7 +107,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * ÉèÖÃffpIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®ffpIdå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -119,7 +119,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * »ñÈ¡ffpCardTypeÊôĞÔµÄÖµ¡£
+     * è·å–ffpCardTypeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -131,7 +131,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * ÉèÖÃffpCardTypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®ffpCardTypeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -143,7 +143,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * »ñÈ¡ffpCardLevelÊôĞÔµÄÖµ¡£
+     * è·å–ffpCardLevelå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -155,7 +155,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * ÉèÖÃffpCardLevelÊôĞÔµÄÖµ¡£
+     * è®¾ç½®ffpCardLevelå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -167,7 +167,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * »ñÈ¡ffpCardNoÊôĞÔµÄÖµ¡£
+     * è·å–ffpCardNoå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -179,7 +179,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * ÉèÖÃffpCardNoÊôĞÔµÄÖµ¡£
+     * è®¾ç½®ffpCardNoå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -191,7 +191,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * »ñÈ¡remarkÊôĞÔµÄÖµ¡£
+     * è·å–remarkå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -203,7 +203,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * ÉèÖÃremarkÊôĞÔµÄÖµ¡£
+     * è®¾ç½®remarkå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -215,7 +215,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * »ñÈ¡cardStatusÊôĞÔµÄÖµ¡£
+     * è·å–cardStatuså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -227,7 +227,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * ÉèÖÃcardStatusÊôĞÔµÄÖµ¡£
+     * è®¾ç½®cardStatuså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -239,7 +239,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * »ñÈ¡isBindingÊôĞÔµÄÖµ¡£
+     * è·å–isBindingå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -251,7 +251,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * ÉèÖÃisBindingÊôĞÔµÄÖµ¡£
+     * è®¾ç½®isBindingå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -263,7 +263,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * »ñÈ¡mileagesÊôĞÔµÄÖµ¡£
+     * è·å–mileageså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -275,7 +275,7 @@ public class MemberInfoFFP
     }
 
     /**
-     * ÉèÖÃmileagesÊôĞÔµÄÖµ¡£
+     * è®¾ç½®mileageså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

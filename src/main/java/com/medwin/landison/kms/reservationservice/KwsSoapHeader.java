@@ -12,9 +12,9 @@ import javax.xml.namespace.QName;
 
 
 /**
- * <p>KwsSoapHeader complex typeµÄ Java Àà¡£
+ * <p>KwsSoapHeader complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="KwsSoapHeader"&gt;
@@ -51,7 +51,7 @@ public class KwsSoapHeader {
     private Map<QName, String> otherAttributes = new HashMap<QName, String>();
 
     /**
-     * »ñÈ¡sessionIdÊôĞÔµÄÖµ¡£
+     * è·å–sessionIdå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -63,7 +63,7 @@ public class KwsSoapHeader {
     }
 
     /**
-     * ÉèÖÃsessionIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®sessionIdå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -75,7 +75,7 @@ public class KwsSoapHeader {
     }
 
     /**
-     * »ñÈ¡retCodeÊôĞÔµÄÖµ¡£
+     * è·å–retCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -87,7 +87,7 @@ public class KwsSoapHeader {
     }
 
     /**
-     * ÉèÖÃretCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®retCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -99,7 +99,7 @@ public class KwsSoapHeader {
     }
 
     /**
-     * »ñÈ¡errReasonÊôĞÔµÄÖµ¡£
+     * è·å–errReasonå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -111,7 +111,7 @@ public class KwsSoapHeader {
     }
 
     /**
-     * ÉèÖÃerrReasonÊôĞÔµÄÖµ¡£
+     * è®¾ç½®errReasonå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

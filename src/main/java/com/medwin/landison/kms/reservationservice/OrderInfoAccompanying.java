@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.reservationservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>OrderInfoAccompanying complex type�� Java �ࡣ
+ * <p>OrderInfoAccompanying complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="OrderInfoAccompanying"&gt;
@@ -70,9 +71,10 @@ public class OrderInfoAccompanying {
     protected String provinceCode;
     @XmlElement(name = "Address")
     protected String address;
-    @XmlElement(name = "Birthday", required = true)
+    @XmlElement(name = "Birthday", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String birthday;
+    protected Date birthday;
     @XmlElement(name = "Title")
     protected String title;
     @XmlElement(name = "Email")
@@ -83,7 +85,7 @@ public class OrderInfoAccompanying {
     protected String bookerName;
 
     /**
-     * ��ȡorderID���Ե�ֵ��
+     * 获取orderID属性的值。
      * 
      */
     public int getOrderID() {
@@ -91,7 +93,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ����orderID���Ե�ֵ��
+     * 设置orderID属性的值。
      * 
      */
     public void setOrderID(int value) {
@@ -99,7 +101,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ��ȡfirstName���Ե�ֵ��
+     * 获取firstName属性的值。
      * 
      * @return
      *     possible object is
@@ -111,7 +113,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ����firstName���Ե�ֵ��
+     * 设置firstName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -123,7 +125,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ��ȡlastName���Ե�ֵ��
+     * 获取lastName属性的值。
      * 
      * @return
      *     possible object is
@@ -135,7 +137,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ����lastName���Ե�ֵ��
+     * 设置lastName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -147,7 +149,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ��ȡmobile���Ե�ֵ��
+     * 获取mobile属性的值。
      * 
      * @return
      *     possible object is
@@ -159,7 +161,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ����mobile���Ե�ֵ��
+     * 设置mobile属性的值。
      * 
      * @param value
      *     allowed object is
@@ -171,7 +173,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ��ȡcountryCode���Ե�ֵ��
+     * 获取countryCode属性的值。
      * 
      * @return
      *     possible object is
@@ -183,7 +185,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ����countryCode���Ե�ֵ��
+     * 设置countryCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -195,7 +197,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ��ȡprovinceCode���Ե�ֵ��
+     * 获取provinceCode属性的值。
      * 
      * @return
      *     possible object is
@@ -207,7 +209,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ����provinceCode���Ե�ֵ��
+     * 设置provinceCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -219,7 +221,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ��ȡaddress���Ե�ֵ��
+     * 获取address属性的值。
      * 
      * @return
      *     possible object is
@@ -231,7 +233,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ����address���Ե�ֵ��
+     * 设置address属性的值。
      * 
      * @param value
      *     allowed object is
@@ -243,31 +245,31 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ��ȡbirthday���Ե�ֵ��
+     * 获取birthday属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
     /**
-     * ����birthday���Ե�ֵ��
+     * 设置birthday属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBirthday(String value) {
+    public void setBirthday(Date value) {
         this.birthday = value;
     }
 
     /**
-     * ��ȡtitle���Ե�ֵ��
+     * 获取title属性的值。
      * 
      * @return
      *     possible object is
@@ -279,7 +281,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ����title���Ե�ֵ��
+     * 设置title属性的值。
      * 
      * @param value
      *     allowed object is
@@ -291,7 +293,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ��ȡemail���Ե�ֵ��
+     * 获取email属性的值。
      * 
      * @return
      *     possible object is
@@ -303,7 +305,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ����email���Ե�ֵ��
+     * 设置email属性的值。
      * 
      * @param value
      *     allowed object is
@@ -315,7 +317,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ��ȡchineseName���Ե�ֵ��
+     * 获取chineseName属性的值。
      * 
      * @return
      *     possible object is
@@ -327,7 +329,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ����chineseName���Ե�ֵ��
+     * 设置chineseName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -339,7 +341,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ��ȡbookerName���Ե�ֵ��
+     * 获取bookerName属性的值。
      * 
      * @return
      *     possible object is
@@ -351,7 +353,7 @@ public class OrderInfoAccompanying {
     }
 
     /**
-     * ����bookerName���Ե�ֵ��
+     * 设置bookerName属性的值。
      * 
      * @param value
      *     allowed object is

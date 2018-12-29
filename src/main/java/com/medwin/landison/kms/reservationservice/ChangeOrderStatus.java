@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -47,7 +47,7 @@ public class ChangeOrderStatus {
     protected String croPermission;
 
     /**
-     * »ñÈ¡statusÊôĞÔµÄÖµ¡£
+     * è·å–statuså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -59,7 +59,7 @@ public class ChangeOrderStatus {
     }
 
     /**
-     * ÉèÖÃstatusÊôĞÔµÄÖµ¡£
+     * è®¾ç½®statuså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -71,7 +71,7 @@ public class ChangeOrderStatus {
     }
 
     /**
-     * »ñÈ¡orderIdÊôĞÔµÄÖµ¡£
+     * è·å–orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getOrderId() {
@@ -79,7 +79,7 @@ public class ChangeOrderStatus {
     }
 
     /**
-     * ÉèÖÃorderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setOrderId(int value) {
@@ -87,7 +87,7 @@ public class ChangeOrderStatus {
     }
 
     /**
-     * »ñÈ¡croPermissionÊôĞÔµÄÖµ¡£
+     * è·å–croPermissionå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -99,7 +99,7 @@ public class ChangeOrderStatus {
     }
 
     /**
-     * ÉèÖÃcroPermissionÊôĞÔµÄÖµ¡£
+     * è®¾ç½®croPermissionå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

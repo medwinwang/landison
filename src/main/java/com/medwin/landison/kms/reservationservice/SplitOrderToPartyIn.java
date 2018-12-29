@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>SplitOrderToPartyIn complex typeµÄ Java Àà¡£
+ * <p>SplitOrderToPartyIn complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="SplitOrderToPartyIn"&gt;
@@ -40,7 +40,7 @@ public class SplitOrderToPartyIn {
     protected String externalUser;
 
     /**
-     * »ñÈ¡orderIdÊôĞÔµÄÖµ¡£
+     * è·å–orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getOrderId() {
@@ -48,7 +48,7 @@ public class SplitOrderToPartyIn {
     }
 
     /**
-     * ÉèÖÃorderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setOrderId(int value) {
@@ -56,7 +56,7 @@ public class SplitOrderToPartyIn {
     }
 
     /**
-     * »ñÈ¡externalUserÊôĞÔµÄÖµ¡£
+     * è·å–externalUserå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -68,7 +68,7 @@ public class SplitOrderToPartyIn {
     }
 
     /**
-     * ÉèÖÃexternalUserÊôĞÔµÄÖµ¡£
+     * è®¾ç½®externalUserå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -38,7 +38,7 @@ public class ConfirmOrderAlertResponse {
     protected boolean confirmOrderAlertResult;
 
     /**
-     * »ñÈ¡confirmOrderAlertResultÊôĞÔµÄÖµ¡£
+     * è·å–confirmOrderAlertResultå±æ€§çš„å€¼ã€‚
      * 
      */
     public boolean isConfirmOrderAlertResult() {
@@ -46,7 +46,7 @@ public class ConfirmOrderAlertResponse {
     }
 
     /**
-     * ÉèÖÃconfirmOrderAlertResultÊôĞÔµÄÖµ¡£
+     * è®¾ç½®confirmOrderAlertResultå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setConfirmOrderAlertResult(boolean value) {

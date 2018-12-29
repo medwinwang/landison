@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.reservationservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>OrderInfoTraceTexts complex type�� Java �ࡣ
+ * <p>OrderInfoTraceTexts complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="OrderInfoTraceTexts"&gt;
@@ -56,23 +57,25 @@ public class OrderInfoTraceTexts {
     protected int orderId;
     @XmlElement(name = "ItemCode")
     protected String itemCode;
-    @XmlElement(name = "TraceDate", required = true)
+    @XmlElement(name = "TraceDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String traceDate;
+    protected Date traceDate;
     @XmlElement(name = "PmsDepartmentCode")
     protected String pmsDepartmentCode;
     @XmlElement(name = "PmsDepartmentName")
     protected String pmsDepartmentName;
     @XmlElement(name = "TraceTexts")
     protected String traceTexts;
-    @XmlElement(name = "ResolveDate", required = true)
+    @XmlElement(name = "ResolveDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String resolveDate;
+    protected Date resolveDate;
     @XmlElement(name = "ResolveUser")
     protected String resolveUser;
 
     /**
-     * ��ȡid���Ե�ֵ��
+     * 获取id属性的值。
      * 
      */
     public int getId() {
@@ -80,7 +83,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ����id���Ե�ֵ��
+     * 设置id属性的值。
      * 
      */
     public void setId(int value) {
@@ -88,7 +91,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ��ȡorderId���Ե�ֵ��
+     * 获取orderId属性的值。
      * 
      */
     public int getOrderId() {
@@ -96,7 +99,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ����orderId���Ե�ֵ��
+     * 设置orderId属性的值。
      * 
      */
     public void setOrderId(int value) {
@@ -104,7 +107,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ��ȡitemCode���Ե�ֵ��
+     * 获取itemCode属性的值。
      * 
      * @return
      *     possible object is
@@ -116,7 +119,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ����itemCode���Ե�ֵ��
+     * 设置itemCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -128,31 +131,31 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ��ȡtraceDate���Ե�ֵ��
+     * 获取traceDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getTraceDate() {
+    public Date getTraceDate() {
         return traceDate;
     }
 
     /**
-     * ����traceDate���Ե�ֵ��
+     * 设置traceDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setTraceDate(String value) {
+    public void setTraceDate(Date value) {
         this.traceDate = value;
     }
 
     /**
-     * ��ȡpmsDepartmentCode���Ե�ֵ��
+     * 获取pmsDepartmentCode属性的值。
      * 
      * @return
      *     possible object is
@@ -164,7 +167,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ����pmsDepartmentCode���Ե�ֵ��
+     * 设置pmsDepartmentCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -176,7 +179,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ��ȡpmsDepartmentName���Ե�ֵ��
+     * 获取pmsDepartmentName属性的值。
      * 
      * @return
      *     possible object is
@@ -188,7 +191,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ����pmsDepartmentName���Ե�ֵ��
+     * 设置pmsDepartmentName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -200,7 +203,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ��ȡtraceTexts���Ե�ֵ��
+     * 获取traceTexts属性的值。
      * 
      * @return
      *     possible object is
@@ -212,7 +215,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ����traceTexts���Ե�ֵ��
+     * 设置traceTexts属性的值。
      * 
      * @param value
      *     allowed object is
@@ -224,31 +227,31 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ��ȡresolveDate���Ե�ֵ��
+     * 获取resolveDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getResolveDate() {
+    public Date getResolveDate() {
         return resolveDate;
     }
 
     /**
-     * ����resolveDate���Ե�ֵ��
+     * 设置resolveDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setResolveDate(String value) {
+    public void setResolveDate(Date value) {
         this.resolveDate = value;
     }
 
     /**
-     * ��ȡresolveUser���Ե�ֵ��
+     * 获取resolveUser属性的值。
      * 
      * @return
      *     possible object is
@@ -260,7 +263,7 @@ public class OrderInfoTraceTexts {
     }
 
     /**
-     * ����resolveUser���Ե�ֵ��
+     * 设置resolveUser属性的值。
      * 
      * @param value
      *     allowed object is

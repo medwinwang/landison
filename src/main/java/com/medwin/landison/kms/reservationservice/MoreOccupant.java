@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>MoreOccupant complex typeµÄ Java Àà¡£
+ * <p>MoreOccupant complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="MoreOccupant"&gt;
@@ -46,7 +46,7 @@ public class MoreOccupant
     protected String occupantChineseName;
 
     /**
-     * »ñÈ¡occupantFirstNameÊôĞÔµÄÖµ¡£
+     * è·å–occupantFirstNameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -58,7 +58,7 @@ public class MoreOccupant
     }
 
     /**
-     * ÉèÖÃoccupantFirstNameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®occupantFirstNameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -70,7 +70,7 @@ public class MoreOccupant
     }
 
     /**
-     * »ñÈ¡occupantLastNameÊôĞÔµÄÖµ¡£
+     * è·å–occupantLastNameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -82,7 +82,7 @@ public class MoreOccupant
     }
 
     /**
-     * ÉèÖÃoccupantLastNameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®occupantLastNameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -94,7 +94,7 @@ public class MoreOccupant
     }
 
     /**
-     * »ñÈ¡occupantChineseNameÊôĞÔµÄÖµ¡£
+     * è·å–occupantChineseNameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -106,7 +106,7 @@ public class MoreOccupant
     }
 
     /**
-     * ÉèÖÃoccupantChineseNameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®occupantChineseNameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

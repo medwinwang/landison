@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>SaveOrderInfoAlertIn complex typeµÄ Java Àà¡£
+ * <p>SaveOrderInfoAlertIn complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="SaveOrderInfoAlertIn"&gt;
@@ -44,7 +44,7 @@ public class SaveOrderInfoAlertIn {
     protected OrderInfoAlerts orderInfoAlerts;
 
     /**
-     * »ñÈ¡saveActionÊôĞÔµÄÖµ¡£
+     * è·å–saveActionå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -56,7 +56,7 @@ public class SaveOrderInfoAlertIn {
     }
 
     /**
-     * ÉèÖÃsaveActionÊôĞÔµÄÖµ¡£
+     * è®¾ç½®saveActionå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -68,7 +68,7 @@ public class SaveOrderInfoAlertIn {
     }
 
     /**
-     * »ñÈ¡externalUserÊôĞÔµÄÖµ¡£
+     * è·å–externalUserå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class SaveOrderInfoAlertIn {
     }
 
     /**
-     * ÉèÖÃexternalUserÊôĞÔµÄÖµ¡£
+     * è®¾ç½®externalUserå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -92,7 +92,7 @@ public class SaveOrderInfoAlertIn {
     }
 
     /**
-     * »ñÈ¡orderInfoAlertsÊôĞÔµÄÖµ¡£
+     * è·å–orderInfoAlertså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -104,7 +104,7 @@ public class SaveOrderInfoAlertIn {
     }
 
     /**
-     * ÉèÖÃorderInfoAlertsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderInfoAlertså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>RestoreReservationIn complex typeµÄ Java Àà¡£
+ * <p>RestoreReservationIn complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="RestoreReservationIn"&gt;
@@ -48,7 +48,7 @@ public class RestoreReservationIn {
     protected String croPermissionName;
 
     /**
-     * »ñÈ¡orderIdÊôĞÔµÄÖµ¡£
+     * è·å–orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getOrderId() {
@@ -56,7 +56,7 @@ public class RestoreReservationIn {
     }
 
     /**
-     * ÉèÖÃorderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setOrderId(int value) {
@@ -64,7 +64,7 @@ public class RestoreReservationIn {
     }
 
     /**
-     * »ñÈ¡restoreReasonÊôĞÔµÄÖµ¡£
+     * è·å–restoreReasonå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class RestoreReservationIn {
     }
 
     /**
-     * ÉèÖÃrestoreReasonÊôĞÔµÄÖµ¡£
+     * è®¾ç½®restoreReasonå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -88,7 +88,7 @@ public class RestoreReservationIn {
     }
 
     /**
-     * »ñÈ¡externalUserÊôĞÔµÄÖµ¡£
+     * è·å–externalUserå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -100,7 +100,7 @@ public class RestoreReservationIn {
     }
 
     /**
-     * ÉèÖÃexternalUserÊôĞÔµÄÖµ¡£
+     * è®¾ç½®externalUserå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -112,7 +112,7 @@ public class RestoreReservationIn {
     }
 
     /**
-     * »ñÈ¡croPermissionNameÊôĞÔµÄÖµ¡£
+     * è·å–croPermissionNameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -124,7 +124,7 @@ public class RestoreReservationIn {
     }
 
     /**
-     * ÉèÖÃcroPermissionNameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®croPermissionNameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

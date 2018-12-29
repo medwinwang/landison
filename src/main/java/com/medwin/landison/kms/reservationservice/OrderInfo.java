@@ -2,18 +2,19 @@
 package com.medwin.landison.kms.reservationservice;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>OrderInfo complex type�� Java �ࡣ
+ * <p>OrderInfo complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="OrderInfo"&gt;
@@ -444,14 +445,16 @@ public class OrderInfo
     protected ArrayOfOrderInfoDiscount orderInfoDiscounts;
     @XmlElement(name = "ID")
     protected int id;
-    @XmlElement(name = "Arrival", required = true)
+    @XmlElement(name = "Arrival", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String arrival;
+    protected Date arrival;
     @XmlElement(name = "Isfixedrate")
     protected boolean isfixedrate;
-    @XmlElement(name = "Departure", required = true)
+    @XmlElement(name = "Departure", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String departure;
+    protected Date departure;
     @XmlElement(name = "Hotel_code")
     protected CommonInfo hotelCode;
     @XmlElement(name = "Guesttype_code")
@@ -496,12 +499,14 @@ public class OrderInfo
     protected String cardHolder;
     @XmlElement(name = "Creditid")
     protected String creditid;
-    @XmlElement(name = "Expire", required = true)
+    @XmlElement(name = "Expire", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String expire;
-    @XmlElement(name = "Makedate", required = true)
+    protected Date expire;
+    @XmlElement(name = "Makedate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String makedate;
+    protected Date makedate;
     @XmlElement(name = "Maker")
     protected String maker;
     @XmlElement(name = "InsertUserName")
@@ -544,9 +549,10 @@ public class OrderInfo
     protected CommonInfo title;
     @XmlElement(name = "Province_code")
     protected CommonInfo provinceCode;
-    @XmlElement(name = "Birthday", required = true)
+    @XmlElement(name = "Birthday", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String birthday;
+    protected Date birthday;
     @XmlElement(name = "Company")
     protected String company;
     @XmlElement(name = "Roomno")
@@ -557,9 +563,10 @@ public class OrderInfo
     protected String comOk;
     @XmlElement(name = "Order_type")
     protected String orderType;
-    @XmlElement(name = "InitialRateDateTime", required = true)
+    @XmlElement(name = "InitialRateDateTime", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String initialRateDateTime;
+    protected Date initialRateDateTime;
     @XmlElement(name = "Total_revenue", required = true)
     protected BigDecimal totalRevenue;
     @XmlElement(name = "InitialPrice", required = true)
@@ -608,9 +615,10 @@ public class OrderInfo
     protected String specialCodes;
     @XmlElement(name = "Mobile")
     protected String mobile;
-    @XmlElement(name = "Keep_hour", required = true)
+    @XmlElement(name = "Keep_hour", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String keepHour;
+    protected Date keepHour;
     @XmlElement(name = "Chname")
     protected String chname;
     @XmlElement(name = "GroupID")
@@ -633,9 +641,10 @@ public class OrderInfo
     protected String address4;
     @XmlElement(name = "Id_no")
     protected String idNo;
-    @XmlElement(name = "CancelDate", required = true)
+    @XmlElement(name = "CancelDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String cancelDate;
+    protected Date cancelDate;
     @XmlElement(name = "DepositCode")
     protected String depositCode;
     @XmlElement(name = "CommisionCode")
@@ -664,9 +673,10 @@ public class OrderInfo
     protected String arrivalStationCode;
     @XmlElement(name = "ArrivalCarrierCode")
     protected String arrivalCarrierCode;
-    @XmlElement(name = "ArrivalDateTime", required = true)
+    @XmlElement(name = "ArrivalDateTime", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String arrivalDateTime;
+    protected Date arrivalDateTime;
     @XmlElement(name = "ArrivalTransportNo")
     protected String arrivalTransportNo;
     @XmlElement(name = "ArrivalComments")
@@ -679,9 +689,10 @@ public class OrderInfo
     protected String departureStationCode;
     @XmlElement(name = "DepartureCarrierCode")
     protected String departureCarrierCode;
-    @XmlElement(name = "DepartureDateTime", required = true)
+    @XmlElement(name = "DepartureDateTime", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String departureDateTime;
+    protected Date departureDateTime;
     @XmlElement(name = "DepartureTransportNo")
     protected String departureTransportNo;
     @XmlElement(name = "DepartureComments")
@@ -740,7 +751,7 @@ public class OrderInfo
     protected String discountMethod;
 
     /**
-     * ��ȡudf1���Ե�ֵ��
+     * 获取udf1属性的值。
      * 
      * @return
      *     possible object is
@@ -752,7 +763,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf1���Ե�ֵ��
+     * 设置udf1属性的值。
      * 
      * @param value
      *     allowed object is
@@ -764,7 +775,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf2���Ե�ֵ��
+     * 获取udf2属性的值。
      * 
      * @return
      *     possible object is
@@ -776,7 +787,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf2���Ե�ֵ��
+     * 设置udf2属性的值。
      * 
      * @param value
      *     allowed object is
@@ -788,7 +799,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf3���Ե�ֵ��
+     * 获取udf3属性的值。
      * 
      * @return
      *     possible object is
@@ -800,7 +811,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf3���Ե�ֵ��
+     * 设置udf3属性的值。
      * 
      * @param value
      *     allowed object is
@@ -812,7 +823,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf4���Ե�ֵ��
+     * 获取udf4属性的值。
      * 
      * @return
      *     possible object is
@@ -824,7 +835,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf4���Ե�ֵ��
+     * 设置udf4属性的值。
      * 
      * @param value
      *     allowed object is
@@ -836,7 +847,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf5���Ե�ֵ��
+     * 获取udf5属性的值。
      * 
      * @return
      *     possible object is
@@ -848,7 +859,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf5���Ե�ֵ��
+     * 设置udf5属性的值。
      * 
      * @param value
      *     allowed object is
@@ -860,7 +871,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf6���Ե�ֵ��
+     * 获取udf6属性的值。
      * 
      * @return
      *     possible object is
@@ -872,7 +883,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf6���Ե�ֵ��
+     * 设置udf6属性的值。
      * 
      * @param value
      *     allowed object is
@@ -884,7 +895,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf7���Ե�ֵ��
+     * 获取udf7属性的值。
      * 
      * @return
      *     possible object is
@@ -896,7 +907,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf7���Ե�ֵ��
+     * 设置udf7属性的值。
      * 
      * @param value
      *     allowed object is
@@ -908,7 +919,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf8���Ե�ֵ��
+     * 获取udf8属性的值。
      * 
      * @return
      *     possible object is
@@ -920,7 +931,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf8���Ե�ֵ��
+     * 设置udf8属性的值。
      * 
      * @param value
      *     allowed object is
@@ -932,7 +943,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf9���Ե�ֵ��
+     * 获取udf9属性的值。
      * 
      * @return
      *     possible object is
@@ -944,7 +955,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf9���Ե�ֵ��
+     * 设置udf9属性的值。
      * 
      * @param value
      *     allowed object is
@@ -956,7 +967,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf10���Ե�ֵ��
+     * 获取udf10属性的值。
      * 
      * @return
      *     possible object is
@@ -968,7 +979,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf10���Ե�ֵ��
+     * 设置udf10属性的值。
      * 
      * @param value
      *     allowed object is
@@ -980,7 +991,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf11���Ե�ֵ��
+     * 获取udf11属性的值。
      * 
      * @return
      *     possible object is
@@ -992,7 +1003,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf11���Ե�ֵ��
+     * 设置udf11属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1004,7 +1015,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf12���Ե�ֵ��
+     * 获取udf12属性的值。
      * 
      * @return
      *     possible object is
@@ -1016,7 +1027,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf12���Ե�ֵ��
+     * 设置udf12属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1028,7 +1039,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf13���Ե�ֵ��
+     * 获取udf13属性的值。
      * 
      * @return
      *     possible object is
@@ -1040,7 +1051,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf13���Ե�ֵ��
+     * 设置udf13属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1052,7 +1063,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf14���Ե�ֵ��
+     * 获取udf14属性的值。
      * 
      * @return
      *     possible object is
@@ -1064,7 +1075,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf14���Ե�ֵ��
+     * 设置udf14属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1076,7 +1087,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf15���Ե�ֵ��
+     * 获取udf15属性的值。
      * 
      * @return
      *     possible object is
@@ -1088,7 +1099,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf15���Ե�ֵ��
+     * 设置udf15属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1100,7 +1111,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf16���Ե�ֵ��
+     * 获取udf16属性的值。
      * 
      * @return
      *     possible object is
@@ -1112,7 +1123,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf16���Ե�ֵ��
+     * 设置udf16属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1124,7 +1135,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf17���Ե�ֵ��
+     * 获取udf17属性的值。
      * 
      * @return
      *     possible object is
@@ -1136,7 +1147,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf17���Ե�ֵ��
+     * 设置udf17属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1148,7 +1159,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf18���Ե�ֵ��
+     * 获取udf18属性的值。
      * 
      * @return
      *     possible object is
@@ -1160,7 +1171,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf18���Ե�ֵ��
+     * 设置udf18属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1172,7 +1183,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf19���Ե�ֵ��
+     * 获取udf19属性的值。
      * 
      * @return
      *     possible object is
@@ -1184,7 +1195,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf19���Ե�ֵ��
+     * 设置udf19属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1196,7 +1207,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡudf20���Ե�ֵ��
+     * 获取udf20属性的值。
      * 
      * @return
      *     possible object is
@@ -1208,7 +1219,7 @@ public class OrderInfo
     }
 
     /**
-     * ����udf20���Ե�ֵ��
+     * 设置udf20属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1220,7 +1231,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡgroupType���Ե�ֵ��
+     * 获取groupType属性的值。
      * 
      * @return
      *     possible object is
@@ -1232,7 +1243,7 @@ public class OrderInfo
     }
 
     /**
-     * ����groupType���Ե�ֵ��
+     * 设置groupType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1244,7 +1255,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡbarType���Ե�ֵ��
+     * 获取barType属性的值。
      * 
      * @return
      *     possible object is
@@ -1256,7 +1267,7 @@ public class OrderInfo
     }
 
     /**
-     * ����barType���Ե�ֵ��
+     * 设置barType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1268,7 +1279,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡresvPoints���Ե�ֵ��
+     * 获取resvPoints属性的值。
      * 
      * @return
      *     possible object is
@@ -1280,7 +1291,7 @@ public class OrderInfo
     }
 
     /**
-     * ����resvPoints���Ե�ֵ��
+     * 设置resvPoints属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1292,7 +1303,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡrecommendedLevel���Ե�ֵ��
+     * 获取recommendedLevel属性的值。
      * 
      * @return
      *     possible object is
@@ -1304,7 +1315,7 @@ public class OrderInfo
     }
 
     /**
-     * ����recommendedLevel���Ե�ֵ��
+     * 设置recommendedLevel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1316,7 +1327,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡchannelConfirmID���Ե�ֵ��
+     * 获取channelConfirmID属性的值。
      * 
      * @return
      *     possible object is
@@ -1328,7 +1339,7 @@ public class OrderInfo
     }
 
     /**
-     * ����channelConfirmID���Ե�ֵ��
+     * 设置channelConfirmID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1340,7 +1351,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡchannelCancelID���Ե�ֵ��
+     * 获取channelCancelID属性的值。
      * 
      * @return
      *     possible object is
@@ -1352,7 +1363,7 @@ public class OrderInfo
     }
 
     /**
-     * ����channelCancelID���Ե�ֵ��
+     * 设置channelCancelID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1364,7 +1375,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdeposit���Ե�ֵ��
+     * 获取deposit属性的值。
      * 
      * @return
      *     possible object is
@@ -1376,7 +1387,7 @@ public class OrderInfo
     }
 
     /**
-     * ����deposit���Ե�ֵ��
+     * 设置deposit属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1388,7 +1399,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡoriginalOrderInfo���Ե�ֵ��
+     * 获取originalOrderInfo属性的值。
      * 
      * @return
      *     possible object is
@@ -1400,7 +1411,7 @@ public class OrderInfo
     }
 
     /**
-     * ����originalOrderInfo���Ե�ֵ��
+     * 设置originalOrderInfo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1412,7 +1423,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡorderRoomStayInfos���Ե�ֵ��
+     * 获取orderRoomStayInfos属性的值。
      * 
      * @return
      *     possible object is
@@ -1424,7 +1435,7 @@ public class OrderInfo
     }
 
     /**
-     * ����orderRoomStayInfos���Ե�ֵ��
+     * 设置orderRoomStayInfos属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1436,7 +1447,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡorderInfoDiscounts���Ե�ֵ��
+     * 获取orderInfoDiscounts属性的值。
      * 
      * @return
      *     possible object is
@@ -1448,7 +1459,7 @@ public class OrderInfo
     }
 
     /**
-     * ����orderInfoDiscounts���Ե�ֵ��
+     * 设置orderInfoDiscounts属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1460,7 +1471,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡid���Ե�ֵ��
+     * 获取id属性的值。
      * 
      */
     public int getID() {
@@ -1468,7 +1479,7 @@ public class OrderInfo
     }
 
     /**
-     * ����id���Ե�ֵ��
+     * 设置id属性的值。
      * 
      */
     public void setID(int value) {
@@ -1476,31 +1487,31 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡarrival���Ե�ֵ��
+     * 获取arrival属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getArrival() {
+    public Date getArrival() {
         return arrival;
     }
 
     /**
-     * ����arrival���Ե�ֵ��
+     * 设置arrival属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setArrival(String value) {
+    public void setArrival(Date value) {
         this.arrival = value;
     }
 
     /**
-     * ��ȡisfixedrate���Ե�ֵ��
+     * 获取isfixedrate属性的值。
      * 
      */
     public boolean isIsfixedrate() {
@@ -1508,7 +1519,7 @@ public class OrderInfo
     }
 
     /**
-     * ����isfixedrate���Ե�ֵ��
+     * 设置isfixedrate属性的值。
      * 
      */
     public void setIsfixedrate(boolean value) {
@@ -1516,31 +1527,31 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdeparture���Ե�ֵ��
+     * 获取departure属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDeparture() {
+    public Date getDeparture() {
         return departure;
     }
 
     /**
-     * ����departure���Ե�ֵ��
+     * 设置departure属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDeparture(String value) {
+    public void setDeparture(Date value) {
         this.departure = value;
     }
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -1552,7 +1563,7 @@ public class OrderInfo
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1564,7 +1575,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡguesttypeCode���Ե�ֵ��
+     * 获取guesttypeCode属性的值。
      * 
      * @return
      *     possible object is
@@ -1576,7 +1587,7 @@ public class OrderInfo
     }
 
     /**
-     * ����guesttypeCode���Ե�ֵ��
+     * 设置guesttypeCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1588,7 +1599,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡguestID���Ե�ֵ��
+     * 获取guestID属性的值。
      * 
      * @return
      *     possible object is
@@ -1600,7 +1611,7 @@ public class OrderInfo
     }
 
     /**
-     * ����guestID���Ե�ֵ��
+     * 设置guestID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1612,7 +1623,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡroomNum���Ե�ֵ��
+     * 获取roomNum属性的值。
      * 
      */
     public int getRoomNum() {
@@ -1620,7 +1631,7 @@ public class OrderInfo
     }
 
     /**
-     * ����roomNum���Ե�ֵ��
+     * 设置roomNum属性的值。
      * 
      */
     public void setRoomNum(int value) {
@@ -1628,7 +1639,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡroomtypeCode���Ե�ֵ��
+     * 获取roomtypeCode属性的值。
      * 
      * @return
      *     possible object is
@@ -1640,7 +1651,7 @@ public class OrderInfo
     }
 
     /**
-     * ����roomtypeCode���Ե�ֵ��
+     * 设置roomtypeCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1652,7 +1663,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡrateCode���Ե�ֵ��
+     * 获取rateCode属性的值。
      * 
      * @return
      *     possible object is
@@ -1664,7 +1675,7 @@ public class OrderInfo
     }
 
     /**
-     * ����rateCode���Ե�ֵ��
+     * 设置rateCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1676,7 +1687,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡrate���Ե�ֵ��
+     * 获取rate属性的值。
      * 
      * @return
      *     possible object is
@@ -1688,7 +1699,7 @@ public class OrderInfo
     }
 
     /**
-     * ����rate���Ե�ֵ��
+     * 设置rate属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1700,7 +1711,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡwrate���Ե�ֵ��
+     * 获取wrate属性的值。
      * 
      * @return
      *     possible object is
@@ -1712,7 +1723,7 @@ public class OrderInfo
     }
 
     /**
-     * ����wrate���Ե�ֵ��
+     * 设置wrate属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1724,7 +1735,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡadults���Ե�ֵ��
+     * 获取adults属性的值。
      * 
      */
     public int getAdults() {
@@ -1732,7 +1743,7 @@ public class OrderInfo
     }
 
     /**
-     * ����adults���Ե�ֵ��
+     * 设置adults属性的值。
      * 
      */
     public void setAdults(int value) {
@@ -1740,7 +1751,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡchildren���Ե�ֵ��
+     * 获取children属性的值。
      * 
      */
     public int getChildren() {
@@ -1748,7 +1759,7 @@ public class OrderInfo
     }
 
     /**
-     * ����children���Ե�ֵ��
+     * 设置children属性的值。
      * 
      */
     public void setChildren(int value) {
@@ -1756,7 +1767,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡextraBed���Ե�ֵ��
+     * 获取extraBed属性的值。
      * 
      */
     public int getExtraBed() {
@@ -1764,7 +1775,7 @@ public class OrderInfo
     }
 
     /**
-     * ����extraBed���Ե�ֵ��
+     * 设置extraBed属性的值。
      * 
      */
     public void setExtraBed(int value) {
@@ -1772,7 +1783,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡfirstname���Ե�ֵ��
+     * 获取firstname属性的值。
      * 
      * @return
      *     possible object is
@@ -1784,7 +1795,7 @@ public class OrderInfo
     }
 
     /**
-     * ����firstname���Ե�ֵ��
+     * 设置firstname属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1796,7 +1807,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡlastname���Ե�ֵ��
+     * 获取lastname属性的值。
      * 
      * @return
      *     possible object is
@@ -1808,7 +1819,7 @@ public class OrderInfo
     }
 
     /**
-     * ����lastname���Ե�ֵ��
+     * 设置lastname属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1820,7 +1831,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcountryCode���Ե�ֵ��
+     * 获取countryCode属性的值。
      * 
      * @return
      *     possible object is
@@ -1832,7 +1843,7 @@ public class OrderInfo
     }
 
     /**
-     * ����countryCode���Ե�ֵ��
+     * 设置countryCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1844,7 +1855,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡaddress���Ե�ֵ��
+     * 获取address属性的值。
      * 
      * @return
      *     possible object is
@@ -1856,7 +1867,7 @@ public class OrderInfo
     }
 
     /**
-     * ����address���Ե�ֵ��
+     * 设置address属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1868,7 +1879,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡfax���Ե�ֵ��
+     * 获取fax属性的值。
      * 
      * @return
      *     possible object is
@@ -1880,7 +1891,7 @@ public class OrderInfo
     }
 
     /**
-     * ����fax���Ե�ֵ��
+     * 设置fax属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1892,7 +1903,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡphone���Ե�ֵ��
+     * 获取phone属性的值。
      * 
      * @return
      *     possible object is
@@ -1904,7 +1915,7 @@ public class OrderInfo
     }
 
     /**
-     * ����phone���Ե�ֵ��
+     * 设置phone属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1916,7 +1927,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡemail���Ե�ֵ��
+     * 获取email属性的值。
      * 
      * @return
      *     possible object is
@@ -1928,7 +1939,7 @@ public class OrderInfo
     }
 
     /**
-     * ����email���Ե�ֵ��
+     * 设置email属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1940,7 +1951,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡidNumber���Ե�ֵ��
+     * 获取idNumber属性的值。
      * 
      * @return
      *     possible object is
@@ -1952,7 +1963,7 @@ public class OrderInfo
     }
 
     /**
-     * ����idNumber���Ե�ֵ��
+     * 设置idNumber属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1964,7 +1975,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcredittypeCode���Ե�ֵ��
+     * 获取credittypeCode属性的值。
      * 
      * @return
      *     possible object is
@@ -1976,7 +1987,7 @@ public class OrderInfo
     }
 
     /**
-     * ����credittypeCode���Ե�ֵ��
+     * 设置credittypeCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -1988,7 +1999,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcardHolder���Ե�ֵ��
+     * 获取cardHolder属性的值。
      * 
      * @return
      *     possible object is
@@ -2000,7 +2011,7 @@ public class OrderInfo
     }
 
     /**
-     * ����cardHolder���Ե�ֵ��
+     * 设置cardHolder属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2012,7 +2023,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcreditid���Ե�ֵ��
+     * 获取creditid属性的值。
      * 
      * @return
      *     possible object is
@@ -2024,7 +2035,7 @@ public class OrderInfo
     }
 
     /**
-     * ����creditid���Ե�ֵ��
+     * 设置creditid属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2036,55 +2047,55 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡexpire���Ե�ֵ��
+     * 获取expire属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getExpire() {
+    public Date getExpire() {
         return expire;
     }
 
     /**
-     * ����expire���Ե�ֵ��
+     * 设置expire属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setExpire(String value) {
+    public void setExpire(Date value) {
         this.expire = value;
     }
 
     /**
-     * ��ȡmakedate���Ե�ֵ��
+     * 获取makedate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getMakedate() {
+    public Date getMakedate() {
         return makedate;
     }
 
     /**
-     * ����makedate���Ե�ֵ��
+     * 设置makedate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setMakedate(String value) {
+    public void setMakedate(Date value) {
         this.makedate = value;
     }
 
     /**
-     * ��ȡmaker���Ե�ֵ��
+     * 获取maker属性的值。
      * 
      * @return
      *     possible object is
@@ -2096,7 +2107,7 @@ public class OrderInfo
     }
 
     /**
-     * ����maker���Ե�ֵ��
+     * 设置maker属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2108,7 +2119,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡinsertUserName���Ե�ֵ��
+     * 获取insertUserName属性的值。
      * 
      * @return
      *     possible object is
@@ -2120,7 +2131,7 @@ public class OrderInfo
     }
 
     /**
-     * ����insertUserName���Ե�ֵ��
+     * 设置insertUserName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2132,7 +2143,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡupdateUserName���Ե�ֵ��
+     * 获取updateUserName属性的值。
      * 
      * @return
      *     possible object is
@@ -2144,7 +2155,7 @@ public class OrderInfo
     }
 
     /**
-     * ����updateUserName���Ե�ֵ��
+     * 设置updateUserName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2156,7 +2167,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡmakehotelCode���Ե�ֵ��
+     * 获取makehotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -2168,7 +2179,7 @@ public class OrderInfo
     }
 
     /**
-     * ����makehotelCode���Ե�ֵ��
+     * 设置makehotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2180,7 +2191,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡflag���Ե�ֵ��
+     * 获取flag属性的值。
      * 
      * @return
      *     possible object is
@@ -2192,7 +2203,7 @@ public class OrderInfo
     }
 
     /**
-     * ����flag���Ե�ֵ��
+     * 设置flag属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2204,7 +2215,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡstatusCode���Ե�ֵ��
+     * 获取statusCode属性的值。
      * 
      * @return
      *     possible object is
@@ -2216,7 +2227,7 @@ public class OrderInfo
     }
 
     /**
-     * ����statusCode���Ե�ֵ��
+     * 设置statusCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2228,7 +2239,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcomments���Ե�ֵ��
+     * 获取comments属性的值。
      * 
      * @return
      *     possible object is
@@ -2240,7 +2251,7 @@ public class OrderInfo
     }
 
     /**
-     * ����comments���Ե�ֵ��
+     * 设置comments属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2252,7 +2263,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡconfirmID���Ե�ֵ��
+     * 获取confirmID属性的值。
      * 
      * @return
      *     possible object is
@@ -2264,7 +2275,7 @@ public class OrderInfo
     }
 
     /**
-     * ����confirmID���Ե�ֵ��
+     * 设置confirmID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2276,7 +2287,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡbookerID���Ե�ֵ��
+     * 获取bookerID属性的值。
      * 
      * @return
      *     possible object is
@@ -2288,7 +2299,7 @@ public class OrderInfo
     }
 
     /**
-     * ����bookerID���Ե�ֵ��
+     * 设置bookerID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2300,7 +2311,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡbookerName���Ե�ֵ��
+     * 获取bookerName属性的值。
      * 
      * @return
      *     possible object is
@@ -2312,7 +2323,7 @@ public class OrderInfo
     }
 
     /**
-     * ����bookerName���Ե�ֵ��
+     * 设置bookerName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2324,7 +2335,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡbookerMobile���Ե�ֵ��
+     * 获取bookerMobile属性的值。
      * 
      * @return
      *     possible object is
@@ -2336,7 +2347,7 @@ public class OrderInfo
     }
 
     /**
-     * ����bookerMobile���Ե�ֵ��
+     * 设置bookerMobile属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2348,7 +2359,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡbookerEmail���Ե�ֵ��
+     * 获取bookerEmail属性的值。
      * 
      * @return
      *     possible object is
@@ -2360,7 +2371,7 @@ public class OrderInfo
     }
 
     /**
-     * ����bookerEmail���Ե�ֵ��
+     * 设置bookerEmail属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2372,7 +2383,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡsplitOrderIds���Ե�ֵ��
+     * 获取splitOrderIds属性的值。
      * 
      * @return
      *     possible object is
@@ -2384,7 +2395,7 @@ public class OrderInfo
     }
 
     /**
-     * ����splitOrderIds���Ե�ֵ��
+     * 设置splitOrderIds属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2396,7 +2407,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡmoreOccupants���Ե�ֵ��
+     * 获取moreOccupants属性的值。
      * 
      * @return
      *     possible object is
@@ -2408,7 +2419,7 @@ public class OrderInfo
     }
 
     /**
-     * ����moreOccupants���Ե�ֵ��
+     * 设置moreOccupants属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2420,7 +2431,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡsynchroSplitOrder���Ե�ֵ��
+     * 获取synchroSplitOrder属性的值。
      * 
      * @return
      *     possible object is
@@ -2432,7 +2443,7 @@ public class OrderInfo
     }
 
     /**
-     * ����synchroSplitOrder���Ե�ֵ��
+     * 设置synchroSplitOrder属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2444,7 +2455,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡoriginalOrderId���Ե�ֵ��
+     * 获取originalOrderId属性的值。
      * 
      * @return
      *     possible object is
@@ -2456,7 +2467,7 @@ public class OrderInfo
     }
 
     /**
-     * ����originalOrderId���Ե�ֵ��
+     * 设置originalOrderId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2468,7 +2479,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡinfant���Ե�ֵ��
+     * 获取infant属性的值。
      * 
      */
     public int getInfant() {
@@ -2476,7 +2487,7 @@ public class OrderInfo
     }
 
     /**
-     * ����infant���Ե�ֵ��
+     * 设置infant属性的值。
      * 
      */
     public void setInfant(int value) {
@@ -2484,7 +2495,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcity���Ե�ֵ��
+     * 获取city属性的值。
      * 
      * @return
      *     possible object is
@@ -2496,7 +2507,7 @@ public class OrderInfo
     }
 
     /**
-     * ����city���Ե�ֵ��
+     * 设置city属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2508,7 +2519,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡlanguagCode���Ե�ֵ��
+     * 获取languagCode属性的值。
      * 
      * @return
      *     possible object is
@@ -2520,7 +2531,7 @@ public class OrderInfo
     }
 
     /**
-     * ����languagCode���Ե�ֵ��
+     * 设置languagCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2532,7 +2543,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡtitle���Ե�ֵ��
+     * 获取title属性的值。
      * 
      * @return
      *     possible object is
@@ -2544,7 +2555,7 @@ public class OrderInfo
     }
 
     /**
-     * ����title���Ե�ֵ��
+     * 设置title属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2556,7 +2567,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡprovinceCode���Ե�ֵ��
+     * 获取provinceCode属性的值。
      * 
      * @return
      *     possible object is
@@ -2568,7 +2579,7 @@ public class OrderInfo
     }
 
     /**
-     * ����provinceCode���Ե�ֵ��
+     * 设置provinceCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2580,31 +2591,31 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡbirthday���Ե�ֵ��
+     * 获取birthday属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
     /**
-     * ����birthday���Ե�ֵ��
+     * 设置birthday属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBirthday(String value) {
+    public void setBirthday(Date value) {
         this.birthday = value;
     }
 
     /**
-     * ��ȡcompany���Ե�ֵ��
+     * 获取company属性的值。
      * 
      * @return
      *     possible object is
@@ -2616,7 +2627,7 @@ public class OrderInfo
     }
 
     /**
-     * ����company���Ե�ֵ��
+     * 设置company属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2628,7 +2639,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡroomno���Ե�ֵ��
+     * 获取roomno属性的值。
      * 
      * @return
      *     possible object is
@@ -2640,7 +2651,7 @@ public class OrderInfo
     }
 
     /**
-     * ����roomno���Ե�ֵ��
+     * 设置roomno属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2652,7 +2663,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡemailConfirm���Ե�ֵ��
+     * 获取emailConfirm属性的值。
      * 
      * @return
      *     possible object is
@@ -2664,7 +2675,7 @@ public class OrderInfo
     }
 
     /**
-     * ����emailConfirm���Ե�ֵ��
+     * 设置emailConfirm属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2676,7 +2687,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcomOk���Ե�ֵ��
+     * 获取comOk属性的值。
      * 
      * @return
      *     possible object is
@@ -2688,7 +2699,7 @@ public class OrderInfo
     }
 
     /**
-     * ����comOk���Ե�ֵ��
+     * 设置comOk属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2700,7 +2711,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡorderType���Ե�ֵ��
+     * 获取orderType属性的值。
      * 
      * @return
      *     possible object is
@@ -2712,7 +2723,7 @@ public class OrderInfo
     }
 
     /**
-     * ����orderType���Ե�ֵ��
+     * 设置orderType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2724,31 +2735,31 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡinitialRateDateTime���Ե�ֵ��
+     * 获取initialRateDateTime属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getInitialRateDateTime() {
+    public Date getInitialRateDateTime() {
         return initialRateDateTime;
     }
 
     /**
-     * ����initialRateDateTime���Ե�ֵ��
+     * 设置initialRateDateTime属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setInitialRateDateTime(String value) {
+    public void setInitialRateDateTime(Date value) {
         this.initialRateDateTime = value;
     }
 
     /**
-     * ��ȡtotalRevenue���Ե�ֵ��
+     * 获取totalRevenue属性的值。
      * 
      * @return
      *     possible object is
@@ -2760,7 +2771,7 @@ public class OrderInfo
     }
 
     /**
-     * ����totalRevenue���Ե�ֵ��
+     * 设置totalRevenue属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2772,7 +2783,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡinitialPrice���Ե�ֵ��
+     * 获取initialPrice属性的值。
      * 
      * @return
      *     possible object is
@@ -2784,7 +2795,7 @@ public class OrderInfo
     }
 
     /**
-     * ����initialPrice���Ե�ֵ��
+     * 设置initialPrice属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2796,7 +2807,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcomErr���Ե�ֵ��
+     * 获取comErr属性的值。
      * 
      */
     public short getComErr() {
@@ -2804,7 +2815,7 @@ public class OrderInfo
     }
 
     /**
-     * ����comErr���Ե�ֵ��
+     * 设置comErr属性的值。
      * 
      */
     public void setComErr(short value) {
@@ -2812,7 +2823,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡmarket���Ե�ֵ��
+     * 获取market属性的值。
      * 
      * @return
      *     possible object is
@@ -2824,7 +2835,7 @@ public class OrderInfo
     }
 
     /**
-     * ����market���Ե�ֵ��
+     * 设置market属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2836,7 +2847,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡsource���Ե�ֵ��
+     * 获取source属性的值。
      * 
      * @return
      *     possible object is
@@ -2848,7 +2859,7 @@ public class OrderInfo
     }
 
     /**
-     * ����source���Ե�ֵ��
+     * 设置source属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2860,7 +2871,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡsex���Ե�ֵ��
+     * 获取sex属性的值。
      * 
      * @return
      *     possible object is
@@ -2872,7 +2883,7 @@ public class OrderInfo
     }
 
     /**
-     * ����sex���Ե�ֵ��
+     * 设置sex属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2884,7 +2895,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡpostcode���Ե�ֵ��
+     * 获取postcode属性的值。
      * 
      * @return
      *     possible object is
@@ -2896,7 +2907,7 @@ public class OrderInfo
     }
 
     /**
-     * ����postcode���Ե�ֵ��
+     * 设置postcode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2908,7 +2919,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡchannel���Ե�ֵ��
+     * 获取channel属性的值。
      * 
      * @return
      *     possible object is
@@ -2920,7 +2931,7 @@ public class OrderInfo
     }
 
     /**
-     * ����channel���Ե�ֵ��
+     * 设置channel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2932,7 +2943,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcCardErr���Ե�ֵ��
+     * 获取cCardErr属性的值。
      * 
      * @return
      *     possible object is
@@ -2944,7 +2955,7 @@ public class OrderInfo
     }
 
     /**
-     * ����cCardErr���Ե�ֵ��
+     * 设置cCardErr属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2956,7 +2967,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡchineseName���Ե�ֵ��
+     * 获取chineseName属性的值。
      * 
      * @return
      *     possible object is
@@ -2968,7 +2979,7 @@ public class OrderInfo
     }
 
     /**
-     * ����chineseName���Ե�ֵ��
+     * 设置chineseName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -2980,7 +2991,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡturnAway���Ե�ֵ��
+     * 获取turnAway属性的值。
      * 
      * @return
      *     possible object is
@@ -2992,7 +3003,7 @@ public class OrderInfo
     }
 
     /**
-     * ����turnAway���Ե�ֵ��
+     * 设置turnAway属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3004,7 +3015,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡflyNum���Ե�ֵ��
+     * 获取flyNum属性的值。
      * 
      * @return
      *     possible object is
@@ -3016,7 +3027,7 @@ public class OrderInfo
     }
 
     /**
-     * ����flyNum���Ե�ֵ��
+     * 设置flyNum属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3028,7 +3039,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡarrivalTime���Ե�ֵ��
+     * 获取arrivalTime属性的值。
      * 
      * @return
      *     possible object is
@@ -3040,7 +3051,7 @@ public class OrderInfo
     }
 
     /**
-     * ����arrivalTime���Ե�ֵ��
+     * 设置arrivalTime属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3052,7 +3063,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdepartTime���Ե�ֵ��
+     * 获取departTime属性的值。
      * 
      * @return
      *     possible object is
@@ -3064,7 +3075,7 @@ public class OrderInfo
     }
 
     /**
-     * ����departTime���Ե�ֵ��
+     * 设置departTime属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3076,7 +3087,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡmemberId���Ե�ֵ��
+     * 获取memberId属性的值。
      * 
      * @return
      *     possible object is
@@ -3088,7 +3099,7 @@ public class OrderInfo
     }
 
     /**
-     * ����memberId���Ե�ֵ��
+     * 设置memberId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3100,7 +3111,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcardType���Ե�ֵ��
+     * 获取cardType属性的值。
      * 
      * @return
      *     possible object is
@@ -3112,7 +3123,7 @@ public class OrderInfo
     }
 
     /**
-     * ����cardType���Ե�ֵ��
+     * 设置cardType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3124,7 +3135,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcardLevel���Ե�ֵ��
+     * 获取cardLevel属性的值。
      * 
      * @return
      *     possible object is
@@ -3136,7 +3147,7 @@ public class OrderInfo
     }
 
     /**
-     * ����cardLevel���Ե�ֵ��
+     * 设置cardLevel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3148,7 +3159,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡadj���Ե�ֵ��
+     * 获取adj属性的值。
      * 
      * @return
      *     possible object is
@@ -3160,7 +3171,7 @@ public class OrderInfo
     }
 
     /**
-     * ����adj���Ե�ֵ��
+     * 设置adj属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3172,7 +3183,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcancelID���Ե�ֵ��
+     * 获取cancelID属性的值。
      * 
      * @return
      *     possible object is
@@ -3184,7 +3195,7 @@ public class OrderInfo
     }
 
     /**
-     * ����cancelID���Ե�ֵ��
+     * 设置cancelID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3196,7 +3207,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡpmsResId���Ե�ֵ��
+     * 获取pmsResId属性的值。
      * 
      * @return
      *     possible object is
@@ -3208,7 +3219,7 @@ public class OrderInfo
     }
 
     /**
-     * ����pmsResId���Ե�ֵ��
+     * 设置pmsResId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3220,7 +3231,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡpmsCancelId���Ե�ֵ��
+     * 获取pmsCancelId属性的值。
      * 
      * @return
      *     possible object is
@@ -3232,7 +3243,7 @@ public class OrderInfo
     }
 
     /**
-     * ����pmsCancelId���Ե�ֵ��
+     * 设置pmsCancelId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3244,7 +3255,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡreservationType���Ե�ֵ��
+     * 获取reservationType属性的值。
      * 
      * @return
      *     possible object is
@@ -3256,7 +3267,7 @@ public class OrderInfo
     }
 
     /**
-     * ����reservationType���Ե�ֵ��
+     * 设置reservationType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3268,7 +3279,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡspecialCodes���Ե�ֵ��
+     * 获取specialCodes属性的值。
      * 
      * @return
      *     possible object is
@@ -3280,7 +3291,7 @@ public class OrderInfo
     }
 
     /**
-     * ����specialCodes���Ե�ֵ��
+     * 设置specialCodes属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3292,7 +3303,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡmobile���Ե�ֵ��
+     * 获取mobile属性的值。
      * 
      * @return
      *     possible object is
@@ -3304,7 +3315,7 @@ public class OrderInfo
     }
 
     /**
-     * ����mobile���Ե�ֵ��
+     * 设置mobile属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3316,31 +3327,31 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡkeepHour���Ե�ֵ��
+     * 获取keepHour属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getKeepHour() {
+    public Date getKeepHour() {
         return keepHour;
     }
 
     /**
-     * ����keepHour���Ե�ֵ��
+     * 设置keepHour属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setKeepHour(String value) {
+    public void setKeepHour(Date value) {
         this.keepHour = value;
     }
 
     /**
-     * ��ȡchname���Ե�ֵ��
+     * 获取chname属性的值。
      * 
      * @return
      *     possible object is
@@ -3352,7 +3363,7 @@ public class OrderInfo
     }
 
     /**
-     * ����chname���Ե�ֵ��
+     * 设置chname属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3364,7 +3375,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡgroupID���Ե�ֵ��
+     * 获取groupID属性的值。
      * 
      * @return
      *     possible object is
@@ -3376,7 +3387,7 @@ public class OrderInfo
     }
 
     /**
-     * ����groupID���Ե�ֵ��
+     * 设置groupID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3388,7 +3399,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡzip���Ե�ֵ��
+     * 获取zip属性的值。
      * 
      * @return
      *     possible object is
@@ -3400,7 +3411,7 @@ public class OrderInfo
     }
 
     /**
-     * ����zip���Ե�ֵ��
+     * 设置zip属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3412,7 +3423,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡofficePhone���Ե�ֵ��
+     * 获取officePhone属性的值。
      * 
      * @return
      *     possible object is
@@ -3424,7 +3435,7 @@ public class OrderInfo
     }
 
     /**
-     * ����officePhone���Ե�ֵ��
+     * 设置officePhone属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3436,7 +3447,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcustID���Ե�ֵ��
+     * 获取custID属性的值。
      * 
      */
     public int getCustID() {
@@ -3444,7 +3455,7 @@ public class OrderInfo
     }
 
     /**
-     * ����custID���Ե�ֵ��
+     * 设置custID属性的值。
      * 
      */
     public void setCustID(int value) {
@@ -3452,7 +3463,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡaccount���Ե�ֵ��
+     * 获取account属性的值。
      * 
      * @return
      *     possible object is
@@ -3464,7 +3475,7 @@ public class OrderInfo
     }
 
     /**
-     * ����account���Ե�ֵ��
+     * 设置account属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3476,7 +3487,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡaddress1���Ե�ֵ��
+     * 获取address1属性的值。
      * 
      * @return
      *     possible object is
@@ -3488,7 +3499,7 @@ public class OrderInfo
     }
 
     /**
-     * ����address1���Ե�ֵ��
+     * 设置address1属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3500,7 +3511,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡaddress2���Ե�ֵ��
+     * 获取address2属性的值。
      * 
      * @return
      *     possible object is
@@ -3512,7 +3523,7 @@ public class OrderInfo
     }
 
     /**
-     * ����address2���Ե�ֵ��
+     * 设置address2属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3524,7 +3535,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡaddress3���Ե�ֵ��
+     * 获取address3属性的值。
      * 
      * @return
      *     possible object is
@@ -3536,7 +3547,7 @@ public class OrderInfo
     }
 
     /**
-     * ����address3���Ե�ֵ��
+     * 设置address3属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3548,7 +3559,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡaddress4���Ե�ֵ��
+     * 获取address4属性的值。
      * 
      * @return
      *     possible object is
@@ -3560,7 +3571,7 @@ public class OrderInfo
     }
 
     /**
-     * ����address4���Ե�ֵ��
+     * 设置address4属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3572,7 +3583,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡidNo���Ե�ֵ��
+     * 获取idNo属性的值。
      * 
      * @return
      *     possible object is
@@ -3584,7 +3595,7 @@ public class OrderInfo
     }
 
     /**
-     * ����idNo���Ե�ֵ��
+     * 设置idNo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3596,31 +3607,31 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcancelDate���Ե�ֵ��
+     * 获取cancelDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getCancelDate() {
+    public Date getCancelDate() {
         return cancelDate;
     }
 
     /**
-     * ����cancelDate���Ե�ֵ��
+     * 设置cancelDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setCancelDate(String value) {
+    public void setCancelDate(Date value) {
         this.cancelDate = value;
     }
 
     /**
-     * ��ȡdepositCode���Ե�ֵ��
+     * 获取depositCode属性的值。
      * 
      * @return
      *     possible object is
@@ -3632,7 +3643,7 @@ public class OrderInfo
     }
 
     /**
-     * ����depositCode���Ե�ֵ��
+     * 设置depositCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3644,7 +3655,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcommisionCode���Ե�ֵ��
+     * 获取commisionCode属性的值。
      * 
      * @return
      *     possible object is
@@ -3656,7 +3667,7 @@ public class OrderInfo
     }
 
     /**
-     * ����commisionCode���Ե�ֵ��
+     * 设置commisionCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3668,7 +3679,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcancelCode���Ե�ֵ��
+     * 获取cancelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -3680,7 +3691,7 @@ public class OrderInfo
     }
 
     /**
-     * ����cancelCode���Ե�ֵ��
+     * 设置cancelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3692,7 +3703,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡpromotionCode���Ե�ֵ��
+     * 获取promotionCode属性的值。
      * 
      * @return
      *     possible object is
@@ -3704,7 +3715,7 @@ public class OrderInfo
     }
 
     /**
-     * ����promotionCode���Ե�ֵ��
+     * 设置promotionCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3716,7 +3727,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡffpId���Ե�ֵ��
+     * 获取ffpId属性的值。
      * 
      * @return
      *     possible object is
@@ -3728,7 +3739,7 @@ public class OrderInfo
     }
 
     /**
-     * ����ffpId���Ե�ֵ��
+     * 设置ffpId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3740,7 +3751,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡproviderCode���Ե�ֵ��
+     * 获取providerCode属性的值。
      * 
      * @return
      *     possible object is
@@ -3752,7 +3763,7 @@ public class OrderInfo
     }
 
     /**
-     * ����providerCode���Ե�ֵ��
+     * 设置providerCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3764,7 +3775,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡproviderKey���Ե�ֵ��
+     * 获取providerKey属性的值。
      * 
      * @return
      *     possible object is
@@ -3776,7 +3787,7 @@ public class OrderInfo
     }
 
     /**
-     * ����providerKey���Ե�ֵ��
+     * 设置providerKey属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3788,7 +3799,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡpartyNO���Ե�ֵ��
+     * 获取partyNO属性的值。
      * 
      * @return
      *     possible object is
@@ -3800,7 +3811,7 @@ public class OrderInfo
     }
 
     /**
-     * ����partyNO���Ե�ֵ��
+     * 设置partyNO属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3812,7 +3823,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcrsPartyNO���Ե�ֵ��
+     * 获取crsPartyNO属性的值。
      * 
      */
     public int getCrsPartyNO() {
@@ -3820,7 +3831,7 @@ public class OrderInfo
     }
 
     /**
-     * ����crsPartyNO���Ե�ֵ��
+     * 设置crsPartyNO属性的值。
      * 
      */
     public void setCrsPartyNO(int value) {
@@ -3828,7 +3839,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡshareCode���Ե�ֵ��
+     * 获取shareCode属性的值。
      * 
      * @return
      *     possible object is
@@ -3840,7 +3851,7 @@ public class OrderInfo
     }
 
     /**
-     * ����shareCode���Ե�ֵ��
+     * 设置shareCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3852,7 +3863,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡarrivalTransportationYN���Ե�ֵ��
+     * 获取arrivalTransportationYN属性的值。
      * 
      * @return
      *     possible object is
@@ -3864,7 +3875,7 @@ public class OrderInfo
     }
 
     /**
-     * ����arrivalTransportationYN���Ե�ֵ��
+     * 设置arrivalTransportationYN属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3876,7 +3887,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡarrivalTransportType���Ե�ֵ��
+     * 获取arrivalTransportType属性的值。
      * 
      * @return
      *     possible object is
@@ -3888,7 +3899,7 @@ public class OrderInfo
     }
 
     /**
-     * ����arrivalTransportType���Ե�ֵ��
+     * 设置arrivalTransportType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3900,7 +3911,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡarrivalStationCode���Ե�ֵ��
+     * 获取arrivalStationCode属性的值。
      * 
      * @return
      *     possible object is
@@ -3912,7 +3923,7 @@ public class OrderInfo
     }
 
     /**
-     * ����arrivalStationCode���Ե�ֵ��
+     * 设置arrivalStationCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3924,7 +3935,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡarrivalCarrierCode���Ե�ֵ��
+     * 获取arrivalCarrierCode属性的值。
      * 
      * @return
      *     possible object is
@@ -3936,7 +3947,7 @@ public class OrderInfo
     }
 
     /**
-     * ����arrivalCarrierCode���Ե�ֵ��
+     * 设置arrivalCarrierCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3948,31 +3959,31 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡarrivalDateTime���Ե�ֵ��
+     * 获取arrivalDateTime属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getArrivalDateTime() {
+    public Date getArrivalDateTime() {
         return arrivalDateTime;
     }
 
     /**
-     * ����arrivalDateTime���Ե�ֵ��
+     * 设置arrivalDateTime属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setArrivalDateTime(String value) {
+    public void setArrivalDateTime(Date value) {
         this.arrivalDateTime = value;
     }
 
     /**
-     * ��ȡarrivalTransportNo���Ե�ֵ��
+     * 获取arrivalTransportNo属性的值。
      * 
      * @return
      *     possible object is
@@ -3984,7 +3995,7 @@ public class OrderInfo
     }
 
     /**
-     * ����arrivalTransportNo���Ե�ֵ��
+     * 设置arrivalTransportNo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -3996,7 +4007,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡarrivalComments���Ե�ֵ��
+     * 获取arrivalComments属性的值。
      * 
      * @return
      *     possible object is
@@ -4008,7 +4019,7 @@ public class OrderInfo
     }
 
     /**
-     * ����arrivalComments���Ե�ֵ��
+     * 设置arrivalComments属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4020,7 +4031,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdepartureTransportationYN���Ե�ֵ��
+     * 获取departureTransportationYN属性的值。
      * 
      * @return
      *     possible object is
@@ -4032,7 +4043,7 @@ public class OrderInfo
     }
 
     /**
-     * ����departureTransportationYN���Ե�ֵ��
+     * 设置departureTransportationYN属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4044,7 +4055,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdepartureTransportType���Ե�ֵ��
+     * 获取departureTransportType属性的值。
      * 
      * @return
      *     possible object is
@@ -4056,7 +4067,7 @@ public class OrderInfo
     }
 
     /**
-     * ����departureTransportType���Ե�ֵ��
+     * 设置departureTransportType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4068,7 +4079,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdepartureStationCode���Ե�ֵ��
+     * 获取departureStationCode属性的值。
      * 
      * @return
      *     possible object is
@@ -4080,7 +4091,7 @@ public class OrderInfo
     }
 
     /**
-     * ����departureStationCode���Ե�ֵ��
+     * 设置departureStationCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4092,7 +4103,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdepartureCarrierCode���Ե�ֵ��
+     * 获取departureCarrierCode属性的值。
      * 
      * @return
      *     possible object is
@@ -4104,7 +4115,7 @@ public class OrderInfo
     }
 
     /**
-     * ����departureCarrierCode���Ե�ֵ��
+     * 设置departureCarrierCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4116,31 +4127,31 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdepartureDateTime���Ե�ֵ��
+     * 获取departureDateTime属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDepartureDateTime() {
+    public Date getDepartureDateTime() {
         return departureDateTime;
     }
 
     /**
-     * ����departureDateTime���Ե�ֵ��
+     * 设置departureDateTime属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDepartureDateTime(String value) {
+    public void setDepartureDateTime(Date value) {
         this.departureDateTime = value;
     }
 
     /**
-     * ��ȡdepartureTransportNo���Ե�ֵ��
+     * 获取departureTransportNo属性的值。
      * 
      * @return
      *     possible object is
@@ -4152,7 +4163,7 @@ public class OrderInfo
     }
 
     /**
-     * ����departureTransportNo���Ե�ֵ��
+     * 设置departureTransportNo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4164,7 +4175,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdepartureComments���Ե�ֵ��
+     * 获取departureComments属性的值。
      * 
      * @return
      *     possible object is
@@ -4176,7 +4187,7 @@ public class OrderInfo
     }
 
     /**
-     * ����departureComments���Ե�ֵ��
+     * 设置departureComments属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4188,7 +4199,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡpayMentGateWay���Ե�ֵ��
+     * 获取payMentGateWay属性的值。
      * 
      * @return
      *     possible object is
@@ -4200,7 +4211,7 @@ public class OrderInfo
     }
 
     /**
-     * ����payMentGateWay���Ե�ֵ��
+     * 设置payMentGateWay属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4212,7 +4223,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡaccompanyings���Ե�ֵ��
+     * 获取accompanyings属性的值。
      * 
      * @return
      *     possible object is
@@ -4224,7 +4235,7 @@ public class OrderInfo
     }
 
     /**
-     * ����accompanyings���Ե�ֵ��
+     * 设置accompanyings属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4236,7 +4247,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡorderInfoTraceTextsList���Ե�ֵ��
+     * 获取orderInfoTraceTextsList属性的值。
      * 
      * @return
      *     possible object is
@@ -4248,7 +4259,7 @@ public class OrderInfo
     }
 
     /**
-     * ����orderInfoTraceTextsList���Ե�ֵ��
+     * 设置orderInfoTraceTextsList属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4260,7 +4271,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdailyItems���Ե�ֵ��
+     * 获取dailyItems属性的值。
      * 
      * @return
      *     possible object is
@@ -4272,7 +4283,7 @@ public class OrderInfo
     }
 
     /**
-     * ����dailyItems���Ե�ֵ��
+     * 设置dailyItems属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4284,7 +4295,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡorderInfoPackageList���Ե�ֵ��
+     * 获取orderInfoPackageList属性的值。
      * 
      * @return
      *     possible object is
@@ -4296,7 +4307,7 @@ public class OrderInfo
     }
 
     /**
-     * ����orderInfoPackageList���Ե�ֵ��
+     * 设置orderInfoPackageList属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4308,7 +4319,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡorderInfoAlertsList���Ե�ֵ��
+     * 获取orderInfoAlertsList属性的值。
      * 
      * @return
      *     possible object is
@@ -4320,7 +4331,7 @@ public class OrderInfo
     }
 
     /**
-     * ����orderInfoAlertsList���Ե�ֵ��
+     * 设置orderInfoAlertsList属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4332,7 +4343,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡpayment���Ե�ֵ��
+     * 获取payment属性的值。
      * 
      * @return
      *     possible object is
@@ -4344,7 +4355,7 @@ public class OrderInfo
     }
 
     /**
-     * ����payment���Ե�ֵ��
+     * 设置payment属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4356,7 +4367,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡguestInfoId���Ե�ֵ��
+     * 获取guestInfoId属性的值。
      * 
      */
     public int getGuestInfoId() {
@@ -4364,7 +4375,7 @@ public class OrderInfo
     }
 
     /**
-     * ����guestInfoId���Ե�ֵ��
+     * 设置guestInfoId属性的值。
      * 
      */
     public void setGuestInfoId(int value) {
@@ -4372,7 +4383,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdepositScheduleInfo���Ե�ֵ��
+     * 获取depositScheduleInfo属性的值。
      * 
      * @return
      *     possible object is
@@ -4384,7 +4395,7 @@ public class OrderInfo
     }
 
     /**
-     * ����depositScheduleInfo���Ե�ֵ��
+     * 设置depositScheduleInfo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4396,7 +4407,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcancelScheduleInfo���Ե�ֵ��
+     * 获取cancelScheduleInfo属性的值。
      * 
      * @return
      *     possible object is
@@ -4408,7 +4419,7 @@ public class OrderInfo
     }
 
     /**
-     * ����cancelScheduleInfo���Ե�ֵ��
+     * 设置cancelScheduleInfo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4420,7 +4431,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡexternalUser���Ե�ֵ��
+     * 获取externalUser属性的值。
      * 
      * @return
      *     possible object is
@@ -4432,7 +4443,7 @@ public class OrderInfo
     }
 
     /**
-     * ����externalUser���Ե�ֵ��
+     * 设置externalUser属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4444,7 +4455,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡblockCode���Ե�ֵ��
+     * 获取blockCode属性的值。
      * 
      * @return
      *     possible object is
@@ -4456,7 +4467,7 @@ public class OrderInfo
     }
 
     /**
-     * ����blockCode���Ե�ֵ��
+     * 设置blockCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4468,7 +4479,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡorderInfoComments���Ե�ֵ��
+     * 获取orderInfoComments属性的值。
      * 
      * @return
      *     possible object is
@@ -4480,7 +4491,7 @@ public class OrderInfo
     }
 
     /**
-     * ����orderInfoComments���Ե�ֵ��
+     * 设置orderInfoComments属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4492,7 +4503,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdicInfoFfp���Ե�ֵ��
+     * 获取dicInfoFfp属性的值。
      * 
      * @return
      *     possible object is
@@ -4504,7 +4515,7 @@ public class OrderInfo
     }
 
     /**
-     * ����dicInfoFfp���Ե�ֵ��
+     * 设置dicInfoFfp属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4516,7 +4527,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡmemberInfoFfp���Ե�ֵ��
+     * 获取memberInfoFfp属性的值。
      * 
      * @return
      *     possible object is
@@ -4528,7 +4539,7 @@ public class OrderInfo
     }
 
     /**
-     * ����memberInfoFfp���Ե�ֵ��
+     * 设置memberInfoFfp属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4540,7 +4551,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡtravelAgency���Ե�ֵ��
+     * 获取travelAgency属性的值。
      * 
      * @return
      *     possible object is
@@ -4552,7 +4563,7 @@ public class OrderInfo
     }
 
     /**
-     * ����travelAgency���Ե�ֵ��
+     * 设置travelAgency属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4564,7 +4575,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡsourceOfBusiness���Ե�ֵ��
+     * 获取sourceOfBusiness属性的值。
      * 
      * @return
      *     possible object is
@@ -4576,7 +4587,7 @@ public class OrderInfo
     }
 
     /**
-     * ����sourceOfBusiness���Ե�ֵ��
+     * 设置sourceOfBusiness属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4588,7 +4599,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡidOfTravelAgency���Ե�ֵ��
+     * 获取idOfTravelAgency属性的值。
      * 
      */
     public int getIdOfTravelAgency() {
@@ -4596,7 +4607,7 @@ public class OrderInfo
     }
 
     /**
-     * ����idOfTravelAgency���Ե�ֵ��
+     * 设置idOfTravelAgency属性的值。
      * 
      */
     public void setIdOfTravelAgency(int value) {
@@ -4604,7 +4615,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡidOfSourceBusiness���Ե�ֵ��
+     * 获取idOfSourceBusiness属性的值。
      * 
      */
     public int getIdOfSourceBusiness() {
@@ -4612,7 +4623,7 @@ public class OrderInfo
     }
 
     /**
-     * ����idOfSourceBusiness���Ե�ֵ��
+     * 设置idOfSourceBusiness属性的值。
      * 
      */
     public void setIdOfSourceBusiness(int value) {
@@ -4620,7 +4631,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡaccountOfTravelAgency���Ե�ֵ��
+     * 获取accountOfTravelAgency属性的值。
      * 
      * @return
      *     possible object is
@@ -4632,7 +4643,7 @@ public class OrderInfo
     }
 
     /**
-     * ����accountOfTravelAgency���Ե�ֵ��
+     * 设置accountOfTravelAgency属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4644,7 +4655,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡaccountOfSourceBusiness���Ե�ֵ��
+     * 获取accountOfSourceBusiness属性的值。
      * 
      * @return
      *     possible object is
@@ -4656,7 +4667,7 @@ public class OrderInfo
     }
 
     /**
-     * ����accountOfSourceBusiness���Ե�ֵ��
+     * 设置accountOfSourceBusiness属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4668,7 +4679,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcompanyName���Ե�ֵ��
+     * 获取companyName属性的值。
      * 
      * @return
      *     possible object is
@@ -4680,7 +4691,7 @@ public class OrderInfo
     }
 
     /**
-     * ����companyName���Ե�ֵ��
+     * 设置companyName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4692,7 +4703,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcompanyAccount���Ե�ֵ��
+     * 获取companyAccount属性的值。
      * 
      * @return
      *     possible object is
@@ -4704,7 +4715,7 @@ public class OrderInfo
     }
 
     /**
-     * ����companyAccount���Ե�ֵ��
+     * 设置companyAccount属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4716,7 +4727,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcompanyID���Ե�ֵ��
+     * 获取companyID属性的值。
      * 
      */
     public int getCompanyID() {
@@ -4724,7 +4735,7 @@ public class OrderInfo
     }
 
     /**
-     * ����companyID���Ե�ֵ��
+     * 设置companyID属性的值。
      * 
      */
     public void setCompanyID(int value) {
@@ -4732,7 +4743,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡcroPermissionName���Ե�ֵ��
+     * 获取croPermissionName属性的值。
      * 
      * @return
      *     possible object is
@@ -4744,7 +4755,7 @@ public class OrderInfo
     }
 
     /**
-     * ����croPermissionName���Ե�ֵ��
+     * 设置croPermissionName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -4756,7 +4767,7 @@ public class OrderInfo
     }
 
     /**
-     * ��ȡdiscountMethod���Ե�ֵ��
+     * 获取discountMethod属性的值。
      * 
      * @return
      *     possible object is
@@ -4768,7 +4779,7 @@ public class OrderInfo
     }
 
     /**
-     * ����discountMethod���Ե�ֵ��
+     * 设置discountMethod属性的值。
      * 
      * @param value
      *     allowed object is

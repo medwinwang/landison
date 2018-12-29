@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>PageInfo complex typeµÄ Java Àà¡£
+ * <p>PageInfo complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="PageInfo"&gt;
@@ -44,7 +44,7 @@ public class PageInfo {
     protected int totalRecords;
 
     /**
-     * »ñÈ¡pageIndexÊôĞÔµÄÖµ¡£
+     * è·å–pageIndexå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getPageIndex() {
@@ -52,7 +52,7 @@ public class PageInfo {
     }
 
     /**
-     * ÉèÖÃpageIndexÊôĞÔµÄÖµ¡£
+     * è®¾ç½®pageIndexå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setPageIndex(int value) {
@@ -60,7 +60,7 @@ public class PageInfo {
     }
 
     /**
-     * »ñÈ¡pageSizeÊôĞÔµÄÖµ¡£
+     * è·å–pageSizeå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getPageSize() {
@@ -68,7 +68,7 @@ public class PageInfo {
     }
 
     /**
-     * ÉèÖÃpageSizeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®pageSizeå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setPageSize(int value) {
@@ -76,7 +76,7 @@ public class PageInfo {
     }
 
     /**
-     * »ñÈ¡totalRecordsÊôĞÔµÄÖµ¡£
+     * è·å–totalRecordså±æ€§çš„å€¼ã€‚
      * 
      */
     public int getTotalRecords() {
@@ -84,7 +84,7 @@ public class PageInfo {
     }
 
     /**
-     * ÉèÖÃtotalRecordsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®totalRecordså±æ€§çš„å€¼ã€‚
      * 
      */
     public void setTotalRecords(int value) {

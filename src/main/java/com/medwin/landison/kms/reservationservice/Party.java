@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Party complex typeµÄ Java Àà¡£
+ * <p>Party complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="Party"&gt;
@@ -42,7 +42,7 @@ public class Party {
     protected PartyAction partyAction;
 
     /**
-     * »ñÈ¡partyNoÊôĞÔµÄÖµ¡£
+     * è·å–partyNoå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -54,7 +54,7 @@ public class Party {
     }
 
     /**
-     * ÉèÖÃpartyNoÊôĞÔµÄÖµ¡£
+     * è®¾ç½®partyNoå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -66,7 +66,7 @@ public class Party {
     }
 
     /**
-     * »ñÈ¡partyActionÊôĞÔµÄÖµ¡£
+     * è·å–partyActionå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -78,7 +78,7 @@ public class Party {
     }
 
     /**
-     * ÉèÖÃpartyActionÊôĞÔµÄÖµ¡£
+     * è®¾ç½®partyActionå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>AddOrderToPartyIn complex typeµÄ Java Àà¡£
+ * <p>AddOrderToPartyIn complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="AddOrderToPartyIn"&gt;
@@ -44,7 +44,7 @@ public class AddOrderToPartyIn {
     protected String externalUser;
 
     /**
-     * »ñÈ¡orderIdÊôĞÔµÄÖµ¡£
+     * è·å–orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getOrderId() {
@@ -52,7 +52,7 @@ public class AddOrderToPartyIn {
     }
 
     /**
-     * ÉèÖÃorderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setOrderId(int value) {
@@ -60,7 +60,7 @@ public class AddOrderToPartyIn {
     }
 
     /**
-     * »ñÈ¡attachOrderIdÊôĞÔµÄÖµ¡£
+     * è·å–attachOrderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getAttachOrderId() {
@@ -68,7 +68,7 @@ public class AddOrderToPartyIn {
     }
 
     /**
-     * ÉèÖÃattachOrderIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®attachOrderIdå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setAttachOrderId(int value) {
@@ -76,7 +76,7 @@ public class AddOrderToPartyIn {
     }
 
     /**
-     * »ñÈ¡externalUserÊôĞÔµÄÖµ¡£
+     * è·å–externalUserå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -88,7 +88,7 @@ public class AddOrderToPartyIn {
     }
 
     /**
-     * ÉèÖÃexternalUserÊôĞÔµÄÖµ¡£
+     * è®¾ç½®externalUserå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

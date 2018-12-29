@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -38,7 +38,7 @@ public class PegasusSetDepositsNotificationResponse {
     protected boolean pegasusSetDepositsNotificationResult;
 
     /**
-     * »ñÈ¡pegasusSetDepositsNotificationResultÊôĞÔµÄÖµ¡£
+     * è·å–pegasusSetDepositsNotificationResultå±æ€§çš„å€¼ã€‚
      * 
      */
     public boolean isPegasusSetDepositsNotificationResult() {
@@ -46,7 +46,7 @@ public class PegasusSetDepositsNotificationResponse {
     }
 
     /**
-     * ÉèÖÃpegasusSetDepositsNotificationResultÊôĞÔµÄÖµ¡£
+     * è®¾ç½®pegasusSetDepositsNotificationResultå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setPegasusSetDepositsNotificationResult(boolean value) {

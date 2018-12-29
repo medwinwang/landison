@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.reservationservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>OrderAlert complex type�� Java �ࡣ
+ * <p>OrderAlert complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="OrderAlert"&gt;
@@ -62,22 +63,25 @@ public class OrderAlert {
     protected int orderId;
     @XmlElement(name = "Phone")
     protected String phone;
-    @XmlElement(name = "Arrival", required = true)
+    @XmlElement(name = "Arrival", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String arrival;
-    @XmlElement(name = "Departure", required = true)
+    protected Date arrival;
+    @XmlElement(name = "Departure", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String departure;
+    protected Date departure;
     @XmlElement(name = "Status")
     protected String status;
-    @XmlElement(name = "ConfirmDate", required = true)
+    @XmlElement(name = "ConfirmDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String confirmDate;
+    protected Date confirmDate;
     @XmlElement(name = "IsConfim")
     protected String isConfim;
 
     /**
-     * ��ȡid���Ե�ֵ��
+     * 获取id属性的值。
      * 
      */
     public int getId() {
@@ -85,7 +89,7 @@ public class OrderAlert {
     }
 
     /**
-     * ����id���Ե�ֵ��
+     * 设置id属性的值。
      * 
      */
     public void setId(int value) {
@@ -93,7 +97,7 @@ public class OrderAlert {
     }
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -105,7 +109,7 @@ public class OrderAlert {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -117,7 +121,7 @@ public class OrderAlert {
     }
 
     /**
-     * ��ȡhotelName���Ե�ֵ��
+     * 获取hotelName属性的值。
      * 
      * @return
      *     possible object is
@@ -129,7 +133,7 @@ public class OrderAlert {
     }
 
     /**
-     * ����hotelName���Ե�ֵ��
+     * 设置hotelName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -141,7 +145,7 @@ public class OrderAlert {
     }
 
     /**
-     * ��ȡorderId���Ե�ֵ��
+     * 获取orderId属性的值。
      * 
      */
     public int getOrderId() {
@@ -149,7 +153,7 @@ public class OrderAlert {
     }
 
     /**
-     * ����orderId���Ե�ֵ��
+     * 设置orderId属性的值。
      * 
      */
     public void setOrderId(int value) {
@@ -157,7 +161,7 @@ public class OrderAlert {
     }
 
     /**
-     * ��ȡphone���Ե�ֵ��
+     * 获取phone属性的值。
      * 
      * @return
      *     possible object is
@@ -169,7 +173,7 @@ public class OrderAlert {
     }
 
     /**
-     * ����phone���Ե�ֵ��
+     * 设置phone属性的值。
      * 
      * @param value
      *     allowed object is
@@ -181,55 +185,55 @@ public class OrderAlert {
     }
 
     /**
-     * ��ȡarrival���Ե�ֵ��
+     * 获取arrival属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getArrival() {
+    public Date getArrival() {
         return arrival;
     }
 
     /**
-     * ����arrival���Ե�ֵ��
+     * 设置arrival属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setArrival(String value) {
+    public void setArrival(Date value) {
         this.arrival = value;
     }
 
     /**
-     * ��ȡdeparture���Ե�ֵ��
+     * 获取departure属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDeparture() {
+    public Date getDeparture() {
         return departure;
     }
 
     /**
-     * ����departure���Ե�ֵ��
+     * 设置departure属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDeparture(String value) {
+    public void setDeparture(Date value) {
         this.departure = value;
     }
 
     /**
-     * ��ȡstatus���Ե�ֵ��
+     * 获取status属性的值。
      * 
      * @return
      *     possible object is
@@ -241,7 +245,7 @@ public class OrderAlert {
     }
 
     /**
-     * ����status���Ե�ֵ��
+     * 设置status属性的值。
      * 
      * @param value
      *     allowed object is
@@ -253,31 +257,31 @@ public class OrderAlert {
     }
 
     /**
-     * ��ȡconfirmDate���Ե�ֵ��
+     * 获取confirmDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getConfirmDate() {
+    public Date getConfirmDate() {
         return confirmDate;
     }
 
     /**
-     * ����confirmDate���Ե�ֵ��
+     * 设置confirmDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setConfirmDate(String value) {
+    public void setConfirmDate(Date value) {
         this.confirmDate = value;
     }
 
     /**
-     * ��ȡisConfim���Ե�ֵ��
+     * 获取isConfim属性的值。
      * 
      * @return
      *     possible object is
@@ -289,7 +293,7 @@ public class OrderAlert {
     }
 
     /**
-     * ����isConfim���Ե�ֵ��
+     * 设置isConfim属性的值。
      * 
      * @param value
      *     allowed object is

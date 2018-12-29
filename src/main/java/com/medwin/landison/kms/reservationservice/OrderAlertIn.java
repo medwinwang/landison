@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.reservationservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>OrderAlertIn complex type�� Java �ࡣ
+ * <p>OrderAlertIn complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="OrderAlertIn"&gt;
@@ -52,18 +53,22 @@ public class OrderAlertIn {
 
     @XmlElement(name = "PageInfo")
     protected PageInfo pageInfo;
-    @XmlElement(name = "BeginInsertDate", required = true, nillable = true)
+    @XmlElement(name = "BeginInsertDate", required = true, type = String.class, nillable = true)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginInsertDate;
-    @XmlElement(name = "EndInsertDate", required = true, nillable = true)
+    protected Date beginInsertDate;
+    @XmlElement(name = "EndInsertDate", required = true, type = String.class, nillable = true)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endInsertDate;
-    @XmlElement(name = "BeginArrivalDate", required = true, nillable = true)
+    protected Date endInsertDate;
+    @XmlElement(name = "BeginArrivalDate", required = true, type = String.class, nillable = true)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginArrivalDate;
-    @XmlElement(name = "EndArrivalDate", required = true, nillable = true)
+    protected Date beginArrivalDate;
+    @XmlElement(name = "EndArrivalDate", required = true, type = String.class, nillable = true)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endArrivalDate;
+    protected Date endArrivalDate;
     @XmlElement(name = "OrderId", required = true, type = Integer.class, nillable = true)
     protected Integer orderId;
     @XmlElement(name = "Phone")
@@ -74,7 +79,7 @@ public class OrderAlertIn {
     protected String isShowConfirm;
 
     /**
-     * ��ȡpageInfo���Ե�ֵ��
+     * 获取pageInfo属性的值。
      * 
      * @return
      *     possible object is
@@ -86,7 +91,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ����pageInfo���Ե�ֵ��
+     * 设置pageInfo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -98,103 +103,103 @@ public class OrderAlertIn {
     }
 
     /**
-     * ��ȡbeginInsertDate���Ե�ֵ��
+     * 获取beginInsertDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBeginInsertDate() {
+    public Date getBeginInsertDate() {
         return beginInsertDate;
     }
 
     /**
-     * ����beginInsertDate���Ե�ֵ��
+     * 设置beginInsertDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginInsertDate(String value) {
+    public void setBeginInsertDate(Date value) {
         this.beginInsertDate = value;
     }
 
     /**
-     * ��ȡendInsertDate���Ե�ֵ��
+     * 获取endInsertDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndInsertDate() {
+    public Date getEndInsertDate() {
         return endInsertDate;
     }
 
     /**
-     * ����endInsertDate���Ե�ֵ��
+     * 设置endInsertDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndInsertDate(String value) {
+    public void setEndInsertDate(Date value) {
         this.endInsertDate = value;
     }
 
     /**
-     * ��ȡbeginArrivalDate���Ե�ֵ��
+     * 获取beginArrivalDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBeginArrivalDate() {
+    public Date getBeginArrivalDate() {
         return beginArrivalDate;
     }
 
     /**
-     * ����beginArrivalDate���Ե�ֵ��
+     * 设置beginArrivalDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginArrivalDate(String value) {
+    public void setBeginArrivalDate(Date value) {
         this.beginArrivalDate = value;
     }
 
     /**
-     * ��ȡendArrivalDate���Ե�ֵ��
+     * 获取endArrivalDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndArrivalDate() {
+    public Date getEndArrivalDate() {
         return endArrivalDate;
     }
 
     /**
-     * ����endArrivalDate���Ե�ֵ��
+     * 设置endArrivalDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndArrivalDate(String value) {
+    public void setEndArrivalDate(Date value) {
         this.endArrivalDate = value;
     }
 
     /**
-     * ��ȡorderId���Ե�ֵ��
+     * 获取orderId属性的值。
      * 
      * @return
      *     possible object is
@@ -206,7 +211,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ����orderId���Ե�ֵ��
+     * 设置orderId属性的值。
      * 
      * @param value
      *     allowed object is
@@ -218,7 +223,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ��ȡphone���Ե�ֵ��
+     * 获取phone属性的值。
      * 
      * @return
      *     possible object is
@@ -230,7 +235,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ����phone���Ե�ֵ��
+     * 设置phone属性的值。
      * 
      * @param value
      *     allowed object is
@@ -242,7 +247,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -254,7 +259,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -266,7 +271,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ��ȡisShowConfirm���Ե�ֵ��
+     * 获取isShowConfirm属性的值。
      * 
      * @return
      *     possible object is
@@ -278,7 +283,7 @@ public class OrderAlertIn {
     }
 
     /**
-     * ����isShowConfirm���Ե�ֵ��
+     * 设置isShowConfirm属性的值。
      * 
      * @param value
      *     allowed object is

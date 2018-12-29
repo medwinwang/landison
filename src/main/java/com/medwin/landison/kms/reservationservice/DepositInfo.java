@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>DepositInfo complex typeµÄ Java Àà¡£
+ * <p>DepositInfo complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="DepositInfo"&gt;
@@ -45,7 +45,7 @@ public class DepositInfo {
     protected String currencyCode;
 
     /**
-     * »ñÈ¡requestDepositÊôĞÔµÄÖµ¡£
+     * è·å–requestDepositå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -57,7 +57,7 @@ public class DepositInfo {
     }
 
     /**
-     * ÉèÖÃrequestDepositÊôĞÔµÄÖµ¡£
+     * è®¾ç½®requestDepositå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -69,7 +69,7 @@ public class DepositInfo {
     }
 
     /**
-     * »ñÈ¡receiveDepositÊôĞÔµÄÖµ¡£
+     * è·å–receiveDepositå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -81,7 +81,7 @@ public class DepositInfo {
     }
 
     /**
-     * ÉèÖÃreceiveDepositÊôĞÔµÄÖµ¡£
+     * è®¾ç½®receiveDepositå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -93,7 +93,7 @@ public class DepositInfo {
     }
 
     /**
-     * »ñÈ¡currencyCodeÊôĞÔµÄÖµ¡£
+     * è·å–currencyCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -105,7 +105,7 @@ public class DepositInfo {
     }
 
     /**
-     * ÉèÖÃcurrencyCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®currencyCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

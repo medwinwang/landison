@@ -11,6 +11,7 @@ import com.medwin.landison.kms.profileservice.GuestInfo;
 import com.medwin.landison.kms.profileservice.QueryGuestInfoOut;
 import com.medwin.landison.kms.reservationservice.*;
 import com.medwin.landison.service.UserService;
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -123,15 +124,6 @@ public class UserServiceImpl implements UserService {
         }
         if(isReg){
 
-//            QueryGuestInfoOut queryGuestInfoOut = kmsService.queryGuestInfo(mobile);
-//            List<GuestInfo> guestInfos = queryGuestInfoOut.getGuestInfoList().getGuestInfo();
-//            if(CollectionUtils.isEmpty(guestInfos)) {
-//                throw new SystemException("查询散客信息失败");
-//            }
-//
-//            JSONObject user = (JSONObject) baseResult.getData();
-//            user.put("guest_id", guestInfos.get(0).getGuestCode());
-
             ldsService.loginUser(mobile, password, baseResult.getData().toString());
         } else {
 
@@ -218,8 +210,8 @@ public class UserServiceImpl implements UserService {
 
 
         OrderInfo orderInfo = new OrderInfo();
-        orderInfo.setArrival(arrival);
-        orderInfo.setDeparture(departure);
+        orderInfo.setArrival(new DateTime(arrival).toDate());
+        orderInfo.setDeparture(new DateTime(departure).toDate());
         orderInfo.setRoomNum(roomNum);
         orderInfo.setExtraBed(extraBed);
         orderInfo.setAdults(adults);
@@ -281,16 +273,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public BaseResult queryOrder(int id, String beginMakedate, String endMakedate, String arrival, String departure,
-                                 String statusCode, String reservationType, String hotelCode, String firstname,
-                                 String lastname, String guestId, String account, String guestType,
-                                 int pageSize, int currentPage) {
+    public BaseResult queryOrder(int id, String beginArrivalDate, String endArrivalDate, String beginDepartureDate, String endDepartureDate,
+                                 String beginInsertDate, String endInsertDate, String hotels, String firstName,
+                                 String lastName, int profileId, String account, String cardNumber,
+                                 String phoneNumber, String statusCode, int pageIndex, int pageSize) {
 
-        ExtraOrderInfoSummary infoSummary = kmsService.orderQueryPerPage(id, beginMakedate, endMakedate,
-                arrival, departure, statusCode, reservationType, hotelCode, firstname, lastname, guestId,
-                account, guestType, pageSize, currentPage);
+        QueryOrderPageOut orderPageOut = kmsService.queryOrderPage(id, beginArrivalDate, endArrivalDate, beginDepartureDate,
+                endDepartureDate, beginInsertDate, endInsertDate, hotels, firstName, lastName, profileId, account, cardNumber,
+                phoneNumber, statusCode, pageIndex, pageSize);
 
-        return new BaseResult(BaseResult.SUCCESS_CODE, "", infoSummary);
+        return new BaseResult(BaseResult.SUCCESS_CODE, "", orderPageOut);
     }
 
 

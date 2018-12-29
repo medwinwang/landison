@@ -42,10 +42,10 @@ public interface UserService {
                         String reteCode, String memberId, String reservationTypeCode, String comments, String address,
                         String email, String mobile, String arrivalTime);
 
-    BaseResult queryOrder(int id, String beginMakedate, String endMakedate, String arrival, String departure,
-                          String statusCode, String reservationType, String hotelCode,
-                          String firstname, String lastname, String guestId, String account,
-                          String guestType, int pageSize, int currentPage);
+    BaseResult queryOrder(int id, String beginArrivalDate, String endArrivalDate, String beginDepartureDate, String endDepartureDate,
+                          String beginInsertDate, String endInsertDate, String hotels, String firstName,
+                          String lastName, int profileId, String account, String cardNumber,
+                          String phoneNumber, String statusCode, int pageIndex, int pageSize);
 
 
     BaseResult checkOrder(String orderId, Double amount, String gatewayIdentification,

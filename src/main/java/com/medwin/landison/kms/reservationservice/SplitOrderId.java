@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>SplitOrderId complex typeµÄ Java Àà¡£
+ * <p>SplitOrderId complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="SplitOrderId"&gt;
@@ -42,7 +42,7 @@ public class SplitOrderId
     protected String splitOrderstatus;
 
     /**
-     * »ñÈ¡splitOrderIdsÊôĞÔµÄÖµ¡£
+     * è·å–splitOrderIdså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -54,7 +54,7 @@ public class SplitOrderId
     }
 
     /**
-     * ÉèÖÃsplitOrderIdsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®splitOrderIdså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -66,7 +66,7 @@ public class SplitOrderId
     }
 
     /**
-     * »ñÈ¡splitOrderstatusÊôĞÔµÄÖµ¡£
+     * è·å–splitOrderstatuså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -78,7 +78,7 @@ public class SplitOrderId
     }
 
     /**
-     * ÉèÖÃsplitOrderstatusÊôĞÔµÄÖµ¡£
+     * è®¾ç½®splitOrderstatuså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

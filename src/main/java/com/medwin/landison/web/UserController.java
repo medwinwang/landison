@@ -114,4 +114,23 @@ public class UserController {
 
     }
 
+
+    @RequestMapping(value = "/orderList", method = RequestMethod.GET)
+    public BaseResult queryOrder(@RequestParam(value="id", defaultValue="-1")int id, String beginArrivalDate,
+                                 String endArrivalDate, String beginDepartureDate, String endDepartureDate,
+                                 String beginInsertDate, String endInsertDate, String hotels, String firstName,
+                                 String lastName, @RequestParam(value="profileId", defaultValue="-1")int profileId,
+                                 String account, String cardNumber, String statusCode,
+                                 @RequestParam(value="pageIndex", defaultValue="1")int pageIndex,
+                                 @RequestParam(value="pageSize", defaultValue="10")int pageSize, HttpSession httpSession) {
+
+        JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
+
+        BaseResult baseResult = userService.queryOrder(id, beginArrivalDate, endArrivalDate, beginDepartureDate,
+                endDepartureDate, beginInsertDate, endInsertDate, hotels, firstName, lastName, profileId, account,
+                cardNumber, user.getString("mobile"), statusCode, pageIndex, pageSize);
+
+        return baseResult;
+    }
+
 }
