@@ -262,55 +262,36 @@
                     return false;
                 }
                 checkSubmitFlg = true;
-                $.ajax({
-                    url: path + "/hotel/addOrder",
-                    data: {arrival: arrival, departure: departure, roomNum: roomNum, adults: adults, rate: selectFirstNightPrice,
-                        lastName: lastName, totalRevenue: selectTotalPrice, hotelCode: hotelCode, roomtypeCode: selectRoomCode, comments: comments,
-                        reteCode: selectRateCode, reservationTypeCode: addType, mobile: mobile, email : email, arrivalTime: arrivalTime},
-                    type: 'post',
-                    dataType: 'json',
-                    success: function(result){
-                        checkSubmitFlg = false;
-                        if(result && result.code == 1) {
-                            if(addType == "10") {
-                                var r=confirm("支付完成？");
-                                if (r) {
+                ajax("/hotel/addOrder",{arrival: arrival, departure: departure, roomNum: roomNum, adults: adults, rate: selectFirstNightPrice,
+                    lastName: lastName, totalRevenue: selectTotalPrice, hotelCode: hotelCode, roomtypeCode: selectRoomCode, comments: comments,
+                    reteCode: selectRateCode, reservationTypeCode: addType, mobile: mobile, email : email, arrivalTime: arrivalTime},
+                function (data) {
+                    checkSubmitFlg = false;
+                    if(addType == "10") {
+                        var r=confirm("支付完成？");
+                        if (r) {
 
-                                } else {
+                        } else {
 
-                                }
-                                window.open("http://"+window.location.host+ path + "/alipay/pay?orderId="+ result.data.id);
-                            }else {
-                                alert("提交订单成功");
-                            }
-                        }else {
-                            alert(result.message);
                         }
+                        window.open("http://"+window.location.host+ path + "/alipay/pay?orderId="+ result.data.id);
+                    }else {
+                        alert("提交订单成功");
                     }
-                });
-
+                }, function (result) {
+                        checkSubmitFlg = false;
+                        alert(result.message);
+                    }, 1);
             })
         }
     }
 
     function queryAva(hotelCode, arrival, departure, adults, roomNum) {
-
-        $.ajax({
-            url: path + "/info/availability",
-            data: {hotelCode: hotelCode, arrival: arrival, departure: departure, adults: adults, roomNum: roomNum},
-            type: 'get',
-            dataType: 'json',
-            success: function(result){
-                if(result && result.code == 1) {
-                    var data = result.data;
-                    showRooms(data);
-                    goStep(2);
-                }else {
-                    alert(result.message);
-                }
-            }
+        ajax("/info/availability", {hotelCode: hotelCode, arrival: arrival, departure: departure, adults: adults, roomNum: roomNum},
+        function (data) {
+            showRooms(data);
+            goStep(2);
         });
-
     }
 
     function showRooms(data) {

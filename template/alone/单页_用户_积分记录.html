@@ -131,35 +131,19 @@
     //记录
     function recordInfo(){
 
-        $.ajax({
-            url: path + "/user/pointsHistory?time="+ new Date().getTime(),
-            data: {
-                page: DataInit.pages.curPage,
-                pageSize: DataInit.pages.pageSize
-            },
-            type: 'get',
-            dataType: 'json',
-            success: function(result){
-                if(result && result.code == 1) {
+        ajax("/user/pointsHistory", {page: DataInit.pages.curPage, pageSize: DataInit.pages.pageSize},
+        function (data) {
+            var d = {
+                list: data
+            };
+            var html = template('log_show', d);
+            $(".integral-record").html(html);
 
-                    var res = result.data;
-                    var d = {
-                        list: res
-                    };
-                    var html = template('log_show', d);
-                    $(".integral-record").html(html);
-
-                    if (DataInit.pages.curPage==1 && res.length > 0) {
-                        $(".j_page").show();
-                    }
-                    DataInit.pages.hasNextPage = res.length > 0;
-                } else {
-
-                    alert(data.message);
-                }
+            if (DataInit.pages.curPage==1 && res.length > 0) {
+                $(".j_page").show();
             }
+            DataInit.pages.hasNextPage = res.length > 0;
         });
-
     }
 </script>
 </body>

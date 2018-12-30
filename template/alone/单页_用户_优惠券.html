@@ -136,39 +136,27 @@
 
     function recordInfo(index, status){
 
-        $.ajax({
-            url: path + "/user/coupons?time="+ new Date().getTime(),
-            data: {
-                page: DataInit.pages.curPage,
-                pageSize: DataInit.pages.pageSize,
-                status:status
-            },
-            type: 'get',
-            dataType: 'json',
-            success: function(result){
-                if(result && result.code == 1) {
+        ajax("/user/coupons", {
+            page: DataInit.pages.curPage,
+            pageSize: DataInit.pages.pageSize,
+            status:status
+        }, function (data) {
+            var d = {
+                list: data,
+                categoryList: {"cash":"代金券", "gift":"礼品券"}
+            };
+            var html = template('log_show', d);
+            $(".tab-"+index).html(html);
 
-                    var res = result.data;
-                    var d = {
-                        list: res,
-                        categoryList: {"cash":"代金券", "gift":"礼品券"}
-                    };
-                    var html = template('log_show', d);
-                    $(".tab-"+index).html(html);
-
-                    if (DataInit.pages.curPage==1) {
-                        $(".paging-"+index).createPage({
-                            pageCount:Math.ceil(res.countNums/DataInit.pages.pageSize),
-                            current:DataInit.pages.curPage,
-                            backFn:function(p){
-                                DataInit.pages.curPage=p;
-                                recordInfo();
-                            }
-                        });
+            if (DataInit.pages.curPage==1) {
+                $(".paging-"+index).createPage({
+                    pageCount:Math.ceil(res.countNums/DataInit.pages.pageSize),
+                    current:DataInit.pages.curPage,
+                    backFn:function(p){
+                        DataInit.pages.curPage=p;
+                        recordInfo();
                     }
-                } else {
-                    alert(data.message);
-                }
+                });
             }
         });
 

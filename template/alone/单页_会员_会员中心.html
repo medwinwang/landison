@@ -254,24 +254,13 @@
                 return false;
             }
 
-            $.ajax({
-                url: path + "/user/update" + "?" + new Date().getTime(),
-                data: {lastName: lastName, firstName: firstName, altLastName: altLastName, altFirstName:altFirstName,
-                    genderCode:genderCode, idTypeCode: idTypeCode, idNumber: idNumber, birthday: birthday, email: email,
-                    addressProvinceCode:addressProvinceCode, addressCity: addressCity, addressDistrict: addressDistrict,
-                    addressStreet: addressStreet, addressCountryCode: 'CN'},
-                type: 'post',
-                dataType: 'json',
-                success: function(result){
-                    if(result && result.code == 1) {
-
-                        alert("更改成功");
-                        window.location.reload();
-                    } else {
-                        alert(result.message);
-                    }
-                }
-            });
+            ajax("/user/update", {lastName: lastName, firstName: firstName, altLastName: altLastName, altFirstName:altFirstName,
+                genderCode:genderCode, idTypeCode: idTypeCode, idNumber: idNumber, birthday: birthday, email: email,
+                addressProvinceCode:addressProvinceCode, addressCity: addressCity, addressDistrict: addressDistrict,
+                addressStreet: addressStreet, addressCountryCode: 'CN'}, function (data) {
+                alert("更改成功");
+                window.location.reload();
+            }, null, 1);
         });
     }
 
@@ -318,29 +307,6 @@
 //            initAddressCitySelect(provinceSelect.val());
 //        }
 //    });
-
-    function initAddressCitySelect(province) {
-        $.ajax({
-            url: path + "//info/information?dataType=CITYS&parentCode="+province,
-            data: {},
-            type: 'get',
-            dataType: 'json',
-            success: function(result){
-                if(result && result.code == 1) {
-
-                    var data = result.data;
-                    var select = $("#addressCity");
-                    select.html('<option value="">-请选择市-</option>');
-                    data.forEach(function (item, index) {
-                        select.append("<option value='"+item.code+"'>"+item.name+"</option>");
-                    });
-
-                }else {
-                    alert(result.message);
-                }
-            }
-        });
-    }
 
     function getMembershipCard(user) {
 

@@ -71,10 +71,10 @@
                         <input type="text" name="lastname" id="lastname" value="" maxlength="10">
                     </div>
                     <div class="search-date">
-                        <p>订单日期</p>
-                        <input type="text" size="6" value="" class="date_picker" id="beginMakedate" name="beginMakedate">
+                        <p>入住日期</p>
+                        <input type="text" size="6" value="" class="date_picker" id="beginArrivalDate" name="beginArrivalDate">
                         ——
-                        <input type="text" size="6" value="" class="date_picker" id="endMakedate" name="endMakedate">
+                        <input type="text" size="6" value="" class="date_picker" id="endArrivalDate" name="endArrivalDate">
                     </div>
                     <div class="search-state">
                         <p>订单状态</p>
@@ -131,7 +131,7 @@
             </div>
             <div>
                 预订时间：
-                <span class="color">{{value.makedate}}</span>
+                <span class="color">{{value.makedate.replace("T", " ").split(".")[0]}}</span>
             </div>
             <div>
             {{if value.statusCode.code=='0001'}}
@@ -148,7 +148,7 @@
                 {{value.lastname}}
             </li>
             <li class="order-3">
-                {{value.arrival}}
+                {{value.arrival.replace("T", " ").split(".")[0]}}
             </li>
             <li class="order-4">
                 {{value.totalRevenue}}元
@@ -189,75 +189,54 @@
             area: ['300px', '100px']//自定义文本域宽高
         }, function(value, index, elem){
 
-            $.ajax({
-                url: path + "/hotel/cancelOrder" + "?" + new Date().getTime(),
-                data: {id: id, comments:value},
-                type: 'post',
-                dataType: 'json',
-                success: function(result){
-                    if(result && result.code == 1) {
-                        if(result.data) {
-                            alert("取消成功");
-                            layer.close(index);
-                            window.location.reload();
-                        } else {
-                            alert("取消失败");
-                        }
-                    }else {
-                        alert(result.message);
-                    }
+            ajax("/hotel/cancelOrder", {id: id, comments:value}, function (data) {
+                if(data) {
+                    alert("取消成功");
+                    layer.close(index);
+                    window.location.reload();
+                } else {
+                    alert("取消失败");
                 }
-            });
+            },null, 1);
         });
     }
 
     //记录
     function recordInfo(){
 
-        var lastname = $("#lastname").val();
-        var beginMakedate = $("#beginMakedate").val();
-        var endMakedate = $("#endMakedate").val();
+        var lastName = $("#lastname").val();
+        var beginArrivalDate = $("#beginArrivalDate").val();
+        var endArrivalDate = $("#endArrivalDate").val();
         var statusCode = $("#statusCode").val();
 
-        $.ajax({
-            url: path + "/hotel/orderList?time="+ new Date().getTime(),
-            data: {
-                currentPage: DataInit.pages.curPage,
-                pageSize: DataInit.pages.pageSize,
-                lastname:lastname,
-                beginMakedate:beginMakedate,
-                endMakedate: endMakedate,
-                statusCode: statusCode
-            },
-            type: 'get',
-            dataType: 'json',
-            success: function(result){
-                if(result && result.code == 1) {
+        ajax("/user/orderList", {
+            pageIndex: DataInit.pages.curPage,
+            pageSize: DataInit.pages.pageSize,
+            lastName:lastName,
+            beginArrivalDate:beginArrivalDate,
+            endArrivalDate: endArrivalDate,
+            statusCode: statusCode
+        }, function (data) {
 
-                    var res = result.data;
-                    var d = {
-                        list: res.oorderArr.orderInfo,
-                        statusList: {"0001":"预定", "0003":"已取消", "0005":"等待", "0004":"已入住", "0006":"已离店", "0007":"不显示"}
-                    };
-                    var html = template('log_show', d);
-                    $("#logList").html(html);
+            var res = data;
+            var d = {
+                list: res.orderInfos.orderInfo,
+                statusList: {"0001":"预定", "0003":"已取消", "0005":"等待", "0004":"已入住", "0006":"已离店", "0007":"不显示"}
+            };
+            var html = template('log_show', d);
+            $("#logList").html(html);
 
-                    if (DataInit.pages.curPage==1) {
-                        $(".paging").createPage({
-                            pageCount:Math.ceil(res.countNums/DataInit.pages.pageSize),
-                            current:DataInit.pages.curPage,
-                            backFn:function(p){
-                                DataInit.pages.curPage=p;
-                                recordInfo();
-                            }
-                        });
+            if (DataInit.pages.curPage==1) {
+                $(".paging").createPage({
+                    pageCount:Math.ceil(res.pageInfo.totalRecords/DataInit.pages.pageSize),
+                    current:DataInit.pages.curPage,
+                    backFn:function(p){
+                        DataInit.pages.curPage=p;
+                        recordInfo();
                     }
-                } else {
-                    alert(data.message);
-                }
+                });
             }
         });
-
     }
 </script>
 

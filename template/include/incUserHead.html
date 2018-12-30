@@ -37,16 +37,8 @@
        $(".j_points").html(getAccountValue(card, "points").value);
        $(".j_cardEndDate").html(card.membershipCardLevel.retentionPeriodEndDate.split("T")[0]);
 
-       $.ajax({
-           url: path + "/user/coupons?time="+ new Date().getTime(),
-           data: {status:"notUsed", pageSize: 20},
-           type: 'get',
-           dataType: 'json',
-           success: function(result){
-               if(result && result.code == 1) {
-				   $("#couponNum").html("（"+result.data.length+"）");
-               }
-           }
+       ajax("/user/coupons", {status:"notUsed", pageSize: 20}, function (data) {
+           $("#couponNum").html("（"+data.length+"）");
        });
 
        initMemberPage(user);
