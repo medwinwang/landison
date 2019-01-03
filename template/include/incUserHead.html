@@ -3,8 +3,8 @@
 		<div class="left-top">
 			<p><span class="j_username"></span>,您好</p>
 			<ul>
-				<li>待支付<span>（1）</span></li>
-				<li>待入住<span>（1）</span></li>
+				<li>待支付<span id="reservedNum"></span></li>
+				<!--<li>待入住<span>（1）</span></li>-->
 				<li>优惠券<span id="couponNum"></span></li>
 			</ul>
 		</div>
@@ -40,6 +40,11 @@
        ajax("/user/coupons", {status:"notUsed", pageSize: 20}, function (data) {
            $("#couponNum").html("（"+data.length+"）");
        });
+
+       ajax("/user/orderList", {statusCode:"0001", pageSize: 1}, function (data) {
+           $("#reservedNum").html("（"+data.pageInfo.totalRecords+"）");
+       });
+
 
        initMemberPage(user);
    }

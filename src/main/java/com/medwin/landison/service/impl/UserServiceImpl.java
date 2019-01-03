@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.medwin.landison.common.BaseResult;
 import com.medwin.landison.config.LpsConfig;
+import com.medwin.landison.entity.LdsOrderEntity;
 import com.medwin.landison.exception.KmsSystemException;
 import com.medwin.landison.exception.SystemException;
 import com.medwin.landison.kms.informationservice.SendInfo;
@@ -282,6 +283,20 @@ public class UserServiceImpl implements UserService {
                 endDepartureDate, beginInsertDate, endInsertDate, hotels, firstName, lastName, profileId, account, cardNumber,
                 phoneNumber, statusCode, pageIndex, pageSize);
 
+//        ArrayOfOrderInfo arrayOfOrderInfo = orderPageOut.getOrderInfos();
+//        if(arrayOfOrderInfo != null && !CollectionUtils.isEmpty(arrayOfOrderInfo.getOrderInfo())) {
+//
+//            arrayOfOrderInfo.getOrderInfo().forEach(orderInfo -> {
+//                if(LdsOrderEntity.TYPE_PRE.equals(orderInfo.getReservationType().getCode())) {//预付订单
+//
+//                    LdsOrderEntity orderEntity = ldsService.getOrderByOrderId(String.valueOf(orderInfo.getID()));
+//                    if(PayMentStatus.PAID.equals(orderEntity.getPayCode())) {
+//
+//                    }
+//                }
+//            });
+//        }
+
         return new BaseResult(BaseResult.SUCCESS_CODE, "", orderPageOut);
     }
 
@@ -313,12 +328,19 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public BaseResult cancelOrder(int id, String comments, String croPermission) {
+    public BaseResult cancelOrder(int id, String comments, String mobile) {
 
-        boolean ret = kmsService.cancelOrder(id, comments, croPermission);
-        if(ret) {
-            ldsService.cancelOrder(id, "0003", comments);
+        QueryOrderPageOut orderPageOut = kmsService.queryOrderPage(id, null, null, null, null, null, null,
+                null,null, null, -1, null,  null, mobile, null, 1, 1);
+        if(orderPageOut.getPageInfo() != null && orderPageOut.getPageInfo().getTotalRecords() > 0) {
+
+            boolean ret = kmsService.cancelOrder(id, comments);
+            if(ret) {
+                ldsService.cancelOrder(id, "0003", comments);
+            }
+            return new BaseResult(BaseResult.SUCCESS_CODE, "", ret);
+        } else {
+            return new BaseResult("2", "查询订单失败", null) ;
         }
-        return new BaseResult(BaseResult.SUCCESS_CODE, "", ret) ;
     }
 }

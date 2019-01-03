@@ -37,7 +37,7 @@ public interface KmsService {
 
     OrderInfo greateReservation(OrderInfo orderInfo);
 
-    boolean cancelOrder(int id, String comments, String croPermission);
+    boolean cancelOrder(int id, String comments);
 
     QueryOrderPageOut queryOrderPage(int id, String beginArrivalDate, String endArrivalDate, String beginDepartureDate, String endDepartureDate,
                                         String beginInsertDate, String endInsertDate, String hotels, String firstName,

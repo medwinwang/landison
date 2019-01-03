@@ -52,5 +52,5 @@ public interface UserService {
                           String gatewayReferenceNo, PayMentStatus status, String remark, String paymentCode,
                           DataType orderType, PayMentStatus updateStatus);
 
-    BaseResult cancelOrder(int id, String comments, String croPermission);
+    BaseResult cancelOrder(int id, String comments, String mobile);
 }

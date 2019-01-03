@@ -133,9 +133,9 @@ public class KmsServiceImpl implements KmsService {
 
 
 
-    public boolean cancelOrder(int id, String comments, String croPermission){
+    public boolean cancelOrder(int id, String comments){
 
-        return reservationSoap.cancelOrder(id, comments, croPermission);
+        return reservationSoap.cancelReservation(id, comments);
     }
 
     @Override

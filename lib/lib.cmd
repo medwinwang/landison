@@ -1,7 +1,7 @@
 mvn install:install-file -Dfile=alipay-sdk-java20170324180803.jar -DgroupId=com.alipay -DartifactId=alipay-sdk-java -Dversion=1.0.0 -Dpackaging=jar
 
 
-java -jar  -XX:+UseConcMarkSweepGC -Xms512m -Xmx512m -Xmn210m -XX:+PrintGCDetails -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=258m  -Xloggc:/opt/web/service/log/gc_log.log -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/opt/web/service/log/dump landison-0.0.1-SNAPSHOT.jar --spring.profiles.active=test &
+java -jar  -XX:+UseConcMarkSweepGC -Xms512m -Xmx512m -Xmn360m -XX:+PrintGCDetails -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=258m  -Xloggc:/opt/web/service/log/gc_log.log -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/opt/web/service/log/dump landison-0.0.1-SNAPSHOT.jar --spring.profiles.active=test &
 
 #gc调优
  jps

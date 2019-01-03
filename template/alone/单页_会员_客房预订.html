@@ -266,7 +266,9 @@
                     lastName: lastName, totalRevenue: selectTotalPrice, hotelCode: hotelCode, roomtypeCode: selectRoomCode, comments: comments,
                     reteCode: selectRateCode, reservationTypeCode: addType, mobile: mobile, email : email, arrivalTime: arrivalTime},
                 function (data) {
+
                     checkSubmitFlg = false;
+                    window.open("http://"+window.location.host+ path + "/alipay/pay?orderId="+ result.data.id, "_blank");
                     if(addType == "10") {
                         var r=confirm("支付完成？");
                         if (r) {
@@ -274,7 +276,6 @@
                         } else {
 
                         }
-                        window.open("http://"+window.location.host+ path + "/alipay/pay?orderId="+ result.data.id);
                     }else {
                         alert("提交订单成功");
                     }
@@ -324,7 +325,7 @@
                 '<td title="订单一经确认，不可取消、修改。若未按时入住，我们将扣除您全额或部分房费。如若您的旅程尚未确定，建议购买取消险哦~">不可取消</td>' +
                 '<td class="tal"><span class="price">'+roomTypeDetail.totalPrice+'</span>' +
                 '<p>'+rate.name.split("|")[0]+'</p></td>' +
-                '<td><a href="javascript:void(0)" class="want" onclick="addRoomOrder(\''+rate.code+'\',\''+roomTypeDetail.code+'\','+firstNightTotalPrice+')">预定</a></td></tr>');
+                '<td><a href="javascript:void(0)" class="want" onclick="addRoomOrder(\''+rate.code+'\',\''+roomTypeDetail.code+'\','+firstNightTotalPrice+','+roomTypeDetail.totalPrice+')">预定</a></td></tr>');
             $("#" + roomTypeCodeId + "_1").attr("rowspan", Number(num) + 1);
 
         } else {
@@ -352,7 +353,7 @@
                 '<td>'+getBf(roomTypeDetail)+'</td>' +
                 '<td title="订单一经确认，不可取消、修改。若未按时入住，我们将扣除您全额或部分房费。如若您的旅程尚未确定，建议购买取消险哦~">不可取消</td>' +
                 '<td class="tal"><span class="price">'+roomTypeDetail.totalPrice+'</span><p>'+rate.name.split("|")[0]+'</p> </td>' +
-                '<td><a href="javascript:void(0)" class="want" onclick="addRoomOrder(\''+rate.code+'\',\''+roomTypeDetail.code+'\','+firstNightTotalPrice+')">预定</a></td></tr>';
+                '<td><a href="javascript:void(0)" class="want" onclick="addRoomOrder(\''+rate.code+'\',\''+roomTypeDetail.code+'\','+firstNightTotalPrice+','+roomTypeDetail.totalPrice+')">预定</a></td></tr>';
             el.append(html);
         }
     }
@@ -405,7 +406,7 @@
             $('.roomDetail').hide();
         });
 
-    function addRoomOrder(rateCode, roomCode, firstNightTotalPrice) {
+    function addRoomOrder(rateCode, roomCode, firstNightTotalPrice, totalPrice) {
         goStep(3);
 //        var dayNum = getDateDiff(arrival, departure);
         $("#totalPrice").html("￥"+ firstNightTotalPrice);
@@ -413,6 +414,7 @@
         selectRateCode = rateCode;
         selectRoomCode = roomCode;
         selectFirstNightPrice = firstNightTotalPrice;
+        selectTotalPrice = totalPrice;
 
     }
 

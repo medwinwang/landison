@@ -51,10 +51,4 @@ public class HotelController {
         return baseResult;
     }
 
-    @RequestMapping(value = "/cancelOrder", method = RequestMethod.POST)
-    public BaseResult cancelOrder(int id, String comments, HttpSession httpSession) {
-
-        return userService.cancelOrder(id, comments, null);
-    }
-
 }

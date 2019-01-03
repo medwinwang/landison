@@ -133,4 +133,12 @@ public class UserController {
         return baseResult;
     }
 
+    @RequestMapping(value = "/cancelOrder", method = RequestMethod.POST)
+    public BaseResult cancelOrder(int id, String comments, HttpSession httpSession) {
+
+        JSONObject user = (JSONObject) httpSession.getAttribute(LoginController.SESSION_USER);
+
+        return userService.cancelOrder(id, comments, user.getString("mobile"));
+    }
+
 }

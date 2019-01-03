@@ -82,7 +82,6 @@
                             <option value="">全部订单</option>
                             <option value="0001">RESERVED</option>
                             <option value="0003">CANCELED</option>
-                            <option value="0005">WAITING</option>
                             <option value="0004">CHECK IN</option>
                             <option value="0006">CHECK OUT</option>
                         </select>
@@ -189,7 +188,7 @@
             area: ['300px', '100px']//自定义文本域宽高
         }, function(value, index, elem){
 
-            ajax("/hotel/cancelOrder", {id: id, comments:value}, function (data) {
+            ajax("/cancelOrder/cancelOrder", {id: id, comments:value}, function (data) {
                 if(data) {
                     alert("取消成功");
                     layer.close(index);

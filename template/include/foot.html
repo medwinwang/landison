@@ -270,10 +270,9 @@
 
     });
 
-	if($(".hotelDrop").length > 0) {
-		ajax("/info/information", {dataType: 'HOTEL'}, function () {
+	function getHotels() {
+		ajax("/info/information", {dataType: 'HOTEL'}, function (data) {
 			var html = '';
-			var data = result.data;
 			for(var i=0; i< data.length; i++) {
 				var item = data[i];
 				html += '<li code="'+item.code+'">'+item.name+'</li>';
