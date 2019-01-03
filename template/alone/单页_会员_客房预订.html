@@ -322,7 +322,7 @@
             $("."+ roomTypeCodeId+":last").after('<tr>' +
 //              '<td>大床</td>' +
                 '<td>'+getBf(roomTypeDetail)+'</td>' +
-                '<td title="订单一经确认，不可取消、修改。若未按时入住，我们将扣除您全额或部分房费。如若您的旅程尚未确定，建议购买取消险哦~">不可取消</td>' +
+                '<td>'+getQxgz(rate.oguaranteeRule)+'</td>' +
                 '<td class="tal"><span class="price">'+roomTypeDetail.totalPrice+'</span>' +
                 '<p>'+rate.name.split("|")[0]+'</p></td>' +
                 '<td><a href="javascript:void(0)" class="want" onclick="addRoomOrder(\''+rate.code+'\',\''+roomTypeDetail.code+'\','+firstNightTotalPrice+','+roomTypeDetail.totalPrice+')">预定</a></td></tr>');
@@ -351,11 +351,29 @@
                 '</td>' +
 //                '<td>大床</td>' +
                 '<td>'+getBf(roomTypeDetail)+'</td>' +
-                '<td title="订单一经确认，不可取消、修改。若未按时入住，我们将扣除您全额或部分房费。如若您的旅程尚未确定，建议购买取消险哦~">不可取消</td>' +
+                '<td>'+getQxgz(rate.oguaranteeRule)+'</td>' +
                 '<td class="tal"><span class="price">'+roomTypeDetail.totalPrice+'</span><p>'+rate.name.split("|")[0]+'</p> </td>' +
                 '<td><a href="javascript:void(0)" class="want" onclick="addRoomOrder(\''+rate.code+'\',\''+roomTypeDetail.code+'\','+firstNightTotalPrice+','+roomTypeDetail.totalPrice+')">预定</a></td></tr>';
             el.append(html);
         }
+    }
+
+    function getQxgz(oguaranteeRule) {
+        if(oguaranteeRule && oguaranteeRule.guaranteeRule) {
+
+            var html = '';
+            oguaranteeRule.guaranteeRule.forEach(function (item, index) {
+                html += item.name.split("|")[0] + ":";
+                if(item.ocancelRule) {
+                   html += item.ocancelRule.name + item.ocancelRule.cancelBeforeTimeStr + '<br>';
+                } else {
+                    html += "免费取消<br>";
+                }
+            });
+
+            return html;
+        }
+        return '--';
     }
 
     function getBf(roomTypeDetail) {
