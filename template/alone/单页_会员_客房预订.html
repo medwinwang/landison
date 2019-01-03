@@ -268,7 +268,7 @@
                 function (data) {
 
                     checkSubmitFlg = false;
-                    window.open("http://"+window.location.host+ path + "/alipay/pay?orderId="+ result.data.id, "_blank");
+                    window.open("http://"+window.location.host+ path + "/alipay/pay?orderId="+ data.id, "_blank");
                     if(addType == "10") {
                         var r=confirm("支付完成？");
                         if (r) {

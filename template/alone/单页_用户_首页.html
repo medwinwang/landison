@@ -188,7 +188,7 @@
             area: ['300px', '100px']//自定义文本域宽高
         }, function(value, index, elem){
 
-            ajax("/cancelOrder/cancelOrder", {id: id, comments:value}, function (data) {
+            ajax("/user/cancelOrder", {id: id, comments:value}, function (data) {
                 if(data) {
                     alert("取消成功");
                     layer.close(index);
