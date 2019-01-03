@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>ExtraAvailability complex typeµÄ Java Àà¡£
+ * <p>ExtraAvailability complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="ExtraAvailability"&gt;
@@ -40,7 +40,7 @@ public class ExtraAvailability {
     protected ArrayOfAvailability oAvailabilityArr;
 
     /**
-     * »ñÈ¡countNumsÊôĞÔµÄÖµ¡£
+     * è·å–countNumså±æ€§çš„å€¼ã€‚
      * 
      */
     public int getCountNums() {
@@ -48,7 +48,7 @@ public class ExtraAvailability {
     }
 
     /**
-     * ÉèÖÃcountNumsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®countNumså±æ€§çš„å€¼ã€‚
      * 
      */
     public void setCountNums(int value) {
@@ -56,7 +56,7 @@ public class ExtraAvailability {
     }
 
     /**
-     * »ñÈ¡oAvailabilityArrÊôĞÔµÄÖµ¡£
+     * è·å–oAvailabilityArrå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -68,7 +68,7 @@ public class ExtraAvailability {
     }
 
     /**
-     * ÉèÖÃoAvailabilityArrÊôĞÔµÄÖµ¡£
+     * è®¾ç½®oAvailabilityArrå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

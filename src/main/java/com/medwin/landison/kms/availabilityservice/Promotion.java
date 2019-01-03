@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Promotion complex typeµÄ Java Àà¡£
+ * <p>Promotion complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="Promotion"&gt;
@@ -65,7 +65,7 @@ public class Promotion {
     protected String desc;
 
     /**
-     * »ñÈ¡discountTypeÊôĞÔµÄÖµ¡£
+     * è·å–discountTypeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -77,7 +77,7 @@ public class Promotion {
     }
 
     /**
-     * ÉèÖÃdiscountTypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®discountTypeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -89,7 +89,7 @@ public class Promotion {
     }
 
     /**
-     * »ñÈ¡stayNightsÊôĞÔµÄÖµ¡£
+     * è·å–stayNightså±æ€§çš„å€¼ã€‚
      * 
      */
     public int getStayNights() {
@@ -97,7 +97,7 @@ public class Promotion {
     }
 
     /**
-     * ÉèÖÃstayNightsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®stayNightså±æ€§çš„å€¼ã€‚
      * 
      */
     public void setStayNights(int value) {
@@ -105,7 +105,7 @@ public class Promotion {
     }
 
     /**
-     * »ñÈ¡freeNightsÊôĞÔµÄÖµ¡£
+     * è·å–freeNightså±æ€§çš„å€¼ã€‚
      * 
      */
     public int getFreeNights() {
@@ -113,7 +113,7 @@ public class Promotion {
     }
 
     /**
-     * ÉèÖÃfreeNightsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®freeNightså±æ€§çš„å€¼ã€‚
      * 
      */
     public void setFreeNights(int value) {
@@ -121,7 +121,7 @@ public class Promotion {
     }
 
     /**
-     * »ñÈ¡lastNightsÊôĞÔµÄÖµ¡£
+     * è·å–lastNightså±æ€§çš„å€¼ã€‚
      * 
      */
     public int getLastNights() {
@@ -129,7 +129,7 @@ public class Promotion {
     }
 
     /**
-     * ÉèÖÃlastNightsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®lastNightså±æ€§çš„å€¼ã€‚
      * 
      */
     public void setLastNights(int value) {
@@ -137,7 +137,7 @@ public class Promotion {
     }
 
     /**
-     * »ñÈ¡beginTimeÊôĞÔµÄÖµ¡£
+     * è·å–beginTimeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -149,7 +149,7 @@ public class Promotion {
     }
 
     /**
-     * ÉèÖÃbeginTimeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®beginTimeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -161,7 +161,7 @@ public class Promotion {
     }
 
     /**
-     * »ñÈ¡endTimeÊôĞÔµÄÖµ¡£
+     * è·å–endTimeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -173,7 +173,7 @@ public class Promotion {
     }
 
     /**
-     * ÉèÖÃendTimeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®endTimeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -185,7 +185,7 @@ public class Promotion {
     }
 
     /**
-     * »ñÈ¡discountÊôĞÔµÄÖµ¡£
+     * è·å–discountå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -197,7 +197,7 @@ public class Promotion {
     }
 
     /**
-     * ÉèÖÃdiscountÊôĞÔµÄÖµ¡£
+     * è®¾ç½®discountå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -209,7 +209,7 @@ public class Promotion {
     }
 
     /**
-     * »ñÈ¡descÊôĞÔµÄÖµ¡£
+     * è·å–descå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -221,7 +221,7 @@ public class Promotion {
     }
 
     /**
-     * ÉèÖÃdescÊôĞÔµÄÖµ¡£
+     * è®¾ç½®descå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

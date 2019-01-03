@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>HotelInfoSummary complex type�� Java �ࡣ
+ * <p>HotelInfoSummary complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="HotelInfoSummary"&gt;
@@ -50,6 +50,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="CityName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="CityCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="ShowVIPPlanLogo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="RealInventory" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="WithGroupHotels" type="{http://www.shijinet.com.cn/kunlun/kws/1.1/}CommonInfo" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -163,12 +164,12 @@ public class HotelInfoSummary {
     @XmlElement(name = "ShowVIPPlanLogo")
     protected String showVIPPlanLogo;
     @XmlElement(name = "RealInventory")
-    protected String realInventory;
+    protected int realInventory;
     @XmlElement(name = "WithGroupHotels")
     protected CommonInfo withGroupHotels;
 
     /**
-     * ��ȡpicPath���Ե�ֵ��
+     * 获取picPath属性的值。
      * 
      * @return
      *     possible object is
@@ -180,7 +181,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����picPath���Ե�ֵ��
+     * 设置picPath属性的值。
      * 
      * @param value
      *     allowed object is
@@ -192,7 +193,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡrecommendedLevel���Ե�ֵ��
+     * 获取recommendedLevel属性的值。
      * 
      * @return
      *     possible object is
@@ -204,7 +205,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����recommendedLevel���Ե�ֵ��
+     * 设置recommendedLevel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -216,7 +217,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡfullName���Ե�ֵ��
+     * 获取fullName属性的值。
      * 
      * @return
      *     possible object is
@@ -228,7 +229,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����fullName���Ե�ֵ��
+     * 设置fullName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -240,7 +241,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡdesc���Ե�ֵ��
+     * 获取desc属性的值。
      * 
      * @return
      *     possible object is
@@ -252,7 +253,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����desc���Ե�ֵ��
+     * 设置desc属性的值。
      * 
      * @param value
      *     allowed object is
@@ -264,7 +265,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡremark���Ե�ֵ��
+     * 获取remark属性的值。
      * 
      * @return
      *     possible object is
@@ -276,7 +277,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����remark���Ե�ֵ��
+     * 设置remark属性的值。
      * 
      * @param value
      *     allowed object is
@@ -288,7 +289,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡkeyword���Ե�ֵ��
+     * 获取keyword属性的值。
      * 
      * @return
      *     possible object is
@@ -300,7 +301,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����keyword���Ե�ֵ��
+     * 设置keyword属性的值。
      * 
      * @param value
      *     allowed object is
@@ -312,7 +313,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡemail���Ե�ֵ��
+     * 获取email属性的值。
      * 
      * @return
      *     possible object is
@@ -324,7 +325,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����email���Ե�ֵ��
+     * 设置email属性的值。
      * 
      * @param value
      *     allowed object is
@@ -336,7 +337,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡmap���Ե�ֵ��
+     * 获取map属性的值。
      * 
      * @return
      *     possible object is
@@ -348,7 +349,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����map���Ե�ֵ��
+     * 设置map属性的值。
      * 
      * @param value
      *     allowed object is
@@ -360,7 +361,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡlevel���Ե�ֵ��
+     * 获取level属性的值。
      * 
      */
     public int getLevel() {
@@ -368,7 +369,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����level���Ե�ֵ��
+     * 设置level属性的值。
      * 
      */
     public void setLevel(int value) {
@@ -376,7 +377,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡminPrice���Ե�ֵ��
+     * 获取minPrice属性的值。
      * 
      * @return
      *     possible object is
@@ -388,7 +389,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����minPrice���Ե�ֵ��
+     * 设置minPrice属性的值。
      * 
      * @param value
      *     allowed object is
@@ -400,7 +401,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡmaxPrice���Ե�ֵ��
+     * 获取maxPrice属性的值。
      * 
      * @return
      *     possible object is
@@ -412,7 +413,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����maxPrice���Ե�ֵ��
+     * 设置maxPrice属性的值。
      * 
      * @param value
      *     allowed object is
@@ -424,7 +425,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡcommentResult���Ե�ֵ��
+     * 获取commentResult属性的值。
      * 
      * @return
      *     possible object is
@@ -436,7 +437,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����commentResult���Ե�ֵ��
+     * 设置commentResult属性的值。
      * 
      * @param value
      *     allowed object is
@@ -448,7 +449,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡudf1���Ե�ֵ��
+     * 获取udf1属性的值。
      * 
      * @return
      *     possible object is
@@ -460,7 +461,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����udf1���Ե�ֵ��
+     * 设置udf1属性的值。
      * 
      * @param value
      *     allowed object is
@@ -472,7 +473,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡudf2���Ե�ֵ��
+     * 获取udf2属性的值。
      * 
      * @return
      *     possible object is
@@ -484,7 +485,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����udf2���Ե�ֵ��
+     * 设置udf2属性的值。
      * 
      * @param value
      *     allowed object is
@@ -496,7 +497,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡudf3���Ե�ֵ��
+     * 获取udf3属性的值。
      * 
      * @return
      *     possible object is
@@ -508,7 +509,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����udf3���Ե�ֵ��
+     * 设置udf3属性的值。
      * 
      * @param value
      *     allowed object is
@@ -520,7 +521,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡudf4���Ե�ֵ��
+     * 获取udf4属性的值。
      * 
      * @return
      *     possible object is
@@ -532,7 +533,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����udf4���Ե�ֵ��
+     * 设置udf4属性的值。
      * 
      * @param value
      *     allowed object is
@@ -544,7 +545,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡudf5���Ե�ֵ��
+     * 获取udf5属性的值。
      * 
      * @return
      *     possible object is
@@ -556,7 +557,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����udf5���Ե�ֵ��
+     * 设置udf5属性的值。
      * 
      * @param value
      *     allowed object is
@@ -568,7 +569,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡcode���Ե�ֵ��
+     * 获取code属性的值。
      * 
      * @return
      *     possible object is
@@ -580,7 +581,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����code���Ե�ֵ��
+     * 设置code属性的值。
      * 
      * @param value
      *     allowed object is
@@ -592,7 +593,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡname���Ե�ֵ��
+     * 获取name属性的值。
      * 
      * @return
      *     possible object is
@@ -604,7 +605,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����name���Ե�ֵ��
+     * 设置name属性的值。
      * 
      * @param value
      *     allowed object is
@@ -616,7 +617,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡengName���Ե�ֵ��
+     * 获取engName属性的值。
      * 
      * @return
      *     possible object is
@@ -628,7 +629,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����engName���Ե�ֵ��
+     * 设置engName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -640,7 +641,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡstars���Ե�ֵ��
+     * 获取stars属性的值。
      * 
      * @return
      *     possible object is
@@ -652,7 +653,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����stars���Ե�ֵ��
+     * 设置stars属性的值。
      * 
      * @param value
      *     allowed object is
@@ -664,7 +665,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡstarName���Ե�ֵ��
+     * 获取starName属性的值。
      * 
      * @return
      *     possible object is
@@ -676,7 +677,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����starName���Ե�ֵ��
+     * 设置starName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -688,7 +689,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡaddress���Ե�ֵ��
+     * 获取address属性的值。
      * 
      * @return
      *     possible object is
@@ -700,7 +701,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����address���Ե�ֵ��
+     * 设置address属性的值。
      * 
      * @param value
      *     allowed object is
@@ -712,7 +713,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡengAddress���Ե�ֵ��
+     * 获取engAddress属性的值。
      * 
      * @return
      *     possible object is
@@ -724,7 +725,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����engAddress���Ե�ֵ��
+     * 设置engAddress属性的值。
      * 
      * @param value
      *     allowed object is
@@ -736,7 +737,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡcountry���Ե�ֵ��
+     * 获取country属性的值。
      * 
      * @return
      *     possible object is
@@ -748,7 +749,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����country���Ե�ֵ��
+     * 设置country属性的值。
      * 
      * @param value
      *     allowed object is
@@ -760,7 +761,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡprovince���Ե�ֵ��
+     * 获取province属性的值。
      * 
      * @return
      *     possible object is
@@ -772,7 +773,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����province���Ե�ֵ��
+     * 设置province属性的值。
      * 
      * @param value
      *     allowed object is
@@ -784,7 +785,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡphone���Ե�ֵ��
+     * 获取phone属性的值。
      * 
      * @return
      *     possible object is
@@ -796,7 +797,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����phone���Ե�ֵ��
+     * 设置phone属性的值。
      * 
      * @param value
      *     allowed object is
@@ -808,7 +809,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡfax���Ե�ֵ��
+     * 获取fax属性的值。
      * 
      * @return
      *     possible object is
@@ -820,7 +821,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����fax���Ե�ֵ��
+     * 设置fax属性的值。
      * 
      * @param value
      *     allowed object is
@@ -832,7 +833,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡpostCode���Ե�ֵ��
+     * 获取postCode属性的值。
      * 
      * @return
      *     possible object is
@@ -844,7 +845,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����postCode���Ե�ֵ��
+     * 设置postCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -856,7 +857,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡcityName���Ե�ֵ��
+     * 获取cityName属性的值。
      * 
      * @return
      *     possible object is
@@ -868,7 +869,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����cityName���Ե�ֵ��
+     * 设置cityName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -880,7 +881,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡcityCode���Ե�ֵ��
+     * 获取cityCode属性的值。
      * 
      * @return
      *     possible object is
@@ -892,7 +893,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����cityCode���Ե�ֵ��
+     * 设置cityCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -904,7 +905,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡshowVIPPlanLogo���Ե�ֵ��
+     * 获取showVIPPlanLogo属性的值。
      * 
      * @return
      *     possible object is
@@ -916,7 +917,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����showVIPPlanLogo���Ե�ֵ��
+     * 设置showVIPPlanLogo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -928,7 +929,23 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ��ȡwithGroupHotels���Ե�ֵ��
+     * 获取realInventory属性的值。
+     * 
+     */
+    public int getRealInventory() {
+        return realInventory;
+    }
+
+    /**
+     * 设置realInventory属性的值。
+     * 
+     */
+    public void setRealInventory(int value) {
+        this.realInventory = value;
+    }
+
+    /**
+     * 获取withGroupHotels属性的值。
      * 
      * @return
      *     possible object is
@@ -940,7 +957,7 @@ public class HotelInfoSummary {
     }
 
     /**
-     * ����withGroupHotels���Ե�ֵ��
+     * 设置withGroupHotels属性的值。
      * 
      * @param value
      *     allowed object is
@@ -951,11 +968,4 @@ public class HotelInfoSummary {
         this.withGroupHotels = value;
     }
 
-    public String getRealInventory() {
-        return realInventory;
-    }
-
-    public void setRealInventory(String realInventory) {
-        this.realInventory = realInventory;
-    }
 }

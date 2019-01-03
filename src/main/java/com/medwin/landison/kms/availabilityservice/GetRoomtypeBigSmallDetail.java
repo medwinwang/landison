@@ -33,8 +33,8 @@ import javax.xml.bind.annotation.XmlType;
     "hotelCode",
     "roomtypeCode"
 })
-@XmlRootElement(name = "GetRoomDetail")
-public class GetRoomDetail {
+@XmlRootElement(name = "GetRoomtypeBigSmallDetail")
+public class GetRoomtypeBigSmallDetail {
 
     @XmlElement(name = "hotel_code")
     protected String hotelCode;

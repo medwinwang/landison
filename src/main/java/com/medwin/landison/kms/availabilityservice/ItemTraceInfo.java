@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>ItemTraceInfo complex typeµÄ Java Àà¡£
+ * <p>ItemTraceInfo complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="ItemTraceInfo"&gt;
@@ -44,7 +44,7 @@ public class ItemTraceInfo {
     protected String traceText;
 
     /**
-     * »ñÈ¡pmsDepartmentCodeÊôĞÔµÄÖµ¡£
+     * è·å–pmsDepartmentCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -56,7 +56,7 @@ public class ItemTraceInfo {
     }
 
     /**
-     * ÉèÖÃpmsDepartmentCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®pmsDepartmentCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -68,7 +68,7 @@ public class ItemTraceInfo {
     }
 
     /**
-     * »ñÈ¡pmsDepartmentNameÊôĞÔµÄÖµ¡£
+     * è·å–pmsDepartmentNameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class ItemTraceInfo {
     }
 
     /**
-     * ÉèÖÃpmsDepartmentNameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®pmsDepartmentNameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -92,7 +92,7 @@ public class ItemTraceInfo {
     }
 
     /**
-     * »ñÈ¡traceTextÊôĞÔµÄÖµ¡£
+     * è·å–traceTextå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -104,7 +104,7 @@ public class ItemTraceInfo {
     }
 
     /**
-     * ÉèÖÃtraceTextÊôĞÔµÄÖµ¡£
+     * è®¾ç½®traceTextå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

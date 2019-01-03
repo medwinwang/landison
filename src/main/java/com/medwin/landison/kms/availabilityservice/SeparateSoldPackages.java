@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>SeparateSoldPackages complex type�� Java �ࡣ
+ * <p>SeparateSoldPackages complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="SeparateSoldPackages"&gt;
@@ -44,15 +45,17 @@ public class SeparateSoldPackages {
     protected String packageCode;
     @XmlElement(name = "Quantity")
     protected int quantity;
-    @XmlElement(name = "BeginDate", required = true)
+    @XmlElement(name = "BeginDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginDate;
-    @XmlElement(name = "EndDate", required = true)
+    protected Date beginDate;
+    @XmlElement(name = "EndDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endDate;
+    protected Date endDate;
 
     /**
-     * ��ȡpackageCode���Ե�ֵ��
+     * 获取packageCode属性的值。
      * 
      * @return
      *     possible object is
@@ -64,7 +67,7 @@ public class SeparateSoldPackages {
     }
 
     /**
-     * ����packageCode���Ե�ֵ��
+     * 设置packageCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -76,7 +79,7 @@ public class SeparateSoldPackages {
     }
 
     /**
-     * ��ȡquantity���Ե�ֵ��
+     * 获取quantity属性的值。
      * 
      */
     public int getQuantity() {
@@ -84,7 +87,7 @@ public class SeparateSoldPackages {
     }
 
     /**
-     * ����quantity���Ե�ֵ��
+     * 设置quantity属性的值。
      * 
      */
     public void setQuantity(int value) {
@@ -92,50 +95,50 @@ public class SeparateSoldPackages {
     }
 
     /**
-     * ��ȡbeginDate���Ե�ֵ��
+     * 获取beginDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBeginDate() {
+    public Date getBeginDate() {
         return beginDate;
     }
 
     /**
-     * ����beginDate���Ե�ֵ��
+     * 设置beginDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginDate(String value) {
+    public void setBeginDate(Date value) {
         this.beginDate = value;
     }
 
     /**
-     * ��ȡendDate���Ե�ֵ��
+     * 获取endDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
     /**
-     * ����endDate���Ե�ֵ��
+     * 设置endDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndDate(String value) {
+    public void setEndDate(Date value) {
         this.endDate = value;
     }
 

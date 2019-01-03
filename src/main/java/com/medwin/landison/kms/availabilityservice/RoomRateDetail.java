@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>RoomRateDetail complex typeµÄ Java Àà¡£
+ * <p>RoomRateDetail complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="RoomRateDetail"&gt;
@@ -40,7 +40,7 @@ public class RoomRateDetail {
     protected ArrayOfRateDetailDaily rateDetailDailys;
 
     /**
-     * »ñÈ¡roomTypeDetailÊôĞÔµÄÖµ¡£
+     * è·å–roomTypeDetailå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class RoomRateDetail {
     }
 
     /**
-     * ÉèÖÃroomTypeDetailÊôĞÔµÄÖµ¡£
+     * è®¾ç½®roomTypeDetailå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class RoomRateDetail {
     }
 
     /**
-     * »ñÈ¡rateDetailDailysÊôĞÔµÄÖµ¡£
+     * è·å–rateDetailDailyså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class RoomRateDetail {
     }
 
     /**
-     * ÉèÖÃrateDetailDailysÊôĞÔµÄÖµ¡£
+     * è®¾ç½®rateDetailDailyså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

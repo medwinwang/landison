@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>CheckItemIsEnoughOut complex type�� Java �ࡣ
+ * <p>CheckItemIsEnoughOut complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="CheckItemIsEnoughOut"&gt;
@@ -42,16 +43,17 @@ public class CheckItemIsEnoughOut {
 
     @XmlElement(name = "ItemCode")
     protected String itemCode;
-    @XmlElement(name = "Dt", required = true)
+    @XmlElement(name = "Dt", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String dt;
+    protected Date dt;
     @XmlElement(name = "OverstepQuantity")
     protected String overstepQuantity;
     @XmlElement(name = "LimitInventory")
     protected String limitInventory;
 
     /**
-     * ��ȡitemCode���Ե�ֵ��
+     * 获取itemCode属性的值。
      * 
      * @return
      *     possible object is
@@ -63,7 +65,7 @@ public class CheckItemIsEnoughOut {
     }
 
     /**
-     * ����itemCode���Ե�ֵ��
+     * 设置itemCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -75,31 +77,31 @@ public class CheckItemIsEnoughOut {
     }
 
     /**
-     * ��ȡdt���Ե�ֵ��
+     * 获取dt属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDt() {
+    public Date getDt() {
         return dt;
     }
 
     /**
-     * ����dt���Ե�ֵ��
+     * 设置dt属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDt(String value) {
+    public void setDt(Date value) {
         this.dt = value;
     }
 
     /**
-     * ��ȡoverstepQuantity���Ե�ֵ��
+     * 获取overstepQuantity属性的值。
      * 
      * @return
      *     possible object is
@@ -111,7 +113,7 @@ public class CheckItemIsEnoughOut {
     }
 
     /**
-     * ����overstepQuantity���Ե�ֵ��
+     * 设置overstepQuantity属性的值。
      * 
      * @param value
      *     allowed object is
@@ -123,7 +125,7 @@ public class CheckItemIsEnoughOut {
     }
 
     /**
-     * ��ȡlimitInventory���Ե�ֵ��
+     * 获取limitInventory属性的值。
      * 
      * @return
      *     possible object is
@@ -135,7 +137,7 @@ public class CheckItemIsEnoughOut {
     }
 
     /**
-     * ����limitInventory���Ե�ֵ��
+     * 设置limitInventory属性的值。
      * 
      * @param value
      *     allowed object is

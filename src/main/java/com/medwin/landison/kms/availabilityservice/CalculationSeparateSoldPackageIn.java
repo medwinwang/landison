@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>CalculationSeparateSoldPackageIn complex type�� Java �ࡣ
+ * <p>CalculationSeparateSoldPackageIn complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="CalculationSeparateSoldPackageIn"&gt;
@@ -56,12 +57,14 @@ public class CalculationSeparateSoldPackageIn {
     protected String packageCode;
     @XmlElement(name = "Quantity")
     protected int quantity;
-    @XmlElement(name = "Arrival", required = true)
+    @XmlElement(name = "Arrival", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String arrival;
-    @XmlElement(name = "Departure", required = true)
+    protected Date arrival;
+    @XmlElement(name = "Departure", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String departure;
+    protected Date departure;
     @XmlElement(name = "Adults")
     protected int adults;
     @XmlElement(name = "Children")
@@ -70,15 +73,17 @@ public class CalculationSeparateSoldPackageIn {
     protected int rooms;
     @XmlElement(name = "HotelCode")
     protected String hotelCode;
-    @XmlElement(name = "BeginDate", required = true)
+    @XmlElement(name = "BeginDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginDate;
-    @XmlElement(name = "EndDate", required = true)
+    protected Date beginDate;
+    @XmlElement(name = "EndDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endDate;
+    protected Date endDate;
 
     /**
-     * ��ȡpackageCode���Ե�ֵ��
+     * 获取packageCode属性的值。
      * 
      * @return
      *     possible object is
@@ -90,7 +95,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ����packageCode���Ե�ֵ��
+     * 设置packageCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -102,7 +107,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ��ȡquantity���Ե�ֵ��
+     * 获取quantity属性的值。
      * 
      */
     public int getQuantity() {
@@ -110,7 +115,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ����quantity���Ե�ֵ��
+     * 设置quantity属性的值。
      * 
      */
     public void setQuantity(int value) {
@@ -118,55 +123,55 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ��ȡarrival���Ե�ֵ��
+     * 获取arrival属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getArrival() {
+    public Date getArrival() {
         return arrival;
     }
 
     /**
-     * ����arrival���Ե�ֵ��
+     * 设置arrival属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setArrival(String value) {
+    public void setArrival(Date value) {
         this.arrival = value;
     }
 
     /**
-     * ��ȡdeparture���Ե�ֵ��
+     * 获取departure属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDeparture() {
+    public Date getDeparture() {
         return departure;
     }
 
     /**
-     * ����departure���Ե�ֵ��
+     * 设置departure属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDeparture(String value) {
+    public void setDeparture(Date value) {
         this.departure = value;
     }
 
     /**
-     * ��ȡadults���Ե�ֵ��
+     * 获取adults属性的值。
      * 
      */
     public int getAdults() {
@@ -174,7 +179,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ����adults���Ե�ֵ��
+     * 设置adults属性的值。
      * 
      */
     public void setAdults(int value) {
@@ -182,7 +187,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ��ȡchildren���Ե�ֵ��
+     * 获取children属性的值。
      * 
      */
     public int getChildren() {
@@ -190,7 +195,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ����children���Ե�ֵ��
+     * 设置children属性的值。
      * 
      */
     public void setChildren(int value) {
@@ -198,7 +203,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ��ȡrooms���Ե�ֵ��
+     * 获取rooms属性的值。
      * 
      */
     public int getRooms() {
@@ -206,7 +211,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ����rooms���Ե�ֵ��
+     * 设置rooms属性的值。
      * 
      */
     public void setRooms(int value) {
@@ -214,7 +219,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -226,7 +231,7 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -238,50 +243,50 @@ public class CalculationSeparateSoldPackageIn {
     }
 
     /**
-     * ��ȡbeginDate���Ե�ֵ��
+     * 获取beginDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBeginDate() {
+    public Date getBeginDate() {
         return beginDate;
     }
 
     /**
-     * ����beginDate���Ե�ֵ��
+     * 设置beginDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginDate(String value) {
+    public void setBeginDate(Date value) {
         this.beginDate = value;
     }
 
     /**
-     * ��ȡendDate���Ե�ֵ��
+     * 获取endDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
     /**
-     * ����endDate���Ե�ֵ��
+     * 设置endDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndDate(String value) {
+    public void setEndDate(Date value) {
         this.endDate = value;
     }
 

@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Segment complex typeµÄ Java Àà¡£
+ * <p>Segment complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="Segment"&gt;
@@ -36,7 +36,7 @@ public class Segment
     protected String mcode;
 
     /**
-     * »ñÈ¡mcodeÊôĞÔµÄÖµ¡£
+     * è·å–mcodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class Segment
     }
 
     /**
-     * ÉèÖÃmcodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®mcodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

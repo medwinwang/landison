@@ -2,18 +2,19 @@
 package com.medwin.landison.kms.availabilityservice;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>RateDetailSummary complex type�� Java �ࡣ
+ * <p>RateDetailSummary complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="RateDetailSummary"&gt;
@@ -94,12 +95,14 @@ public class RateDetailSummary {
     protected Roomtype roomType;
     @XmlElement(name = "Price", required = true)
     protected BigDecimal price;
-    @XmlElement(name = "FromDt", required = true)
+    @XmlElement(name = "FromDt", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String fromDt;
-    @XmlElement(name = "ToDt", required = true)
+    protected Date fromDt;
+    @XmlElement(name = "ToDt", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String toDt;
+    protected Date toDt;
     @XmlElement(name = "RoomNumbers")
     protected String roomNumbers;
     @XmlElement(name = "Prs1", required = true)
@@ -144,7 +147,7 @@ public class RateDetailSummary {
     protected ArrayOfPackage packages;
 
     /**
-     * ��ȡid���Ե�ֵ��
+     * 获取id属性的值。
      * 
      */
     public int getId() {
@@ -152,7 +155,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����id���Ե�ֵ��
+     * 设置id属性的值。
      * 
      */
     public void setId(int value) {
@@ -160,7 +163,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡrate���Ե�ֵ��
+     * 获取rate属性的值。
      * 
      * @return
      *     possible object is
@@ -172,7 +175,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����rate���Ե�ֵ��
+     * 设置rate属性的值。
      * 
      * @param value
      *     allowed object is
@@ -184,7 +187,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡroomType���Ե�ֵ��
+     * 获取roomType属性的值。
      * 
      * @return
      *     possible object is
@@ -196,7 +199,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����roomType���Ե�ֵ��
+     * 设置roomType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -208,7 +211,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡprice���Ե�ֵ��
+     * 获取price属性的值。
      * 
      * @return
      *     possible object is
@@ -220,7 +223,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����price���Ե�ֵ��
+     * 设置price属性的值。
      * 
      * @param value
      *     allowed object is
@@ -232,55 +235,55 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡfromDt���Ե�ֵ��
+     * 获取fromDt属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getFromDt() {
+    public Date getFromDt() {
         return fromDt;
     }
 
     /**
-     * ����fromDt���Ե�ֵ��
+     * 设置fromDt属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setFromDt(String value) {
+    public void setFromDt(Date value) {
         this.fromDt = value;
     }
 
     /**
-     * ��ȡtoDt���Ե�ֵ��
+     * 获取toDt属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getToDt() {
+    public Date getToDt() {
         return toDt;
     }
 
     /**
-     * ����toDt���Ե�ֵ��
+     * 设置toDt属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setToDt(String value) {
+    public void setToDt(Date value) {
         this.toDt = value;
     }
 
     /**
-     * ��ȡroomNumbers���Ե�ֵ��
+     * 获取roomNumbers属性的值。
      * 
      * @return
      *     possible object is
@@ -292,7 +295,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����roomNumbers���Ե�ֵ��
+     * 设置roomNumbers属性的值。
      * 
      * @param value
      *     allowed object is
@@ -304,7 +307,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡprs1���Ե�ֵ��
+     * 获取prs1属性的值。
      * 
      * @return
      *     possible object is
@@ -316,7 +319,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����prs1���Ե�ֵ��
+     * 设置prs1属性的值。
      * 
      * @param value
      *     allowed object is
@@ -328,7 +331,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡprs2���Ե�ֵ��
+     * 获取prs2属性的值。
      * 
      * @return
      *     possible object is
@@ -340,7 +343,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����prs2���Ե�ֵ��
+     * 设置prs2属性的值。
      * 
      * @param value
      *     allowed object is
@@ -352,7 +355,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡprs3���Ե�ֵ��
+     * 获取prs3属性的值。
      * 
      * @return
      *     possible object is
@@ -364,7 +367,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����prs3���Ե�ֵ��
+     * 设置prs3属性的值。
      * 
      * @param value
      *     allowed object is
@@ -376,7 +379,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡprs4���Ե�ֵ��
+     * 获取prs4属性的值。
      * 
      * @return
      *     possible object is
@@ -388,7 +391,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����prs4���Ե�ֵ��
+     * 设置prs4属性的值。
      * 
      * @param value
      *     allowed object is
@@ -400,7 +403,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡprs5���Ե�ֵ��
+     * 获取prs5属性的值。
      * 
      * @return
      *     possible object is
@@ -412,7 +415,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����prs5���Ե�ֵ��
+     * 设置prs5属性的值。
      * 
      * @param value
      *     allowed object is
@@ -424,7 +427,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡwprs1���Ե�ֵ��
+     * 获取wprs1属性的值。
      * 
      * @return
      *     possible object is
@@ -436,7 +439,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����wprs1���Ե�ֵ��
+     * 设置wprs1属性的值。
      * 
      * @param value
      *     allowed object is
@@ -448,7 +451,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡwprs2���Ե�ֵ��
+     * 获取wprs2属性的值。
      * 
      * @return
      *     possible object is
@@ -460,7 +463,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����wprs2���Ե�ֵ��
+     * 设置wprs2属性的值。
      * 
      * @param value
      *     allowed object is
@@ -472,7 +475,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡwprs3���Ե�ֵ��
+     * 获取wprs3属性的值。
      * 
      * @return
      *     possible object is
@@ -484,7 +487,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����wprs3���Ե�ֵ��
+     * 设置wprs3属性的值。
      * 
      * @param value
      *     allowed object is
@@ -496,7 +499,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡwprs4���Ե�ֵ��
+     * 获取wprs4属性的值。
      * 
      * @return
      *     possible object is
@@ -508,7 +511,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����wprs4���Ե�ֵ��
+     * 设置wprs4属性的值。
      * 
      * @param value
      *     allowed object is
@@ -520,7 +523,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡwprs5���Ե�ֵ��
+     * 获取wprs5属性的值。
      * 
      * @return
      *     possible object is
@@ -532,7 +535,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����wprs5���Ե�ֵ��
+     * 设置wprs5属性的值。
      * 
      * @param value
      *     allowed object is
@@ -544,7 +547,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡextraBed���Ե�ֵ��
+     * 获取extraBed属性的值。
      * 
      * @return
      *     possible object is
@@ -556,7 +559,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����extraBed���Ե�ֵ��
+     * 设置extraBed属性的值。
      * 
      * @param value
      *     allowed object is
@@ -568,7 +571,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡwextraBed���Ե�ֵ��
+     * 获取wextraBed属性的值。
      * 
      * @return
      *     possible object is
@@ -580,7 +583,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����wextraBed���Ե�ֵ��
+     * 设置wextraBed属性的值。
      * 
      * @param value
      *     allowed object is
@@ -592,7 +595,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡchild���Ե�ֵ��
+     * 获取child属性的值。
      * 
      * @return
      *     possible object is
@@ -604,7 +607,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����child���Ե�ֵ��
+     * 设置child属性的值。
      * 
      * @param value
      *     allowed object is
@@ -616,7 +619,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡwchild���Ե�ֵ��
+     * 获取wchild属性的值。
      * 
      * @return
      *     possible object is
@@ -628,7 +631,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����wchild���Ե�ֵ��
+     * 设置wchild属性的值。
      * 
      * @param value
      *     allowed object is
@@ -640,7 +643,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡname���Ե�ֵ��
+     * 获取name属性的值。
      * 
      * @return
      *     possible object is
@@ -652,7 +655,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����name���Ե�ֵ��
+     * 设置name属性的值。
      * 
      * @param value
      *     allowed object is
@@ -664,7 +667,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡmemo���Ե�ֵ��
+     * 获取memo属性的值。
      * 
      * @return
      *     possible object is
@@ -676,7 +679,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����memo���Ե�ֵ��
+     * 设置memo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -688,7 +691,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡhotel���Ե�ֵ��
+     * 获取hotel属性的值。
      * 
      * @return
      *     possible object is
@@ -700,7 +703,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����hotel���Ե�ֵ��
+     * 设置hotel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -712,7 +715,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡweekControl���Ե�ֵ��
+     * 获取weekControl属性的值。
      * 
      * @return
      *     possible object is
@@ -724,7 +727,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����weekControl���Ե�ֵ��
+     * 设置weekControl属性的值。
      * 
      * @param value
      *     allowed object is
@@ -736,7 +739,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡsumPrice���Ե�ֵ��
+     * 获取sumPrice属性的值。
      * 
      */
     public int getSumPrice() {
@@ -744,7 +747,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����sumPrice���Ե�ֵ��
+     * 设置sumPrice属性的值。
      * 
      */
     public void setSumPrice(int value) {
@@ -752,7 +755,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ��ȡpackages���Ե�ֵ��
+     * 获取packages属性的值。
      * 
      * @return
      *     possible object is
@@ -764,7 +767,7 @@ public class RateDetailSummary {
     }
 
     /**
-     * ����packages���Ե�ֵ��
+     * 设置packages属性的值。
      * 
      * @param value
      *     allowed object is

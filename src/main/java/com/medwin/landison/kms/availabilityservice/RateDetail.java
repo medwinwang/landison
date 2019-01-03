@@ -2,18 +2,19 @@
 package com.medwin.landison.kms.availabilityservice;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>RateDetail complex type�� Java �ࡣ
+ * <p>RateDetail complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="RateDetail"&gt;
@@ -69,12 +70,14 @@ public class RateDetail {
 
     @XmlElement(name = "RoomType")
     protected CommonInfo roomType;
-    @XmlElement(name = "BeginDate", required = true)
+    @XmlElement(name = "BeginDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginDate;
-    @XmlElement(name = "EndDate", required = true)
+    protected Date beginDate;
+    @XmlElement(name = "EndDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endDate;
+    protected Date endDate;
     @XmlElement(name = "WeekControls")
     protected String weekControls;
     @XmlElement(name = "Price1", required = true)
@@ -105,7 +108,7 @@ public class RateDetail {
     protected ArrayOfPackage packages;
 
     /**
-     * ��ȡroomType���Ե�ֵ��
+     * 获取roomType属性的值。
      * 
      * @return
      *     possible object is
@@ -117,7 +120,7 @@ public class RateDetail {
     }
 
     /**
-     * ����roomType���Ե�ֵ��
+     * 设置roomType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -129,55 +132,55 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡbeginDate���Ե�ֵ��
+     * 获取beginDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBeginDate() {
+    public Date getBeginDate() {
         return beginDate;
     }
 
     /**
-     * ����beginDate���Ե�ֵ��
+     * 设置beginDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginDate(String value) {
+    public void setBeginDate(Date value) {
         this.beginDate = value;
     }
 
     /**
-     * ��ȡendDate���Ե�ֵ��
+     * 获取endDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
     /**
-     * ����endDate���Ե�ֵ��
+     * 设置endDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndDate(String value) {
+    public void setEndDate(Date value) {
         this.endDate = value;
     }
 
     /**
-     * ��ȡweekControls���Ե�ֵ��
+     * 获取weekControls属性的值。
      * 
      * @return
      *     possible object is
@@ -189,7 +192,7 @@ public class RateDetail {
     }
 
     /**
-     * ����weekControls���Ե�ֵ��
+     * 设置weekControls属性的值。
      * 
      * @param value
      *     allowed object is
@@ -201,7 +204,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡprice1���Ե�ֵ��
+     * 获取price1属性的值。
      * 
      * @return
      *     possible object is
@@ -213,7 +216,7 @@ public class RateDetail {
     }
 
     /**
-     * ����price1���Ե�ֵ��
+     * 设置price1属性的值。
      * 
      * @param value
      *     allowed object is
@@ -225,7 +228,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡprice2���Ե�ֵ��
+     * 获取price2属性的值。
      * 
      * @return
      *     possible object is
@@ -237,7 +240,7 @@ public class RateDetail {
     }
 
     /**
-     * ����price2���Ե�ֵ��
+     * 设置price2属性的值。
      * 
      * @param value
      *     allowed object is
@@ -249,7 +252,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡprice3���Ե�ֵ��
+     * 获取price3属性的值。
      * 
      * @return
      *     possible object is
@@ -261,7 +264,7 @@ public class RateDetail {
     }
 
     /**
-     * ����price3���Ե�ֵ��
+     * 设置price3属性的值。
      * 
      * @param value
      *     allowed object is
@@ -273,7 +276,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡprice4���Ե�ֵ��
+     * 获取price4属性的值。
      * 
      * @return
      *     possible object is
@@ -285,7 +288,7 @@ public class RateDetail {
     }
 
     /**
-     * ����price4���Ե�ֵ��
+     * 设置price4属性的值。
      * 
      * @param value
      *     allowed object is
@@ -297,7 +300,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡprice5���Ե�ֵ��
+     * 获取price5属性的值。
      * 
      * @return
      *     possible object is
@@ -309,7 +312,7 @@ public class RateDetail {
     }
 
     /**
-     * ����price5���Ե�ֵ��
+     * 设置price5属性的值。
      * 
      * @param value
      *     allowed object is
@@ -321,7 +324,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡpriceBed���Ե�ֵ��
+     * 获取priceBed属性的值。
      * 
      * @return
      *     possible object is
@@ -333,7 +336,7 @@ public class RateDetail {
     }
 
     /**
-     * ����priceBed���Ե�ֵ��
+     * 设置priceBed属性的值。
      * 
      * @param value
      *     allowed object is
@@ -345,7 +348,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡpriceChild���Ե�ֵ��
+     * 获取priceChild属性的值。
      * 
      * @return
      *     possible object is
@@ -357,7 +360,7 @@ public class RateDetail {
     }
 
     /**
-     * ����priceChild���Ե�ֵ��
+     * 设置priceChild属性的值。
      * 
      * @param value
      *     allowed object is
@@ -369,7 +372,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡtaxFlag���Ե�ֵ��
+     * 获取taxFlag属性的值。
      * 
      * @return
      *     possible object is
@@ -381,7 +384,7 @@ public class RateDetail {
     }
 
     /**
-     * ����taxFlag���Ե�ֵ��
+     * 设置taxFlag属性的值。
      * 
      * @param value
      *     allowed object is
@@ -393,7 +396,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡtax���Ե�ֵ��
+     * 获取tax属性的值。
      * 
      * @return
      *     possible object is
@@ -405,7 +408,7 @@ public class RateDetail {
     }
 
     /**
-     * ����tax���Ե�ֵ��
+     * 设置tax属性的值。
      * 
      * @param value
      *     allowed object is
@@ -417,7 +420,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡserviceChargeFlag���Ե�ֵ��
+     * 获取serviceChargeFlag属性的值。
      * 
      * @return
      *     possible object is
@@ -429,7 +432,7 @@ public class RateDetail {
     }
 
     /**
-     * ����serviceChargeFlag���Ե�ֵ��
+     * 设置serviceChargeFlag属性的值。
      * 
      * @param value
      *     allowed object is
@@ -441,7 +444,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡserviceCharge���Ե�ֵ��
+     * 获取serviceCharge属性的值。
      * 
      * @return
      *     possible object is
@@ -453,7 +456,7 @@ public class RateDetail {
     }
 
     /**
-     * ����serviceCharge���Ե�ֵ��
+     * 设置serviceCharge属性的值。
      * 
      * @param value
      *     allowed object is
@@ -465,7 +468,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡdes���Ե�ֵ��
+     * 获取des属性的值。
      * 
      * @return
      *     possible object is
@@ -477,7 +480,7 @@ public class RateDetail {
     }
 
     /**
-     * ����des���Ե�ֵ��
+     * 设置des属性的值。
      * 
      * @param value
      *     allowed object is
@@ -489,7 +492,7 @@ public class RateDetail {
     }
 
     /**
-     * ��ȡpackages���Ե�ֵ��
+     * 获取packages属性的值。
      * 
      * @return
      *     possible object is
@@ -501,7 +504,7 @@ public class RateDetail {
     }
 
     /**
-     * ����packages���Ե�ֵ��
+     * 设置packages属性的值。
      * 
      * @param value
      *     allowed object is

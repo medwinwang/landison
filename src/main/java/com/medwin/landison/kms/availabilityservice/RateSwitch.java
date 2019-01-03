@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>RateSwitch complex typeµÄ Java Àà¡£
+ * <p>RateSwitch complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="RateSwitch"&gt;
@@ -52,7 +52,7 @@ public class RateSwitch {
     protected int year;
 
     /**
-     * »ñÈ¡hotelCodeÊôĞÔµÄÖµ¡£
+     * è·å–hotelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -64,7 +64,7 @@ public class RateSwitch {
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®hotelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -76,7 +76,7 @@ public class RateSwitch {
     }
 
     /**
-     * »ñÈ¡channelCodeÊôĞÔµÄÖµ¡£
+     * è·å–channelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -88,7 +88,7 @@ public class RateSwitch {
     }
 
     /**
-     * ÉèÖÃchannelCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®channelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -100,7 +100,7 @@ public class RateSwitch {
     }
 
     /**
-     * »ñÈ¡rateCodeÊôĞÔµÄÖµ¡£
+     * è·å–rateCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -112,7 +112,7 @@ public class RateSwitch {
     }
 
     /**
-     * ÉèÖÃrateCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®rateCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -124,7 +124,7 @@ public class RateSwitch {
     }
 
     /**
-     * »ñÈ¡dayStatusÊôĞÔµÄÖµ¡£
+     * è·å–dayStatuså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -136,7 +136,7 @@ public class RateSwitch {
     }
 
     /**
-     * ÉèÖÃdayStatusÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dayStatuså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -148,7 +148,7 @@ public class RateSwitch {
     }
 
     /**
-     * »ñÈ¡yearÊôĞÔµÄÖµ¡£
+     * è·å–yearå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getYear() {
@@ -156,7 +156,7 @@ public class RateSwitch {
     }
 
     /**
-     * ÉèÖÃyearÊôĞÔµÄÖµ¡£
+     * è®¾ç½®yearå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setYear(int value) {

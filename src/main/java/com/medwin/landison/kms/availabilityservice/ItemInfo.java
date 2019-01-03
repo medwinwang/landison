@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>ItemInfo complex typeµÄ Java Àà¡£
+ * <p>ItemInfo complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="ItemInfo"&gt;
@@ -70,7 +70,7 @@ public class ItemInfo
     protected ItemTraceInfo itemTrace;
 
     /**
-     * »ñÈ¡hotelCodeÊôĞÔµÄÖµ¡£
+     * è·å–hotelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -82,7 +82,7 @@ public class ItemInfo
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®hotelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -94,7 +94,7 @@ public class ItemInfo
     }
 
     /**
-     * »ñÈ¡descriptionÊôĞÔµÄÖµ¡£
+     * è·å–descriptionå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -106,7 +106,7 @@ public class ItemInfo
     }
 
     /**
-     * ÉèÖÃdescriptionÊôĞÔµÄÖµ¡£
+     * è®¾ç½®descriptionå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -118,7 +118,7 @@ public class ItemInfo
     }
 
     /**
-     * »ñÈ¡inactiveÊôĞÔµÄÖµ¡£
+     * è·å–inactiveå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -130,7 +130,7 @@ public class ItemInfo
     }
 
     /**
-     * ÉèÖÃinactiveÊôĞÔµÄÖµ¡£
+     * è®¾ç½®inactiveå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -142,7 +142,7 @@ public class ItemInfo
     }
 
     /**
-     * »ñÈ¡itemClassCodeÊôĞÔµÄÖµ¡£
+     * è·å–itemClassCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -154,7 +154,7 @@ public class ItemInfo
     }
 
     /**
-     * ÉèÖÃitemClassCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®itemClassCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -166,7 +166,7 @@ public class ItemInfo
     }
 
     /**
-     * »ñÈ¡defaultQuantityÊôĞÔµÄÖµ¡£
+     * è·å–defaultQuantityå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getDefaultQuantity() {
@@ -174,7 +174,7 @@ public class ItemInfo
     }
 
     /**
-     * ÉèÖÃdefaultQuantityÊôĞÔµÄÖµ¡£
+     * è®¾ç½®defaultQuantityå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setDefaultQuantity(int value) {
@@ -182,7 +182,7 @@ public class ItemInfo
     }
 
     /**
-     * »ñÈ¡availableFromÊôĞÔµÄÖµ¡£
+     * è·å–availableFromå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -194,7 +194,7 @@ public class ItemInfo
     }
 
     /**
-     * ÉèÖÃavailableFromÊôĞÔµÄÖµ¡£
+     * è®¾ç½®availableFromå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -206,7 +206,7 @@ public class ItemInfo
     }
 
     /**
-     * »ñÈ¡availableToÊôĞÔµÄÖµ¡£
+     * è·å–availableToå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -218,7 +218,7 @@ public class ItemInfo
     }
 
     /**
-     * ÉèÖÃavailableToÊôĞÔµÄÖµ¡£
+     * è®¾ç½®availableToå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -230,7 +230,7 @@ public class ItemInfo
     }
 
     /**
-     * »ñÈ¡sellSeparateÊôĞÔµÄÖµ¡£
+     * è·å–sellSeparateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -242,7 +242,7 @@ public class ItemInfo
     }
 
     /**
-     * ÉèÖÃsellSeparateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®sellSeparateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -254,7 +254,7 @@ public class ItemInfo
     }
 
     /**
-     * »ñÈ¡itemTraceÊôĞÔµÄÖµ¡£
+     * è·å–itemTraceå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -266,7 +266,7 @@ public class ItemInfo
     }
 
     /**
-     * ÉèÖÃitemTraceÊôĞÔµÄÖµ¡£
+     * è®¾ç½®itemTraceå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

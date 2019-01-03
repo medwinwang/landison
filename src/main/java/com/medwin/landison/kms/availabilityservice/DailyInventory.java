@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>DailyInventory complex type�� Java �ࡣ
+ * <p>DailyInventory complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="DailyInventory"&gt;
@@ -38,40 +39,41 @@ import java.lang.String;
 })
 public class DailyInventory {
 
-    @XmlElement(name = "Datum", required = true)
+    @XmlElement(name = "Datum", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String datum;
+    protected Date datum;
     @XmlElement(name = "HouseOverBook")
     protected int houseOverBook;
     @XmlElement(name = "RoomTypeInventories")
     protected ArrayOfDailyInventoryRoomTypeInventory roomTypeInventories;
 
     /**
-     * ��ȡdatum���Ե�ֵ��
+     * 获取datum属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDatum() {
+    public Date getDatum() {
         return datum;
     }
 
     /**
-     * ����datum���Ե�ֵ��
+     * 设置datum属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDatum(String value) {
+    public void setDatum(Date value) {
         this.datum = value;
     }
 
     /**
-     * ��ȡhouseOverBook���Ե�ֵ��
+     * 获取houseOverBook属性的值。
      * 
      */
     public int getHouseOverBook() {
@@ -79,7 +81,7 @@ public class DailyInventory {
     }
 
     /**
-     * ����houseOverBook���Ե�ֵ��
+     * 设置houseOverBook属性的值。
      * 
      */
     public void setHouseOverBook(int value) {
@@ -87,7 +89,7 @@ public class DailyInventory {
     }
 
     /**
-     * ��ȡroomTypeInventories���Ե�ֵ��
+     * 获取roomTypeInventories属性的值。
      * 
      * @return
      *     possible object is
@@ -99,7 +101,7 @@ public class DailyInventory {
     }
 
     /**
-     * ����roomTypeInventories���Ե�ֵ��
+     * 设置roomTypeInventories属性的值。
      * 
      * @param value
      *     allowed object is

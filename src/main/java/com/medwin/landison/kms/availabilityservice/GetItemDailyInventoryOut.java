@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>GetItemDailyInventoryOut complex typeµÄ Java Àà¡£
+ * <p>GetItemDailyInventoryOut complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="GetItemDailyInventoryOut"&gt;
@@ -36,7 +36,7 @@ public class GetItemDailyInventoryOut {
     protected ArrayOfItemDailyInventoryInfo itemDailyInventoryInfos;
 
     /**
-     * »ñÈ¡itemDailyInventoryInfosÊôĞÔµÄÖµ¡£
+     * è·å–itemDailyInventoryInfoså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class GetItemDailyInventoryOut {
     }
 
     /**
-     * ÉèÖÃitemDailyInventoryInfosÊôĞÔµÄÖµ¡£
+     * è®¾ç½®itemDailyInventoryInfoså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

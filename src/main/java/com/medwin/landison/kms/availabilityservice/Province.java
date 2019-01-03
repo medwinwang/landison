@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Province complex typeµÄ Java Àà¡£
+ * <p>Province complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="Province"&gt;
@@ -38,7 +38,7 @@ public class Province
     protected Country country;
 
     /**
-     * »ñÈ¡countryÊôĞÔµÄÖµ¡£
+     * è·å–countryå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -50,7 +50,7 @@ public class Province
     }
 
     /**
-     * ÉèÖÃcountryÊôĞÔµÄÖµ¡£
+     * è®¾ç½®countryå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

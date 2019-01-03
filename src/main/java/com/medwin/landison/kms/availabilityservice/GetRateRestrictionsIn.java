@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>GetRateRestrictionsIn complex type�� Java �ࡣ
+ * <p>GetRateRestrictionsIn complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="GetRateRestrictionsIn"&gt;
@@ -48,19 +49,21 @@ public class GetRateRestrictionsIn {
     protected String hotelCode;
     @XmlElement(name = "Channel")
     protected String channel;
-    @XmlElement(name = "Start", required = true)
+    @XmlElement(name = "Start", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String start;
-    @XmlElement(name = "End", required = true)
+    protected Date start;
+    @XmlElement(name = "End", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String end;
+    protected Date end;
     @XmlElement(name = "RateCode")
     protected String rateCode;
     @XmlElement(name = "RoomTypeCode")
     protected String roomTypeCode;
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -72,7 +75,7 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -84,7 +87,7 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * ��ȡchannel���Ե�ֵ��
+     * 获取channel属性的值。
      * 
      * @return
      *     possible object is
@@ -96,7 +99,7 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * ����channel���Ե�ֵ��
+     * 设置channel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -108,55 +111,55 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * ��ȡstart���Ե�ֵ��
+     * 获取start属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getStart() {
+    public Date getStart() {
         return start;
     }
 
     /**
-     * ����start���Ե�ֵ��
+     * 设置start属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setStart(String value) {
+    public void setStart(Date value) {
         this.start = value;
     }
 
     /**
-     * ��ȡend���Ե�ֵ��
+     * 获取end属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEnd() {
+    public Date getEnd() {
         return end;
     }
 
     /**
-     * ����end���Ե�ֵ��
+     * 设置end属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEnd(String value) {
+    public void setEnd(Date value) {
         this.end = value;
     }
 
     /**
-     * ��ȡrateCode���Ե�ֵ��
+     * 获取rateCode属性的值。
      * 
      * @return
      *     possible object is
@@ -168,7 +171,7 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * ����rateCode���Ե�ֵ��
+     * 设置rateCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -180,7 +183,7 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * ��ȡroomTypeCode���Ե�ֵ��
+     * 获取roomTypeCode属性的值。
      * 
      * @return
      *     possible object is
@@ -192,7 +195,7 @@ public class GetRateRestrictionsIn {
     }
 
     /**
-     * ����roomTypeCode���Ե�ֵ��
+     * 设置roomTypeCode属性的值。
      * 
      * @param value
      *     allowed object is

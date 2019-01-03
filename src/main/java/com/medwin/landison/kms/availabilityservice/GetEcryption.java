@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -39,7 +39,7 @@ public class GetEcryption {
     protected int action;
 
     /**
-     * »ñÈ¡keyÊôĞÔµÄÖµ¡£
+     * è·å–keyå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -51,7 +51,7 @@ public class GetEcryption {
     }
 
     /**
-     * ÉèÖÃkeyÊôĞÔµÄÖµ¡£
+     * è®¾ç½®keyå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -63,7 +63,7 @@ public class GetEcryption {
     }
 
     /**
-     * »ñÈ¡actionÊôĞÔµÄÖµ¡£
+     * è·å–actionå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getAction() {
@@ -71,7 +71,7 @@ public class GetEcryption {
     }
 
     /**
-     * ÉèÖÃactionÊôĞÔµÄÖµ¡£
+     * è®¾ç½®actionå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setAction(int value) {

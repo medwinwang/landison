@@ -1,19 +1,20 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>anonymous complex type�� Java �ࡣ
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -56,12 +57,14 @@ import java.lang.String;
 @XmlRootElement(name = "NewGetAvailabilityListByCustom")
 public class NewGetAvailabilityListByCustom {
 
-    @XmlElement(required = true)
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String arrival;
-    @XmlElement(required = true)
+    protected Date arrival;
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String departure;
+    protected Date departure;
     @XmlElement(name = "extra_bed")
     protected int extraBed;
     protected int adults;
@@ -78,55 +81,55 @@ public class NewGetAvailabilityListByCustom {
     protected ArrayOfString hotelArr;
 
     /**
-     * ��ȡarrival���Ե�ֵ��
+     * 获取arrival属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getArrival() {
+    public Date getArrival() {
         return arrival;
     }
 
     /**
-     * ����arrival���Ե�ֵ��
+     * 设置arrival属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setArrival(String value) {
+    public void setArrival(Date value) {
         this.arrival = value;
     }
 
     /**
-     * ��ȡdeparture���Ե�ֵ��
+     * 获取departure属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDeparture() {
+    public Date getDeparture() {
         return departure;
     }
 
     /**
-     * ����departure���Ե�ֵ��
+     * 设置departure属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDeparture(String value) {
+    public void setDeparture(Date value) {
         this.departure = value;
     }
 
     /**
-     * ��ȡextraBed���Ե�ֵ��
+     * 获取extraBed属性的值。
      * 
      */
     public int getExtraBed() {
@@ -134,7 +137,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ����extraBed���Ե�ֵ��
+     * 设置extraBed属性的值。
      * 
      */
     public void setExtraBed(int value) {
@@ -142,7 +145,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ��ȡadults���Ե�ֵ��
+     * 获取adults属性的值。
      * 
      */
     public int getAdults() {
@@ -150,7 +153,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ����adults���Ե�ֵ��
+     * 设置adults属性的值。
      * 
      */
     public void setAdults(int value) {
@@ -158,7 +161,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ��ȡroomNum���Ե�ֵ��
+     * 获取roomNum属性的值。
      * 
      */
     public int getRoomNum() {
@@ -166,7 +169,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ����roomNum���Ե�ֵ��
+     * 设置roomNum属性的值。
      * 
      */
     public void setRoomNum(int value) {
@@ -174,7 +177,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ��ȡguesttypeCode���Ե�ֵ��
+     * 获取guesttypeCode属性的值。
      * 
      * @return
      *     possible object is
@@ -186,7 +189,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ����guesttypeCode���Ե�ֵ��
+     * 设置guesttypeCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -198,7 +201,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ��ȡcustAccount���Ե�ֵ��
+     * 获取custAccount属性的值。
      * 
      * @return
      *     possible object is
@@ -210,7 +213,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ����custAccount���Ե�ֵ��
+     * 设置custAccount属性的值。
      * 
      * @param value
      *     allowed object is
@@ -222,7 +225,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ��ȡcardNo���Ե�ֵ��
+     * 获取cardNo属性的值。
      * 
      * @return
      *     possible object is
@@ -234,7 +237,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ����cardNo���Ե�ֵ��
+     * 设置cardNo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -246,7 +249,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ��ȡchildren���Ե�ֵ��
+     * 获取children属性的值。
      * 
      */
     public int getChildren() {
@@ -254,7 +257,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ����children���Ե�ֵ��
+     * 设置children属性的值。
      * 
      */
     public void setChildren(int value) {
@@ -262,7 +265,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ��ȡchannel���Ե�ֵ��
+     * 获取channel属性的值。
      * 
      * @return
      *     possible object is
@@ -274,7 +277,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ����channel���Ե�ֵ��
+     * 设置channel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -286,7 +289,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ��ȡhotelArr���Ե�ֵ��
+     * 获取hotelArr属性的值。
      * 
      * @return
      *     possible object is
@@ -298,7 +301,7 @@ public class NewGetAvailabilityListByCustom {
     }
 
     /**
-     * ����hotelArr���Ե�ֵ��
+     * 设置hotelArr属性的值。
      * 
      * @param value
      *     allowed object is

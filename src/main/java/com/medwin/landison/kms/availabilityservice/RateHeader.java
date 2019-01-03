@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>RateHeader complex type�� Java �ࡣ
+ * <p>RateHeader complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="RateHeader"&gt;
@@ -86,17 +87,19 @@ public class RateHeader {
     protected ArrayOfSource sources;
     @XmlElement(name = "Packages")
     protected ArrayOfPackage packages;
-    @XmlElement(name = "BeginDate", required = true)
+    @XmlElement(name = "BeginDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginDate;
-    @XmlElement(name = "EndDate", required = true)
+    protected Date beginDate;
+    @XmlElement(name = "EndDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endDate;
+    protected Date endDate;
     @XmlElement(name = "SortId")
     protected String sortId;
 
     /**
-     * ��ȡcateCode���Ե�ֵ��
+     * 获取cateCode属性的值。
      * 
      * @return
      *     possible object is
@@ -108,7 +111,7 @@ public class RateHeader {
     }
 
     /**
-     * ����cateCode���Ե�ֵ��
+     * 设置cateCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -120,7 +123,7 @@ public class RateHeader {
     }
 
     /**
-     * ��ȡratePlan���Ե�ֵ��
+     * 获取ratePlan属性的值。
      * 
      * @return
      *     possible object is
@@ -132,7 +135,7 @@ public class RateHeader {
     }
 
     /**
-     * ����ratePlan���Ե�ֵ��
+     * 设置ratePlan属性的值。
      * 
      * @param value
      *     allowed object is
@@ -144,7 +147,7 @@ public class RateHeader {
     }
 
     /**
-     * ��ȡminLos���Ե�ֵ��
+     * 获取minLos属性的值。
      * 
      */
     public int getMinLos() {
@@ -152,7 +155,7 @@ public class RateHeader {
     }
 
     /**
-     * ����minLos���Ե�ֵ��
+     * 设置minLos属性的值。
      * 
      */
     public void setMinLos(int value) {
@@ -160,7 +163,7 @@ public class RateHeader {
     }
 
     /**
-     * ��ȡmaxLos���Ե�ֵ��
+     * 获取maxLos属性的值。
      * 
      */
     public int getMaxLos() {
@@ -168,7 +171,7 @@ public class RateHeader {
     }
 
     /**
-     * ����maxLos���Ե�ֵ��
+     * 设置maxLos属性的值。
      * 
      */
     public void setMaxLos(int value) {
@@ -176,7 +179,7 @@ public class RateHeader {
     }
 
     /**
-     * ��ȡadvBookin���Ե�ֵ��
+     * 获取advBookin属性的值。
      * 
      */
     public int getAdvBookin() {
@@ -184,7 +187,7 @@ public class RateHeader {
     }
 
     /**
-     * ����advBookin���Ե�ֵ��
+     * 设置advBookin属性的值。
      * 
      */
     public void setAdvBookin(int value) {
@@ -192,7 +195,7 @@ public class RateHeader {
     }
 
     /**
-     * ��ȡmaxAdvBookin���Ե�ֵ��
+     * 获取maxAdvBookin属性的值。
      * 
      */
     public int getMaxAdvBookin() {
@@ -200,7 +203,7 @@ public class RateHeader {
     }
 
     /**
-     * ����maxAdvBookin���Ե�ֵ��
+     * 设置maxAdvBookin属性的值。
      * 
      */
     public void setMaxAdvBookin(int value) {
@@ -208,7 +211,7 @@ public class RateHeader {
     }
 
     /**
-     * ��ȡdes���Ե�ֵ��
+     * 获取des属性的值。
      * 
      * @return
      *     possible object is
@@ -220,7 +223,7 @@ public class RateHeader {
     }
 
     /**
-     * ����des���Ե�ֵ��
+     * 设置des属性的值。
      * 
      * @param value
      *     allowed object is
@@ -232,7 +235,7 @@ public class RateHeader {
     }
 
     /**
-     * ��ȡshortInfo���Ե�ֵ��
+     * 获取shortInfo属性的值。
      * 
      * @return
      *     possible object is
@@ -244,7 +247,7 @@ public class RateHeader {
     }
 
     /**
-     * ����shortInfo���Ե�ֵ��
+     * 设置shortInfo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -256,7 +259,7 @@ public class RateHeader {
     }
 
     /**
-     * ��ȡlongInfo���Ե�ֵ��
+     * 获取longInfo属性的值。
      * 
      * @return
      *     possible object is
@@ -268,7 +271,7 @@ public class RateHeader {
     }
 
     /**
-     * ����longInfo���Ե�ֵ��
+     * 设置longInfo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -280,7 +283,7 @@ public class RateHeader {
     }
 
     /**
-     * ��ȡsegments���Ե�ֵ��
+     * 获取segments属性的值。
      * 
      * @return
      *     possible object is
@@ -292,7 +295,7 @@ public class RateHeader {
     }
 
     /**
-     * ����segments���Ե�ֵ��
+     * 设置segments属性的值。
      * 
      * @param value
      *     allowed object is
@@ -304,7 +307,7 @@ public class RateHeader {
     }
 
     /**
-     * ��ȡsources���Ե�ֵ��
+     * 获取sources属性的值。
      * 
      * @return
      *     possible object is
@@ -316,7 +319,7 @@ public class RateHeader {
     }
 
     /**
-     * ����sources���Ե�ֵ��
+     * 设置sources属性的值。
      * 
      * @param value
      *     allowed object is
@@ -328,7 +331,7 @@ public class RateHeader {
     }
 
     /**
-     * ��ȡpackages���Ե�ֵ��
+     * 获取packages属性的值。
      * 
      * @return
      *     possible object is
@@ -340,7 +343,7 @@ public class RateHeader {
     }
 
     /**
-     * ����packages���Ե�ֵ��
+     * 设置packages属性的值。
      * 
      * @param value
      *     allowed object is
@@ -352,55 +355,55 @@ public class RateHeader {
     }
 
     /**
-     * ��ȡbeginDate���Ե�ֵ��
+     * 获取beginDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBeginDate() {
+    public Date getBeginDate() {
         return beginDate;
     }
 
     /**
-     * ����beginDate���Ե�ֵ��
+     * 设置beginDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginDate(String value) {
+    public void setBeginDate(Date value) {
         this.beginDate = value;
     }
 
     /**
-     * ��ȡendDate���Ե�ֵ��
+     * 获取endDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
     /**
-     * ����endDate���Ե�ֵ��
+     * 设置endDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndDate(String value) {
+    public void setEndDate(Date value) {
         this.endDate = value;
     }
 
     /**
-     * ��ȡsortId���Ե�ֵ��
+     * 获取sortId属性的值。
      * 
      * @return
      *     possible object is
@@ -412,7 +415,7 @@ public class RateHeader {
     }
 
     /**
-     * ����sortId���Ե�ֵ��
+     * 设置sortId属性的值。
      * 
      * @param value
      *     allowed object is

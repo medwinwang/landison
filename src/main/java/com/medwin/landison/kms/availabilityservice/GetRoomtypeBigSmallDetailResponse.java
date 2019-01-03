@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="CheckItemIsEnoughResult" type="{http://www.shijinet.com.cn/kunlun/kws/1.1/}ArrayOfCheckItemIsEnoughOut" minOccurs="0"/&gt;
+ *         &lt;element name="GetRoomtypeBigSmallDetailResult" type="{http://www.shijinet.com.cn/kunlun/kws/1.1/}ArrayOfCommonInfo" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -29,36 +29,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "checkItemIsEnoughResult"
+    "getRoomtypeBigSmallDetailResult"
 })
-@XmlRootElement(name = "CheckItemIsEnoughResponse")
-public class CheckItemIsEnoughResponse {
+@XmlRootElement(name = "GetRoomtypeBigSmallDetailResponse")
+public class GetRoomtypeBigSmallDetailResponse {
 
-    @XmlElement(name = "CheckItemIsEnoughResult")
-    protected ArrayOfCheckItemIsEnoughOut checkItemIsEnoughResult;
+    @XmlElement(name = "GetRoomtypeBigSmallDetailResult")
+    protected ArrayOfCommonInfo getRoomtypeBigSmallDetailResult;
 
     /**
-     * 获取checkItemIsEnoughResult属性的值。
+     * 获取getRoomtypeBigSmallDetailResult属性的值。
      * 
      * @return
      *     possible object is
-     *     {@link ArrayOfCheckItemIsEnoughOut }
+     *     {@link ArrayOfCommonInfo }
      *     
      */
-    public ArrayOfCheckItemIsEnoughOut getCheckItemIsEnoughResult() {
-        return checkItemIsEnoughResult;
+    public ArrayOfCommonInfo getGetRoomtypeBigSmallDetailResult() {
+        return getRoomtypeBigSmallDetailResult;
     }
 
     /**
-     * 设置checkItemIsEnoughResult属性的值。
+     * 设置getRoomtypeBigSmallDetailResult属性的值。
      * 
      * @param value
      *     allowed object is
-     *     {@link ArrayOfCheckItemIsEnoughOut }
+     *     {@link ArrayOfCommonInfo }
      *     
      */
-    public void setCheckItemIsEnoughResult(ArrayOfCheckItemIsEnoughOut value) {
-        this.checkItemIsEnoughResult = value;
+    public void setGetRoomtypeBigSmallDetailResult(ArrayOfCommonInfo value) {
+        this.getRoomtypeBigSmallDetailResult = value;
     }
 
 }

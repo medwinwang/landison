@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>ItemDailyInventoryInfo complex type�� Java �ࡣ
+ * <p>ItemDailyInventoryInfo complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="ItemDailyInventoryInfo"&gt;
@@ -52,9 +53,10 @@ public class ItemDailyInventoryInfo {
     protected String itemName;
     @XmlElement(name = "HotelCode")
     protected String hotelCode;
-    @XmlElement(name = "Dt", required = true)
+    @XmlElement(name = "Dt", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String dt;
+    protected Date dt;
     @XmlElement(name = "Quantity")
     protected int quantity;
     @XmlElement(name = "AvailableQuantity")
@@ -63,7 +65,7 @@ public class ItemDailyInventoryInfo {
     protected String limitInventory;
 
     /**
-     * ��ȡitemCode���Ե�ֵ��
+     * 获取itemCode属性的值。
      * 
      * @return
      *     possible object is
@@ -75,7 +77,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * ����itemCode���Ե�ֵ��
+     * 设置itemCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -87,7 +89,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * ��ȡitemName���Ե�ֵ��
+     * 获取itemName属性的值。
      * 
      * @return
      *     possible object is
@@ -99,7 +101,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * ����itemName���Ե�ֵ��
+     * 设置itemName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -111,7 +113,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -123,7 +125,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -135,31 +137,31 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * ��ȡdt���Ե�ֵ��
+     * 获取dt属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDt() {
+    public Date getDt() {
         return dt;
     }
 
     /**
-     * ����dt���Ե�ֵ��
+     * 设置dt属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDt(String value) {
+    public void setDt(Date value) {
         this.dt = value;
     }
 
     /**
-     * ��ȡquantity���Ե�ֵ��
+     * 获取quantity属性的值。
      * 
      */
     public int getQuantity() {
@@ -167,7 +169,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * ����quantity���Ե�ֵ��
+     * 设置quantity属性的值。
      * 
      */
     public void setQuantity(int value) {
@@ -175,7 +177,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * ��ȡavailableQuantity���Ե�ֵ��
+     * 获取availableQuantity属性的值。
      * 
      */
     public int getAvailableQuantity() {
@@ -183,7 +185,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * ����availableQuantity���Ե�ֵ��
+     * 设置availableQuantity属性的值。
      * 
      */
     public void setAvailableQuantity(int value) {
@@ -191,7 +193,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * ��ȡlimitInventory���Ե�ֵ��
+     * 获取limitInventory属性的值。
      * 
      * @return
      *     possible object is
@@ -203,7 +205,7 @@ public class ItemDailyInventoryInfo {
     }
 
     /**
-     * ����limitInventory���Ե�ֵ��
+     * 设置limitInventory属性的值。
      * 
      * @param value
      *     allowed object is

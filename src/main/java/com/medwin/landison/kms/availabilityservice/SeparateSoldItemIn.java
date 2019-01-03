@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>SeparateSoldItemIn complex typeµÄ Java Àà¡£
+ * <p>SeparateSoldItemIn complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="SeparateSoldItemIn"&gt;
@@ -44,7 +44,7 @@ public class SeparateSoldItemIn {
     protected String itemKey;
 
     /**
-     * »ñÈ¡itemClassCodeÊôĞÔµÄÖµ¡£
+     * è·å–itemClassCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -56,7 +56,7 @@ public class SeparateSoldItemIn {
     }
 
     /**
-     * ÉèÖÃitemClassCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®itemClassCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -68,7 +68,7 @@ public class SeparateSoldItemIn {
     }
 
     /**
-     * »ñÈ¡hotelCodeÊôĞÔµÄÖµ¡£
+     * è·å–hotelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class SeparateSoldItemIn {
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®hotelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -92,7 +92,7 @@ public class SeparateSoldItemIn {
     }
 
     /**
-     * »ñÈ¡itemKeyÊôĞÔµÄÖµ¡£
+     * è·å–itemKeyå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -104,7 +104,7 @@ public class SeparateSoldItemIn {
     }
 
     /**
-     * ÉèÖÃitemKeyÊôĞÔµÄÖµ¡£
+     * è®¾ç½®itemKeyå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

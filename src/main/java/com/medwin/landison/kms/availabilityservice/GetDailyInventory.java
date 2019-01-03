@@ -1,19 +1,20 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>anonymous complex type�� Java �ࡣ
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -47,17 +48,19 @@ public class GetDailyInventory {
     @XmlElement(name = "hotel_code")
     protected String hotelCode;
     protected String channel;
-    @XmlElement(required = true)
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String dtBegin;
-    @XmlElement(required = true)
+    protected Date dtBegin;
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String dtEnd;
+    protected Date dtEnd;
     @XmlElement(name = "room_type")
     protected String roomType;
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -69,7 +72,7 @@ public class GetDailyInventory {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -81,7 +84,7 @@ public class GetDailyInventory {
     }
 
     /**
-     * ��ȡchannel���Ե�ֵ��
+     * 获取channel属性的值。
      * 
      * @return
      *     possible object is
@@ -93,7 +96,7 @@ public class GetDailyInventory {
     }
 
     /**
-     * ����channel���Ե�ֵ��
+     * 设置channel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -105,55 +108,55 @@ public class GetDailyInventory {
     }
 
     /**
-     * ��ȡdtBegin���Ե�ֵ��
+     * 获取dtBegin属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDtBegin() {
+    public Date getDtBegin() {
         return dtBegin;
     }
 
     /**
-     * ����dtBegin���Ե�ֵ��
+     * 设置dtBegin属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDtBegin(String value) {
+    public void setDtBegin(Date value) {
         this.dtBegin = value;
     }
 
     /**
-     * ��ȡdtEnd���Ե�ֵ��
+     * 获取dtEnd属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDtEnd() {
+    public Date getDtEnd() {
         return dtEnd;
     }
 
     /**
-     * ����dtEnd���Ե�ֵ��
+     * 设置dtEnd属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDtEnd(String value) {
+    public void setDtEnd(Date value) {
         this.dtEnd = value;
     }
 
     /**
-     * ��ȡroomType���Ե�ֵ��
+     * 获取roomType属性的值。
      * 
      * @return
      *     possible object is
@@ -165,7 +168,7 @@ public class GetDailyInventory {
     }
 
     /**
-     * ����roomType���Ե�ֵ��
+     * 设置roomType属性的值。
      * 
      * @param value
      *     allowed object is

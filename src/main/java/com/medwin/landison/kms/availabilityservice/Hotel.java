@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Hotel complex typeµÄ Java Àà¡£
+ * <p>Hotel complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="Hotel"&gt;
@@ -42,7 +42,7 @@ public class Hotel
     protected String cityName;
 
     /**
-     * »ñÈ¡engNameÊôĞÔµÄÖµ¡£
+     * è·å–engNameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -54,7 +54,7 @@ public class Hotel
     }
 
     /**
-     * ÉèÖÃengNameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®engNameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -66,7 +66,7 @@ public class Hotel
     }
 
     /**
-     * »ñÈ¡cityNameÊôĞÔµÄÖµ¡£
+     * è·å–cityNameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -78,7 +78,7 @@ public class Hotel
     }
 
     /**
-     * ÉèÖÃcityNameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®cityNameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

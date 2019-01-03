@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>DailyInventoryRoomTypeInventory complex typeµÄ Java Àà¡£
+ * <p>DailyInventoryRoomTypeInventory complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="DailyInventoryRoomTypeInventory"&gt;
@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="OutOfOrder" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="AvailableRooms" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="RoomTypeColor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="RoomTypeDes" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="RoomTypeName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="Definite" type="{http://www.shijinet.com.cn/kunlun/kws/1.1/}RoomTypeInventoryDefinite" minOccurs="0"/&gt;
  *         &lt;element name="Tentative" type="{http://www.shijinet.com.cn/kunlun/kws/1.1/}RoomTypeInventoryTentative" minOccurs="0"/&gt;
@@ -46,6 +47,7 @@ import javax.xml.bind.annotation.XmlType;
     "outOfOrder",
     "availableRooms",
     "roomTypeColor",
+    "roomTypeDes",
     "roomTypeName",
     "definite",
     "tentative"
@@ -68,6 +70,8 @@ public class DailyInventoryRoomTypeInventory {
     protected int availableRooms;
     @XmlElement(name = "RoomTypeColor")
     protected String roomTypeColor;
+    @XmlElement(name = "RoomTypeDes")
+    protected String roomTypeDes;
     @XmlElement(name = "RoomTypeName")
     protected String roomTypeName;
     @XmlElement(name = "Definite")
@@ -76,7 +80,7 @@ public class DailyInventoryRoomTypeInventory {
     protected RoomTypeInventoryTentative tentative;
 
     /**
-     * »ñÈ¡statusÊôĞÔµÄÖµ¡£
+     * è·å–statuså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -88,7 +92,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * ÉèÖÃstatusÊôĞÔµÄÖµ¡£
+     * è®¾ç½®statuså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -100,7 +104,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * »ñÈ¡roomTypeÊôĞÔµÄÖµ¡£
+     * è·å–roomTypeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -112,7 +116,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * ÉèÖÃroomTypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®roomTypeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -124,7 +128,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * »ñÈ¡genericÊôĞÔµÄÖµ¡£
+     * è·å–genericå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getGeneric() {
@@ -132,7 +136,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * ÉèÖÃgenericÊôĞÔµÄÖµ¡£
+     * è®¾ç½®genericå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setGeneric(int value) {
@@ -140,7 +144,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * »ñÈ¡physicalRoomsÊôĞÔµÄÖµ¡£
+     * è·å–physicalRoomså±æ€§çš„å€¼ã€‚
      * 
      */
     public int getPhysicalRooms() {
@@ -148,7 +152,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * ÉèÖÃphysicalRoomsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®physicalRoomså±æ€§çš„å€¼ã€‚
      * 
      */
     public void setPhysicalRooms(int value) {
@@ -156,7 +160,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * »ñÈ¡roomTypeOverbookÊôĞÔµÄÖµ¡£
+     * è·å–roomTypeOverbookå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getRoomTypeOverbook() {
@@ -164,7 +168,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * ÉèÖÃroomTypeOverbookÊôĞÔµÄÖµ¡£
+     * è®¾ç½®roomTypeOverbookå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setRoomTypeOverbook(int value) {
@@ -172,7 +176,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * »ñÈ¡outOfOrderÊôĞÔµÄÖµ¡£
+     * è·å–outOfOrderå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getOutOfOrder() {
@@ -180,7 +184,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * ÉèÖÃoutOfOrderÊôĞÔµÄÖµ¡£
+     * è®¾ç½®outOfOrderå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setOutOfOrder(int value) {
@@ -188,7 +192,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * »ñÈ¡availableRoomsÊôĞÔµÄÖµ¡£
+     * è·å–availableRoomså±æ€§çš„å€¼ã€‚
      * 
      */
     public int getAvailableRooms() {
@@ -196,7 +200,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * ÉèÖÃavailableRoomsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®availableRoomså±æ€§çš„å€¼ã€‚
      * 
      */
     public void setAvailableRooms(int value) {
@@ -204,7 +208,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * »ñÈ¡roomTypeColorÊôĞÔµÄÖµ¡£
+     * è·å–roomTypeColorå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -216,7 +220,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * ÉèÖÃroomTypeColorÊôĞÔµÄÖµ¡£
+     * è®¾ç½®roomTypeColorå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -228,7 +232,31 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * »ñÈ¡roomTypeNameÊôĞÔµÄÖµ¡£
+     * è·å–roomTypeDeså±æ€§çš„å€¼ã€‚
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getRoomTypeDes() {
+        return roomTypeDes;
+    }
+
+    /**
+     * è®¾ç½®roomTypeDeså±æ€§çš„å€¼ã€‚
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setRoomTypeDes(String value) {
+        this.roomTypeDes = value;
+    }
+
+    /**
+     * è·å–roomTypeNameå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -240,7 +268,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * ÉèÖÃroomTypeNameÊôĞÔµÄÖµ¡£
+     * è®¾ç½®roomTypeNameå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -252,7 +280,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * »ñÈ¡definiteÊôĞÔµÄÖµ¡£
+     * è·å–definiteå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -264,7 +292,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * ÉèÖÃdefiniteÊôĞÔµÄÖµ¡£
+     * è®¾ç½®definiteå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -276,7 +304,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * »ñÈ¡tentativeÊôĞÔµÄÖµ¡£
+     * è·å–tentativeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -288,7 +316,7 @@ public class DailyInventoryRoomTypeInventory {
     }
 
     /**
-     * ÉèÖÃtentativeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®tentativeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

@@ -26,12 +26,14 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import javax.xml.crypto.Data;
 import javax.xml.ws.handler.Handler;
 import javax.xml.ws.handler.HandlerResolver;
 import javax.xml.ws.handler.PortInfo;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -118,8 +120,15 @@ public class KmsServiceImpl implements KmsService {
     public Availability getAvailability(String hotelCode, String arrival, String departure, int extraBed, int adults,
                                 int roomNum, String guesttypeCode, String custAccount, String cardNo,
                                         int children, String channel) {
-
-        Availability availability = availabilityQuerySoap.getAvailability(hotelCode, arrival, departure, extraBed, adults, roomNum,
+        Date arrivalDate = null;
+        Date departureDate = null;
+        if(!StringUtils.isEmpty(arrival)) {
+            arrivalDate = new DateTime(arrival).toDate();
+        }
+        if(!StringUtils.isEmpty(departure)) {
+            departureDate = new DateTime(departure).toDate();
+        }
+        Availability availability = availabilityQuerySoap.getAvailability(hotelCode, arrivalDate, departureDate, extraBed, adults, roomNum,
                 guesttypeCode, custAccount, cardNo, children, channel);
 
         return availability;

@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>AvailabilityPackage complex typeµÄ Java Àà¡£
+ * <p>AvailabilityPackage complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="AvailabilityPackage"&gt;
@@ -44,7 +44,7 @@ public class AvailabilityPackage {
     protected ArrayOfDailyItem dailyItems;
 
     /**
-     * »ñÈ¡packageÊôĞÔµÄÖµ¡£
+     * è·å–packageå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -56,7 +56,7 @@ public class AvailabilityPackage {
     }
 
     /**
-     * ÉèÖÃpackageÊôĞÔµÄÖµ¡£
+     * è®¾ç½®packageå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -68,7 +68,7 @@ public class AvailabilityPackage {
     }
 
     /**
-     * »ñÈ¡dailyPackagesÊôĞÔµÄÖµ¡£
+     * è·å–dailyPackageså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class AvailabilityPackage {
     }
 
     /**
-     * ÉèÖÃdailyPackagesÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dailyPackageså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -92,7 +92,7 @@ public class AvailabilityPackage {
     }
 
     /**
-     * »ñÈ¡dailyItemsÊôĞÔµÄÖµ¡£
+     * è·å–dailyItemså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -104,7 +104,7 @@ public class AvailabilityPackage {
     }
 
     /**
-     * ÉèÖÃdailyItemsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dailyItemså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

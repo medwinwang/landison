@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>RateDetailRequest complex type�� Java �ࡣ
+ * <p>RateDetailRequest complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="RateDetailRequest"&gt;
@@ -66,12 +67,14 @@ public class RateDetailRequest {
     protected String hotelCode;
     @XmlElement(name = "Channel")
     protected String channel;
-    @XmlElement(name = "Arrival", required = true)
+    @XmlElement(name = "Arrival", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String arrival;
-    @XmlElement(name = "Departure", required = true)
+    protected Date arrival;
+    @XmlElement(name = "Departure", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String departure;
+    protected Date departure;
     @XmlElement(name = "Rate_code")
     protected String rateCode;
     @XmlElement(name = "Roomtype_code")
@@ -97,7 +100,7 @@ public class RateDetailRequest {
     protected String isAllPrices;
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -109,7 +112,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -121,7 +124,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ��ȡchannel���Ե�ֵ��
+     * 获取channel属性的值。
      * 
      * @return
      *     possible object is
@@ -133,7 +136,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����channel���Ե�ֵ��
+     * 设置channel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -145,55 +148,55 @@ public class RateDetailRequest {
     }
 
     /**
-     * ��ȡarrival���Ե�ֵ��
+     * 获取arrival属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getArrival() {
+    public Date getArrival() {
         return arrival;
     }
 
     /**
-     * ����arrival���Ե�ֵ��
+     * 设置arrival属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setArrival(String value) {
+    public void setArrival(Date value) {
         this.arrival = value;
     }
 
     /**
-     * ��ȡdeparture���Ե�ֵ��
+     * 获取departure属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDeparture() {
+    public Date getDeparture() {
         return departure;
     }
 
     /**
-     * ����departure���Ե�ֵ��
+     * 设置departure属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDeparture(String value) {
+    public void setDeparture(Date value) {
         this.departure = value;
     }
 
     /**
-     * ��ȡrateCode���Ե�ֵ��
+     * 获取rateCode属性的值。
      * 
      * @return
      *     possible object is
@@ -205,7 +208,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����rateCode���Ե�ֵ��
+     * 设置rateCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -217,7 +220,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ��ȡroomtypeCode���Ե�ֵ��
+     * 获取roomtypeCode属性的值。
      * 
      * @return
      *     possible object is
@@ -229,7 +232,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����roomtypeCode���Ե�ֵ��
+     * 设置roomtypeCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -241,7 +244,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ��ȡcardNo���Ե�ֵ��
+     * 获取cardNo属性的值。
      * 
      * @return
      *     possible object is
@@ -253,7 +256,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����cardNo���Ե�ֵ��
+     * 设置cardNo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -265,7 +268,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ��ȡcardType���Ե�ֵ��
+     * 获取cardType属性的值。
      * 
      * @return
      *     possible object is
@@ -277,7 +280,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����cardType���Ե�ֵ��
+     * 设置cardType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -289,7 +292,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ��ȡcardLevel���Ե�ֵ��
+     * 获取cardLevel属性的值。
      * 
      * @return
      *     possible object is
@@ -301,7 +304,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����cardLevel���Ե�ֵ��
+     * 设置cardLevel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -313,7 +316,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ��ȡaccount���Ե�ֵ��
+     * 获取account属性的值。
      * 
      * @return
      *     possible object is
@@ -325,7 +328,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����account���Ե�ֵ��
+     * 设置account属性的值。
      * 
      * @param value
      *     allowed object is
@@ -337,7 +340,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ��ȡbarType���Ե�ֵ��
+     * 获取barType属性的值。
      * 
      * @return
      *     possible object is
@@ -349,7 +352,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����barType���Ե�ֵ��
+     * 设置barType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -361,7 +364,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ��ȡroomNum���Ե�ֵ��
+     * 获取roomNum属性的值。
      * 
      */
     public int getRoomNum() {
@@ -369,7 +372,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����roomNum���Ե�ֵ��
+     * 设置roomNum属性的值。
      * 
      */
     public void setRoomNum(int value) {
@@ -377,7 +380,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ��ȡgroupType���Ե�ֵ��
+     * 获取groupType属性的值。
      * 
      * @return
      *     possible object is
@@ -389,7 +392,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����groupType���Ե�ֵ��
+     * 设置groupType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -401,7 +404,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ��ȡadults���Ե�ֵ��
+     * 获取adults属性的值。
      * 
      */
     public int getAdults() {
@@ -409,7 +412,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����adults���Ե�ֵ��
+     * 设置adults属性的值。
      * 
      */
     public void setAdults(int value) {
@@ -417,7 +420,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ��ȡisAllPrices���Ե�ֵ��
+     * 获取isAllPrices属性的值。
      * 
      * @return
      *     possible object is
@@ -429,7 +432,7 @@ public class RateDetailRequest {
     }
 
     /**
-     * ����isAllPrices���Ե�ֵ��
+     * 设置isAllPrices属性的值。
      * 
      * @param value
      *     allowed object is

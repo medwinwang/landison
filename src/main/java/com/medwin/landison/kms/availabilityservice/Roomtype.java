@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Roomtype complex typeµÄ Java Àà¡£
+ * <p>Roomtype complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="Roomtype"&gt;
@@ -44,7 +44,7 @@ public class Roomtype
     protected ArrayOfCommonInfo hotelRoomInstallations;
 
     /**
-     * »ñÈ¡colorÊôĞÔµÄÖµ¡£
+     * è·å–colorå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -56,7 +56,7 @@ public class Roomtype
     }
 
     /**
-     * ÉèÖÃcolorÊôĞÔµÄÖµ¡£
+     * è®¾ç½®colorå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -68,7 +68,7 @@ public class Roomtype
     }
 
     /**
-     * »ñÈ¡desÊôĞÔµÄÖµ¡£
+     * è·å–deså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -80,7 +80,7 @@ public class Roomtype
     }
 
     /**
-     * ÉèÖÃdesÊôĞÔµÄÖµ¡£
+     * è®¾ç½®deså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -92,7 +92,7 @@ public class Roomtype
     }
 
     /**
-     * »ñÈ¡hotelRoomInstallationsÊôĞÔµÄÖµ¡£
+     * è·å–hotelRoomInstallationså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -104,7 +104,7 @@ public class Roomtype
     }
 
     /**
-     * ÉèÖÃhotelRoomInstallationsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®hotelRoomInstallationså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

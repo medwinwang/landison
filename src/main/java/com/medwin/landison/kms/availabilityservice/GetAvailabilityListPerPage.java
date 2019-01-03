@@ -1,19 +1,20 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>anonymous complex type�� Java �ࡣ
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -78,12 +79,14 @@ public class GetAvailabilityListPerPage {
     protected int minPrice;
     @XmlElement(name = "max_price")
     protected int maxPrice;
-    @XmlElement(required = true)
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String arrival;
-    @XmlElement(required = true)
+    protected Date arrival;
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String departure;
+    protected Date departure;
     @XmlElement(name = "extra_bed")
     protected int extraBed;
     protected int adults;
@@ -107,7 +110,7 @@ public class GetAvailabilityListPerPage {
     protected int currentPage;
 
     /**
-     * ��ȡminPrice���Ե�ֵ��
+     * 获取minPrice属性的值。
      * 
      */
     public int getMinPrice() {
@@ -115,7 +118,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����minPrice���Ե�ֵ��
+     * 设置minPrice属性的值。
      * 
      */
     public void setMinPrice(int value) {
@@ -123,7 +126,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡmaxPrice���Ե�ֵ��
+     * 获取maxPrice属性的值。
      * 
      */
     public int getMaxPrice() {
@@ -131,7 +134,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����maxPrice���Ե�ֵ��
+     * 设置maxPrice属性的值。
      * 
      */
     public void setMaxPrice(int value) {
@@ -139,55 +142,55 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡarrival���Ե�ֵ��
+     * 获取arrival属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getArrival() {
+    public Date getArrival() {
         return arrival;
     }
 
     /**
-     * ����arrival���Ե�ֵ��
+     * 设置arrival属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setArrival(String value) {
+    public void setArrival(Date value) {
         this.arrival = value;
     }
 
     /**
-     * ��ȡdeparture���Ե�ֵ��
+     * 获取departure属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDeparture() {
+    public Date getDeparture() {
         return departure;
     }
 
     /**
-     * ����departure���Ե�ֵ��
+     * 设置departure属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDeparture(String value) {
+    public void setDeparture(Date value) {
         this.departure = value;
     }
 
     /**
-     * ��ȡextraBed���Ե�ֵ��
+     * 获取extraBed属性的值。
      * 
      */
     public int getExtraBed() {
@@ -195,7 +198,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����extraBed���Ե�ֵ��
+     * 设置extraBed属性的值。
      * 
      */
     public void setExtraBed(int value) {
@@ -203,7 +206,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡadults���Ե�ֵ��
+     * 获取adults属性的值。
      * 
      */
     public int getAdults() {
@@ -211,7 +214,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����adults���Ե�ֵ��
+     * 设置adults属性的值。
      * 
      */
     public void setAdults(int value) {
@@ -219,7 +222,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡroomNum���Ե�ֵ��
+     * 获取roomNum属性的值。
      * 
      */
     public int getRoomNum() {
@@ -227,7 +230,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����roomNum���Ե�ֵ��
+     * 设置roomNum属性的值。
      * 
      */
     public void setRoomNum(int value) {
@@ -235,7 +238,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡguesttypeCode���Ե�ֵ��
+     * 获取guesttypeCode属性的值。
      * 
      * @return
      *     possible object is
@@ -247,7 +250,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����guesttypeCode���Ե�ֵ��
+     * 设置guesttypeCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -259,7 +262,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡcustAccount���Ե�ֵ��
+     * 获取custAccount属性的值。
      * 
      * @return
      *     possible object is
@@ -271,7 +274,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����custAccount���Ե�ֵ��
+     * 设置custAccount属性的值。
      * 
      * @param value
      *     allowed object is
@@ -283,7 +286,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡcardNo���Ե�ֵ��
+     * 获取cardNo属性的值。
      * 
      * @return
      *     possible object is
@@ -295,7 +298,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����cardNo���Ե�ֵ��
+     * 设置cardNo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -307,7 +310,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡchildren���Ե�ֵ��
+     * 获取children属性的值。
      * 
      */
     public int getChildren() {
@@ -315,7 +318,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����children���Ե�ֵ��
+     * 设置children属性的值。
      * 
      */
     public void setChildren(int value) {
@@ -323,7 +326,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡchannel���Ե�ֵ��
+     * 获取channel属性的值。
      * 
      * @return
      *     possible object is
@@ -335,7 +338,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����channel���Ե�ֵ��
+     * 设置channel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -347,7 +350,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡgroupCode���Ե�ֵ��
+     * 获取groupCode属性的值。
      * 
      * @return
      *     possible object is
@@ -359,7 +362,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����groupCode���Ե�ֵ��
+     * 设置groupCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -371,7 +374,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡcountryCode���Ե�ֵ��
+     * 获取countryCode属性的值。
      * 
      * @return
      *     possible object is
@@ -383,7 +386,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����countryCode���Ե�ֵ��
+     * 设置countryCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -395,7 +398,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡcityCode���Ե�ֵ��
+     * 获取cityCode属性的值。
      * 
      * @return
      *     possible object is
@@ -407,7 +410,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����cityCode���Ե�ֵ��
+     * 设置cityCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -419,7 +422,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡtag���Ե�ֵ��
+     * 获取tag属性的值。
      * 
      * @return
      *     possible object is
@@ -431,7 +434,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����tag���Ե�ֵ��
+     * 设置tag属性的值。
      * 
      * @param value
      *     allowed object is
@@ -443,7 +446,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡhotelName���Ե�ֵ��
+     * 获取hotelName属性的值。
      * 
      * @return
      *     possible object is
@@ -455,7 +458,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����hotelName���Ե�ֵ��
+     * 设置hotelName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -467,7 +470,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡstarCode���Ե�ֵ��
+     * 获取starCode属性的值。
      * 
      * @return
      *     possible object is
@@ -479,7 +482,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����starCode���Ե�ֵ��
+     * 设置starCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -491,7 +494,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡpageSize���Ե�ֵ��
+     * 获取pageSize属性的值。
      * 
      */
     public int getPageSize() {
@@ -499,7 +502,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����pageSize���Ե�ֵ��
+     * 设置pageSize属性的值。
      * 
      */
     public void setPageSize(int value) {
@@ -507,7 +510,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ��ȡcurrentPage���Ե�ֵ��
+     * 获取currentPage属性的值。
      * 
      */
     public int getCurrentPage() {
@@ -515,7 +518,7 @@ public class GetAvailabilityListPerPage {
     }
 
     /**
-     * ����currentPage���Ե�ֵ��
+     * 设置currentPage属性的值。
      * 
      */
     public void setCurrentPage(int value) {

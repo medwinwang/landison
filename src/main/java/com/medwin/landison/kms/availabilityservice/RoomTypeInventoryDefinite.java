@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>RoomTypeInventoryDefinite complex typeµÄ Java Àà¡£
+ * <p>RoomTypeInventoryDefinite complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="RoomTypeInventoryDefinite"&gt;
@@ -44,7 +44,7 @@ public class RoomTypeInventoryDefinite {
     protected int resvCount;
 
     /**
-     * »ñÈ¡countÊôĞÔµÄÖµ¡£
+     * è·å–countå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getCount() {
@@ -52,7 +52,7 @@ public class RoomTypeInventoryDefinite {
     }
 
     /**
-     * ÉèÖÃcountÊôĞÔµÄÖµ¡£
+     * è®¾ç½®countå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setCount(int value) {
@@ -60,7 +60,7 @@ public class RoomTypeInventoryDefinite {
     }
 
     /**
-     * »ñÈ¡blockCountÊôĞÔµÄÖµ¡£
+     * è·å–blockCountå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getBlockCount() {
@@ -68,7 +68,7 @@ public class RoomTypeInventoryDefinite {
     }
 
     /**
-     * ÉèÖÃblockCountÊôĞÔµÄÖµ¡£
+     * è®¾ç½®blockCountå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setBlockCount(int value) {
@@ -76,7 +76,7 @@ public class RoomTypeInventoryDefinite {
     }
 
     /**
-     * »ñÈ¡resvCountÊôĞÔµÄÖµ¡£
+     * è·å–resvCountå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getResvCount() {
@@ -84,7 +84,7 @@ public class RoomTypeInventoryDefinite {
     }
 
     /**
-     * ÉèÖÃresvCountÊôĞÔµÄÖµ¡£
+     * è®¾ç½®resvCountå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setResvCount(int value) {

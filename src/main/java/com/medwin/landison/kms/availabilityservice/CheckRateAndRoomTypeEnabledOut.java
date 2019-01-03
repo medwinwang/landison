@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>CheckRateAndRoomTypeEnabledOut complex typeµÄ Java Àà¡£
+ * <p>CheckRateAndRoomTypeEnabledOut complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="CheckRateAndRoomTypeEnabledOut"&gt;
@@ -57,7 +57,7 @@ public class CheckRateAndRoomTypeEnabledOut {
     protected ArrayOfAvailabilityPackage ratePackages;
 
     /**
-     * »ñÈ¡rateAndRoomTypeEnabledListÊôĞÔµÄÖµ¡£
+     * è·å–rateAndRoomTypeEnabledListå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -69,7 +69,7 @@ public class CheckRateAndRoomTypeEnabledOut {
     }
 
     /**
-     * ÉèÖÃrateAndRoomTypeEnabledListÊôĞÔµÄÖµ¡£
+     * è®¾ç½®rateAndRoomTypeEnabledListå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -81,7 +81,7 @@ public class CheckRateAndRoomTypeEnabledOut {
     }
 
     /**
-     * »ñÈ¡totalPriceÊôĞÔµÄÖµ¡£
+     * è·å–totalPriceå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -93,7 +93,7 @@ public class CheckRateAndRoomTypeEnabledOut {
     }
 
     /**
-     * ÉèÖÃtotalPriceÊôĞÔµÄÖµ¡£
+     * è®¾ç½®totalPriceå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -105,7 +105,7 @@ public class CheckRateAndRoomTypeEnabledOut {
     }
 
     /**
-     * »ñÈ¡orderRoomStaysÊôĞÔµÄÖµ¡£
+     * è·å–orderRoomStayså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -117,7 +117,7 @@ public class CheckRateAndRoomTypeEnabledOut {
     }
 
     /**
-     * ÉèÖÃorderRoomStaysÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderRoomStayså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -129,7 +129,7 @@ public class CheckRateAndRoomTypeEnabledOut {
     }
 
     /**
-     * »ñÈ¡packageOutÊôĞÔµÄÖµ¡£
+     * è·å–packageOutå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -141,7 +141,7 @@ public class CheckRateAndRoomTypeEnabledOut {
     }
 
     /**
-     * ÉèÖÃpackageOutÊôĞÔµÄÖµ¡£
+     * è®¾ç½®packageOutå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -153,7 +153,7 @@ public class CheckRateAndRoomTypeEnabledOut {
     }
 
     /**
-     * »ñÈ¡oGuaranteeRuleÊôĞÔµÄÖµ¡£
+     * è·å–oGuaranteeRuleå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -165,7 +165,7 @@ public class CheckRateAndRoomTypeEnabledOut {
     }
 
     /**
-     * ÉèÖÃoGuaranteeRuleÊôĞÔµÄÖµ¡£
+     * è®¾ç½®oGuaranteeRuleå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -177,7 +177,7 @@ public class CheckRateAndRoomTypeEnabledOut {
     }
 
     /**
-     * »ñÈ¡ratePackagesÊôĞÔµÄÖµ¡£
+     * è·å–ratePackageså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -189,7 +189,7 @@ public class CheckRateAndRoomTypeEnabledOut {
     }
 
     /**
-     * ÉèÖÃratePackagesÊôĞÔµÄÖµ¡£
+     * è®¾ç½®ratePackageså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

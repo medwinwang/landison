@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>CancelRuleDetail complex typeµÄ Java Àà¡£
+ * <p>CancelRuleDetail complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="CancelRuleDetail"&gt;
@@ -22,6 +22,8 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="type" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="day_before_arrival" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="cancel_before_time" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="cancel_before_time_minit" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="cancel_before_time_str" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="penalty_fee" type="{http://www.w3.org/2001/XMLSchema}decimal"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -37,6 +39,8 @@ import javax.xml.bind.annotation.XmlType;
     "type",
     "dayBeforeArrival",
     "cancelBeforeTime",
+    "cancelBeforeTimeMinit",
+    "cancelBeforeTimeStr",
     "penaltyFee"
 })
 public class CancelRuleDetail {
@@ -48,11 +52,15 @@ public class CancelRuleDetail {
     protected int dayBeforeArrival;
     @XmlElement(name = "cancel_before_time")
     protected int cancelBeforeTime;
+    @XmlElement(name = "cancel_before_time_minit")
+    protected int cancelBeforeTimeMinit;
+    @XmlElement(name = "cancel_before_time_str")
+    protected String cancelBeforeTimeStr;
     @XmlElement(name = "penalty_fee", required = true)
     protected BigDecimal penaltyFee;
 
     /**
-     * »ñÈ¡remarkÊôĞÔµÄÖµ¡£
+     * è·å–remarkå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -64,7 +72,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * ÉèÖÃremarkÊôĞÔµÄÖµ¡£
+     * è®¾ç½®remarkå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -76,7 +84,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * »ñÈ¡typeÊôĞÔµÄÖµ¡£
+     * è·å–typeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -88,7 +96,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * ÉèÖÃtypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®typeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -100,7 +108,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * »ñÈ¡dayBeforeArrivalÊôĞÔµÄÖµ¡£
+     * è·å–dayBeforeArrivalå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getDayBeforeArrival() {
@@ -108,7 +116,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * ÉèÖÃdayBeforeArrivalÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dayBeforeArrivalå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setDayBeforeArrival(int value) {
@@ -116,7 +124,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * »ñÈ¡cancelBeforeTimeÊôĞÔµÄÖµ¡£
+     * è·å–cancelBeforeTimeå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getCancelBeforeTime() {
@@ -124,7 +132,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * ÉèÖÃcancelBeforeTimeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®cancelBeforeTimeå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setCancelBeforeTime(int value) {
@@ -132,7 +140,47 @@ public class CancelRuleDetail {
     }
 
     /**
-     * »ñÈ¡penaltyFeeÊôĞÔµÄÖµ¡£
+     * è·å–cancelBeforeTimeMinitå±æ€§çš„å€¼ã€‚
+     * 
+     */
+    public int getCancelBeforeTimeMinit() {
+        return cancelBeforeTimeMinit;
+    }
+
+    /**
+     * è®¾ç½®cancelBeforeTimeMinitå±æ€§çš„å€¼ã€‚
+     * 
+     */
+    public void setCancelBeforeTimeMinit(int value) {
+        this.cancelBeforeTimeMinit = value;
+    }
+
+    /**
+     * è·å–cancelBeforeTimeStrå±æ€§çš„å€¼ã€‚
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCancelBeforeTimeStr() {
+        return cancelBeforeTimeStr;
+    }
+
+    /**
+     * è®¾ç½®cancelBeforeTimeStrå±æ€§çš„å€¼ã€‚
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCancelBeforeTimeStr(String value) {
+        this.cancelBeforeTimeStr = value;
+    }
+
+    /**
+     * è·å–penaltyFeeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -144,7 +192,7 @@ public class CancelRuleDetail {
     }
 
     /**
-     * ÉèÖÃpenaltyFeeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®penaltyFeeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

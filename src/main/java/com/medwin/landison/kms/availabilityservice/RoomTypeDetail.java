@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>RoomTypeDetail complex typeµÄ Java Àà¡£
+ * <p>RoomTypeDetail complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="RoomTypeDetail"&gt;
@@ -106,7 +106,7 @@ public class RoomTypeDetail
     protected ArrayOfPackage packages;
 
     /**
-     * »ñÈ¡maxOccupancyÊôĞÔµÄÖµ¡£
+     * è·å–maxOccupancyå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getMaxOccupancy() {
@@ -114,7 +114,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃmaxOccupancyÊôĞÔµÄÖµ¡£
+     * è®¾ç½®maxOccupancyå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setMaxOccupancy(int value) {
@@ -122,7 +122,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡hotelInstallationsÊôĞÔµÄÖµ¡£
+     * è·å–hotelInstallationså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -134,7 +134,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃhotelInstallationsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®hotelInstallationså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -146,7 +146,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡statusÊôĞÔµÄÖµ¡£
+     * è·å–statuså±æ€§çš„å€¼ã€‚
      * 
      */
     public int getStatus() {
@@ -154,7 +154,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃstatusÊôĞÔµÄÖµ¡£
+     * è®¾ç½®statuså±æ€§çš„å€¼ã€‚
      * 
      */
     public void setStatus(int value) {
@@ -162,7 +162,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡hotelÊôĞÔµÄÖµ¡£
+     * è·å–hotelå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -174,7 +174,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃhotelÊôĞÔµÄÖµ¡£
+     * è®¾ç½®hotelå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -186,7 +186,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡roomTypeÊôĞÔµÄÖµ¡£
+     * è·å–roomTypeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -198,7 +198,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃroomTypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®roomTypeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -210,7 +210,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡numberÊôĞÔµÄÖµ¡£
+     * è·å–numberå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getNumber() {
@@ -218,7 +218,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃnumberÊôĞÔµÄÖµ¡£
+     * è®¾ç½®numberå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setNumber(int value) {
@@ -226,7 +226,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡sortIdÊôĞÔµÄÖµ¡£
+     * è·å–sortIdå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -238,7 +238,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃsortIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®sortIdå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -250,7 +250,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡isHurdleÊôĞÔµÄÖµ¡£
+     * è·å–isHurdleå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -262,7 +262,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃisHurdleÊôĞÔµÄÖµ¡£
+     * è®¾ç½®isHurdleå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -274,7 +274,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡firstNightPriceÊôĞÔµÄÖµ¡£
+     * è·å–firstNightPriceå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -286,7 +286,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃfirstNightPriceÊôĞÔµÄÖµ¡£
+     * è®¾ç½®firstNightPriceå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -298,7 +298,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡totalPriceÊôĞÔµÄÖµ¡£
+     * è·å–totalPriceå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -310,7 +310,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃtotalPriceÊôĞÔµÄÖµ¡£
+     * è®¾ç½®totalPriceå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -322,7 +322,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡availableRoomsÊôĞÔµÄÖµ¡£
+     * è·å–availableRoomså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -334,7 +334,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃavailableRoomsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®availableRoomså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -346,7 +346,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡desÊôĞÔµÄÖµ¡£
+     * è·å–deså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -358,7 +358,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃdesÊôĞÔµÄÖµ¡£
+     * è®¾ç½®deså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -370,7 +370,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡addressÊôĞÔµÄÖµ¡£
+     * è·å–addresså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -382,7 +382,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃaddressÊôĞÔµÄÖµ¡£
+     * è®¾ç½®addresså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -394,7 +394,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡picÊôĞÔµÄÖµ¡£
+     * è·å–picå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -406,7 +406,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃpicÊôĞÔµÄÖµ¡£
+     * è®¾ç½®picå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -418,7 +418,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡installationsÊôĞÔµÄÖµ¡£
+     * è·å–installationså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -430,7 +430,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃinstallationsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®installationså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -442,7 +442,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡roomTypeCateÊôĞÔµÄÖµ¡£
+     * è·å–roomTypeCateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -454,7 +454,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃroomTypeCateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®roomTypeCateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -466,7 +466,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡areaÊôĞÔµÄÖµ¡£
+     * è·å–areaå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getArea() {
@@ -474,7 +474,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃareaÊôĞÔµÄÖµ¡£
+     * è®¾ç½®areaå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setArea(int value) {
@@ -482,7 +482,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * »ñÈ¡packagesÊôĞÔµÄÖµ¡£
+     * è·å–packageså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -494,7 +494,7 @@ public class RoomTypeDetail
     }
 
     /**
-     * ÉèÖÃpackagesÊôĞÔµÄÖµ¡£
+     * è®¾ç½®packageså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

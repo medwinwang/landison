@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>RateAndRoomTypeEnabled complex typeµÄ Java Àà¡£
+ * <p>RateAndRoomTypeEnabled complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="RateAndRoomTypeEnabled"&gt;
@@ -48,7 +48,7 @@ public class RateAndRoomTypeEnabled {
     protected boolean result;
 
     /**
-     * »ñÈ¡orderRoomStayInfoÊôĞÔµÄÖµ¡£
+     * è·å–orderRoomStayInfoå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -60,7 +60,7 @@ public class RateAndRoomTypeEnabled {
     }
 
     /**
-     * ÉèÖÃorderRoomStayInfoÊôĞÔµÄÖµ¡£
+     * è®¾ç½®orderRoomStayInfoå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -72,7 +72,7 @@ public class RateAndRoomTypeEnabled {
     }
 
     /**
-     * »ñÈ¡checkItemÊôĞÔµÄÖµ¡£
+     * è·å–checkItemå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -84,7 +84,7 @@ public class RateAndRoomTypeEnabled {
     }
 
     /**
-     * ÉèÖÃcheckItemÊôĞÔµÄÖµ¡£
+     * è®¾ç½®checkItemå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -96,7 +96,7 @@ public class RateAndRoomTypeEnabled {
     }
 
     /**
-     * »ñÈ¡descriptionÊôĞÔµÄÖµ¡£
+     * è·å–descriptionå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -108,7 +108,7 @@ public class RateAndRoomTypeEnabled {
     }
 
     /**
-     * ÉèÖÃdescriptionÊôĞÔµÄÖµ¡£
+     * è®¾ç½®descriptionå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -120,7 +120,7 @@ public class RateAndRoomTypeEnabled {
     }
 
     /**
-     * »ñÈ¡resultÊôĞÔµÄÖµ¡£
+     * è·å–resultå±æ€§çš„å€¼ã€‚
      * 
      */
     public boolean isResult() {
@@ -128,7 +128,7 @@ public class RateAndRoomTypeEnabled {
     }
 
     /**
-     * ÉèÖÃresultÊôĞÔµÄÖµ¡£
+     * è®¾ç½®resultå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setResult(boolean value) {

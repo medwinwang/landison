@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>GetItemDailyInventoryIn complex type�� Java �ࡣ
+ * <p>GetItemDailyInventoryIn complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="GetItemDailyInventoryIn"&gt;
@@ -48,15 +49,17 @@ public class GetItemDailyInventoryIn {
     protected String keyWord;
     @XmlElement(name = "HotelCode")
     protected String hotelCode;
-    @XmlElement(name = "FromDt", required = true, nillable = true)
+    @XmlElement(name = "FromDt", required = true, type = String.class, nillable = true)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String fromDt;
-    @XmlElement(name = "ToDt", required = true, nillable = true)
+    protected Date fromDt;
+    @XmlElement(name = "ToDt", required = true, type = String.class, nillable = true)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String toDt;
+    protected Date toDt;
 
     /**
-     * ��ȡitemClassCode���Ե�ֵ��
+     * 获取itemClassCode属性的值。
      * 
      * @return
      *     possible object is
@@ -68,7 +71,7 @@ public class GetItemDailyInventoryIn {
     }
 
     /**
-     * ����itemClassCode���Ե�ֵ��
+     * 设置itemClassCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -80,7 +83,7 @@ public class GetItemDailyInventoryIn {
     }
 
     /**
-     * ��ȡkeyWord���Ե�ֵ��
+     * 获取keyWord属性的值。
      * 
      * @return
      *     possible object is
@@ -92,7 +95,7 @@ public class GetItemDailyInventoryIn {
     }
 
     /**
-     * ����keyWord���Ե�ֵ��
+     * 设置keyWord属性的值。
      * 
      * @param value
      *     allowed object is
@@ -104,7 +107,7 @@ public class GetItemDailyInventoryIn {
     }
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -116,7 +119,7 @@ public class GetItemDailyInventoryIn {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -128,50 +131,50 @@ public class GetItemDailyInventoryIn {
     }
 
     /**
-     * ��ȡfromDt���Ե�ֵ��
+     * 获取fromDt属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getFromDt() {
+    public Date getFromDt() {
         return fromDt;
     }
 
     /**
-     * ����fromDt���Ե�ֵ��
+     * 设置fromDt属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setFromDt(String value) {
+    public void setFromDt(Date value) {
         this.fromDt = value;
     }
 
     /**
-     * ��ȡtoDt���Ե�ֵ��
+     * 获取toDt属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getToDt() {
+    public Date getToDt() {
         return toDt;
     }
 
     /**
-     * ����toDt���Ե�ֵ��
+     * 设置toDt属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setToDt(String value) {
+    public void setToDt(Date value) {
         this.toDt = value;
     }
 

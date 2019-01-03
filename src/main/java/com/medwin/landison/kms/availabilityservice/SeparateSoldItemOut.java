@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>SeparateSoldItemOut complex typeµÄ Java Àà¡£
+ * <p>SeparateSoldItemOut complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="SeparateSoldItemOut"&gt;
@@ -36,7 +36,7 @@ public class SeparateSoldItemOut {
     protected ArrayOfItemInfo itemInfos;
 
     /**
-     * »ñÈ¡itemInfosÊôĞÔµÄÖµ¡£
+     * è·å–itemInfoså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class SeparateSoldItemOut {
     }
 
     /**
-     * ÉèÖÃitemInfosÊôĞÔµÄÖµ¡£
+     * è®¾ç½®itemInfoså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

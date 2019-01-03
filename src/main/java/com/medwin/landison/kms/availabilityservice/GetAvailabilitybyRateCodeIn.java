@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>GetAvailabilitybyRateCodeIn complex type�� Java �ࡣ
+ * <p>GetAvailabilitybyRateCodeIn complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="GetAvailabilitybyRateCodeIn"&gt;
@@ -64,12 +65,14 @@ public class GetAvailabilitybyRateCodeIn {
 
     @XmlElement(name = "HotelCode")
     protected String hotelCode;
-    @XmlElement(name = "Arrival", required = true)
+    @XmlElement(name = "Arrival", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String arrival;
-    @XmlElement(name = "Departure", required = true)
+    protected Date arrival;
+    @XmlElement(name = "Departure", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String departure;
+    protected Date departure;
     @XmlElement(name = "Adults")
     protected int adults;
     @XmlElement(name = "RoomNum")
@@ -97,7 +100,7 @@ public class GetAvailabilitybyRateCodeIn {
     protected String groupType;
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -109,7 +112,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -121,55 +124,55 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ��ȡarrival���Ե�ֵ��
+     * 获取arrival属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getArrival() {
+    public Date getArrival() {
         return arrival;
     }
 
     /**
-     * ����arrival���Ե�ֵ��
+     * 设置arrival属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setArrival(String value) {
+    public void setArrival(Date value) {
         this.arrival = value;
     }
 
     /**
-     * ��ȡdeparture���Ե�ֵ��
+     * 获取departure属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDeparture() {
+    public Date getDeparture() {
         return departure;
     }
 
     /**
-     * ����departure���Ե�ֵ��
+     * 设置departure属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDeparture(String value) {
+    public void setDeparture(Date value) {
         this.departure = value;
     }
 
     /**
-     * ��ȡadults���Ե�ֵ��
+     * 获取adults属性的值。
      * 
      */
     public int getAdults() {
@@ -177,7 +180,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����adults���Ե�ֵ��
+     * 设置adults属性的值。
      * 
      */
     public void setAdults(int value) {
@@ -185,7 +188,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ��ȡroomNum���Ե�ֵ��
+     * 获取roomNum属性的值。
      * 
      */
     public int getRoomNum() {
@@ -193,7 +196,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����roomNum���Ե�ֵ��
+     * 设置roomNum属性的值。
      * 
      */
     public void setRoomNum(int value) {
@@ -201,7 +204,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ��ȡguesttypeCode���Ե�ֵ��
+     * 获取guesttypeCode属性的值。
      * 
      * @return
      *     possible object is
@@ -213,7 +216,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����guesttypeCode���Ե�ֵ��
+     * 设置guesttypeCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -225,7 +228,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ��ȡcustAccount���Ե�ֵ��
+     * 获取custAccount属性的值。
      * 
      * @return
      *     possible object is
@@ -237,7 +240,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����custAccount���Ե�ֵ��
+     * 设置custAccount属性的值。
      * 
      * @param value
      *     allowed object is
@@ -249,7 +252,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ��ȡcardNo���Ե�ֵ��
+     * 获取cardNo属性的值。
      * 
      * @return
      *     possible object is
@@ -261,7 +264,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����cardNo���Ե�ֵ��
+     * 设置cardNo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -273,7 +276,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ��ȡcardType���Ե�ֵ��
+     * 获取cardType属性的值。
      * 
      * @return
      *     possible object is
@@ -285,7 +288,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����cardType���Ե�ֵ��
+     * 设置cardType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -297,7 +300,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ��ȡcardLevel���Ե�ֵ��
+     * 获取cardLevel属性的值。
      * 
      * @return
      *     possible object is
@@ -309,7 +312,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����cardLevel���Ե�ֵ��
+     * 设置cardLevel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -321,7 +324,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ��ȡchildren���Ե�ֵ��
+     * 获取children属性的值。
      * 
      */
     public int getChildren() {
@@ -329,7 +332,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����children���Ե�ֵ��
+     * 设置children属性的值。
      * 
      */
     public void setChildren(int value) {
@@ -337,7 +340,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ��ȡchannel���Ե�ֵ��
+     * 获取channel属性的值。
      * 
      * @return
      *     possible object is
@@ -349,7 +352,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����channel���Ե�ֵ��
+     * 设置channel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -361,7 +364,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ��ȡbarType���Ե�ֵ��
+     * 获取barType属性的值。
      * 
      * @return
      *     possible object is
@@ -373,7 +376,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����barType���Ե�ֵ��
+     * 设置barType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -385,7 +388,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ��ȡrateCode���Ե�ֵ��
+     * 获取rateCode属性的值。
      * 
      * @return
      *     possible object is
@@ -397,7 +400,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����rateCode���Ե�ֵ��
+     * 设置rateCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -409,7 +412,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ��ȡgroupType���Ե�ֵ��
+     * 获取groupType属性的值。
      * 
      * @return
      *     possible object is
@@ -421,7 +424,7 @@ public class GetAvailabilitybyRateCodeIn {
     }
 
     /**
-     * ����groupType���Ե�ֵ��
+     * 设置groupType属性的值。
      * 
      * @param value
      *     allowed object is

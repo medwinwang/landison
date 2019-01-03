@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>RoomDetail complex typeµÄ Java Àà¡£
+ * <p>RoomDetail complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="RoomDetail"&gt;
@@ -18,7 +18,9 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="RoomType" type="{http://www.shijinet.com.cn/kunlun/kws/1.1/}Roomtype" minOccurs="0"/&gt;
+ *         &lt;element name="RoomTypeBundled" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="AvailableRooms" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="SortId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -30,17 +32,23 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "RoomDetail", propOrder = {
     "roomType",
-    "availableRooms"
+    "roomTypeBundled",
+    "availableRooms",
+    "sortId"
 })
 public class RoomDetail {
 
     @XmlElement(name = "RoomType")
     protected Roomtype roomType;
+    @XmlElement(name = "RoomTypeBundled")
+    protected String roomTypeBundled;
     @XmlElement(name = "AvailableRooms")
     protected String availableRooms;
+    @XmlElement(name = "SortId")
+    protected String sortId;
 
     /**
-     * »ñÈ¡roomTypeÊôĞÔµÄÖµ¡£
+     * è·å–roomTypeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -52,7 +60,7 @@ public class RoomDetail {
     }
 
     /**
-     * ÉèÖÃroomTypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®roomTypeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -64,7 +72,31 @@ public class RoomDetail {
     }
 
     /**
-     * »ñÈ¡availableRoomsÊôĞÔµÄÖµ¡£
+     * è·å–roomTypeBundledå±æ€§çš„å€¼ã€‚
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getRoomTypeBundled() {
+        return roomTypeBundled;
+    }
+
+    /**
+     * è®¾ç½®roomTypeBundledå±æ€§çš„å€¼ã€‚
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setRoomTypeBundled(String value) {
+        this.roomTypeBundled = value;
+    }
+
+    /**
+     * è·å–availableRoomså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -76,7 +108,7 @@ public class RoomDetail {
     }
 
     /**
-     * ÉèÖÃavailableRoomsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®availableRoomså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -85,6 +117,30 @@ public class RoomDetail {
      */
     public void setAvailableRooms(String value) {
         this.availableRooms = value;
+    }
+
+    /**
+     * è·å–sortIdå±æ€§çš„å€¼ã€‚
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSortId() {
+        return sortId;
+    }
+
+    /**
+     * è®¾ç½®sortIdå±æ€§çš„å€¼ã€‚
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSortId(String value) {
+        this.sortId = value;
     }
 
 }

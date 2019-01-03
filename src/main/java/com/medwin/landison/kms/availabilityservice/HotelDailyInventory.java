@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>HotelDailyInventory complex typeµÄ Java Àà¡£
+ * <p>HotelDailyInventory complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="HotelDailyInventory"&gt;
@@ -40,7 +40,7 @@ public class HotelDailyInventory {
     protected ArrayOfDailyInventory dailyInventories;
 
     /**
-     * »ñÈ¡hotelCodeÊôĞÔµÄÖµ¡£
+     * è·å–hotelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class HotelDailyInventory {
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®hotelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class HotelDailyInventory {
     }
 
     /**
-     * »ñÈ¡dailyInventoriesÊôĞÔµÄÖµ¡£
+     * è·å–dailyInventorieså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class HotelDailyInventory {
     }
 
     /**
-     * ÉèÖÃdailyInventoriesÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dailyInventorieså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

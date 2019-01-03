@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>RatePlan complex typeµÄ Java Àà¡£
+ * <p>RatePlan complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="RatePlan"&gt;
@@ -40,7 +40,7 @@ public class RatePlan {
     protected ArrayOfRateDetail rateDetail;
 
     /**
-     * »ñÈ¡rateHeaderÊôĞÔµÄÖµ¡£
+     * è·å–rateHeaderå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class RatePlan {
     }
 
     /**
-     * ÉèÖÃrateHeaderÊôĞÔµÄÖµ¡£
+     * è®¾ç½®rateHeaderå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class RatePlan {
     }
 
     /**
-     * »ñÈ¡rateDetailÊôĞÔµÄÖµ¡£
+     * è·å–rateDetailå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class RatePlan {
     }
 
     /**
-     * ÉèÖÃrateDetailÊôĞÔµÄÖµ¡£
+     * è®¾ç½®rateDetailå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

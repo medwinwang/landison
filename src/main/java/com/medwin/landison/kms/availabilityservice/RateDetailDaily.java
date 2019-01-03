@@ -2,18 +2,19 @@
 package com.medwin.landison.kms.availabilityservice;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>RateDetailDaily complex type�� Java �ࡣ
+ * <p>RateDetailDaily complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="RateDetailDaily"&gt;
@@ -83,9 +84,10 @@ public class RateDetailDaily {
     protected BigDecimal resvPoints;
     @XmlElement(name = "Status")
     protected int status;
-    @XmlElement(name = "InHouseDate", required = true)
+    @XmlElement(name = "InHouseDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String inHouseDate;
+    protected Date inHouseDate;
     @XmlElement(required = true)
     protected BigDecimal price;
     @XmlElement(name = "prs_1", required = true)
@@ -119,7 +121,7 @@ public class RateDetailDaily {
     protected ArrayOfPackage packages;
 
     /**
-     * ��ȡrateCode���Ե�ֵ��
+     * 获取rateCode属性的值。
      * 
      * @return
      *     possible object is
@@ -131,7 +133,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����rateCode���Ե�ֵ��
+     * 设置rateCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -143,7 +145,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡresvCouponCode���Ե�ֵ��
+     * 获取resvCouponCode属性的值。
      * 
      * @return
      *     possible object is
@@ -155,7 +157,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����resvCouponCode���Ե�ֵ��
+     * 设置resvCouponCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -167,7 +169,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡresvPoints���Ե�ֵ��
+     * 获取resvPoints属性的值。
      * 
      * @return
      *     possible object is
@@ -179,7 +181,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����resvPoints���Ե�ֵ��
+     * 设置resvPoints属性的值。
      * 
      * @param value
      *     allowed object is
@@ -191,7 +193,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡstatus���Ե�ֵ��
+     * 获取status属性的值。
      * 
      */
     public int getStatus() {
@@ -199,7 +201,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����status���Ե�ֵ��
+     * 设置status属性的值。
      * 
      */
     public void setStatus(int value) {
@@ -207,31 +209,31 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡinHouseDate���Ե�ֵ��
+     * 获取inHouseDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getInHouseDate() {
+    public Date getInHouseDate() {
         return inHouseDate;
     }
 
     /**
-     * ����inHouseDate���Ե�ֵ��
+     * 设置inHouseDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setInHouseDate(String value) {
+    public void setInHouseDate(Date value) {
         this.inHouseDate = value;
     }
 
     /**
-     * ��ȡprice���Ե�ֵ��
+     * 获取price属性的值。
      * 
      * @return
      *     possible object is
@@ -243,7 +245,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����price���Ե�ֵ��
+     * 设置price属性的值。
      * 
      * @param value
      *     allowed object is
@@ -255,7 +257,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡprs1���Ե�ֵ��
+     * 获取prs1属性的值。
      * 
      * @return
      *     possible object is
@@ -267,7 +269,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����prs1���Ե�ֵ��
+     * 设置prs1属性的值。
      * 
      * @param value
      *     allowed object is
@@ -279,7 +281,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡprs2���Ե�ֵ��
+     * 获取prs2属性的值。
      * 
      * @return
      *     possible object is
@@ -291,7 +293,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����prs2���Ե�ֵ��
+     * 设置prs2属性的值。
      * 
      * @param value
      *     allowed object is
@@ -303,7 +305,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡprs3���Ե�ֵ��
+     * 获取prs3属性的值。
      * 
      * @return
      *     possible object is
@@ -315,7 +317,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����prs3���Ե�ֵ��
+     * 设置prs3属性的值。
      * 
      * @param value
      *     allowed object is
@@ -327,7 +329,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡprs4���Ե�ֵ��
+     * 获取prs4属性的值。
      * 
      * @return
      *     possible object is
@@ -339,7 +341,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����prs4���Ե�ֵ��
+     * 设置prs4属性的值。
      * 
      * @param value
      *     allowed object is
@@ -351,7 +353,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡprs5���Ե�ֵ��
+     * 获取prs5属性的值。
      * 
      * @return
      *     possible object is
@@ -363,7 +365,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����prs5���Ե�ֵ��
+     * 设置prs5属性的值。
      * 
      * @param value
      *     allowed object is
@@ -375,7 +377,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡisWeekend���Ե�ֵ��
+     * 获取isWeekend属性的值。
      * 
      */
     public int getIsWeekend() {
@@ -383,7 +385,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����isWeekend���Ե�ֵ��
+     * 设置isWeekend属性的值。
      * 
      */
     public void setIsWeekend(int value) {
@@ -391,7 +393,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡextraBed���Ե�ֵ��
+     * 获取extraBed属性的值。
      * 
      * @return
      *     possible object is
@@ -403,7 +405,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����extraBed���Ե�ֵ��
+     * 设置extraBed属性的值。
      * 
      * @param value
      *     allowed object is
@@ -415,7 +417,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡchild���Ե�ֵ��
+     * 获取child属性的值。
      * 
      * @return
      *     possible object is
@@ -427,7 +429,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����child���Ե�ֵ��
+     * 设置child属性的值。
      * 
      * @param value
      *     allowed object is
@@ -439,7 +441,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡtax���Ե�ֵ��
+     * 获取tax属性的值。
      * 
      * @return
      *     possible object is
@@ -451,7 +453,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����tax���Ե�ֵ��
+     * 设置tax属性的值。
      * 
      * @param value
      *     allowed object is
@@ -463,7 +465,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡtaxFlag���Ե�ֵ��
+     * 获取taxFlag属性的值。
      * 
      * @return
      *     possible object is
@@ -475,7 +477,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����taxFlag���Ե�ֵ��
+     * 设置taxFlag属性的值。
      * 
      * @param value
      *     allowed object is
@@ -487,7 +489,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡserviceCharge���Ե�ֵ��
+     * 获取serviceCharge属性的值。
      * 
      * @return
      *     possible object is
@@ -499,7 +501,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����serviceCharge���Ե�ֵ��
+     * 设置serviceCharge属性的值。
      * 
      * @param value
      *     allowed object is
@@ -511,7 +513,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡserviceChargeFlag���Ե�ֵ��
+     * 获取serviceChargeFlag属性的值。
      * 
      * @return
      *     possible object is
@@ -523,7 +525,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����serviceChargeFlag���Ե�ֵ��
+     * 设置serviceChargeFlag属性的值。
      * 
      * @param value
      *     allowed object is
@@ -535,7 +537,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡdes���Ե�ֵ��
+     * 获取des属性的值。
      * 
      * @return
      *     possible object is
@@ -547,7 +549,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����des���Ե�ֵ��
+     * 设置des属性的值。
      * 
      * @param value
      *     allowed object is
@@ -559,7 +561,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡavailableRooms���Ե�ֵ��
+     * 获取availableRooms属性的值。
      * 
      */
     public int getAvailableRooms() {
@@ -567,7 +569,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����availableRooms���Ե�ֵ��
+     * 设置availableRooms属性的值。
      * 
      */
     public void setAvailableRooms(int value) {
@@ -575,7 +577,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ��ȡpackages���Ե�ֵ��
+     * 获取packages属性的值。
      * 
      * @return
      *     possible object is
@@ -587,7 +589,7 @@ public class RateDetailDaily {
     }
 
     /**
-     * ����packages���Ե�ֵ��
+     * 设置packages属性的值。
      * 
      * @param value
      *     allowed object is

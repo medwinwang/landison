@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>CheckItemIsEnoughIn complex type�� Java �ࡣ
+ * <p>CheckItemIsEnoughIn complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="CheckItemIsEnoughIn"&gt;
@@ -58,12 +59,14 @@ public class CheckItemIsEnoughIn {
     protected ArrayOfDailyItem dailyItems;
     @XmlElement(name = "OrderId")
     protected int orderId;
-    @XmlElement(name = "Arrival", required = true)
+    @XmlElement(name = "Arrival", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String arrival;
-    @XmlElement(name = "Departure", required = true)
+    protected Date arrival;
+    @XmlElement(name = "Departure", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String departure;
+    protected Date departure;
     @XmlElement(name = "Hotel_code")
     protected CommonInfo hotelCode;
     @XmlElement(name = "Room_num")
@@ -80,7 +83,7 @@ public class CheckItemIsEnoughIn {
     protected ArrayOfPackage packages;
 
     /**
-     * ��ȡdailyItems���Ե�ֵ��
+     * 获取dailyItems属性的值。
      * 
      * @return
      *     possible object is
@@ -92,7 +95,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ����dailyItems���Ե�ֵ��
+     * 设置dailyItems属性的值。
      * 
      * @param value
      *     allowed object is
@@ -104,7 +107,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ��ȡorderId���Ե�ֵ��
+     * 获取orderId属性的值。
      * 
      */
     public int getOrderId() {
@@ -112,7 +115,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ����orderId���Ե�ֵ��
+     * 设置orderId属性的值。
      * 
      */
     public void setOrderId(int value) {
@@ -120,55 +123,55 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ��ȡarrival���Ե�ֵ��
+     * 获取arrival属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getArrival() {
+    public Date getArrival() {
         return arrival;
     }
 
     /**
-     * ����arrival���Ե�ֵ��
+     * 设置arrival属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setArrival(String value) {
+    public void setArrival(Date value) {
         this.arrival = value;
     }
 
     /**
-     * ��ȡdeparture���Ե�ֵ��
+     * 获取departure属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDeparture() {
+    public Date getDeparture() {
         return departure;
     }
 
     /**
-     * ����departure���Ե�ֵ��
+     * 设置departure属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDeparture(String value) {
+    public void setDeparture(Date value) {
         this.departure = value;
     }
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -180,7 +183,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -192,7 +195,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ��ȡroomNum���Ե�ֵ��
+     * 获取roomNum属性的值。
      * 
      */
     public int getRoomNum() {
@@ -200,7 +203,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ����roomNum���Ե�ֵ��
+     * 设置roomNum属性的值。
      * 
      */
     public void setRoomNum(int value) {
@@ -208,7 +211,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ��ȡroomtypeCode���Ե�ֵ��
+     * 获取roomtypeCode属性的值。
      * 
      * @return
      *     possible object is
@@ -220,7 +223,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ����roomtypeCode���Ե�ֵ��
+     * 设置roomtypeCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -232,7 +235,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ��ȡrateCode���Ե�ֵ��
+     * 获取rateCode属性的值。
      * 
      * @return
      *     possible object is
@@ -244,7 +247,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ����rateCode���Ե�ֵ��
+     * 设置rateCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -256,7 +259,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ��ȡadults���Ե�ֵ��
+     * 获取adults属性的值。
      * 
      */
     public int getAdults() {
@@ -264,7 +267,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ����adults���Ե�ֵ��
+     * 设置adults属性的值。
      * 
      */
     public void setAdults(int value) {
@@ -272,7 +275,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ��ȡchildren���Ե�ֵ��
+     * 获取children属性的值。
      * 
      */
     public int getChildren() {
@@ -280,7 +283,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ����children���Ե�ֵ��
+     * 设置children属性的值。
      * 
      */
     public void setChildren(int value) {
@@ -288,7 +291,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ��ȡpackages���Ե�ֵ��
+     * 获取packages属性的值。
      * 
      * @return
      *     possible object is
@@ -300,7 +303,7 @@ public class CheckItemIsEnoughIn {
     }
 
     /**
-     * ����packages���Ե�ֵ��
+     * 设置packages属性的值。
      * 
      * @param value
      *     allowed object is

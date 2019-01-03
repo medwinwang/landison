@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>GetAvailabilityPackageIn complex type�� Java �ࡣ
+ * <p>GetAvailabilityPackageIn complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="GetAvailabilityPackageIn"&gt;
@@ -48,12 +49,14 @@ import java.lang.String;
 })
 public class GetAvailabilityPackageIn {
 
-    @XmlElement(name = "Arrival", required = true)
+    @XmlElement(name = "Arrival", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String arrival;
-    @XmlElement(name = "Departure", required = true)
+    protected Date arrival;
+    @XmlElement(name = "Departure", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String departure;
+    protected Date departure;
     @XmlElement(name = "RateCode")
     protected String rateCode;
     @XmlElement(name = "RoomTypeCode")
@@ -68,55 +71,55 @@ public class GetAvailabilityPackageIn {
     protected int rooms;
 
     /**
-     * ��ȡarrival���Ե�ֵ��
+     * 获取arrival属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getArrival() {
+    public Date getArrival() {
         return arrival;
     }
 
     /**
-     * ����arrival���Ե�ֵ��
+     * 设置arrival属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setArrival(String value) {
+    public void setArrival(Date value) {
         this.arrival = value;
     }
 
     /**
-     * ��ȡdeparture���Ե�ֵ��
+     * 获取departure属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDeparture() {
+    public Date getDeparture() {
         return departure;
     }
 
     /**
-     * ����departure���Ե�ֵ��
+     * 设置departure属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDeparture(String value) {
+    public void setDeparture(Date value) {
         this.departure = value;
     }
 
     /**
-     * ��ȡrateCode���Ե�ֵ��
+     * 获取rateCode属性的值。
      * 
      * @return
      *     possible object is
@@ -128,7 +131,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ����rateCode���Ե�ֵ��
+     * 设置rateCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -140,7 +143,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ��ȡroomTypeCode���Ե�ֵ��
+     * 获取roomTypeCode属性的值。
      * 
      * @return
      *     possible object is
@@ -152,7 +155,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ����roomTypeCode���Ե�ֵ��
+     * 设置roomTypeCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -164,7 +167,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -176,7 +179,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -188,7 +191,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ��ȡadult���Ե�ֵ��
+     * 获取adult属性的值。
      * 
      */
     public int getAdult() {
@@ -196,7 +199,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ����adult���Ե�ֵ��
+     * 设置adult属性的值。
      * 
      */
     public void setAdult(int value) {
@@ -204,7 +207,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ��ȡchildren���Ե�ֵ��
+     * 获取children属性的值。
      * 
      */
     public int getChildren() {
@@ -212,7 +215,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ����children���Ե�ֵ��
+     * 设置children属性的值。
      * 
      */
     public void setChildren(int value) {
@@ -220,7 +223,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ��ȡrooms���Ե�ֵ��
+     * 获取rooms属性的值。
      * 
      */
     public int getRooms() {
@@ -228,7 +231,7 @@ public class GetAvailabilityPackageIn {
     }
 
     /**
-     * ����rooms���Ե�ֵ��
+     * 设置rooms属性的值。
      * 
      */
     public void setRooms(int value) {

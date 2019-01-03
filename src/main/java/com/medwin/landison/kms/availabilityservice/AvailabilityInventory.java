@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>AvailabilityInventory complex typeµÄ Java Àà¡£
+ * <p>AvailabilityInventory complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="AvailabilityInventory"&gt;
@@ -40,7 +40,7 @@ public class AvailabilityInventory {
     protected ArrayOfRoomDetail roomDetails;
 
     /**
-     * »ñÈ¡hotelInfoÊôĞÔµÄÖµ¡£
+     * è·å–hotelInfoå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -52,7 +52,7 @@ public class AvailabilityInventory {
     }
 
     /**
-     * ÉèÖÃhotelInfoÊôĞÔµÄÖµ¡£
+     * è®¾ç½®hotelInfoå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -64,7 +64,7 @@ public class AvailabilityInventory {
     }
 
     /**
-     * »ñÈ¡roomDetailsÊôĞÔµÄÖµ¡£
+     * è·å–roomDetailså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class AvailabilityInventory {
     }
 
     /**
-     * ÉèÖÃroomDetailsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®roomDetailså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

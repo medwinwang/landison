@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>CalculationSeparateSoldPackageOut complex typeµÄ Java Àà¡£
+ * <p>CalculationSeparateSoldPackageOut complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="CalculationSeparateSoldPackageOut"&gt;
@@ -57,7 +57,7 @@ public class CalculationSeparateSoldPackageOut {
     protected ArrayOfDailyItem dailyItems;
 
     /**
-     * »ñÈ¡totalPriceÊôĞÔµÄÖµ¡£
+     * è·å–totalPriceå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -69,7 +69,7 @@ public class CalculationSeparateSoldPackageOut {
     }
 
     /**
-     * ÉèÖÃtotalPriceÊôĞÔµÄÖµ¡£
+     * è®¾ç½®totalPriceå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -81,7 +81,7 @@ public class CalculationSeparateSoldPackageOut {
     }
 
     /**
-     * »ñÈ¡totalQuantityÊôĞÔµÄÖµ¡£
+     * è·å–totalQuantityå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getTotalQuantity() {
@@ -89,7 +89,7 @@ public class CalculationSeparateSoldPackageOut {
     }
 
     /**
-     * ÉèÖÃtotalQuantityÊôĞÔµÄÖµ¡£
+     * è®¾ç½®totalQuantityå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setTotalQuantity(int value) {
@@ -97,7 +97,7 @@ public class CalculationSeparateSoldPackageOut {
     }
 
     /**
-     * »ñÈ¡packageDescÊôĞÔµÄÖµ¡£
+     * è·å–packageDescå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -109,7 +109,7 @@ public class CalculationSeparateSoldPackageOut {
     }
 
     /**
-     * ÉèÖÃpackageDescÊôĞÔµÄÖµ¡£
+     * è®¾ç½®packageDescå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -121,7 +121,7 @@ public class CalculationSeparateSoldPackageOut {
     }
 
     /**
-     * »ñÈ¡itemInfosÊôĞÔµÄÖµ¡£
+     * è·å–itemInfoså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -133,7 +133,7 @@ public class CalculationSeparateSoldPackageOut {
     }
 
     /**
-     * ÉèÖÃitemInfosÊôĞÔµÄÖµ¡£
+     * è®¾ç½®itemInfoså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -145,7 +145,7 @@ public class CalculationSeparateSoldPackageOut {
     }
 
     /**
-     * »ñÈ¡dailyPackagesÊôĞÔµÄÖµ¡£
+     * è·å–dailyPackageså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -157,7 +157,7 @@ public class CalculationSeparateSoldPackageOut {
     }
 
     /**
-     * ÉèÖÃdailyPackagesÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dailyPackageså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -169,7 +169,7 @@ public class CalculationSeparateSoldPackageOut {
     }
 
     /**
-     * »ñÈ¡dailyItemsÊôĞÔµÄÖµ¡£
+     * è·å–dailyItemså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -181,7 +181,7 @@ public class CalculationSeparateSoldPackageOut {
     }
 
     /**
-     * ÉèÖÃdailyItemsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dailyItemså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>GetRateRestrictionsOut complex type�� Java �ࡣ
+ * <p>GetRateRestrictionsOut complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="GetRateRestrictionsOut"&gt;
@@ -62,12 +63,14 @@ public class GetRateRestrictionsOut {
     protected String hotelCode;
     @XmlElement(name = "Channel")
     protected String channel;
-    @XmlElement(name = "BeginDate", required = true)
+    @XmlElement(name = "BeginDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginDate;
-    @XmlElement(name = "EndDate", required = true)
+    protected Date beginDate;
+    @XmlElement(name = "EndDate", required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endDate;
+    protected Date endDate;
     @XmlElement(name = "RestrictionType")
     protected String restrictionType;
     @XmlElement(name = "RestrictionValue")
@@ -88,7 +91,7 @@ public class GetRateRestrictionsOut {
     protected String los;
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -100,7 +103,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -112,7 +115,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ��ȡchannel���Ե�ֵ��
+     * 获取channel属性的值。
      * 
      * @return
      *     possible object is
@@ -124,7 +127,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ����channel���Ե�ֵ��
+     * 设置channel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -136,55 +139,55 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ��ȡbeginDate���Ե�ֵ��
+     * 获取beginDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getBeginDate() {
+    public Date getBeginDate() {
         return beginDate;
     }
 
     /**
-     * ����beginDate���Ե�ֵ��
+     * 设置beginDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginDate(String value) {
+    public void setBeginDate(Date value) {
         this.beginDate = value;
     }
 
     /**
-     * ��ȡendDate���Ե�ֵ��
+     * 获取endDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
     /**
-     * ����endDate���Ե�ֵ��
+     * 设置endDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndDate(String value) {
+    public void setEndDate(Date value) {
         this.endDate = value;
     }
 
     /**
-     * ��ȡrestrictionType���Ե�ֵ��
+     * 获取restrictionType属性的值。
      * 
      * @return
      *     possible object is
@@ -196,7 +199,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ����restrictionType���Ե�ֵ��
+     * 设置restrictionType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -208,7 +211,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ��ȡrestrictionValue���Ե�ֵ��
+     * 获取restrictionValue属性的值。
      * 
      */
     public int getRestrictionValue() {
@@ -216,7 +219,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ����restrictionValue���Ե�ֵ��
+     * 设置restrictionValue属性的值。
      * 
      */
     public void setRestrictionValue(int value) {
@@ -224,7 +227,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ��ȡdow���Ե�ֵ��
+     * 获取dow属性的值。
      * 
      * @return
      *     possible object is
@@ -236,7 +239,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ����dow���Ե�ֵ��
+     * 设置dow属性的值。
      * 
      * @param value
      *     allowed object is
@@ -248,7 +251,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ��ȡhouseLevel���Ե�ֵ��
+     * 获取houseLevel属性的值。
      * 
      * @return
      *     possible object is
@@ -260,7 +263,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ����houseLevel���Ե�ֵ��
+     * 设置houseLevel属性的值。
      * 
      * @param value
      *     allowed object is
@@ -272,7 +275,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ��ȡroomTypeCode���Ե�ֵ��
+     * 获取roomTypeCode属性的值。
      * 
      * @return
      *     possible object is
@@ -284,7 +287,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ����roomTypeCode���Ե�ֵ��
+     * 设置roomTypeCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -296,7 +299,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ��ȡrateCode���Ե�ֵ��
+     * 获取rateCode属性的值。
      * 
      * @return
      *     possible object is
@@ -308,7 +311,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ����rateCode���Ե�ֵ��
+     * 设置rateCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -320,7 +323,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ��ȡrateCate���Ե�ֵ��
+     * 获取rateCate属性的值。
      * 
      * @return
      *     possible object is
@@ -332,7 +335,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ����rateCate���Ե�ֵ��
+     * 设置rateCate属性的值。
      * 
      * @param value
      *     allowed object is
@@ -344,7 +347,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ��ȡroomClass���Ե�ֵ��
+     * 获取roomClass属性的值。
      * 
      * @return
      *     possible object is
@@ -356,7 +359,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ����roomClass���Ե�ֵ��
+     * 设置roomClass属性的值。
      * 
      * @param value
      *     allowed object is
@@ -368,7 +371,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ��ȡlos���Ե�ֵ��
+     * 获取los属性的值。
      * 
      * @return
      *     possible object is
@@ -380,7 +383,7 @@ public class GetRateRestrictionsOut {
     }
 
     /**
-     * ����los���Ե�ֵ��
+     * 设置los属性的值。
      * 
      * @param value
      *     allowed object is

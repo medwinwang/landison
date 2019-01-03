@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>GuaranteeRule complex typeµÄ Java Àà¡£
+ * <p>GuaranteeRule complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="GuaranteeRule"&gt;
@@ -84,7 +84,7 @@ public class GuaranteeRule
     protected String rateCode;
 
     /**
-     * »ñÈ¡oCancelRuleÊôĞÔµÄÖµ¡£
+     * è·å–oCancelRuleå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -96,7 +96,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃoCancelRuleÊôĞÔµÄÖµ¡£
+     * è®¾ç½®oCancelRuleå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -108,7 +108,7 @@ public class GuaranteeRule
     }
 
     /**
-     * »ñÈ¡oDepositRuleÊôĞÔµÄÖµ¡£
+     * è·å–oDepositRuleå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -120,7 +120,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃoDepositRuleÊôĞÔµÄÖµ¡£
+     * è®¾ç½®oDepositRuleå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -132,7 +132,7 @@ public class GuaranteeRule
     }
 
     /**
-     * »ñÈ¡isRelatedPointsÊôĞÔµÄÖµ¡£
+     * è·å–isRelatedPointså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -144,7 +144,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃisRelatedPointsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®isRelatedPointså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -156,7 +156,7 @@ public class GuaranteeRule
     }
 
     /**
-     * »ñÈ¡remarkÊôĞÔµÄÖµ¡£
+     * è·å–remarkå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -168,7 +168,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃremarkÊôĞÔµÄÖµ¡£
+     * è®¾ç½®remarkå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -180,7 +180,7 @@ public class GuaranteeRule
     }
 
     /**
-     * »ñÈ¡arrivalTimeRequiredÊôĞÔµÄÖµ¡£
+     * è·å–arrivalTimeRequiredå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -192,7 +192,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃarrivalTimeRequiredÊôĞÔµÄÖµ¡£
+     * è®¾ç½®arrivalTimeRequiredå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -204,7 +204,7 @@ public class GuaranteeRule
     }
 
     /**
-     * »ñÈ¡arrivalTimeÊôĞÔµÄÖµ¡£
+     * è·å–arrivalTimeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -216,7 +216,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃarrivalTimeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®arrivalTimeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -228,7 +228,7 @@ public class GuaranteeRule
     }
 
     /**
-     * »ñÈ¡creditCardRequiredÊôĞÔµÄÖµ¡£
+     * è·å–creditCardRequiredå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -240,7 +240,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃcreditCardRequiredÊôĞÔµÄÖµ¡£
+     * è®¾ç½®creditCardRequiredå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -252,7 +252,7 @@ public class GuaranteeRule
     }
 
     /**
-     * »ñÈ¡deductÊôĞÔµÄÖµ¡£
+     * è·å–deductå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -264,7 +264,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃdeductÊôĞÔµÄÖµ¡£
+     * è®¾ç½®deductå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -276,7 +276,7 @@ public class GuaranteeRule
     }
 
     /**
-     * »ñÈ¡depositRequiredÊôĞÔµÄÖµ¡£
+     * è·å–depositRequiredå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -288,7 +288,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃdepositRequiredÊôĞÔµÄÖµ¡£
+     * è®¾ç½®depositRequiredå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -300,7 +300,7 @@ public class GuaranteeRule
     }
 
     /**
-     * »ñÈ¡isPrepayÊôĞÔµÄÖµ¡£
+     * è·å–isPrepayå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -312,7 +312,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃisPrepayÊôĞÔµÄÖµ¡£
+     * è®¾ç½®isPrepayå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -324,7 +324,7 @@ public class GuaranteeRule
     }
 
     /**
-     * »ñÈ¡inactiveÊôĞÔµÄÖµ¡£
+     * è·å–inactiveå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -336,7 +336,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃinactiveÊôĞÔµÄÖµ¡£
+     * è®¾ç½®inactiveå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -348,7 +348,7 @@ public class GuaranteeRule
     }
 
     /**
-     * »ñÈ¡isRelatedCardValueÊôĞÔµÄÖµ¡£
+     * è·å–isRelatedCardValueå±æ€§çš„å€¼ã€‚
      * 
      */
     public boolean isIsRelatedCardValue() {
@@ -356,7 +356,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃisRelatedCardValueÊôĞÔµÄÖµ¡£
+     * è®¾ç½®isRelatedCardValueå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setIsRelatedCardValue(boolean value) {
@@ -364,7 +364,7 @@ public class GuaranteeRule
     }
 
     /**
-     * »ñÈ¡rateCodeÊôĞÔµÄÖµ¡£
+     * è·å–rateCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -376,7 +376,7 @@ public class GuaranteeRule
     }
 
     /**
-     * ÉèÖÃrateCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®rateCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

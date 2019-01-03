@@ -1,18 +1,19 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>Package complex type�� Java �ࡣ
+ * <p>Package complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="Package"&gt;
@@ -28,12 +29,10 @@ import java.lang.String;
  *         &lt;element name="KwsDesc" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="InputQuantityYn" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *         &lt;element name="Quantity" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
- *         &lt;element name="RateCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="RoomTypeCode" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="BeginDate" type="{http://www.w3.org/2001/XMLSchema}dateTime"/&gt;
  *         &lt;element name="EndDate" type="{http://www.w3.org/2001/XMLSchema}dateTime"/&gt;
  *         &lt;element name="ItemInfoList" type="{http://www.shijinet.com.cn/kunlun/kws/1.1/}ArrayOfItemInfo" minOccurs="0"/&gt;
- *         &lt;element name="FromFlag" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="PostNextDay" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/extension&gt;
  *   &lt;/complexContent&gt;
@@ -53,12 +52,10 @@ import java.lang.String;
     "kwsDesc",
     "inputQuantityYn",
     "quantity",
-    "rateCode",
-    "roomTypeCode",
     "beginDate",
     "endDate",
     "itemInfoList",
-    "fromFlag"
+    "postNextDay"
 })
 public class Package
     extends CommonInfo
@@ -82,23 +79,21 @@ public class Package
     protected boolean inputQuantityYn;
     @XmlElement(name = "Quantity")
     protected int quantity;
-    @XmlElement(name = "RateCode")
-    protected String rateCode;
-    @XmlElement(name = "RoomTypeCode")
-    protected String roomTypeCode;
-    @XmlElement(name = "BeginDate", required = true, nillable = true)
+    @XmlElement(name = "BeginDate", required = true, type = String.class, nillable = true)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String beginDate;
-    @XmlElement(name = "EndDate", required = true, nillable = true)
+    protected Date beginDate;
+    @XmlElement(name = "EndDate", required = true, type = String.class, nillable = true)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String endDate;
+    protected Date endDate;
     @XmlElement(name = "ItemInfoList")
     protected ArrayOfItemInfo itemInfoList;
-    @XmlElement(name = "FromFlag")
-    protected String fromFlag;
+    @XmlElement(name = "PostNextDay")
+    protected String postNextDay;
 
     /**
-     * ��ȡgroupCode���Ե�ֵ��
+     * 获取groupCode属性的值。
      * 
      * @return
      *     possible object is
@@ -110,7 +105,7 @@ public class Package
     }
 
     /**
-     * ����groupCode���Ե�ֵ��
+     * 设置groupCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -122,7 +117,7 @@ public class Package
     }
 
     /**
-     * ��ȡgroupName���Ե�ֵ��
+     * 获取groupName属性的值。
      * 
      * @return
      *     possible object is
@@ -134,7 +129,7 @@ public class Package
     }
 
     /**
-     * ����groupName���Ե�ֵ��
+     * 设置groupName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -146,7 +141,7 @@ public class Package
     }
 
     /**
-     * ��ȡprice���Ե�ֵ��
+     * 获取price属性的值。
      * 
      * @return
      *     possible object is
@@ -158,7 +153,7 @@ public class Package
     }
 
     /**
-     * ����price���Ե�ֵ��
+     * 设置price属性的值。
      * 
      * @param value
      *     allowed object is
@@ -170,7 +165,7 @@ public class Package
     }
 
     /**
-     * ��ȡpackageType���Ե�ֵ��
+     * 获取packageType属性的值。
      * 
      * @return
      *     possible object is
@@ -182,7 +177,7 @@ public class Package
     }
 
     /**
-     * ����packageType���Ե�ֵ��
+     * 设置packageType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -194,7 +189,7 @@ public class Package
     }
 
     /**
-     * ��ȡpostingRhythm���Ե�ֵ��
+     * 获取postingRhythm属性的值。
      * 
      * @return
      *     possible object is
@@ -206,7 +201,7 @@ public class Package
     }
 
     /**
-     * ����postingRhythm���Ե�ֵ��
+     * 设置postingRhythm属性的值。
      * 
      * @param value
      *     allowed object is
@@ -218,7 +213,7 @@ public class Package
     }
 
     /**
-     * ��ȡcalculationRule���Ե�ֵ��
+     * 获取calculationRule属性的值。
      * 
      * @return
      *     possible object is
@@ -230,7 +225,7 @@ public class Package
     }
 
     /**
-     * ����calculationRule���Ե�ֵ��
+     * 设置calculationRule属性的值。
      * 
      * @param value
      *     allowed object is
@@ -242,7 +237,7 @@ public class Package
     }
 
     /**
-     * ��ȡkwsDesc���Ե�ֵ��
+     * 获取kwsDesc属性的值。
      * 
      * @return
      *     possible object is
@@ -254,7 +249,7 @@ public class Package
     }
 
     /**
-     * ����kwsDesc���Ե�ֵ��
+     * 设置kwsDesc属性的值。
      * 
      * @param value
      *     allowed object is
@@ -266,7 +261,7 @@ public class Package
     }
 
     /**
-     * ��ȡinputQuantityYn���Ե�ֵ��
+     * 获取inputQuantityYn属性的值。
      * 
      */
     public boolean isInputQuantityYn() {
@@ -274,7 +269,7 @@ public class Package
     }
 
     /**
-     * ����inputQuantityYn���Ե�ֵ��
+     * 设置inputQuantityYn属性的值。
      * 
      */
     public void setInputQuantityYn(boolean value) {
@@ -282,7 +277,7 @@ public class Package
     }
 
     /**
-     * ��ȡquantity���Ե�ֵ��
+     * 获取quantity属性的值。
      * 
      */
     public int getQuantity() {
@@ -290,7 +285,7 @@ public class Package
     }
 
     /**
-     * ����quantity���Ե�ֵ��
+     * 设置quantity属性的值。
      * 
      */
     public void setQuantity(int value) {
@@ -298,103 +293,55 @@ public class Package
     }
 
     /**
-     * ��ȡrateCode���Ե�ֵ��
+     * 获取beginDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getRateCode() {
-        return rateCode;
-    }
-
-    /**
-     * ����rateCode���Ե�ֵ��
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setRateCode(String value) {
-        this.rateCode = value;
-    }
-
-    /**
-     * ��ȡroomTypeCode���Ե�ֵ��
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getRoomTypeCode() {
-        return roomTypeCode;
-    }
-
-    /**
-     * ����roomTypeCode���Ե�ֵ��
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setRoomTypeCode(String value) {
-        this.roomTypeCode = value;
-    }
-
-    /**
-     * ��ȡbeginDate���Ե�ֵ��
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getBeginDate() {
+    public Date getBeginDate() {
         return beginDate;
     }
 
     /**
-     * ����beginDate���Ե�ֵ��
+     * 设置beginDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setBeginDate(String value) {
+    public void setBeginDate(Date value) {
         this.beginDate = value;
     }
 
     /**
-     * ��ȡendDate���Ե�ֵ��
+     * 获取endDate属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
     /**
-     * ����endDate���Ե�ֵ��
+     * 设置endDate属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setEndDate(String value) {
+    public void setEndDate(Date value) {
         this.endDate = value;
     }
 
     /**
-     * ��ȡitemInfoList���Ե�ֵ��
+     * 获取itemInfoList属性的值。
      * 
      * @return
      *     possible object is
@@ -406,7 +353,7 @@ public class Package
     }
 
     /**
-     * ����itemInfoList���Ե�ֵ��
+     * 设置itemInfoList属性的值。
      * 
      * @param value
      *     allowed object is
@@ -418,27 +365,27 @@ public class Package
     }
 
     /**
-     * ��ȡfromFlag���Ե�ֵ��
+     * 获取postNextDay属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getFromFlag() {
-        return fromFlag;
+    public String getPostNextDay() {
+        return postNextDay;
     }
 
     /**
-     * ����fromFlag���Ե�ֵ��
+     * 设置postNextDay属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setFromFlag(String value) {
-        this.fromFlag = value;
+    public void setPostNextDay(String value) {
+        this.postNextDay = value;
     }
 
 }

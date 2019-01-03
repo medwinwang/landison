@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Rate complex typeµÄ Java Àà¡£
+ * <p>Rate complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="Rate"&gt;
@@ -195,7 +195,7 @@ public class Rate
     protected BigDecimal serviceCharge;
 
     /**
-     * »ñÈ¡oGuaranteeRuleÊôĞÔµÄÖµ¡£
+     * è·å–oGuaranteeRuleå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -207,7 +207,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃoGuaranteeRuleÊôĞÔµÄÖµ¡£
+     * è®¾ç½®oGuaranteeRuleå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -219,7 +219,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡groupTypeÊôĞÔµÄÖµ¡£
+     * è·å–groupTypeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -231,7 +231,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃgroupTypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®groupTypeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -243,7 +243,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡isfixedrateÊôĞÔµÄÖµ¡£
+     * è·å–isfixedrateå±æ€§çš„å€¼ã€‚
      * 
      */
     public boolean isIsfixedrate() {
@@ -251,7 +251,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃisfixedrateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®isfixedrateå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setIsfixedrate(boolean value) {
@@ -259,7 +259,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡cateCodeÊôĞÔµÄÖµ¡£
+     * è·å–cateCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -271,7 +271,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃcateCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®cateCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -283,7 +283,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡minLosÊôĞÔµÄÖµ¡£
+     * è·å–minLoså±æ€§çš„å€¼ã€‚
      * 
      */
     public int getMinLos() {
@@ -291,7 +291,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃminLosÊôĞÔµÄÖµ¡£
+     * è®¾ç½®minLoså±æ€§çš„å€¼ã€‚
      * 
      */
     public void setMinLos(int value) {
@@ -299,7 +299,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡maxLosÊôĞÔµÄÖµ¡£
+     * è·å–maxLoså±æ€§çš„å€¼ã€‚
      * 
      */
     public int getMaxLos() {
@@ -307,7 +307,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃmaxLosÊôĞÔµÄÖµ¡£
+     * è®¾ç½®maxLoså±æ€§çš„å€¼ã€‚
      * 
      */
     public void setMaxLos(int value) {
@@ -315,7 +315,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡advBookinÊôĞÔµÄÖµ¡£
+     * è·å–advBookinå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getAdvBookin() {
@@ -323,7 +323,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃadvBookinÊôĞÔµÄÖµ¡£
+     * è®¾ç½®advBookinå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setAdvBookin(int value) {
@@ -331,7 +331,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡maxAdvBookinÊôĞÔµÄÖµ¡£
+     * è·å–maxAdvBookinå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getMaxAdvBookin() {
@@ -339,7 +339,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃmaxAdvBookinÊôĞÔµÄÖµ¡£
+     * è®¾ç½®maxAdvBookinå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setMaxAdvBookin(int value) {
@@ -347,7 +347,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡availableLimitRoomsÊôĞÔµÄÖµ¡£
+     * è·å–availableLimitRoomså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -359,7 +359,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃavailableLimitRoomsÊôĞÔµÄÖµ¡£
+     * è®¾ç½®availableLimitRoomså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -371,7 +371,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡desÊôĞÔµÄÖµ¡£
+     * è·å–deså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -383,7 +383,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃdesÊôĞÔµÄÖµ¡£
+     * è®¾ç½®deså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -395,7 +395,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡basePriceÊôĞÔµÄÖµ¡£
+     * è·å–basePriceå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -407,7 +407,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃbasePriceÊôĞÔµÄÖµ¡£
+     * è®¾ç½®basePriceå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -419,7 +419,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡packagesÊôĞÔµÄÖµ¡£
+     * è·å–packageså±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -431,7 +431,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃpackagesÊôĞÔµÄÖµ¡£
+     * è®¾ç½®packageså±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -443,7 +443,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡marketÊôĞÔµÄÖµ¡£
+     * è·å–marketå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -455,7 +455,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃmarketÊôĞÔµÄÖµ¡£
+     * è®¾ç½®marketå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -467,7 +467,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡sourceÊôĞÔµÄÖµ¡£
+     * è·å–sourceå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -479,7 +479,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃsourceÊôĞÔµÄÖµ¡£
+     * è®¾ç½®sourceå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -491,7 +491,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡shortInfoÊôĞÔµÄÖµ¡£
+     * è·å–shortInfoå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -503,7 +503,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃshortInfoÊôĞÔµÄÖµ¡£
+     * è®¾ç½®shortInfoå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -515,7 +515,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡longInfoÊôĞÔµÄÖµ¡£
+     * è·å–longInfoå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -527,7 +527,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃlongInfoÊôĞÔµÄÖµ¡£
+     * è®¾ç½®longInfoå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -539,7 +539,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡isStandardÊôĞÔµÄÖµ¡£
+     * è·å–isStandardå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -551,7 +551,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃisStandardÊôĞÔµÄÖµ¡£
+     * è®¾ç½®isStandardå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -563,7 +563,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡isDiscountÊôĞÔµÄÖµ¡£
+     * è·å–isDiscountå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -575,7 +575,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃisDiscountÊôĞÔµÄÖµ¡£
+     * è®¾ç½®isDiscountå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -587,7 +587,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡hotelCodeÊôĞÔµÄÖµ¡£
+     * è·å–hotelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -599,7 +599,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃhotelCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®hotelCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -611,7 +611,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡sortIdÊôĞÔµÄÖµ¡£
+     * è·å–sortIdå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -623,7 +623,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃsortIdÊôĞÔµÄÖµ¡£
+     * è®¾ç½®sortIdå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -635,7 +635,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡promotionÊôĞÔµÄÖµ¡£
+     * è·å–promotionå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -647,7 +647,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃpromotionÊôĞÔµÄÖµ¡£
+     * è®¾ç½®promotionå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -659,7 +659,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡roomtypeCodeÊôĞÔµÄÖµ¡£
+     * è·å–roomtypeCodeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -671,7 +671,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃroomtypeCodeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®roomtypeCodeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -683,7 +683,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡barRateÊôĞÔµÄÖµ¡£
+     * è·å–barRateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -695,7 +695,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃbarRateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®barRateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -707,7 +707,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡barBaseRateÊôĞÔµÄÖµ¡£
+     * è·å–barBaseRateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -719,7 +719,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃbarBaseRateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®barBaseRateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -731,7 +731,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡dbarRateÊôĞÔµÄÖµ¡£
+     * è·å–dbarRateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -743,7 +743,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃdbarRateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dbarRateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -755,7 +755,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡dbarBaseRateÊôĞÔµÄÖµ¡£
+     * è·å–dbarBaseRateå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -767,7 +767,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃdbarBaseRateÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dbarBaseRateå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -779,7 +779,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡barGroupÊôĞÔµÄÖµ¡£
+     * è·å–barGroupå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -791,7 +791,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃbarGroupÊôĞÔµÄÖµ¡£
+     * è®¾ç½®barGroupå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -803,7 +803,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡dbarGroupÊôĞÔµÄÖµ¡£
+     * è·å–dbarGroupå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -815,7 +815,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃdbarGroupÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dbarGroupå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -827,7 +827,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡dayUseÊôĞÔµÄÖµ¡£
+     * è·å–dayUseå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -839,7 +839,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃdayUseÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dayUseå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -851,7 +851,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡baseAmountÊôĞÔµÄÖµ¡£
+     * è·å–baseAmountå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -863,7 +863,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃbaseAmountÊôĞÔµÄÖµ¡£
+     * è®¾ç½®baseAmountå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -875,7 +875,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡basePercentÊôĞÔµÄÖµ¡£
+     * è·å–basePercentå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -887,7 +887,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃbasePercentÊôĞÔµÄÖµ¡£
+     * è®¾ç½®basePercentå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -899,7 +899,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡baseRoundingÊôĞÔµÄÖµ¡£
+     * è·å–baseRoundingå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -911,7 +911,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃbaseRoundingÊôĞÔµÄÖµ¡£
+     * è®¾ç½®baseRoundingå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -923,7 +923,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡basePreciseÊôĞÔµÄÖµ¡£
+     * è·å–basePreciseå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -935,7 +935,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃbasePreciseÊôĞÔµÄÖµ¡£
+     * è®¾ç½®basePreciseå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -947,7 +947,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡baseDigitsFromÊôĞÔµÄÖµ¡£
+     * è·å–baseDigitsFromå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -959,7 +959,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃbaseDigitsFromÊôĞÔµÄÖµ¡£
+     * è®¾ç½®baseDigitsFromå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -971,7 +971,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡baseDigitsToÊôĞÔµÄÖµ¡£
+     * è·å–baseDigitsToå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -983,7 +983,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃbaseDigitsToÊôĞÔµÄÖµ¡£
+     * è®¾ç½®baseDigitsToå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -995,7 +995,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡yieldableÊôĞÔµÄÖµ¡£
+     * è·å–yieldableå±æ€§çš„å€¼ã€‚
      * 
      */
     public boolean isYieldable() {
@@ -1003,7 +1003,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃyieldableÊôĞÔµÄÖµ¡£
+     * è®¾ç½®yieldableå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setYieldable(boolean value) {
@@ -1011,7 +1011,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡taxFlagÊôĞÔµÄÖµ¡£
+     * è·å–taxFlagå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1023,7 +1023,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃtaxFlagÊôĞÔµÄÖµ¡£
+     * è®¾ç½®taxFlagå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1035,7 +1035,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡taxChargeÊôĞÔµÄÖµ¡£
+     * è·å–taxChargeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1047,7 +1047,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃtaxChargeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®taxChargeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1059,7 +1059,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡serviceFlagÊôĞÔµÄÖµ¡£
+     * è·å–serviceFlagå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1071,7 +1071,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃserviceFlagÊôĞÔµÄÖµ¡£
+     * è®¾ç½®serviceFlagå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -1083,7 +1083,7 @@ public class Rate
     }
 
     /**
-     * »ñÈ¡serviceChargeÊôĞÔµÄÖµ¡£
+     * è·å–serviceChargeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -1095,7 +1095,7 @@ public class Rate
     }
 
     /**
-     * ÉèÖÃserviceChargeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®serviceChargeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

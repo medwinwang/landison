@@ -274,6 +274,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetRoomtypeBigSmallDetail }
+     * 
+     */
+    public GetRoomtypeBigSmallDetail createGetRoomtypeBigSmallDetail() {
+        return new GetRoomtypeBigSmallDetail();
+    }
+
+    /**
+     * Create an instance of {@link GetRoomtypeBigSmallDetailResponse }
+     * 
+     */
+    public GetRoomtypeBigSmallDetailResponse createGetRoomtypeBigSmallDetailResponse() {
+        return new GetRoomtypeBigSmallDetailResponse();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfCommonInfo }
+     * 
+     */
+    public ArrayOfCommonInfo createArrayOfCommonInfo() {
+        return new ArrayOfCommonInfo();
+    }
+
+    /**
      * Create an instance of {@link GetRateDetailSummary }
      * 
      */
@@ -751,14 +775,6 @@ public class ObjectFactory {
      */
     public Roomtype createRoomtype() {
         return new Roomtype();
-    }
-
-    /**
-     * Create an instance of {@link ArrayOfCommonInfo }
-     * 
-     */
-    public ArrayOfCommonInfo createArrayOfCommonInfo() {
-        return new ArrayOfCommonInfo();
     }
 
     /**

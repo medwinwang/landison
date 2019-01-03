@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>anonymous complex typeµÄ Java Àà¡£
+ * <p>anonymous complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -38,7 +38,7 @@ public class GetAvailabilityPackageResponse {
     protected GetAvailabilityPackageOut getAvailabilityPackageResult;
 
     /**
-     * »ñÈ¡getAvailabilityPackageResultÊôĞÔµÄÖµ¡£
+     * è·å–getAvailabilityPackageResultå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -50,7 +50,7 @@ public class GetAvailabilityPackageResponse {
     }
 
     /**
-     * ÉèÖÃgetAvailabilityPackageResultÊôĞÔµÄÖµ¡£
+     * è®¾ç½®getAvailabilityPackageResultå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is

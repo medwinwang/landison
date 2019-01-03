@@ -1,19 +1,20 @@
 
 package com.medwin.landison.kms.availabilityservice;
 
+import java.util.Date;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import java.lang.String;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>anonymous complex type�� Java �ࡣ
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>����ģʽƬ��ָ�������ڴ����е�Ԥ�����ݡ�
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -48,12 +49,13 @@ public class GetRateDetailSummary {
     protected String roomType;
     @XmlElement(name = "rate_code")
     protected String rateCode;
-    @XmlElement(required = true)
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(Adapter1 .class)
     @XmlSchemaType(name = "dateTime")
-    protected String date;
+    protected Date date;
 
     /**
-     * ��ȡhotelCode���Ե�ֵ��
+     * 获取hotelCode属性的值。
      * 
      * @return
      *     possible object is
@@ -65,7 +67,7 @@ public class GetRateDetailSummary {
     }
 
     /**
-     * ����hotelCode���Ե�ֵ��
+     * 设置hotelCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -77,7 +79,7 @@ public class GetRateDetailSummary {
     }
 
     /**
-     * ��ȡroomType���Ե�ֵ��
+     * 获取roomType属性的值。
      * 
      * @return
      *     possible object is
@@ -89,7 +91,7 @@ public class GetRateDetailSummary {
     }
 
     /**
-     * ����roomType���Ե�ֵ��
+     * 设置roomType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -101,7 +103,7 @@ public class GetRateDetailSummary {
     }
 
     /**
-     * ��ȡrateCode���Ե�ֵ��
+     * 获取rateCode属性的值。
      * 
      * @return
      *     possible object is
@@ -113,7 +115,7 @@ public class GetRateDetailSummary {
     }
 
     /**
-     * ����rateCode���Ե�ֵ��
+     * 设置rateCode属性的值。
      * 
      * @param value
      *     allowed object is
@@ -125,26 +127,26 @@ public class GetRateDetailSummary {
     }
 
     /**
-     * ��ȡdate���Ե�ֵ��
+     * 获取date属性的值。
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
     /**
-     * ����date���Ե�ֵ��
+     * 设置date属性的值。
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDate(String value) {
+    public void setDate(Date value) {
         this.date = value;
     }
 

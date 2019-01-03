@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>DepositRules complex typeµÄ Java Àà¡£
+ * <p>DepositRules complex typeçš„ Java ç±»ã€‚
  * 
- * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
+ * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
  * 
  * <pre>
  * &lt;complexType name="DepositRules"&gt;
@@ -57,7 +57,7 @@ public class DepositRules
     protected String inactive;
 
     /**
-     * »ñÈ¡remarkÊôĞÔµÄÖµ¡£
+     * è·å–remarkå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -69,7 +69,7 @@ public class DepositRules
     }
 
     /**
-     * ÉèÖÃremarkÊôĞÔµÄÖµ¡£
+     * è®¾ç½®remarkå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -81,7 +81,7 @@ public class DepositRules
     }
 
     /**
-     * »ñÈ¡typeÊôĞÔµÄÖµ¡£
+     * è·å–typeå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -93,7 +93,7 @@ public class DepositRules
     }
 
     /**
-     * ÉèÖÃtypeÊôĞÔµÄÖµ¡£
+     * è®¾ç½®typeå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -105,7 +105,7 @@ public class DepositRules
     }
 
     /**
-     * »ñÈ¡depositAmountÊôĞÔµÄÖµ¡£
+     * è·å–depositAmountå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -117,7 +117,7 @@ public class DepositRules
     }
 
     /**
-     * ÉèÖÃdepositAmountÊôĞÔµÄÖµ¡£
+     * è®¾ç½®depositAmountå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
@@ -129,7 +129,7 @@ public class DepositRules
     }
 
     /**
-     * »ñÈ¡dayBeforeArrivalÊôĞÔµÄÖµ¡£
+     * è·å–dayBeforeArrivalå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getDayBeforeArrival() {
@@ -137,7 +137,7 @@ public class DepositRules
     }
 
     /**
-     * ÉèÖÃdayBeforeArrivalÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dayBeforeArrivalå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setDayBeforeArrival(int value) {
@@ -145,7 +145,7 @@ public class DepositRules
     }
 
     /**
-     * »ñÈ¡dayAfterBookingÊôĞÔµÄÖµ¡£
+     * è·å–dayAfterBookingå±æ€§çš„å€¼ã€‚
      * 
      */
     public int getDayAfterBooking() {
@@ -153,7 +153,7 @@ public class DepositRules
     }
 
     /**
-     * ÉèÖÃdayAfterBookingÊôĞÔµÄÖµ¡£
+     * è®¾ç½®dayAfterBookingå±æ€§çš„å€¼ã€‚
      * 
      */
     public void setDayAfterBooking(int value) {
@@ -161,7 +161,7 @@ public class DepositRules
     }
 
     /**
-     * »ñÈ¡inactiveÊôĞÔµÄÖµ¡£
+     * è·å–inactiveå±æ€§çš„å€¼ã€‚
      * 
      * @return
      *     possible object is
@@ -173,7 +173,7 @@ public class DepositRules
     }
 
     /**
-     * ÉèÖÃinactiveÊôĞÔµÄÖµ¡£
+     * è®¾ç½®inactiveå±æ€§çš„å€¼ã€‚
      * 
      * @param value
      *     allowed object is
