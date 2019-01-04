@@ -283,19 +283,22 @@ public class UserServiceImpl implements UserService {
                 endDepartureDate, beginInsertDate, endInsertDate, hotels, firstName, lastName, profileId, account, cardNumber,
                 phoneNumber, statusCode, pageIndex, pageSize);
 
-//        ArrayOfOrderInfo arrayOfOrderInfo = orderPageOut.getOrderInfos();
-//        if(arrayOfOrderInfo != null && !CollectionUtils.isEmpty(arrayOfOrderInfo.getOrderInfo())) {
-//
-//            arrayOfOrderInfo.getOrderInfo().forEach(orderInfo -> {
-//                if(LdsOrderEntity.TYPE_PRE.equals(orderInfo.getReservationType().getCode())) {//预付订单
-//
+        ArrayOfOrderInfo arrayOfOrderInfo = orderPageOut.getOrderInfos();
+        if(arrayOfOrderInfo != null && !CollectionUtils.isEmpty(arrayOfOrderInfo.getOrderInfo())) {
+
+            arrayOfOrderInfo.getOrderInfo().forEach(orderInfo -> {
+                if(LdsOrderEntity.TYPE_PRE.equals(orderInfo.getReservationType().getCode())
+                        && "0001".equals(orderInfo.getStatusCode().getCode())) {//预付 未入住订单
+
+                    OrderInfo orderAllInfo = kmsService.getOrderInfo(orderInfo.getID());
+                    orderInfo.setPayMentGateWay(orderAllInfo.getPayMentGateWay());
 //                    LdsOrderEntity orderEntity = ldsService.getOrderByOrderId(String.valueOf(orderInfo.getID()));
 //                    if(PayMentStatus.PAID.equals(orderEntity.getPayCode())) {
 //
 //                    }
-//                }
-//            });
-//        }
+                }
+            });
+        }
 
         return new BaseResult(BaseResult.SUCCESS_CODE, "", orderPageOut);
     }

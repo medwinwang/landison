@@ -55,8 +55,8 @@ public class AlipayController {
 
         // 设置请求参数
         AlipayTradePagePayRequest alipayRequest = new AlipayTradePagePayRequest();
-        alipayRequest.setReturnUrl(alipayConfig.getReturnUrl());
-        alipayRequest.setNotifyUrl(alipayConfig.getNotifyUrl());
+        alipayRequest.setReturnUrl(alipayConfig.getBackHost() + alipayConfig.getReturnUrl());
+        alipayRequest.setNotifyUrl(alipayConfig.getBackHost() + alipayConfig.getNotifyUrl());
 
         if(StringUtils.isEmpty(subject)){
             subject = "客房预订";
@@ -138,7 +138,7 @@ public class AlipayController {
             return ("fail");// 验签发生异常,则直接返回失败
         }
         if (signVerified) {
-            return ("success");
+            return "<script>location.href='"+alipayConfig.getBackHost()+"/member/index.html';</script>";
         } else {
             log.info("验证失败,不去更新状态");
             return ("fail");

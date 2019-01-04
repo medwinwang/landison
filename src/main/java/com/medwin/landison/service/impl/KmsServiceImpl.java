@@ -214,4 +214,9 @@ public class KmsServiceImpl implements KmsService {
         return profileSoap.queryGuestInfo(queryGuestInfoIn);
     }
 
+    @Override
+    public OrderInfo getOrderInfo(int id) {
+        return reservationSoap.getOrderInfo(id);
+    }
+
 }

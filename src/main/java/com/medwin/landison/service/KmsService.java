@@ -48,4 +48,6 @@ public interface KmsService {
 
     QueryGuestInfoOut queryGuestInfo(String mobile);
 
+    OrderInfo getOrderInfo(int id);
+
 }

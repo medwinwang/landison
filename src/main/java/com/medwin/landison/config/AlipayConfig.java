@@ -22,6 +22,7 @@ public class AlipayConfig {
     private String server;
     private String notifyUrl;
     private String returnUrl;
+    private String backHost;
     private String sign;
     private String charset;
     private String format;

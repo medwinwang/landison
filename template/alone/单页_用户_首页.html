@@ -80,10 +80,10 @@
                         <p>订单状态</p>
                         <select id="statusCode">
                             <option value="">全部订单</option>
-                            <option value="0001">RESERVED</option>
-                            <option value="0003">CANCELED</option>
-                            <option value="0004">CHECK IN</option>
-                            <option value="0006">CHECK OUT</option>
+                            <option value="0001">待入住</option>
+                            <option value="0003">已取消</option>
+                            <option value="0004">已入住</option>
+                            <option value="0006">已退房</option>
                         </select>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                 <div class="order-list" id="logList">
 
                 </div>
-                <div class="paging tcdPageCode"></div>
+                <div class="paging tcdPageCode" style="padding-top: 50px"></div>
             </div>
         </div>
     </div>
@@ -147,16 +147,21 @@
                 {{value.lastname}}
             </li>
             <li class="order-3">
-                {{value.arrival.replace("T", " ").split(".")[0]}}
+                {{value.arrival.split("T")[0]}}
             </li>
             <li class="order-4">
                 {{value.totalRevenue}}元
             </li>
-            <li class="order-5">{{value.statusCode.name}}</li>
+            <li class="order-5">{{statusList[value.statusCode.code]}}</li>
             <li class="order-6">
+                {{if value.reservationType.code=='10' && value.statusCode.code == '0001'
+                && (value.payMentGateWay.orderInfoPaymentGateway.length == 0 || value.payMentGateWay.orderInfoPaymentGateway[0].status != 'PAID')}}
+                <a href="javascript:void(0)" onclick="payOrder({{value.id}})" class="color">继续支付</a>
+                {{/if}}
                 {{if value.statusCode.code=='0006'}}
                 <a href="" class="color">点评酒店</a>
                 {{/if}}
+
             </li>
         </ul>
     </div>
@@ -177,6 +182,10 @@
     };
     function  initMemberPage(user) {
         recordInfo();
+    }
+
+    function payOrder(id) {
+        window.open("//"+window.location.host+ path + "/alipay/pay?orderId="+ id, "_blank");
     }
 
     function cancelOrder(id) {
@@ -220,7 +229,7 @@
             var res = data;
             var d = {
                 list: res.orderInfos.orderInfo,
-                statusList: {"0001":"预定", "0003":"已取消", "0005":"等待", "0004":"已入住", "0006":"已离店", "0007":"不显示"}
+                statusList: {"0001":"待入住", "0003":"已取消", "0005":"等待", "0004":"已入住", "0006":"已退房", "0007":"不显示"}
             };
             var html = template('log_show', d);
             $("#logList").html(html);
