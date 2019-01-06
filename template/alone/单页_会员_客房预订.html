@@ -268,14 +268,16 @@
                 function (data) {
 
                     checkSubmitFlg = false;
-                    window.open("//"+window.location.host+ path + "/alipay/pay?orderId="+ data.id, "_blank");
+
                     if(addType == "10") {
-                        var r=confirm("支付完成？");
-                        if (r) {
+                        window.open("//"+window.location.host+ path + "/alipay/pay?orderId="+ data.id, "_blank");
+                        layer.confirm('支付完成？', {
+                            btn: ['确定','取消'] //按钮
+                        }, function(){
+                            location.href = "/member/index.html";
+                        }, function(){
 
-                        } else {
-
-                        }
+                        });
                     }else {
                         alert("提交订单成功");
                     }
