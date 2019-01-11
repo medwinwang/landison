@@ -18,7 +18,7 @@
 		<ul>
 			<li>会员等级：<span class="j_level">--</span></li>
 			<li>会员卡号：<span id="cardCode">--</span></li>
-			<li>会员积分：<span class="j_points">--</span><span>兑换</span></li>
+			<li>会员积分：<span class="j_points">--</span></li>
 			<li><a href="/member/index.html">我的订单</a></li>
 			<li><a href="/member/coupon.html">我的优惠券</a></li>
 			<li><a href="/member/index.html">我的账户</a></li>
@@ -30,7 +30,7 @@
    function  isLogin(user) {
 
        var card = getMembershipCard(user);
-       $(".j_level").html(card.membershipCardLevel.level);
+       $(".j_level").html(card.membershipCardLevel.currentLevel.name);
        $(".j_username").html(user.lastName);
        $("#cardCode").html(card.membershipCardNumber);
        $("#storedValue").html(getAccountValue(card, "storedValue").value);

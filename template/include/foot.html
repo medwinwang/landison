@@ -82,6 +82,7 @@
             alert("请输入正确手机号码");
             return false;
         }
+        _this.html("请求中...");
         ajax("/login/sendSms",  {mobileCountryNumber: mobileCountryNumber, mobile: mobile},
 		function (data) {
             clearInterval(loginTimer);
