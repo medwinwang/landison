@@ -22,7 +22,6 @@
     <div class="introduction">
         <div class="introduction-nav">
             <ul>
-                <li ><a href="/member/reserve.html">客房预订</a></li>
                 [@cms_channel_list parentId=channel.parent.id channelOption='1']
                 [#list tag_list as sub]
                     <li [#if sub.id == channel.id] class="active" [/#if]><a href="${sub.url}">${sub.name}</a></li>

@@ -26,7 +26,6 @@
     <div class="introduction">
         <div class="introduction-nav">
             <ul>
-                <li ><a href="/member/reserve.html">客房预订</a></li>
                 [@cms_channel_list parentId=channel.parent.id channelOption='1']
                 [#list tag_list as sub]
                     <li [#if sub.id == channel.id] class="active" [/#if]><a href="${sub.url}">${sub.name}</a></li>
@@ -40,12 +39,14 @@
                 ${channel.txt!}
             </div>
         </div>
+        [#if channel.contentImg??]
         <div class="picture">
             <div class="introduce-title"><img src="${static}/img/original/introduction/icon2.png">客房图片</div>
             <div>
                 <img src="${channel.contentImg!}" alt="">
             </div>
         </div>
+        [/#if]
     </div>
 
 </div>

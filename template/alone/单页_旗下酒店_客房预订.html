@@ -8,7 +8,7 @@
     <meta name="keywords" content="${channel.keywords!}">
     <link rel="dns-prefetch" href="">
     <link rel="stylesheet" href="${static}/css/base.css">
-    <link rel="stylesheet" href="${static}/css/original/map.css">
+    <link rel="stylesheet" href="${static}/css/original/introduction.css">
 </head>
 <body>
 
@@ -18,6 +18,10 @@
 <div class="container">
 
     <div class="banner" style="background: url(${channel.titleImg!}) no-repeat;">
+        <div class="banner-content">
+            <p class="hotel-name">${channel.parent.title!channel.parent.name}</p>
+            <p>诚挚欢迎您的到来！</p>
+        </div>
     </div>
     <div class="introduction">
         <div class="introduction-nav">
@@ -29,11 +33,11 @@
                 [/@cms_channel_list]
             </ul>
         </div>
-
-        <div class="entertainment"><div><img src="${static}/img/original/map/1.png">${channel.title!channel.name}</div></div>
-
-        <div class="baidu">
-            <img src="${channel.contentImg!}" alt="">
+        <div class="introduce">
+            <div class="introduce-title"><img src="${static}/img/original/introduction/icon1.png">${channel.title!channel.name}</div>
+            <div>
+                ${channel.txt!}
+            </div>
         </div>
     </div>
 
