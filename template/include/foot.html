@@ -228,6 +228,13 @@
             day3.setTime(day3.getTime()+24*60*60*1000);
             $("#departure").val(dateToStr(day3));
 
+            $("#arrival").change(function () {
+				if($("#departure").val()<= $(this).val()){
+                    var date = new Date($(this).val());
+                    date.setTime(date.getTime()+24*60*60*1000);
+                    $("#departure").val(dateToStr(date));
+				}
+            });
             $("#reserveBtn").click(function () {
                 var hotelCode = $("#hotelCode").attr('code');
                 var hotelName = $("#hotelCode").val();
