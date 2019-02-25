@@ -53,7 +53,8 @@
         </table>
 
         <div id="addOrder" style="display: none">
-            <h2 class="title none">您的首日总价为：<span id="totalPrice"></span></h2>
+            <h2 class="title none">您的单间价为：<span id="onePrice"></span></h2>
+            <h2 class="title none">您的总价为：<span id="totalPrice"></span></h2>
             <div class="form">
                 <h2 class="title">请填写详情</h2>
                 <ul>
@@ -317,7 +318,8 @@
     function newShowRoom(el, roomTypeDetail, rate, rateDetailDailys) {
 
         var roomTypeCodeId = "roomTypeCode_" + roomTypeDetail.code;
-        var firstNightTotalPrice = getFirstNightTotalPrice(rateDetailDailys);
+        var firstNightPrice = getFirstNightPrice(rateDetailDailys);
+        var firstNightTotalPrice = firstNightPrice.toFixed(2) * roomNum;
         if($("#" + roomTypeCodeId).length > 0){
 
             var num = $("#" + roomTypeCodeId + "_1").attr("rowspan");
@@ -325,9 +327,9 @@
 //              '<td>大床</td>' +
                 '<td>'+getBf(roomTypeDetail)+'</td>' +
                 '<td>'+getQxgz(rate.oguaranteeRule)+'</td>' +
-                '<td class="tal"><span class="price">'+roomTypeDetail.totalPrice+'</span>' +
+                '<td class="tal"><span class="price">'+firstNightPrice.toFixed(2)+'</span>' +
                 '<p>'+rate.name.split("|")[0]+'</p></td>' +
-                '<td><a href="javascript:void(0)" class="want" onclick="addRoomOrder(\''+rate.code+'\',\''+roomTypeDetail.code+'\','+firstNightTotalPrice+','+roomTypeDetail.totalPrice+')">预定</a></td></tr>');
+                '<td><a href="javascript:void(0)" class="want" onclick="addRoomOrder(\''+rate.code+'\',\''+roomTypeDetail.code+'\','+firstNightTotalPrice+','+roomTypeDetail.totalPrice+','+firstNightPrice.toFixed(2)+')">预订</a></td></tr>');
             $("#" + roomTypeCodeId + "_1").attr("rowspan", Number(num) + 1);
 
         } else {
@@ -354,8 +356,8 @@
 //                '<td>大床</td>' +
                 '<td>'+getBf(roomTypeDetail)+'</td>' +
                 '<td>'+getQxgz(rate.oguaranteeRule)+'</td>' +
-                '<td class="tal"><span class="price">'+roomTypeDetail.totalPrice+'</span><p>'+rate.name.split("|")[0]+'</p> </td>' +
-                '<td><a href="javascript:void(0)" class="want" onclick="addRoomOrder(\''+rate.code+'\',\''+roomTypeDetail.code+'\','+firstNightTotalPrice+','+roomTypeDetail.totalPrice+')">预定</a></td></tr>';
+                '<td class="tal"><span class="price">'+firstNightPrice.toFixed(2)+'</span><p>'+rate.name.split("|")[0]+'</p> </td>' +
+                '<td><a href="javascript:void(0)" class="want" onclick="addRoomOrder(\''+rate.code+'\',\''+roomTypeDetail.code+'\','+firstNightTotalPrice+','+roomTypeDetail.totalPrice+','+firstNightPrice.toFixed(2)+')">预订</a></td></tr>';
             el.append(html);
         }
     }
@@ -395,6 +397,13 @@
     //首日总价
     function getFirstNightTotalPrice(rateDetailDailys) {
 
+        var price = getFirstNightPrice(rateDetailDailys);
+        return (price * roomNum).toFixed(2);
+    }
+
+    //首日单价
+    function getFirstNightPrice(rateDetailDailys) {
+
         var rateDetailDaily = rateDetailDailys.rateDetailDaily[0];
         var price = rateDetailDaily['prs'+ adults];
         if(price <= 0) {
@@ -405,7 +414,7 @@
         } else {
             price += rateDetailDaily.serviceCharge;
         }
-        return (price * roomNum).toFixed(2);
+        return price;
     }
 
     function getRoomType(roomTypeDetail) {
@@ -426,11 +435,11 @@
             $('.roomDetail').hide();
         });
 
-    function addRoomOrder(rateCode, roomCode, firstNightTotalPrice, totalPrice) {
+    function addRoomOrder(rateCode, roomCode, firstNightTotalPrice, totalPrice, firstNightPrice) {
         goStep(3);
 //        var dayNum = getDateDiff(arrival, departure);
         $("#totalPrice").html("￥"+ firstNightTotalPrice);
-
+        $("#onePrice").html("￥"+ firstNightPrice);
         selectRateCode = rateCode;
         selectRoomCode = roomCode;
         selectFirstNightPrice = firstNightTotalPrice;
