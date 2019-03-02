@@ -56,75 +56,102 @@
             <h2 class="title none">您的单间价为：<span id="onePrice"></span></h2>
             <h2 class="title none">您的总价为：<span id="totalPrice"></span></h2>
             <div class="form">
-                <h2 class="title">请填写详情</h2>
-                <ul>
-                    <li>
-                        <label class="label">姓名</label>
-                        <div class="block">
-                            <input type="text" size="20" placeholder="中文姓" id="lastName" name="lastName">
-                        </div>
-                    </li>
-                    <li>
-                        <label class="label">手机号</label>
-                        <div class="block">
-                            <input type="text" size="40" placeholder="请输入手机号..." id="orderMobile" name="orderMobile">
-                        </div>
-                    </li>
-                    <li id="arrivalTimeInput">
-                        <label class="label">到店时间</label>
-                        <div class="block">
-                            <input type="text" size="40" placeholder="请输入到店时间..." id="arrivalTime" name="arrivalTime">
-                        </div>
-                    </li>
-                    <li>
-                        <label class="label">邮箱</label>
-                        <div class="block">
-                            <input type="email" size="40" placeholder="请输入邮箱..." id="email" name="email">
-                        </div>
-                    </li>
-                    <li>
-                        <label class="label">其他要求</label>
-                        <div class="block">
-                            <div class="inline"><textarea rows="3" cols="60" placeholder="其他要求..." id="comments"></textarea></div>
-                        </div>
-                    </li>
-                </ul>
-                <h2 class="title">选择支付方式</h2>
-                <ul class="pay-way">
-                    <li>
-                        <label class="label"><input type="radio" name="addType" value="10" checked></label>
-                        <div class="block">
-                            <dl>
-                                <dt>网上在线支付</dt>
-                                <dd>（支持银联支付、支付宝支付、账户余额支付）
-                                    <br>订单支付成功后，订单不可变更、不可取消、不可退款！我们将为您预订的客房保留至退房当日中午12:00。</dd>
-                            </dl>
-                        </div>
-                    </li>
-                    <li>
-                        <label class="label"><input type="radio" name="addType" value="1"></label>
-                        <div class="block">
-                            <dl>
-                                <dt>酒店前台支付</dt>
-                                <dd>我们将为您预订的客房保留至抵店之日下午18:00；如需18:00后入住，请提前致电酒店前台告知到店时间；<br>
-                                对于到店时间晚于18:00，且不告知酒店前台到店留房时间的客人，酒店有权在不提前告知客人的情况下取消预订。</dd>
-                            </dl>
-                        </div>
-                    </li>
-                    <li>
-                        <label class="label"><input type="checkbox" id="protocol"></label>
-                        <div class="block">
-                            <dl>
-                                <dt>我已阅读并同意<a id="contract" href="javascript:void(0)">《预订须知》</a></dt>
-                            </dl>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="block">
-                            <button class="btn" id="addOrderSubmit">提交订单</button>
-                        </div>
-                    </li>
-                </ul>
+                <div id="inputForm">
+                    <h2 class="title">请填写详情</h2>
+                    <ul>
+                        <li>
+                            <label class="label must">姓名</label>
+                            <div class="block">
+                                <input type="text" size="5" placeholder="姓" id="lastName" name="lastName" maxlength="10">
+                                <input type="text" size="5" placeholder="名" id="firstName" name="firstName" maxlength="10">
+                            </div>
+                        </li>
+                        <li>
+                            <label class="label must">手机号</label>
+                            <div class="block">
+                                <input type="text" size="40" placeholder="请输入手机号..." id="orderMobile" name="orderMobile" maxlength="11">
+                            </div>
+                        </li>
+                        <li>
+                            <label class="label">邮箱</label>
+                            <div class="block">
+                                <input type="email" size="40" placeholder="请输入邮箱..." id="email" name="email">
+                            </div>
+                        </li>
+                        <li>
+                            <label class="label">其他要求</label>
+                            <div class="block">
+                                <div class="inline"><textarea rows="3" cols="60" placeholder="其他要求..." id="comments" maxlength="100"></textarea></div>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="label must">为必填项</label>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <div class="block">
+                                <button class="btn" id="checkOrderbtn">确认订单</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="payTypeForm" style="display: none">
+                    <h2 class="title">订单详情</h2>
+                    <ul>
+                        <li>
+                            <label class="label" style="width: 800px;text-align: left;padding-left: 50px"><em id="orderShow"></em></label>
+                        </li>
+                        <li>
+                            <label class="label" style="width: 300px;text-align: left;padding-left: 50px">姓名：<em id="nameShow"></em></label>
+                        </li>
+                        <li>
+                            <label class="label" style="width: 300px;text-align: left;padding-left: 50px">手机号：<em id="orderMobileShow"></em></label>
+                        </li>
+                        <li>
+                            <label class="label" style="width: 300px;text-align: left;padding-left: 50px">邮箱：<em id="emailShow"></em></label>
+                        </li>
+                        <li>
+                            <label class="label" style="width: 800px;text-align: left;padding-left: 50px">其他要求：<em id="commentsShow"></em></label>
+                        </li>
+                    </ul>
+                    <h2 class="title">选择支付方式</h2>
+                    <ul class="pay-way">
+                        <li>
+                            <label class="label"><input type="radio" name="addType" value="10" checked></label>
+                            <div class="block">
+                                <dl>
+                                    <dt>网上在线支付</dt>
+                                    <dd>（支持银联支付、支付宝支付、账户余额支付）
+                                        <br>订单支付成功后，订单不可变更、不可取消、不可退款！我们将为您预订的客房保留至退房当日中午12:00。</dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="label"><input type="radio" name="addType" value="1"></label>
+                            <div class="block">
+                                <dl>
+                                    <dt>酒店前台支付</dt>
+                                    <dd>我们将为您预订的客房保留至抵店之日下午18:00；如需18:00后入住，请提前致电酒店前台告知到店时间；<br>
+                                    对于到店时间晚于18:00，且不告知酒店前台到店留房时间的客人，酒店有权在不提前告知客人的情况下取消预订。</dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="label"><input type="checkbox" id="protocol"></label>
+                            <div class="block">
+                                <dl>
+                                    <dt>我已阅读并同意<a id="contract" href="javascript:void(0)">《预订须知》</a></dt>
+                                </dl>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="block">
+                                <button class="btn" id="addOrderSubmit">提交订单</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <!-- item -->
@@ -153,6 +180,7 @@
     function isLogin(user) {
 
         $("#lastName").val(user.lastName);
+        $("#firstName").val(user.firstName);
         $("#orderMobile").val(user.mobile);
 //        $("#mobile").val((user.addressProvince? user.addressProvince.name.split("|")[0]:'')+ user.addressCityName+user.addressStreet);
         $("#email").val(user.email);
@@ -165,9 +193,10 @@
 
 [#include '../include/foot.html'/]
 <script src="${static}/js/jquery-timepicker/jquery.timepicker.min.js"></script>
+<script src="${static}/js/xss.min.js"></script>
 <script type="application/javascript">
 
-    $('#arrivalTime').timepicker({ 'timeFormat': 'G:i' });
+//    $('#arrivalTime').timepicker({ 'timeFormat': 'G:i' });
 
     $("#contract").click(function () {
 
@@ -225,6 +254,55 @@
         if(hotelCode && arrival && departure) {
             queryAva(hotelCode, arrival, departure, adults, roomNum);
 
+            //确认订单
+            $("#checkOrderbtn").click(function () {
+
+                var lastName = $("#lastName").val();
+                var firstName = $("#firstName").val();
+                var mobile = $("#orderMobile").val();
+                var email = $("#email").val();
+                var comments = $("#comments").val();
+                if(lastName== null || lastName == ""){
+                    alert("请输入中文姓");
+                    return false;
+                }
+                if(!checkHz(lastName)){
+                    alert("请输入正确的中文姓");
+                    return false;
+                }
+                if(firstName== null || firstName == ""){
+                    alert("请输入中文名");
+                    return false;
+                }
+                if(!checkHz(firstName)){
+                    alert("请输入正确的中文名");
+                    return false;
+                }
+                if(mobile== null || mobile == ""){
+                    alert("请输入手机号");
+                    return false;
+                }
+                if(!checkMobile(mobile)){
+                    alert("请输入正确的手机号");
+                    return false;
+                }
+                if(email != "" && !checkEmail(email)){
+                    alert("请输入正确的邮箱");
+                    return false;
+                }
+
+                $("#inputForm").hide();
+                $("#payTypeForm").show();
+
+                $("#orderShow").html(filterXSS("酒店："+ $("#hotelCode").val()+ "；到达日："+ $("#arrival").val()+"；离开日："+$("#departure").val()
+                +"；人数：" + $("#adults").val() + "；客房数：" + $("#roomNum").val()));
+                $("#nameShow").html(filterXSS(lastName+firstName));
+                $("#orderMobileShow").html(filterXSS(mobile));
+                $("#emailShow").html(filterXSS(email));
+                $("#commentsShow").html(filterXSS(comments));
+
+            });
+
             //提交订单
             $("#addOrderSubmit").click(function () {
 
@@ -241,7 +319,7 @@
                 var mobile = $("#orderMobile").val();
                 var email = $("#email").val();
                 var comments = $("#comments").val();
-                var arrivalTime = $("#arrivalTime").val();
+                var arrivalTime = "18:00";
                 if(lastName== null || lastName == ""){
                     alert("请输入姓名");
                     return false;
@@ -250,20 +328,16 @@
                     alert("请输入手机号");
                     return false;
                 }
-                if(email== null || email == ""){
-                    alert("请输入邮箱");
+                if(!checkMobile(mobile)){
+                    alert("请输入正确的手机号");
                     return false;
                 }
-                if(arrivalTime== null || arrivalTime == ""){
-                    alert("请输入到店时间");
-                    return false;
-                }
-                if(!checkEmail(email)){
-                    alert("请输入正确的邮箱格式");
+                if(email != "" && !checkEmail(email)){
+                    alert("请输入正确的邮箱");
                     return false;
                 }
                 checkSubmitFlg = true;
-                ajax("/hotel/addOrder",{arrival: arrival, departure: departure, roomNum: roomNum, adults: adults, rate: selectFirstNightPrice,
+                ajax("/hotel/addOrder",{arrival: arrival, departure: departure, roomNum: roomNum, adults: Math.ceil(adults/roomNum), rate: selectFirstNightPrice,
                     lastName: lastName, totalRevenue: selectTotalPrice, hotelCode: hotelCode, roomtypeCode: selectRoomCode, comments: comments,
                     reteCode: selectRateCode, reservationTypeCode: addType, mobile: mobile, email : email, arrivalTime: arrivalTime},
                 function (data) {

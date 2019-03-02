@@ -205,7 +205,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public BaseResult addOrder(String arrival, String departure, int roomNum, int extraBed, int adults, int children,
-                               double rate, String lastName, double totalRevenue, String hotelCode, String guesttypeCode,
+                               double rate, String lastName, String firstName, double totalRevenue, String hotelCode, String guesttypeCode,
                                String roomtypeCode, String reteCode, String memberId, String reservationTypeCode, String comments,
                                String address, String email, String mobile, String arrivalTime) {
 
@@ -217,6 +217,7 @@ public class UserServiceImpl implements UserService {
         orderInfo.setExtraBed(extraBed);
         orderInfo.setAdults(adults);
         orderInfo.setChildren(children);
+        orderInfo.setFirstname(firstName);
         orderInfo.setRate(new BigDecimal(rate).setScale(2,BigDecimal.ROUND_HALF_UP));
         orderInfo.setLastname(lastName);
         orderInfo.setTotalRevenue(new BigDecimal(totalRevenue).setScale(2,BigDecimal.ROUND_HALF_UP));

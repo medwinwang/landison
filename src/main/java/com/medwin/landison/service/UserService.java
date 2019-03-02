@@ -38,7 +38,7 @@ public interface UserService {
     BaseResult getCoupons(String profileId, String status, int page, int pageSize);
 
     BaseResult addOrder(String arrival, String departure,int roomNum, int extraBed, int adults,int children, double rate,
-                        String lastName, double totalRevenue, String hotelCode, String guesttypeCode, String roomtypeCode,
+                        String lastName, String firstName, double totalRevenue, String hotelCode, String guesttypeCode, String roomtypeCode,
                         String reteCode, String memberId, String reservationTypeCode, String comments, String address,
                         String email, String mobile, String arrivalTime);
 
