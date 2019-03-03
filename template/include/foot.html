@@ -60,7 +60,7 @@
 	<p>4006 866 866</p>
 	<p>© LTG Ltd (from 2006). All Rights Reserved.</p>
 </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="${static}/js/jquery.min.js"></script>
 <script src="${static}/js/base.js"></script>
 <script src="${static}/js/common.js?v=1"></script>
 <script src="${static}/js/layer/layer.js" type="text/javascript"></script>
@@ -231,29 +231,26 @@
 
             var day2 = new Date();
             day2.setTime(day2.getTime());
-            $("#arrival").val(dateToStr(day2));
             var day3 = new Date();
             day3.setTime(day3.getTime()+24*60*60*1000);
-            $("#departure").val(dateToStr(day3));
+            $("#arrivalDepartureDate").val(dateToStr(day2) + " - "+ dateToStr(day3));
 
-            $("#arrival").change(function () {
-				if($("#departure").val()<= $(this).val()){
-                    var date = new Date($(this).val());
-                    date.setTime(date.getTime()+24*60*60*1000);
-                    $("#departure").val(dateToStr(date));
-				}
-            });
             $("#reserveBtn").click(function () {
                 var hotelCode = $("#hotelCode").attr('code');
                 var hotelName = $("#hotelCode").val();
-                var arrival = $("#arrival").val();
-                var departure = $("#departure").val();
+                var arrivalDepartureDate = $("#arrivalDepartureDate").val();
                 var adults = $("#adults").attr('code');
                 var roomNum = $("#roomNum").attr('code');
                 if(!hotelCode) {
                     alert("请先选择酒店");
                     return false;
 				}
+                if(arrivalDepartureDate== null || arrivalDepartureDate.length < 20) {
+                    alert("请先选择到达日和离开日");
+                    return false;
+                }
+                var arrival = arrivalDepartureDate.split(" ")[0];
+                var departure = arrivalDepartureDate.split(" ")[2];
 				location.href = "/member/reserve.html?hotelCode="+ hotelCode +"&hotelName="+encodeURI(hotelName)
 					+ "&arrival="+arrival +"&departure="+departure+"&adults="+adults+"&roomNum="+roomNum;
             });

@@ -237,11 +237,9 @@
             $("#hotelCode").attr('code', hotelCode);
             $("#hotelCode").val(hotelName);
         }
-        if(arrival){
+        if(arrival && departure){
             $("#arrival").val(arrival);
-        }
-        if(departure){
-            $("#departure").val(departure);
+            $("#arrivalDepartureDate").val(arrival + " - " + departure);
         }
         if(adults) {
             $("#adults").attr('code', adults);
@@ -294,7 +292,7 @@
                 $("#inputForm").hide();
                 $("#payTypeForm").show();
 
-                $("#orderShow").html(filterXSS("酒店："+ $("#hotelCode").val()+ "；到达日："+ $("#arrival").val()+"；离开日："+$("#departure").val()
+                $("#orderShow").html(filterXSS("酒店："+ $("#hotelCode").val()+ "；到达日-离开日："+$("#arrivalDepartureDate").val()
                 +"；人数：" + $("#adults").val() + "；客房数：" + $("#roomNum").val()));
                 $("#nameShow").html(filterXSS(lastName+firstName));
                 $("#orderMobileShow").html(filterXSS(mobile));
