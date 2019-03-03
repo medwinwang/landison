@@ -17,9 +17,9 @@
 <!-- container -->
 <div class="container">
 
-    <div class="member-banner">
+    <!--<div class="member-banner">-->
         [#include '../include/incUserHead.html'/]
-    </div>
+    <!--</div>-->
 
     <div class="member-content">
         <div class="member-nav">
@@ -144,7 +144,7 @@
                 <div>{{value.hotelCode.name}}</div>
             </li>
             <li class="order-2">
-                {{value.lastname}}
+                {{value.lastname}}{{value.firstname}}
             </li>
             <li class="order-3">
                 {{value.arrival.split("T")[0]}}

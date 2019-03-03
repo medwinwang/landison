@@ -268,7 +268,7 @@
             $(".j_no_user").hide();
             $(".j_user").show();
             var user = data;
-            $("#username").html(user.lastName);
+            $("#username").html(user.lastName+user.firstName);
             $("#username").click(function () {
                 location.href = "/member/index.html";
             });
