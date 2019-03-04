@@ -5,8 +5,8 @@
 	<ul class="wrap clearfix">
 		[@cms_channel_list parentId=channel.parentId channelOption='1' ]
 		[#list tag_list as sub]
-		[#if sub.id < 130]
-		<li [#if sub.id==118 ] style="display:none;" class="j_user" [/#if]>
+		[#if sub.id == 117 || sub.id=119]
+		<li>
 		<a href="${sub.url}" [#if channel??&&(channel.id==sub.id) ] class="active" [/#if]>${sub.name}</a></li>
 		[/#if]
 		[/#list]
